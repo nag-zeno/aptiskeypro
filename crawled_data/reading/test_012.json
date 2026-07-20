@@ -1,0 +1,228 @@
+{
+  "label": "Bộ đề #12",
+  "questions1": [
+    {
+      "questionStart": "I really ",
+      "answerOptions": [
+        "love",
+        "make",
+        "run"
+      ],
+      "questionEnd": " spending my weekends painting.",
+      "correctAnswer": "love"
+    },
+    {
+      "questionStart": "This jacket feels a little too ",
+      "answerOptions": [
+        "mean",
+        "small",
+        "again"
+      ],
+      "questionEnd": " for me now.",
+      "correctAnswer": "small"
+    },
+    {
+      "questionStart": "Could you go to the ",
+      "answerOptions": [
+        "shop",
+        "park",
+        "sea"
+      ],
+      "questionEnd": " and buy some bread?",
+      "correctAnswer": "shop"
+    },
+    {
+      "questionStart": "There were so many ",
+      "answerOptions": [
+        "people",
+        "birds",
+        "trees"
+      ],
+      "questionEnd": " waiting outside the cinema.",
+      "correctAnswer": "people"
+    },
+    {
+      "questionStart": "My grandparents plan to ",
+      "answerOptions": [
+        "room",
+        "visit",
+        "fly"
+      ],
+      "questionEnd": " us during the summer break.",
+      "correctAnswer": "visit"
+    }
+  ],
+  "question2Topic": "Busy coffee shop",
+  "question2Content": [
+    {
+      "text": "The café was very crowded when the customer arrived.",
+      "id": "item1"
+    },
+    {
+      "text": "The staff helped them find a table and handed them a menu.",
+      "id": "item2"
+    },
+    {
+      "text": "The customer was surprised because the menu was different from what they had expected.",
+      "id": "item3"
+    },
+    {
+      "text": "They decided to order the most expensive item — a sandwich.",
+      "id": "item4"
+    },
+    {
+      "text": "The customer said the sandwich was delicious and that they would definitely come back again.",
+      "id": "item5"
+    }
+  ],
+  "question3Topic": "My visit to a new coffee shop",
+  "question3Content": [
+    {
+      "text": "It was my first time visiting a new local coffee shop.",
+      "id": "item1"
+    },
+    {
+      "text": "At first, I didn’t think it would be good, but I decided to give it a try.",
+      "id": "item2"
+    },
+    {
+      "text": "I looked at the menu and saw many different kinds of food and drinks.",
+      "id": "item3"
+    },
+    {
+      "text": "I chose one dish to try for myself.",
+      "id": "item4"
+    },
+    {
+      "text": "When I tasted it, I found it really delicious and knew I would come back again.",
+      "id": "item5"
+    }
+  ],
+  "question4Topic": "Career",
+  "question4Text": [
+    "<strong>Here is the perspective of four people on the above topic. Please read the content and answer the question.</strong>",
+    "<strong>A:</strong> After graduating, I wanted to take some time to figure out what I truly wanted. I started looking for temporary jobs, but it was quite difficult because most companies don’t hire people without experience. Eventually, a game company contacted me, and I agreed to work for them. The job is hybrid, so sometimes I work in the evenings, but I’m fine with that.",
+    "<strong>B:</strong> I went to university right after finishing high school. I had always wanted to become a teacher, so I didn’t need to explore other career options. Three months ago, I did an internship at a local school. It was an eye-opening experience, even though the workload was heavier than I expected. However, I believe it was very worthwhile.",
+    "<strong>C:</strong> When I graduated, I didn’t really know what I wanted to do. Some people advised me to start working right away, but I wanted to gain some practical experience first. That’s why I applied for various volunteer positions. Although I didn’t earn any money, I had the chance to try out different types of work. Looking back, I feel happy with my decision because of the valuable knowledge I gained.",
+    "<strong>D:</strong> When I was younger, I lived near a plumber and sometimes worked with her. She gave me simple tasks like checking for pipe leaks or tightening screws. So later on, it felt natural for me to go to university to become an electrician. Now, when I see short online electrical courses, I wish I had chosen them instead of going to university."
+  ],
+  "question4Content": [
+    {
+      "question": "Who did not want to change to other careers?",
+      "id": "question4_q1",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who thinks it was hard to get the first job?",
+      "id": "question4_q2",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Who enjoys working in a flexible work environment?",
+      "id": "question4_q3",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Who enjoyed doing things with their hands?",
+      "id": "question4_q4",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Who thinks their training was too long?",
+      "id": "question4_q5",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Who enjoyed working when training?",
+      "id": "question4_q6",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who thinks they benefited from working for free?",
+      "id": "question4_q7",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    }
+  ],
+  "correctAnswersQuestion4": [
+    "B",
+    "A",
+    "A",
+    "D",
+    "D",
+    "B",
+    "C"
+  ],
+  "question5Topic": "Four-Day Workweek",
+  "options": [
+    "",
+    "A way of life now out date",
+    "Benefits for employees",
+    "Undesirable finalcial consequences",
+    "Unforeseen challenges for employees",
+    "Difficult to change old habits",
+    "Unfair for some people",
+    "Alternative solutions worth considering"
+  ],
+  "paragraph_question5": [
+    "For many years, a workweek of five or even six days was the standard. However, advancements in technology, evolving social values, and an increasing emphasis on work-life balance are making this traditional schedule less relevant. Both employees and employers are starting to question whether spending the majority of one’s week at work is truly necessary or productive.",
+    "Proponents of a four-day workweek highlight various benefits for workers. With an extra day off, employees gain more time to recharge, connect with family, or explore personal interests. Research shows that shorter workweeks can enhance focus and efficiency, leading to improved job performance and higher levels of job satisfaction.",
+    "While appealing, a reduced workweek could have financial downsides. Companies might incur higher expenses from the need to hire additional staff or adjust compensation models. For sectors that rely on hourly employees, it may be difficult to maintain profitability, potentially leading to service reductions or job cuts.",
+    "Adapting to a new work schedule can be difficult for some employees. The pressure to complete tasks within a shorter timeframe can lead to stress, and fast-paced industries may face challenges such as missed deadlines or conflicting schedules, complicating the transition to a shorter workweek.",
+    "For individuals accustomed to traditional work hours, the shift to a four-day workweek can be challenging. Breaking long-established routines is tough, and some may resist change even when it offers potential benefits. Adapting to a new work pattern often requires time and support.",
+    "While a four-day workweek may sound ideal to many, it isn’t necessarily fair to all. Essential workers, healthcare providers, and employees in the hospitality industry may not have the option to reduce their hours. This could create disparities among different worker groups and lead to tension within the workforce.",
+    "Rather than universally implementing a four-day workweek, experts suggest considering more flexible arrangements. Options such as allowing employees to choose their days off or offering shorter daily hours can provide similar advantages without disrupting industries that depend on a traditional work schedule."
+  ],
+  "meohoc": [
+    "<strong>Mẹo nhớ Keyword:</strong> out date → Benefits → Undesirable → challenges → Difficult → Unfair → solutions.",
+    "<strong>Nhớ theo đoạn văn:</strong> Phương pháp làm việc cũ đã <strong>lỗi thời (out date)</strong>, nhưng <strong>lợi ích (Benefits)</strong> cho nhân viên vẫn quan trọng. Tuy nhiên, có thể có <strong>hệ quả không mong muốn (Undesirable)</strong> và <strong>thách thức (challenges)</strong> khi thay đổi. Điều này khiến nhân viên cảm thấy <strong>khó khăn (Difficult)</strong> và <strong>không công bằng (Unfair)</strong>. Các <strong>giải pháp thay thế (solutions)</strong> có thể giúp cải thiện."
+  ]
+}

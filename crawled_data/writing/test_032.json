@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #032",
+  "club_name": "Television club",
+  "questions1": {
+    "question1_1": "Who do you usually go to the movies with?",
+    "question1_2": "Do you like to take photos?",
+    "question1_3": "Where do you like to go on holiday?",
+    "question1_4": "What’s your favorite color?",
+    "question1_5": "What did you do last night?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I go with friends.",
+    "question1_2_answer": "Yes, I love it.",
+    "question1_3_answer": "I love the beach.",
+    "question1_4_answer": "My favorite color is blue.",
+    "question1_5_answer": "I watched a movie."
+  },
+  "questions2": {
+    "question2": "Do you usually watch TV?"
+  },
+  "questions2_answer": {
+    "question2": "I don't watch TV often, but I enjoy watching movies or series occasionally. I prefer streaming services because they offer more flexibility in what to watch."
+  },
+  "questions3": {
+    "question3_1": "What do you like to do when you watch TV?",
+    "question3_2": "Do you like watching TV alone or with others?",
+    "question3_3": "Is it good for children to watch TV programs too much?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "When I watch TV, I like to relax and enjoy the show with a snack. Sometimes, I also multitask by browsing the internet or chatting with friends while watching.",
+    "question3_2_answer": "I enjoy watching TV with others, especially family or friends. It’s more fun to share reactions and discuss the plot, but I also enjoy some solo time with my favorite shows.",
+    "question3_3_answer": "It's not good for children to watch too much TV. It can lead to a sedentary lifestyle and affect their development. It’s important for kids to engage in other activities as well."
+  },
+  "questions4_main": "Dear members, we need to set up an event and choose a place so that foreigners can attend. Please give your suggestions.",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that our television club is organizing an event for foreigners. We should consider hosting it at a central location like a community hall or a public park. It would be great for accessibility!\n    <br>Let me know what you think! \n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I am excited to hear that our television club is organizing an event for foreigners. I suggest hosting it at a location that's central and easy to reach, such as a community hall or public park. These places would offer enough space for a large crowd and ensure accessibility for everyone.  \n    <br> For the event itself, we could showcase popular TV shows, host Q&A sessions with directors or actors, and create interactive exhibits about television history. These activities will engage attendees of all ages and backgrounds.  \n    <br> I am happy to help organize and promote this event, and I believe it will be a great opportunity to bring people together.  \n    <br> Best regards,  \n    <br> Jimmy"
+}

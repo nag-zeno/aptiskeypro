@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #007",
+  "club_name": "College club",
+  "questions1": {
+    "question1_1": "Which sport do you like to play the most?",
+    "question1_2": "What did you do last night?",
+    "question1_3": "Do you like shopping?",
+    "question1_4": "What are you wearing today?",
+    "question1_5": "What is your favorite kind of music?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I like football.",
+    "question1_2_answer": "I watched TV.",
+    "question1_3_answer": "Yes, I do.",
+    "question1_4_answer": "I’m wearing jeans.",
+    "question1_5_answer": "I enjoy pop music."
+  },
+  "questions2": {
+    "question2": "Please tell us about the days and times you can attend courses and what you would like to study?"
+  },
+  "questions2_answer": {
+    "question2": "I am available on weekends, mainly on Saturday afternoons. I would love to study painting, especially focusing on modern art techniques and experimenting with different mediums."
+  },
+  "questions3": {
+    "question3_1": "Hi! Welcome to the college. What course are you doing and why did you choose it?",
+    "question3_2": "Welcome! How do you feel about the college so far?",
+    "question3_3": "Did you hear that the college sports club has closed? What do you think about this?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I’m studying graphic design because I’ve always been passionate about creativity and visual communication. This course will help me develop my skills and open up career opportunities in the creative industry.",
+    "question3_2_answer": "So far, I’m really enjoying the college. The campus is vibrant and welcoming, and I’ve met some friendly people. The professors are knowledgeable and make learning engaging, which I appreciate.",
+    "question3_3_answer": "Yes, I heard about the sports club closing. It's disappointing because many students enjoyed the activities and it was a great way to stay active. I hope they reconsider or offer alternatives in the future."
+  },
+  "questions4_main": "We are writing to inform you that the end of course exams will now take place two weeks earlier than originally planned. You exam, which was scheduled for the 21st of next month, will now take place on the 7th of next month. We apologize for any difficulty this may cause.",
+  "question4_1_text": "Write a short email to your friend (about 50 words). Tell them what you think the college should do about the situation.",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words). Tell them what you think the college should do about the situation.",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that the exams have been moved up two weeks. I think the college should give us more notice and maybe adjust the study schedule. It’s going to be really stressful. What do you think? <br> \n    Best, <br> \n    Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I was informed that the end-of-course exams have been moved up two weeks earlier than originally planned. This sudden change is quite concerning, and many students, including myself, are finding it difficult to adjust our study plans in such a short time. I believe the college should have given more notice to avoid causing unnecessary stress for students. It might be helpful to offer additional support, such as extra study sessions or extending the revision period. I also suggest the college communicates more clearly and in advance about such important changes. \n    <br> I hope you will consider this feedback and help make adjustments for the benefit of all students. \n    <br> Best regards,  \n    <br> Phuong"
+}

@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #006",
+  "club_name": "Cinema club",
+  "questions1": {
+    "question1_1": "What is your job?",
+    "question1_2": "What is your favorite food?",
+    "question1_3": "What do you usually do in the morning?",
+    "question1_4": "Where did you go last night?",
+    "question1_5": "What do you like doing with your friend?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I’m a teacher.",
+    "question1_2_answer": "I love pizza.",
+    "question1_3_answer": "I read the news.",
+    "question1_4_answer": "I stayed at home.",
+    "question1_5_answer": "We watch movies together."
+  },
+  "questions2": {
+    "question2": "When and how often do you watch films?"
+  },
+  "questions2_answer": {
+    "question2": "I usually watch films in the evenings after work. I try to watch at least two movies a week, mostly on weekends when I have more free time."
+  },
+  "questions3": {
+    "question3_1": "I like to sit near the screen when I go to the cinema? I never drink or eat anything during the film. What about you?",
+    "question3_2": "I don’t like watching old back-and-white. They are boring. I prefer modern films, which do you prefer, and why?",
+    "question3_3": "Some people say we don’t need cinemas anymore. We can watch everything on TV or online at home? What do you think about this?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I prefer sitting closer to the screen for a better experience, and I enjoy some snacks during the film. It helps me relax and enjoy the movie more. How about you?",
+    "question3_2_answer": "I also prefer modern films because of the high-quality visuals and advanced technology. They are more engaging and entertaining, while black-and-white films feel less dynamic and harder to connect with.",
+    "question3_3_answer": "While watching films online is convenient, I think cinemas offer a unique experience with a large screen and immersive sound. Watching in a theater still feels special and brings people together."
+  },
+  "questions4_main": "As you know our weekly film shows are very popular. However, we have had a number of complaints about people using their mobile phones during the film. We have started asking people to turn off their phones before the film starts but this hasn’t solved the problem. We are thinking of banning mobile phones from our cinema in the future and would be interested to hear your view on this. Do you have any other suggestions?",
+  "question4_1_text": "Write a short email to your friend (about 50 words). Tell your friend what suggestions you will make and why?",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words). Write about your ideas and what you think about the situation.",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I heard about the issue with people using their phones during the films. I think banning mobile phones could be a good solution. Alternatively, we could create a designated area for phone users, away from the main seating area. What do you think? <br> \n    Best, <br> \n    Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I understand the frustration regarding people using their mobile phones during film screenings. While banning phones could be effective, I suggest we first try a “phone-free” zone. People who prefer to use their phones could sit there, which would keep the main areas free from distractions. Alternatively, we could provide phone holders that encourage people to store their phones securely before the film begins. This could help resolve the problem without taking drastic measures. \n    <br> I hope these suggestions help. I look forward to hearing your thoughts. \n    <br> Best regards,  \n    <br> Phuong"
+}

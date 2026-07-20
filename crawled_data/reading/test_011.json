@@ -1,0 +1,228 @@
+{
+  "label": "Bộ đề #11",
+  "questions1": [
+    {
+      "questionStart": "The apartment we rented last year was quite ",
+      "answerOptions": [
+        "boring",
+        "small",
+        "healthy"
+      ],
+      "questionEnd": ".",
+      "correctAnswer": "small"
+    },
+    {
+      "questionStart": "We usually ",
+      "answerOptions": [
+        "stay",
+        "movie",
+        "bring"
+      ],
+      "questionEnd": " at my aunt's house during the holidays.",
+      "correctAnswer": "stay"
+    },
+    {
+      "questionStart": "She planted colorful roses in the ",
+      "answerOptions": [
+        "sky",
+        "garden",
+        "water"
+      ],
+      "questionEnd": ".",
+      "correctAnswer": "garden"
+    },
+    {
+      "questionStart": "Several old ",
+      "answerOptions": [
+        "cloud",
+        "trees",
+        "morning"
+      ],
+      "questionEnd": " were cut down last week.",
+      "correctAnswer": "trees"
+    },
+    {
+      "questionStart": "That wooden bridge looks very ",
+      "answerOptions": [
+        "hot",
+        "old",
+        "free"
+      ],
+      "questionEnd": " but it's still safe.",
+      "correctAnswer": "old"
+    }
+  ],
+  "question2Topic": "Healthy Eating",
+  "question2Content": [
+    {
+      "text": "In the past, many meals were high in sugar and unhealthy fats.",
+      "id": "item1"
+    },
+    {
+      "text": "Years ago, limited access to fresh produce made healthy eating more difficult.",
+      "id": "item2"
+    },
+    {
+      "text": "Modern diets now focus on fresh, whole foods instead of processed ones.",
+      "id": "item3"
+    },
+    {
+      "text": "Nutritionists today teach people how to plan balanced and nutritious meals.",
+      "id": "item4"
+    },
+    {
+      "text": "Nowadays, mobile apps help users track calories and discover healthy recipes.",
+      "id": "item5"
+    }
+  ],
+  "question3Topic": "Wellness Fair",
+  "question3Content": [
+    {
+      "text": "The wellness fair took place on Saturday afternoon, encouraging people to adopt healthier lifestyles.",
+      "id": "item1"
+    },
+    {
+      "text": "More than 60 (con số bất kỳ) participants joined the event, with Dr. A (tên người) leading an engaging fitness workshop.",
+      "id": "item2"
+    },
+    {
+      "text": "The fair also included activities like cooking demonstrations, mindfulness sessions, and a fun run.",
+      "id": "item3"
+    },
+    {
+      "text": "After the workshops, prizes were awarded to participants who created the most creative health posters.",
+      "id": "item4"
+    },
+    {
+      "text": "Families enjoyed tasting healthy snacks and discovering practical tips for better overall wellness.",
+      "id": "item5"
+    }
+  ],
+  "question4Topic": "Volunteering",
+  "question4Text": [
+    "<strong>Here is the perspective of four people on the above topic. Please read the content and answer the question.</strong>",
+    "<strong>A:</strong> I’m very busy and rarely have any free time to do anything, so even spending a few hours volunteering is quite difficult. I would have to take half a day off work. I see many people in need, and they genuinely require additional financial support. That’s something I can help with because I earn a good salary. Making monthly donations is not a problem for me—it’s how I show my support and contribution.",
+    "<strong>B:</strong> Some people enjoy volunteering abroad, but honestly, I feel that most people are more interested in traveling. I believe we should use our time more meaningfully. Every town has many people in need. Their circumstances are difficult, and they lack the means to improve their quality of life. They are individuals who have contributed a great deal to the country. Sharing stories with them helps us understand the differences between generations. We can also broaden our knowledge of local history, traditions, and culture through their experiences.",
+    "<strong>C:</strong> I believe there are many ways for us to show kindness through volunteering. I am currently retired and helping to build houses for people in need. I work with a volunteer organization that has well-prepared and clear plans. Through this work, I have had the opportunity to experience different foreign cultures. We are often sent to various countries to carry out projects, so it’s also a great way to travel while still doing something meaningful. This work involves physical labor, which helps improve our physical health—something some people only begin to realize after some time.",
+    "<strong>D:</strong> My mother told me to do local volunteering because she is a member of that organization, but I’m not very interested. I prefer volunteering abroad because I can develop soft skills—something that will benefit my future career. In addition, meeting new people helps me expand my network and build valuable connections that I can use later in my professional life."
+  ],
+  "question4Content": [
+    {
+      "question": "Who wants to enhance their future career?",
+      "id": "question4_q1",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Who helps support charity work with money?",
+      "id": "question4_q2",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Who thinks it should help the local community?",
+      "id": "question4_q3",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who thinks volunteering helps improve physical health?",
+      "id": "question4_q4",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who thinks it can improve knowledge about culture?",
+      "id": "question4_q5",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who thinks it is a way to travel?",
+      "id": "question4_q6",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who wants to make new friends?",
+      "id": "question4_q7",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    }
+  ],
+  "correctAnswersQuestion4": [
+    "D",
+    "A",
+    "B",
+    "C",
+    "B",
+    "C",
+    "D"
+  ],
+  "question5Topic": "Mountain (Mountain summits) (phiên bản 2)",
+  "options": [
+    "",
+    "Changing the definition of mountain",
+    "The unique feeling of achievement",
+    "Publicity of achievement",
+    "The wrong priority",
+    "A disturbing relevant",
+    "Focus on sustainability",
+    "A more intimate relationship"
+  ],
+  "paragraph_question5": [
+    "In the modern consciousness, the definition of a mountain has evolved far beyond its geological description as a massive landform of rock and ice. Historically viewed as sacred barriers or purely natural entities, mountains are increasingly defined by humans as 'vertical arenas' for personal testing. This conceptual shift transforms the mountain from a part of the ecosystem into a commodity—a challenge to be overcome rather than a landscape to be respected.",
+    "This new definition is driven by a powerful psychological reward: the unique feeling of achievement. When a climber pushes their physical limits to reach a summit, the combination of exhaustion and altitude creates a potent cocktail of adrenaline and pride. It is a singular sensation of conquering the impossible, offering a temporary escape from the mundane routines of daily life. This internal 'high' creates a deep-seated desire to return.",
+    "However, in our hyper-connected era, internal satisfaction is rarely enough; it is the publicity of achievement that now drives the masses. The solitude of the peaks is often broken by the need to document and broadcast the success on social media. The mountain becomes a backdrop for digital validation, where the value of the climb is measured in likes and shares rather than personal growth.",
+    "The obsession with public recognition inevitably establishes the wrong priority. Instead of prioritizing safety, skill acquisition, or the appreciation of nature's subtle beauty, many climbers become fixated solely on 'bagging the peak'. This 'summit fever' encourages rushing, dangerous shortcuts, and a lack of preparation. The journey itself is ignored in a frantic race to the top, reducing the majestic experience to a mere checklist item.",
+    "This distorted mindset leads to a disturbing relevant—a troubling reality where our ego directly impacts the environment. As more people flock to the mountains with the wrong priorities, we witness a direct correlation between human traffic and environmental degradation. Trails are eroded, campsites are littered with non-biodegradable waste, and delicate wildlife habitats are disturbed.",
+    "Facing this ecological crisis, the mountaineering community is being forced to shift its focus on sustainability. We are realizing that the mountains are finite resources that cannot withstand endless abuse. This creates a new imperative: implementing stricter limits on climber numbers, enforcing 'leave no trace' policies, and promoting ethical tourism. The goal is shifting from conquering the land to preserving it.",
+    "Ultimately, this move toward preservation fosters a more intimate relationship with the mountain. When we stop viewing the peak as an enemy to defeat or a trophy to display, we begin to see it as a partner. This new relationship is built on humility, silence, and deep respect for the natural world. We learn to climb not just to stand on the mountain, but to be with the mountain."
+  ],
+  "meohoc": [
+    "<strong>Mẹo nhớ Keyword:</strong> Changing definition → Unique feeling → Publicity → Wrong priority → Disturbing relevant → Sustainability → Intimate relationship.",
+    "<strong>Nhớ theo đoạn văn:</strong> Chúng ta bắt đầu bằng việc <strong>thay đổi định nghĩa (Changing definition)</strong> về núi, tìm kiếm <strong>cảm giác thành tựu độc nhất (Unique feeling)</strong>. Nhưng sự hào nhoáng dẫn đến việc <strong>công khai thành tích (Publicity)</strong> và đặt ra <strong>ưu tiên sai lầm (Wrong priority)</strong>. Điều này tạo ra một thực tế <strong>liên quan đáng ngại (Disturbing relevant)</strong>. Giờ đây, ta phải <strong>tập trung vào bền vững (Focus on sustainability)</strong> để xây dựng một <strong>mối quan hệ thân mật hơn (Intimate relationship)</strong> với thiên nhiên."
+  ]
+}

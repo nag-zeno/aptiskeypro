@@ -1,0 +1,228 @@
+{
+  "label": "Bộ đề #08",
+  "questions1": [
+    {
+      "questionStart": "My grandparents own a small ",
+      "answerOptions": [
+        "farm",
+        "compare",
+        "spare"
+      ],
+      "questionEnd": " outside the city.",
+      "correctAnswer": "farm"
+    },
+    {
+      "questionStart": "Everyone in the class felt very ",
+      "answerOptions": [
+        "run",
+        "excited",
+        "most"
+      ],
+      "questionEnd": " about the field trip.",
+      "correctAnswer": "excited"
+    },
+    {
+      "questionStart": "Please turn ",
+      "answerOptions": [
+        "big",
+        "left",
+        "go"
+      ],
+      "questionEnd": " when you reach the traffic light.",
+      "correctAnswer": "left"
+    },
+    {
+      "questionStart": "We strolled along the busy ",
+      "answerOptions": [
+        "water",
+        "street",
+        "cloud"
+      ],
+      "questionEnd": " near the market.",
+      "correctAnswer": "street"
+    },
+    {
+      "questionStart": "I always ",
+      "answerOptions": [
+        "stone",
+        "drink",
+        "school"
+      ],
+      "questionEnd": " a glass of juice before breakfast.",
+      "correctAnswer": "drink"
+    }
+  ],
+  "question2Topic": "Eating at restaurant",
+  "question2Content": [
+    {
+      "text": "I decided to try a new café located at the end of the street.",
+      "id": "item1"
+    },
+    {
+      "text": "The place was quite busy, with a lively atmosphere.",
+      "id": "item2"
+    },
+    {
+      "text": "Even so, a staff member quickly noticed me and brought over the menu.",
+      "id": "item3"
+    },
+    {
+      "text": "I was a bit surprised to see that there were only a few items to choose from.",
+      "id": "item4"
+    },
+    {
+      "text": "In the end, I went for the most expensive salad on the menu.",
+      "id": "item5"
+    }
+  ],
+  "question3Topic": "A group presentation",
+  "question3Content": [
+    {
+      "text": "First, we prepared the materials for our group presentation.",
+      "id": "item1"
+    },
+    {
+      "text": "Then, we presented our topic for 10 minutes.",
+      "id": "item2"
+    },
+    {
+      "text": "Throughout the presentation, we used images to explain our ideas.",
+      "id": "item3"
+    },
+    {
+      "text": "After the presentation, other students asked questions.",
+      "id": "item4"
+    },
+    {
+      "text": "Finally, each group member took turns answering the questions.",
+      "id": "item5"
+    }
+  ],
+  "question4Topic": "Free time activity",
+  "question4Text": [
+    "<strong>Here are four people's views on the same topic. Read them carefully and answer the questions below.</strong>",
+    "<strong>A:</strong> When I was a teenager, I loved recording short stories on an old tape recorder with my cousins. We spent hours coming up with ideas and acting them out just for fun. These days, we make podcasts using modern apps that make editing and publishing much easier and more enjoyable. Even though technology has simplified the process, we still spend a lot of time planning each episode carefully. For me, podcasting is a creative way to express ideas and connect with people on a deeper level.",
+    "<strong>B:</strong> As a child, I spent many sunny afternoons flying kites in the park with my brothers and sisters. Watching my kite rise high into the sky always filled me with happiness and excitement. Those simple yet meaningful moments taught me patience and coordination. Even now, whenever I see children flying kites, I feel warm memories returning. Those carefree days will always be some of my favorite childhood moments.",
+    "<strong>C:</strong> When I was little, I was fascinated by doing jigsaw puzzles with my family. Carefully fitting each piece into place was both fun and satisfying. Now that I’m older, I often play strategy-based video games, which feel like a modern version of puzzles. They’re not only entertaining but also help me stay focused and think critically. For me, these games bring the same sense of challenge and accomplishment that puzzles once did — just in a more dynamic and interactive way.",
+    "<strong>D:</strong> I grew up near a beautiful lake, and swimming there with my friends was one of my favorite things to do. It was such a great way to spend time outdoors, though rainy days sometimes left me feeling bored at home. Nowadays, I practice yoga to relax and recharge after long working hours. It has helped me stay calm, balanced, and focused. Yoga has become an important part of my routine and a great way to take care of both my body and mind."
+  ],
+  "question4Content": [
+    {
+      "question": "Who now enjoys video games?",
+      "id": "question4_q1",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who enjoys podcasting with friends?",
+      "id": "question4_q2",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Who loved swimming as a child?",
+      "id": "question4_q3",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Who loved puzzles as a child?",
+      "id": "question4_q4",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who now prefers yoga?",
+      "id": "question4_q5",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Who loved kite flying as a child?",
+      "id": "question4_q6",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who finds modern apps easier to use?",
+      "id": "question4_q7",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    }
+  ],
+  "correctAnswersQuestion4": [
+    "C",
+    "A",
+    "D",
+    "C",
+    "D",
+    "B",
+    "A"
+  ],
+  "question5Topic": "Urban Development",
+  "options": [
+    "",
+    "Redefining Sustainable City Planning",
+    "Encouraging Green Spaces in Urban Areas",
+    "Supporting Affordable Housing Projects",
+    "Overreliance on High-Rise Buildings",
+    "Concerns About Traffic Congestion",
+    "Strengthening Community Engagement",
+    "Focusing on Renewable Energy Source"
+  ],
+  "paragraph_question5": [
+    "Modern urban development increasingly focuses on sustainability as cities face growing populations and environmental challenges. Redefining sustainable city planning means integrating environmental protection, efficient land use, and long-term economic growth into urban strategies. Planners aim to design cities that balance development with ecological responsibility while improving residents’ quality of life.",
+    "One key aspect of sustainable city planning is the creation of more green spaces. Parks, urban forests, and community gardens help reduce pollution, improve air quality, and provide residents with areas for recreation and relaxation. Green spaces also contribute to better mental health and create a healthier living environment in densely populated cities.",
+    "As cities expand, ensuring access to affordable housing becomes a major priority. Governments and developers must work together to create housing projects that are accessible to different income groups. Affordable housing helps reduce inequality and allows more people to live closer to workplaces, schools, and essential services.",
+    "However, rapid urbanization has led many cities to depend heavily on high-rise developments to accommodate population growth. While tall buildings can maximize land use, excessive reliance on them may reduce community interaction and place pressure on infrastructure. Balanced urban design should combine vertical development with livable neighborhood spaces.",
+    "Another challenge linked to rapid urban growth is increasing traffic congestion. As more people move into cities, transportation systems often struggle to keep up with demand. Long commuting times, air pollution, and road overcrowding can negatively affect both the environment and residents’ daily lives.",
+    "To address these challenges effectively, community participation plays an important role in urban planning. Local residents can provide valuable insights into their needs and priorities. When communities are actively involved in decision-making, city policies become more inclusive and better suited to real-life conditions.",
+    "Finally, sustainable urban development requires a transition toward renewable energy sources. Cities are increasingly investing in solar power, wind energy, and energy-efficient infrastructure to reduce carbon emissions. By adopting clean energy solutions, urban areas can move closer to becoming environmentally responsible and resilient for the future."
+  ],
+  "meohoc": [
+    "<strong>Mẹo nhớ Keyword:</strong> Sustainable → Urban Areas → Housing Projects → Buildings → Traffic Congestion → Community → Energy Source.",
+    "<strong>Nhớ theo đoạn văn:</strong> Quy hoạch thành phố bền vững (<strong>Sustainable</strong>) bắt đầu từ việc mở rộng không gian xanh trong khu đô thị (<strong>Urban Areas</strong>), hỗ trợ các dự án nhà ở hợp lý (<strong>Housing Projects</strong>), hạn chế sự phụ thuộc quá mức vào các tòa nhà cao tầng (<strong>Buildings</strong>). Đồng thời, cần giải quyết vấn đề tắc nghẽn giao thông (<strong>Traffic Congestion</strong>), tăng cường sự gắn kết cộng đồng (<strong>Community</strong>) và tập trung vào việc sử dụng nguồn năng lượng tái tạo (<strong>Energy Source</strong>)."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #019",
+  "club_name": "Language club",
+  "questions1": {
+    "question1_1": "What is your favorite animal?",
+    "question1_2": "What is your favorite hobby?",
+    "question1_3": "What is your favorite food?",
+    "question1_4": "What is your favorite time of the day?",
+    "question1_5": "What is your favorite season?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I love cats.",
+    "question1_2_answer": "I enjoy reading.",
+    "question1_3_answer": "I love pizza.",
+    "question1_4_answer": "I prefer the evening.",
+    "question1_5_answer": "I love the spring."
+  },
+  "questions2": {
+    "question2": "Tell me your free time and interests?"
+  },
+  "questions2_answer": {
+    "question2": "In my free time, I enjoy reading books, listening to music, and practicing languages. I also love traveling and learning about different cultures to improve my language skills."
+  },
+  "questions3": {
+    "question3_1": "Why did you choose this course?",
+    "question3_2": "How have you found the course so far? What’s been difficult?",
+    "question3_3": "What are you hoping to do when you finish the course?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I chose this course because I want to improve my language skills, especially in speaking and writing. It seemed like a great opportunity to practice with others and expand my knowledge.",
+    "question3_2_answer": "The course has been quite interesting so far, but I find the grammar lessons a bit challenging. However, I enjoy the conversations and interactive activities which make learning more fun.",
+    "question3_3_answer": "After finishing the course, I hope to become fluent and confident in speaking the language. I also plan to use it for travel and potentially work opportunities in countries where it's spoken."
+  },
+  "questions4_main": "You are taking an English Course at the American Dream Center. After studying for 2 months, you find the course effective and useful.",
+  "question4_1_text": "Write a short email to your friend (about 50 words). Write about your feelings and recommend the course to her/him .",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words). You have registered for an English course at A Level Speaking Center but in the end you can’t arrange the time to attend the course. Write about your feelings, the reason why you can’t attend and what you would like to do.",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I’ve been attending an English course at the American Dream Center for two months now, and it’s been really effective! The lessons are useful and the teachers are great. I recommend it to you if you’re looking to improve your English! \n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I am writing to inform you that I have registered for the English course at A Level Speaking Center, but unfortunately, I am unable to attend due to scheduling conflicts. The course seems excellent, but my current commitments make it difficult to find time. I am disappointed as I was looking forward to improving my language skills. \n    <br> I would like to inquire about possible alternatives, such as rescheduling or enrolling in a future course. If possible, I would also appreciate any online learning options to stay on track. I am committed to improving my English and would love to continue with the center once I can arrange my schedule.\n    <br> Thank you for your understanding. I look forward to your advice. \n    <br> Best regards,  \n    <br> Jimmy"
+}

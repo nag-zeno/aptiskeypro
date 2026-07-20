@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #035",
+  "club_name": "Walking club",
+  "questions1": {
+    "question1_1": "How is the weather today?",
+    "question1_2": "What is your favorite season of the year?",
+    "question1_3": "What do you usually do in your free time?",
+    "question1_4": "What is your favorite sport?",
+    "question1_5": "What is a place you would like to visit in your country?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "It’s sunny today.",
+    "question1_2_answer": "I love the spring.",
+    "question1_3_answer": "I like reading books.",
+    "question1_4_answer": "I love football.",
+    "question1_5_answer": "I’d like to visit Hoi An."
+  },
+  "questions2": {
+    "question2": "The last time you went for a walk?"
+  },
+  "questions2_answer": {
+    "question2": "The last time I went for a walk was yesterday evening. I walked in the park, enjoyed the fresh air, and relaxed while watching the sunset. It was very refreshing."
+  },
+  "questions3": {
+    "question3_1": "I often go for a walk. What about you?",
+    "question3_2": "I prefer to go to the countryside for a walk. Walking in the city is stressful and noisy. What do you think?",
+    "question3_3": "In the past, people walked long distances as part of their lives. These days, they don't walk anymore. Why?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I also enjoy going for walks, especially in nature. I find it helps me relax, clear my mind, and stay active. Walking is a peaceful way to connect with the environment.",
+    "question3_2_answer": "I agree with you. The countryside offers a much more peaceful environment for walking compared to the city. The noise and traffic in urban areas can make walking stressful and less enjoyable.",
+    "question3_3_answer": "These days, many people rely on cars and public transport for convenience and speed. With modern technology, walking has become less necessary for most daily activities, leading to a more sedentary lifestyle."
+  },
+  "questions4_main": "Dear members, The club has planned to organize a walk across European countries. There were a few members of the group who suggested it, but it was said that it was unrealistic. Please send us your suggestions and your reasons.",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that the Walking Club is planning a walk across European countries. While it might seem ambitious, I think it's a great idea! We could take it step by step and make it manageable. \n    <br>Let me know what you think! \n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I was excited to hear about the plan to organize a walk across European countries. While some might find it unrealistic, I believe we can make it happen by starting with smaller regions or countries and gradually building up. This will allow us to gauge interest and adapt the plans as needed.  \n    <br> We can also involve local communities along the route, creating a cultural exchange and raising awareness about walking and healthy living. The event could be organized in stages over several years, making it more feasible.  \n    <br> I am happy to assist in organizing and promoting the event. I believe it will be an unforgettable experience that encourages healthy habits and fosters connections among participants.  \n    <br> Best regards,  \n    <br> Jimmy"
+}

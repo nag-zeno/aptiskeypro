@@ -1,0 +1,821 @@
+/* ====================================================================================
+   NEUMORPHISM DESIGN SYSTEM - APTISPRO
+   
+   Modern Neumorphism (Soft UI) Style
+   Palette: Warm off-white base with cool blue/indigo accents
+   - Base Background:    #e0e5ec (soft grey-blue)
+   - Primary Accent:     #4f8ef7 (vivid blue)
+   - Secondary Accent:   #6c63ff (indigo/violet)
+   - Success:            #27ae60
+   - Danger:             #e74c3c
+   - Text Dark:          #2d3748
+   - Text Muted:         #718096
+   ==================================================================================== */
+
+/* --- 0. FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
+/* --- 1. DESIGN TOKENS --- */
+:root {
+  /* Base */
+  --nm-bg:              #e0e5ec;
+  --nm-bg-alt:          #dce1e8;
+
+  /* Shadows - The heart of Neumorphism */
+  --nm-shadow-light:    #ffffff;
+  --nm-shadow-dark:     #a3b1c6;
+  --nm-shadow-out:      6px 6px 16px #a3b1c6, -6px -6px 16px #ffffff;
+  --nm-shadow-out-lg:   10px 10px 24px #a3b1c6, -10px -10px 24px #ffffff;
+  --nm-shadow-in:       inset 4px 4px 10px #a3b1c6, inset -4px -4px 10px #ffffff;
+  --nm-shadow-in-lg:    inset 6px 6px 14px #a3b1c6, inset -6px -6px 14px #ffffff;
+  --nm-shadow-flat:     2px 2px 5px #a3b1c6, -2px -2px 5px #ffffff;
+
+  /* Colors */
+  --nm-primary:         #4f8ef7;
+  --nm-primary-dark:    #3a76e0;
+  --nm-primary-glow:    rgba(79, 142, 247, 0.35);
+  --nm-secondary:       #6c63ff;
+  --nm-secondary-glow:  rgba(108, 99, 255, 0.25);
+  --nm-success:         #27ae60;
+  --nm-success-glow:    rgba(39, 174, 96, 0.3);
+  --nm-danger:          #e74c3c;
+  --nm-danger-glow:     rgba(231, 76, 60, 0.3);
+  --nm-warning:         #f39c12;
+  --nm-warning-glow:    rgba(243, 156, 18, 0.3);
+  --nm-info:            #16a085;
+  --nm-info-glow:       rgba(22, 160, 133, 0.3);
+
+  /* Text */
+  --nm-text:            #2d3748;
+  --nm-text-muted:      #718096;
+  --nm-text-light:      #a0aec0;
+  --nm-on-accent:       #ffffff;
+
+  /* Radii */
+  --nm-r-s:   10px;
+  --nm-r-m:   16px;
+  --nm-r-l:   20px;
+  --nm-r-xl:  28px;
+  --nm-r-full: 9999px;
+
+  /* Transitions */
+  --nm-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --nm-transition-fast: all 0.15s ease;
+}
+
+/* --- 2. GLOBAL BASE --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif !important;
+  background-color: var(--nm-bg) !important;
+  color: var(--nm-text) !important;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito', sans-serif !important;
+  font-weight: 700 !important;
+  color: var(--nm-text) !important;
+}
+
+/* --- 3. NEUMORPHIC SURFACE UTILITY --- */
+.nm-surface {
+  background-color: var(--nm-bg);
+  box-shadow: var(--nm-shadow-out);
+  border-radius: var(--nm-r-l);
+}
+
+.nm-inset {
+  background-color: var(--nm-bg);
+  box-shadow: var(--nm-shadow-in);
+  border-radius: var(--nm-r-m);
+}
+
+/* --- 4. BUTTONS --- */
+.btn {
+  font-family: 'Nunito', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 0.03em !important;
+  padding: 0.55rem 1.6rem !important;
+  border: none !important;
+  border-radius: var(--nm-r-full) !important;
+  transition: var(--nm-transition) !important;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.15);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  border-radius: inherit;
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+.btn:active {
+  transform: scale(0.96) !important;
+  transition-duration: 100ms !important;
+}
+
+/* Primary Button */
+.btn-primary {
+  background: linear-gradient(145deg, #5b9bff, #4080ed) !important;
+  color: var(--nm-on-accent) !important;
+  box-shadow: 5px 5px 12px #a3b1c6, -3px -3px 8px #ffffff,
+              0 4px 15px var(--nm-primary-glow) !important;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background: linear-gradient(145deg, #4080ed, #3a76e0) !important;
+  box-shadow: 6px 6px 16px #a3b1c6, -4px -4px 10px #ffffff,
+              0 6px 20px var(--nm-primary-glow) !important;
+  color: var(--nm-on-accent) !important;
+}
+.btn-primary:active {
+  box-shadow: inset 3px 3px 8px rgba(60, 100, 200, 0.4),
+              inset -2px -2px 5px rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Success Button */
+.btn-success {
+  background: linear-gradient(145deg, #2ecc71, #27ae60) !important;
+  color: var(--nm-on-accent) !important;
+  box-shadow: 5px 5px 12px #a3b1c6, -3px -3px 8px #ffffff,
+              0 4px 15px var(--nm-success-glow) !important;
+}
+.btn-success:hover, .btn-success:focus {
+  background: linear-gradient(145deg, #27ae60, #219a52) !important;
+  box-shadow: 6px 6px 16px #a3b1c6, -4px -4px 10px #ffffff,
+              0 6px 20px var(--nm-success-glow) !important;
+  color: var(--nm-on-accent) !important;
+}
+
+/* Danger Button */
+.btn-danger {
+  background: linear-gradient(145deg, #f05a4b, #e74c3c) !important;
+  color: var(--nm-on-accent) !important;
+  box-shadow: 5px 5px 12px #a3b1c6, -3px -3px 8px #ffffff,
+              0 4px 15px var(--nm-danger-glow) !important;
+}
+.btn-danger:hover, .btn-danger:focus {
+  background: linear-gradient(145deg, #e74c3c, #c0392b) !important;
+  box-shadow: 6px 6px 16px #a3b1c6, -4px -4px 10px #ffffff,
+              0 6px 20px var(--nm-danger-glow) !important;
+  color: var(--nm-on-accent) !important;
+}
+
+/* Warning Button */
+.btn-warning {
+  background: linear-gradient(145deg, #f5a623, #f39c12) !important;
+  color: var(--nm-on-accent) !important;
+  box-shadow: 5px 5px 12px #a3b1c6, -3px -3px 8px #ffffff,
+              0 4px 15px var(--nm-warning-glow) !important;
+}
+.btn-warning:hover, .btn-warning:focus {
+  background: linear-gradient(145deg, #f39c12, #d68910) !important;
+  box-shadow: 6px 6px 16px #a3b1c6, -4px -4px 10px #ffffff,
+              0 6px 20px var(--nm-warning-glow) !important;
+  color: var(--nm-on-accent) !important;
+}
+
+/* Info Button */
+.btn-info {
+  background: linear-gradient(145deg, #1abc9c, #16a085) !important;
+  color: var(--nm-on-accent) !important;
+  box-shadow: 5px 5px 12px #a3b1c6, -3px -3px 8px #ffffff,
+              0 4px 15px var(--nm-info-glow) !important;
+}
+.btn-info:hover, .btn-info:focus {
+  background: linear-gradient(145deg, #16a085, #138a72) !important;
+  box-shadow: 6px 6px 16px #a3b1c6, -4px -4px 10px #ffffff,
+              0 6px 20px var(--nm-info-glow) !important;
+  color: var(--nm-on-accent) !important;
+}
+
+/* Secondary Button (Outlined / Soft) */
+.btn-secondary {
+  background-color: var(--nm-bg) !important;
+  color: var(--nm-text) !important;
+  box-shadow: var(--nm-shadow-out) !important;
+}
+.btn-secondary:hover {
+  box-shadow: 8px 8px 18px #a3b1c6, -8px -8px 18px #ffffff !important;
+  color: var(--nm-primary) !important;
+}
+.btn-secondary:active {
+  box-shadow: var(--nm-shadow-in) !important;
+}
+
+/* Light Button */
+.btn-light {
+  background-color: var(--nm-bg) !important;
+  color: var(--nm-text) !important;
+  box-shadow: var(--nm-shadow-flat) !important;
+}
+.btn-light:hover {
+  box-shadow: var(--nm-shadow-out) !important;
+}
+
+/* Dark Button */
+.btn-dark {
+  background: linear-gradient(145deg, #3d4a5c, #2d3748) !important;
+  color: #ffffff !important;
+  box-shadow: 5px 5px 12px #a3b1c6, -3px -3px 8px #ffffff !important;
+}
+
+/* Disabled state */
+.btn:disabled, .btn.disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  box-shadow: 2px 2px 5px #a3b1c6, -2px -2px 5px #ffffff !important;
+}
+
+/* --- 5. FOOTER NAV (Quiz pages) --- */
+.footer {
+  background-color: var(--nm-bg) !important;
+  border-top: none !important;
+  box-shadow: -2px -4px 16px #a3b1c6, 0 -2px 8px #ffffff !important;
+}
+
+.footer .btn-back, .btn-back {
+  background: linear-gradient(145deg, #f5a623, #f39c12) !important;
+  color: var(--nm-on-accent) !important;
+  box-shadow: 4px 4px 10px #a3b1c6, -3px -3px 7px #ffffff,
+              0 4px 12px var(--nm-warning-glow) !important;
+}
+.footer .btn-back:hover, .btn-back:hover {
+  box-shadow: 6px 6px 14px #a3b1c6, -4px -4px 9px #ffffff,
+              0 5px 16px var(--nm-warning-glow) !important;
+}
+
+.footer .btn-next, .btn-next {
+  background: linear-gradient(145deg, #5b9bff, #4080ed) !important;
+  color: var(--nm-on-accent) !important;
+  box-shadow: 4px 4px 10px #a3b1c6, -3px -3px 7px #ffffff,
+              0 4px 12px var(--nm-primary-glow) !important;
+}
+.footer .btn-next:hover, .btn-next:hover {
+  box-shadow: 6px 6px 14px #a3b1c6, -4px -4px 9px #ffffff,
+              0 5px 16px var(--nm-primary-glow) !important;
+}
+
+.footer .btn-check-result, .btn-check-result {
+  background: linear-gradient(145deg, #2ecc71, #27ae60) !important;
+  color: var(--nm-on-accent) !important;
+  box-shadow: 4px 4px 10px #a3b1c6, -3px -3px 7px #ffffff,
+              0 4px 12px var(--nm-success-glow) !important;
+}
+
+/* --- 6. QUIZ PAGE HEADER --- */
+.header {
+  background-color: var(--nm-bg) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border-bottom: none !important;
+  box-shadow: 0 4px 16px #a3b1c6, 0 -2px 6px #ffffff !important;
+}
+
+/* --- 7. TOP BAR (Audio bar) --- */
+.top-bar {
+  background: linear-gradient(135deg, #4f8ef7 0%, #6c63ff 100%) !important;
+  border-radius: var(--nm-r-l) !important;
+  margin-bottom: 1rem !important;
+  box-shadow: 5px 5px 14px #a3b1c6, -3px -3px 8px #ffffff,
+              0 4px 20px var(--nm-primary-glow) !important;
+  color: white !important;
+}
+
+/* --- 8. CARDS & CONTAINERS --- */
+.card {
+  background-color: var(--nm-bg) !important;
+  border-radius: var(--nm-r-l) !important;
+  border: none !important;
+  box-shadow: var(--nm-shadow-out) !important;
+  transition: var(--nm-transition) !important;
+}
+.card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: var(--nm-shadow-out-lg) !important;
+}
+
+.card-header {
+  background: linear-gradient(135deg, rgba(79,142,247,0.12) 0%, rgba(108,99,255,0.10) 100%) !important;
+  color: var(--nm-text) !important;
+  border-bottom: 1px solid rgba(163,177,198,0.25) !important;
+  border-radius: var(--nm-r-l) var(--nm-r-l) 0 0 !important;
+  font-weight: 700 !important;
+}
+
+.card-body {
+  padding: 1.5rem !important;
+}
+
+.info-box, .small-box {
+  background-color: var(--nm-bg) !important;
+  border-radius: var(--nm-r-l) !important;
+  border: none !important;
+  box-shadow: var(--nm-shadow-out) !important;
+}
+
+/* Question container (quiz pages) */
+.question-container {
+  background-color: var(--nm-bg) !important;
+  border-radius: var(--nm-r-l) !important;
+  padding: 1.5rem !important;
+  border: none !important;
+  margin-bottom: 1rem !important;
+  box-shadow: var(--nm-shadow-out) !important;
+}
+
+/* Answer box */
+.answer-box {
+  background-color: var(--nm-bg) !important;
+  border: 1.5px solid rgba(79,142,247,0.25) !important;
+  border-radius: var(--nm-r-l) !important;
+  color: var(--nm-text) !important;
+  box-shadow: var(--nm-shadow-in) !important;
+}
+
+/* Slot drop zones */
+.slot {
+  border: 2px dashed rgba(79,142,247,0.4) !important;
+  background-color: var(--nm-bg) !important;
+  border-radius: var(--nm-r-s) !important;
+  box-shadow: var(--nm-shadow-in) !important;
+  transition: var(--nm-transition) !important;
+}
+.drag-over {
+  border-color: var(--nm-primary) !important;
+  background: linear-gradient(135deg, rgba(79,142,247,0.10), rgba(108,99,255,0.08)) !important;
+  box-shadow: inset 3px 3px 8px rgba(79,142,247,0.3),
+              inset -3px -3px 8px #ffffff !important;
+}
+
+/* --- 9. FORMS & INPUTS --- */
+.form-control, .form-select, .form-control-sm {
+  font-family: 'Nunito', sans-serif !important;
+  background-color: var(--nm-bg) !important;
+  border: none !important;
+  border-radius: var(--nm-r-m) !important;
+  color: var(--nm-text) !important;
+  padding: 0.65rem 1rem !important;
+  box-shadow: var(--nm-shadow-in) !important;
+  transition: var(--nm-transition) !important;
+}
+.form-control:focus, .form-select:focus {
+  background-color: var(--nm-bg) !important;
+  box-shadow: inset 4px 4px 10px #a3b1c6,
+              inset -4px -4px 10px #ffffff,
+              0 0 0 3px var(--nm-primary-glow) !important;
+  outline: none !important;
+  color: var(--nm-text) !important;
+}
+.form-control::placeholder {
+  color: var(--nm-text-light) !important;
+  opacity: 1 !important;
+}
+
+/* Radio buttons */
+.form-check-input[type="radio"] {
+  background-color: var(--nm-bg) !important;
+  border: 2px solid rgba(163,177,198,0.6) !important;
+  box-shadow: var(--nm-shadow-flat) !important;
+  transition: var(--nm-transition-fast) !important;
+}
+.form-check-input[type="radio"]:checked {
+  background-color: var(--nm-primary) !important;
+  border-color: var(--nm-primary) !important;
+  box-shadow: 0 0 0 3px var(--nm-primary-glow),
+              var(--nm-shadow-flat) !important;
+}
+
+/* Checkbox */
+.form-check-input[type="checkbox"] {
+  background-color: var(--nm-bg) !important;
+  border: 2px solid rgba(163,177,198,0.6) !important;
+  box-shadow: var(--nm-shadow-flat) !important;
+  border-radius: 6px !important;
+}
+.form-check-input[type="checkbox"]:checked {
+  background-color: var(--nm-primary) !important;
+  border-color: var(--nm-primary) !important;
+}
+
+/* Volume range slider */
+input[type="range"] {
+  accent-color: var(--nm-primary) !important;
+  appearance: none;
+  height: 6px;
+  border-radius: 9999px;
+  background: var(--nm-shadow-in);
+}
+
+/* --- 10. SIDEBAR & NAV (ADMINLTE) --- */
+.app-sidebar, .sidebar, .main-sidebar {
+  background-color: var(--nm-bg) !important;
+  border-right: none !important;
+  box-shadow: 4px 0 16px #a3b1c6 !important;
+}
+
+.sidebar-brand, .brand-link {
+  background: linear-gradient(135deg, #4f8ef7 0%, #6c63ff 100%) !important;
+  border-bottom: none !important;
+  box-shadow: 0 4px 12px var(--nm-primary-glow) !important;
+}
+
+.brand-text {
+  color: #ffffff !important;
+  font-family: 'Nunito', sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.05em !important;
+}
+
+.sidebar .nav-link, .app-sidebar .nav-link {
+  border-radius: var(--nm-r-full) !important;
+  color: var(--nm-text-muted) !important;
+  font-weight: 600 !important;
+  margin: 2px 8px !important;
+  transition: var(--nm-transition) !important;
+}
+
+.sidebar .nav-link.active,
+.app-sidebar .nav-link.active,
+.sidebar .active > .nav-link {
+  background: linear-gradient(135deg, rgba(79,142,247,0.18), rgba(108,99,255,0.13)) !important;
+  color: var(--nm-primary) !important;
+  font-weight: 700 !important;
+  box-shadow: var(--nm-shadow-in) !important;
+}
+
+.sidebar .nav-link:hover:not(.active),
+.app-sidebar .nav-link:hover:not(.active) {
+  background-color: rgba(79,142,247,0.08) !important;
+  color: var(--nm-primary) !important;
+  box-shadow: var(--nm-shadow-flat) !important;
+}
+
+.nav-header {
+  color: var(--nm-text-light) !important;
+  font-size: 0.7rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  padding: 0.75rem 1rem 0.25rem !important;
+}
+
+/* --- 11. APP HEADER / TOP NAVBAR --- */
+.app-header, .main-header {
+  background-color: var(--nm-bg) !important;
+  border-bottom: none !important;
+  box-shadow: 0 4px 16px #a3b1c6, 0 -1px 4px #ffffff !important;
+}
+
+/* Navbar links */
+.app-header .nav-link, .main-header .nav-link {
+  color: var(--nm-text-muted) !important;
+  border-radius: var(--nm-r-full) !important;
+  padding: 0.5rem 0.85rem !important;
+  transition: var(--nm-transition) !important;
+}
+.app-header .nav-link:hover {
+  background-color: rgba(79,142,247,0.08) !important;
+  color: var(--nm-primary) !important;
+  box-shadow: var(--nm-shadow-flat) !important;
+}
+
+/* --- 12. BADGES & ALERTS --- */
+.badge.bg-primary {
+  background: linear-gradient(135deg, #4f8ef7, #6c63ff) !important;
+  color: white !important;
+  box-shadow: 0 2px 8px var(--nm-primary-glow) !important;
+}
+.badge.bg-success {
+  background: linear-gradient(135deg, #27ae60, #2ecc71) !important;
+  color: white !important;
+}
+.badge.bg-warning {
+  background: linear-gradient(135deg, #f39c12, #f5a623) !important;
+  color: white !important;
+}
+.badge.bg-danger {
+  background: linear-gradient(135deg, #e74c3c, #f05a4b) !important;
+  color: white !important;
+}
+
+.alert-primary {
+  background-color: var(--nm-bg) !important;
+  color: var(--nm-text) !important;
+  border: 1.5px solid rgba(79,142,247,0.25) !important;
+  border-radius: var(--nm-r-l) !important;
+  box-shadow: var(--nm-shadow-out) !important;
+}
+
+.alert-success {
+  background-color: var(--nm-bg) !important;
+  color: var(--nm-text) !important;
+  border: 1.5px solid rgba(39,174,96,0.3) !important;
+  border-radius: var(--nm-r-l) !important;
+  box-shadow: var(--nm-shadow-out) !important;
+}
+
+/* --- 13. MODAL --- */
+.modal-content {
+  border-radius: var(--nm-r-xl) !important;
+  background-color: var(--nm-bg) !important;
+  border: none !important;
+  box-shadow: 16px 16px 40px #a3b1c6, -10px -10px 30px #ffffff !important;
+}
+
+.modal-header {
+  border-bottom: 1px solid rgba(163,177,198,0.3) !important;
+  border-radius: var(--nm-r-xl) var(--nm-r-xl) 0 0 !important;
+  background: linear-gradient(135deg, rgba(79,142,247,0.12) 0%, rgba(108,99,255,0.10) 100%) !important;
+}
+
+.modal-header.bg-primary {
+  background: linear-gradient(135deg, #4f8ef7 0%, #6c63ff 100%) !important;
+  box-shadow: 0 4px 16px var(--nm-primary-glow) !important;
+}
+
+.modal-footer {
+  border-top: 1px solid rgba(163,177,198,0.3) !important;
+  border-radius: 0 0 var(--nm-r-xl) var(--nm-r-xl) !important;
+}
+
+.modal-backdrop.show {
+  background-color: rgba(45, 55, 72, 0.6) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+/* --- 14. TABLES --- */
+.table {
+  color: var(--nm-text) !important;
+  border-radius: var(--nm-r-l) !important;
+  overflow: hidden;
+}
+.table > thead {
+  background: linear-gradient(135deg, rgba(79,142,247,0.15), rgba(108,99,255,0.12)) !important;
+  color: var(--nm-text) !important;
+}
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: rgba(79,142,247,0.04) !important;
+}
+.table-hover > tbody > tr:hover > * {
+  background-color: rgba(79,142,247,0.09) !important;
+}
+
+/* --- 15. QUIZ RESULT TABLE --- */
+.text-success {
+  color: var(--nm-success) !important;
+  font-weight: 700 !important;
+}
+.text-danger {
+  color: var(--nm-danger) !important;
+  font-weight: 700 !important;
+}
+
+/* Correct / Incorrect (listeningkey.css override) */
+.correct {
+  color: var(--nm-success) !important;
+  font-weight: 700 !important;
+}
+.incorrect {
+  color: var(--nm-danger) !important;
+  font-weight: 700 !important;
+}
+
+.bg-success {
+  background: linear-gradient(135deg, #27ae60, #2ecc71) !important;
+  color: white !important;
+}
+.bg-danger {
+  background: linear-gradient(135deg, #e74c3c, #f05a4b) !important;
+  color: white !important;
+}
+
+/* --- 16. SCORE DISPLAY --- */
+#totalScore {
+  color: var(--nm-success) !important;
+  font-weight: 800 !important;
+  font-size: 1.8rem !important;
+  text-shadow: 0 2px 8px var(--nm-success-glow) !important;
+}
+
+#scoreClassification {
+  color: var(--nm-primary) !important;
+  font-weight: 800 !important;
+  font-size: 1.8rem !important;
+  text-shadow: 0 2px 8px var(--nm-primary-glow) !important;
+}
+
+/* --- 17. COUNTDOWN TIMER --- */
+.countdown, #countdownTimer {
+  color: var(--nm-primary) !important;
+  font-weight: 800 !important;
+  font-family: 'Nunito', sans-serif !important;
+  text-shadow: 0 2px 8px var(--nm-primary-glow) !important;
+}
+
+/* --- 18. TRANSCRIPT BOX (Listening) --- */
+#transcriptBox, .transcriptBox {
+  background-color: var(--nm-bg) !important;
+  border: 1.5px solid rgba(79,142,247,0.2) !important;
+  border-radius: var(--nm-r-l) !important;
+  color: var(--nm-text) !important;
+  box-shadow: var(--nm-shadow-in) !important;
+}
+
+/* --- 19. DROPDOWN MENUS --- */
+.dropdown-menu {
+  background-color: var(--nm-bg) !important;
+  border: none !important;
+  border-radius: var(--nm-r-l) !important;
+  box-shadow: var(--nm-shadow-out-lg) !important;
+  padding: 0.5rem !important;
+}
+
+.dropdown-item {
+  border-radius: var(--nm-r-s) !important;
+  color: var(--nm-text) !important;
+  font-family: 'Nunito', sans-serif !important;
+  font-weight: 600 !important;
+  transition: var(--nm-transition-fast) !important;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(79,142,247,0.1) !important;
+  color: var(--nm-primary) !important;
+}
+
+.dropdown-divider {
+  border-color: rgba(163,177,198,0.4) !important;
+}
+
+/* --- 20. NAV PILLS / TABS --- */
+.nav-pills .nav-link.active {
+  background: linear-gradient(135deg, #4f8ef7, #6c63ff) !important;
+  color: white !important;
+  border-radius: var(--nm-r-full) !important;
+  box-shadow: 3px 3px 8px #a3b1c6, -2px -2px 6px #ffffff,
+              0 4px 12px var(--nm-primary-glow) !important;
+}
+.nav-pills .nav-link {
+  border-radius: var(--nm-r-full) !important;
+  color: var(--nm-text-muted) !important;
+  font-weight: 600 !important;
+  transition: var(--nm-transition) !important;
+}
+.nav-pills .nav-link:hover:not(.active) {
+  background-color: rgba(79,142,247,0.08) !important;
+  color: var(--nm-primary) !important;
+}
+
+/* --- 21. BREADCRUMB --- */
+.breadcrumb {
+  background-color: var(--nm-bg) !important;
+  border-radius: var(--nm-r-full) !important;
+  box-shadow: var(--nm-shadow-in) !important;
+  padding: 0.5rem 1.2rem !important;
+}
+.breadcrumb-item a {
+  color: var(--nm-primary) !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+.breadcrumb-item.active {
+  color: var(--nm-text-muted) !important;
+}
+
+/* --- 22. UPDATE POPUP (inline style override) --- */
+.update-popup {
+  background: var(--nm-bg) !important;
+  border-radius: var(--nm-r-l) !important;
+  box-shadow: var(--nm-shadow-out-lg) !important;
+  border: none !important;
+}
+
+.update-header {
+  background: linear-gradient(135deg, #4f8ef7 0%, #6c63ff 100%) !important;
+  border-top-left-radius: var(--nm-r-l) !important;
+  border-top-right-radius: var(--nm-r-l) !important;
+  box-shadow: 0 4px 12px var(--nm-primary-glow) !important;
+}
+
+/* --- 23. APP FOOTER --- */
+.app-footer {
+  background-color: var(--nm-bg) !important;
+  border-top: none !important;
+  box-shadow: -2px -4px 16px #a3b1c6 !important;
+  color: var(--nm-text-muted) !important;
+  font-family: 'Nunito', sans-serif !important;
+}
+
+/* --- 24. BTN-ACTIVE (for active quiz button) --- */
+.btn-active {
+  background: linear-gradient(145deg, #5b9bff, #4080ed) !important;
+  color: white !important;
+  box-shadow: inset 3px 3px 8px rgba(60,100,200,0.4),
+              inset -2px -2px 5px rgba(255,255,255,0.3),
+              0 4px 12px var(--nm-primary-glow) !important;
+  border: none !important;
+}
+
+/* --- 25. DECORATIVE BLOBS (subtle, Neumorphism-friendly) --- */
+.nm-blob {
+  position: fixed;
+  border-radius: 9999px;
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0.07;
+  pointer-events: none;
+  animation: nm-drift 10s ease-in-out infinite alternate;
+}
+.nm-blob-blue {
+  width: 450px;
+  height: 450px;
+  background: var(--nm-primary);
+  top: -8%;
+  right: -10%;
+}
+.nm-blob-violet {
+  width: 380px;
+  height: 380px;
+  background: var(--nm-secondary);
+  bottom: 0%;
+  left: -8%;
+  animation-delay: -5s;
+}
+
+@keyframes nm-drift {
+  from { transform: scale(1) translate(0, 0); }
+  to   { transform: scale(1.12) translate(24px, -18px); }
+}
+
+/* --- 26. FOCUS RING (accessibility) --- */
+*:focus-visible {
+  outline: 3px solid var(--nm-primary) !important;
+  outline-offset: 3px !important;
+}
+
+/* --- 27. SCROLLBAR --- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--nm-bg);
+  border-radius: 9999px;
+  box-shadow: var(--nm-shadow-in);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #4f8ef7, #6c63ff);
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px var(--nm-primary-glow);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #6c63ff, #4f8ef7);
+}
+
+/* --- 28. SELECTION --- */
+::selection {
+  background-color: var(--nm-primary-glow) !important;
+  color: var(--nm-text) !important;
+}
+
+/* --- 29. USER MENU HEADER --- */
+.user-header {
+  background: linear-gradient(135deg, #4f8ef7 0%, #6c63ff 100%) !important;
+  border-radius: var(--nm-r-l) var(--nm-r-l) 0 0 !important;
+  box-shadow: 0 4px 16px var(--nm-primary-glow) !important;
+}
+
+/* --- 30. MOTION PREFERENCE --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* --- 31. RESPONSIVE TWEAKS --- */
+@media (max-width: 768px) {
+  :root {
+    --nm-shadow-out: 4px 4px 10px #a3b1c6, -4px -4px 10px #ffffff;
+    --nm-shadow-out-lg: 6px 6px 14px #a3b1c6, -6px -6px 14px #ffffff;
+    --nm-shadow-in: inset 3px 3px 7px #a3b1c6, inset -3px -3px 7px #ffffff;
+  }
+}

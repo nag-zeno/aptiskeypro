@@ -1,0 +1,228 @@
+{
+  "label": "Bộ đề #06",
+  "questions1": [
+    {
+      "questionStart": "Every morning, he rides his ",
+      "answerOptions": [
+        "spaceship",
+        "plane",
+        "bicycle"
+      ],
+      "questionEnd": "to the office.",
+      "correctAnswer": "bicycle"
+    },
+    {
+      "questionStart": "The trees in this forest are extremely ",
+      "answerOptions": [
+        "hate",
+        "tall",
+        "went"
+      ],
+      "questionEnd": ".",
+      "correctAnswer": "tall"
+    },
+    {
+      "questionStart": "There are lots of tall ",
+      "answerOptions": [
+        "road",
+        "buy",
+        "trees"
+      ],
+      "questionEnd": " along this street.",
+      "correctAnswer": "trees"
+    },
+    {
+      "questionStart": "We always have ",
+      "answerOptions": [
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "questionEnd": " together before work.",
+      "correctAnswer": "breakfast"
+    },
+    {
+      "questionStart": "On weekends, I enjoy playing board ",
+      "answerOptions": [
+        "games",
+        "make",
+        "time"
+      ],
+      "questionEnd": " with my siblings.",
+      "correctAnswer": "games"
+    }
+  ],
+  "question2Topic": "Workplace evolution",
+  "question2Content": [
+    {
+      "text": "In the past, employees followed strict nine-to-five schedules.",
+      "id": "item1"
+    },
+    {
+      "text": "Limited technology once restricted remote work possibilities.",
+      "id": "item2"
+    },
+    {
+      "text": "Modern workplaces are adopting more flexible work models.",
+      "id": "item3"
+    },
+    {
+      "text": "Managers now use software to track project progress remotely.",
+      "id": "item4"
+    },
+    {
+      "text": "Today, companies experiment with shorter workweeks to boost productivity.",
+      "id": "item5"
+    }
+  ],
+  "question3Topic": "Music show at the park (Music festivals)",
+  "question3Content": [
+    {
+      "text": "The event was fully planned, financed, and supported by local authorities.",
+      "id": "item1"
+    },
+    {
+      "text": "As a result, entry was free, and around five thousand people attended.",
+      "id": "item2"
+    },
+    {
+      "text": "Many attendees arrived early and browsed local shops before the event began.",
+      "id": "item3"
+    },
+    {
+      "text": "Despite the busy day, workers finished ahead of schedule and watched the famous singer perform.",
+      "id": "item4"
+    },
+    {
+      "text": "The two-hour performance thrilled the audience, leaving everyone in high spirits.",
+      "id": "item5"
+    }
+  ],
+  "question4Topic": "Technology in childhood - Phiên bản 2",
+  "question4Text": [
+    "<strong>Here is the perspective of four people on the above topic. Please read the content and answer the question.</strong>",
+    "<strong>A:</strong> When I was a child, I enjoyed building simple circuits with my parents using basic kits. Today, I collaborate on tech projects with my cousins using drag-and-drop coding platforms. These tools make the development process easier, but I always take the time to thoroughly test our creations. It’s a wonderful way to foster creativity and work together.",
+    "<strong>B:</strong> As a kid, I played with programmable toys like robotic pets alongside my friends. I can still recall the excitement of programming their movements. Those toys sparked my interest in logic and curiosity, and I continue to cherish those early experiences with technology.",
+    "<strong>C:</strong> Growing up, I was fascinated by books about inventors and their innovative creations. Those stories inspired my imagination. Today, I design prototypes using 3D modeling software. The tools are much more precise now, but the joy of creating something new still feels just like the excitement of those childhood books.",
+    "<strong>D:</strong> I spent many hours as a child exploring my family’s old computer, learning basic commands. Rainy days often meant staying indoors and experimenting with different software. Today, I keep up with the latest innovations by listening to tech podcasts. They’re not only entertaining but also help me stay connected to the ever-evolving tech world."
+  ],
+  "question4Content": [
+    {
+      "question": "Who now enjoys 3D modeling?",
+      "id": "question4_q1",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who finds modern platforms user-friendly?",
+      "id": "question4_q2",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Who loved playing with programmable toys as a child?",
+      "id": "question4_q3",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who loved exploring early computers as a child?",
+      "id": "question4_q4",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Who enjoys creating tech projects with family?",
+      "id": "question4_q5",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Who loved reading about inventions as a child?",
+      "id": "question4_q6",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who now prefers tech podcasts?",
+      "id": "question4_q7",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    }
+  ],
+  "correctAnswersQuestion4": [
+    "C",
+    "A",
+    "B",
+    "D",
+    "A",
+    "C",
+    "D"
+  ],
+  "question5Topic": "Technology advances",
+  "options": [
+    "",
+    "Redefining Human-Technology Interaction",
+    "Boosting Productivity Through Intelligent Automation",
+    "Promoting Technology-Based Education Programs",
+    "Overreliance on Digital Interfaces",
+    "Concerns About Disparities in Access to Technology",
+    "Building Innovative Tech Communities",
+    "Focusing on Sustainable Digital Solutions"
+  ],
+  "paragraph_question5": [
+    "The way people use technology is changing quickly. Today, new devices and apps are easier to use. People can talk to machines, use hand gestures, or even use their face to control them. This helps make technology feel more natural and simple. It also improves how we use technology in our daily life and at work.",
+    "Smart machines and software are now doing boring and repeated tasks in many workplaces. These tools, often powered by artificial intelligence (AI), save time and help workers focus on more important and creative jobs. As a result, companies work better and grow faster in many fields.",
+    "More and more schools are using technology in their lessons. They teach students skills like computer coding, robotics, and how to use digital tools. These programs help students prepare for future jobs, and also build creativity and problem-solving skills, which are important in the digital world.",
+    "Using digital devices too much can cause problems. Spending too much time in front of screens can make people feel lonely, stressed, or tired. It can also make it harder to focus or talk with others. That’s why it's important to have a good balance between screen time and offline activities like exercise, talking with friends, or enjoying nature.",
+    "Not everyone has the same access to technology. Some people don’t have fast internet or modern devices, so they miss chances to learn or find jobs. This creates unfair gaps in society. To fix this, we need good plans and community programs to give more people access to the tools they need.",
+    "Technology communities are groups of people who love working with tech. They share ideas, help each other, and work together on new projects. These communities support learning and help turn smart ideas into real products or services that can help others.",
+    "As technology grows, people are also thinking about the environment. Many companies are now creating eco-friendly products and using green practices to reduce harm to nature. These actions help protect the Earth and make sure that digital progress is good for our planet in the long term."
+  ],
+  "meohoc": [
+    "<strong>Mẹo nhớ Keyword:</strong> Human-Technology → Intelligent Automation → Education → Digital Interfaces → Access to Technology → Building Innovative → Digital Solutions.",
+    "<strong>Nhớ theo đoạn văn:</strong> Công nghệ con người (<strong>Human-Technology</strong>) kết hợp tự động hóa thông minh (<strong>Intelligent Automation</strong>) để cải cách giáo dục (<strong>Education</strong>), tạo ra giao diện kỹ thuật số (<strong>Digital Interfaces</strong>), mang đến sự tiếp cận công nghệ (<strong>Access to Technology</strong>), xây dựng giải pháp sáng tạo (<strong>Building Innovative</strong>) và giải pháp kỹ thuật số (<strong>Digital Solutions</strong>)."
+  ]
+}

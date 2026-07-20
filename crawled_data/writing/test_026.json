@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #026",
+  "club_name": "Photography club",
+  "questions1": {
+    "question1_1": "Who do you usually go to the movies with?",
+    "question1_2": "Who do you like spending time with?",
+    "question1_3": "Do you like taking photos?",
+    "question1_4": "Do you often use Facebook?",
+    "question1_5": "Tell me the last time you watched TV."
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I go with friends.",
+    "question1_2_answer": "I like spending time alone.",
+    "question1_3_answer": "Yes, I love it.",
+    "question1_4_answer": "I use Facebook occasionally.",
+    "question1_5_answer": "I watched TV last night."
+  },
+  "questions2": {
+    "question2": "Please tell me the last time you took a picture?"
+  },
+  "questions2_answer": {
+    "question2": "The last time I took a picture was during a weekend trip to the mountains. I captured the beautiful scenery, with clear skies and vibrant greenery, which was truly breathtaking."
+  },
+  "questions3": {
+    "question3_1": "Hi! Welcome to the club. How to have a beautiful picture?",
+    "question3_2": "I often save my photos as files on my computer or print them out. How do you save your photos?",
+    "question3_3": "What skills do you need to take good photos?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "To have a beautiful picture, it's important to focus on lighting, composition, and framing. Also, using the right camera settings and editing afterward can enhance the image's appeal.",
+    "question3_2_answer": "I usually save my photos both digitally on cloud storage and on an external hard drive. I also occasionally print them out to create albums or frame my favorite shots.",
+    "question3_3_answer": "To take good photos, you need skills in composition, understanding lighting, choosing the right angles, and mastering camera settings. Editing also plays an important role in enhancing the final image."
+  },
+  "questions4_main": "Dear member, the club organizes exhibitions to display the best photographs of club members. This exhibition must be suitable for both the young and the old. Please give suggestions.",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that the club is organizing an exhibition to display the best photographs. I think it’s a great idea! We should ensure the exhibition is engaging for both young and old people. \n    <br>Let me know if you’re interested in helping out!\n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I am excited to hear that the club is organizing an exhibition to display members' best photographs. I believe it is important to make the exhibition appealing to both young and old members.  \n    <br> To cater to everyone, we could consider displaying a variety of photography styles, such as landscape, portraits, and black-and-white photos, so there’s something for everyone to enjoy. Additionally, interactive elements like a photo voting system or a digital slideshow could keep visitors engaged.  \n    <br> I would be happy to volunteer to help organize the event, assist with curating the photographs, or help with promoting it. I believe this exhibition will be a great opportunity for all members to showcase their work.  \n    <br> Best regards,  \n    <br> Jimmy"
+}

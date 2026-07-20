@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #002",
+  "club_name": "Beautiful homes club",
+  "questions1": {
+    "question1_1": "What is your favorite time of the year?",
+    "question1_2": "What is your favorite sport?",
+    "question1_3": "Where do you wanna go on holiday?",
+    "question1_4": "What is the weather today?",
+    "question1_5": "What do you like to do in the evening?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I like summer.",
+    "question1_2_answer": "I enjoy football.",
+    "question1_3_answer": "I want to visit Japan.",
+    "question1_4_answer": "It's sunny today.",
+    "question1_5_answer": "I watch TV shows."
+  },
+  "questions2": {
+    "question2": "Why do you want to join beautiful homes club?"
+  },
+  "questions2_answer": {
+    "question2": "I'm excited to join the Beautiful Homes Club because I love decorating and want to make my home more beautiful and cozy for my family to enjoy."
+  },
+  "questions3": {
+    "question3_1": "I have a bad relationship with my neighbors because they often make noise. Tell me how is your relationship with your neighbors?",
+    "question3_2": "Do you prefer living in old buildings or modern buildings? Why?",
+    "question3_3": "The house should be designed in a way that is good for the environment. Do you agree?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I have a good relationship with my neighbors. We often help each other out and respect each other's space, so there are rarely any conflicts. Communication is key in maintaining a peaceful atmosphere.",
+    "question3_2_answer": "I prefer living in modern buildings because they tend to have better facilities, are more energy-efficient, and are designed with current trends in mind. Old buildings, though charming, often lack these features.",
+    "question3_3_answer": "Yes, I completely agree. Designing houses with environmental considerations, such as using sustainable materials, energy-efficient systems, and reducing waste, can help minimize our ecological footprint and promote a healthier planet."
+  },
+  "questions4_main": "Dear member, The cost of maintaining old building is very high and these building take up a lot of space. The government has a proposal that we knock down old buildings and build more modern blocks.",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that the government has proposed knocking down old buildings to make space for modern blocks. I think it’s a great idea because maintaining old buildings is expensive, and modern buildings would be more energy-efficient. What do you think? \n    <br>Looking forward to hearing your thoughts! \n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear President, \n    <br> I am writing to express my opinion on the government’s proposal to knock down old buildings and replace them with modern blocks. While I understand that maintaining old buildings can be costly, I believe we should carefully consider the impact on local communities and historical sites before proceeding. It might be beneficial to explore ways to preserve some of these buildings while still allowing for modern development in other areas. I suggest we engage with local residents and architects to discuss the best course of action. \n    <br> I look forward to your response and hope we can find a solution that benefits everyone.  \n    <br> Best regards,  \n    <br> Jimmy"
+}

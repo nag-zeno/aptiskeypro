@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #380",
+  "club_name": "English club 2",
+  "questions1": {
+    "question1_1": "Where did you go last night?",
+    "question1_2": "What do you like doing with your friend?",
+    "question1_3": "Which sport do you like to play the most?",
+    "question1_4": "What did you do last night?",
+    "question1_5": "Do you like shopping?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I went to the cinema.",
+    "question1_2_answer": "I like watching movies.",
+    "question1_3_answer": "I love playing football.",
+    "question1_4_answer": "I watched a movie.",
+    "question1_5_answer": "Yes, I enjoy it."
+  },
+  "questions2": {
+    "question2": "When do you usually have to come into contact with English?"
+  },
+  "questions2_answer": {
+    "question2": "I usually come into contact with English when I watch movies, read books, or communicate with friends online. It's also necessary for work and school tasks."
+  },
+  "questions3": {
+    "question3_1": "Tell me about your English learning experience?",
+    "question3_2": "I can read and write, but I can't speak English. Do you have any advice for me?",
+    "question3_3": "English is a popular language in the world. What are your thoughts on this opinion?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "My English learning experience has been quite challenging but rewarding. I started with basic grammar and vocabulary, then gradually moved on to speaking and listening practice through movies, books, and conversations.",
+    "question3_2_answer": "I suggest practicing speaking regularly, even if it's with yourself or language exchange partners. Listening to English podcasts and mimicking native speakers can help improve pronunciation and fluency in speaking.",
+    "question3_3_answer": "I agree that English is a global language. Its widespread use in business, media, and education makes it essential for communication across cultures, providing more opportunities for travel and career advancement."
+  },
+  "questions4_main": "The english club will organize a talk to attract both old and young people. Please give your opinions.",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard about the talk that the English club is organizing. I think it’s a great idea to attract both young and old people. We could have some interactive activities and maybe a Q&A session. It’ll be fun! \n    <br> Let me know if you want to join! \n    <br> Best, \n    <br> Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I am excited to hear about the upcoming talk organized by the English club. I think it’s a fantastic way to attract both young and older generations. To ensure the event is engaging for everyone, I suggest including a variety of activities, such as a discussion on current trends or an interactive segment where the audience can participate. It could also be interesting to invite a guest speaker who has experience with English language learning across ages. \n    <br> I believe this approach will help create a more inclusive atmosphere, attracting diverse audiences. I would be happy to assist in organizing the event or promoting it. \n    <br> Best regards,  \n    <br> Jimmy"
+}

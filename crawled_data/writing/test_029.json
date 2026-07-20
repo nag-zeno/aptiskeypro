@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #029",
+  "club_name": "Social club",
+  "questions1": {
+    "question1_1": "What’s the weather like today?",
+    "question1_2": "How are you?",
+    "question1_3": "What’s your favorite hobby?",
+    "question1_4": "How do you get to work?",
+    "question1_5": "What do you like to do in the evening?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "It’s sunny today.",
+    "question1_2_answer": "I’m doing great, thanks!",
+    "question1_3_answer": "I enjoy reading books.",
+    "question1_4_answer": "I drive to work.",
+    "question1_5_answer": "I like watching TV."
+  },
+  "questions2": {
+    "question2": "Tell me about your best friend?"
+  },
+  "questions2_answer": {
+    "question2": "My best friend is someone who is always supportive and understanding. We share common interests and have fun together, whether it's hanging out or working on projects."
+  },
+  "questions3": {
+    "question3_1": "What do you do when you go out with your friends?",
+    "question3_2": "Is it easier for young people to have friends?",
+    "question3_3": "It is much easier to make new friends these days because of computers and mobile phones. Do you agree? Why or why not?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "When I go out with my friends, we often visit cafes, watch movies, or just hang out and chat. It’s always fun to catch up and relax together in a comfortable setting.",
+    "question3_2_answer": "Yes, I believe it’s easier for young people to make friends today. Social media and online platforms allow them to meet and connect with others, making it more accessible to build relationships.",
+    "question3_3_answer": "I agree that technology makes it easier to meet new people, but it’s important to build deeper connections in person. Online interactions can be helpful but might not always lead to meaningful friendships."
+  },
+  "questions4_main": "Dear members, we would like to organize some monthly face to face meetings. We would like your suggestions about when and where we could meet. It suits both young and older people. Please send us your suggestions and your reasons.",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that the club is organizing monthly face-to-face meetings. I think meeting on weekends at a local park or community center would be great. It's convenient for both young and older people. \n    <br>Let me know what you think! \n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I think organizing monthly face-to-face meetings is a fantastic idea. To make it accessible for both young and older members, I suggest holding the meetings at a central location like a local park or community center. Weekends would work best for most people, as it allows everyone to attend without interfering with work or school.  \n    <br> I also recommend considering different themes or activities for each meeting, like discussions, workshops, or outdoor activities, to keep it engaging for everyone. This will help build stronger connections between members while accommodating different preferences.  \n    <br> I’m happy to assist with organizing and promoting these meetings, and I look forward to seeing this idea come to life.  \n    <br> Best regards,  \n    <br> Jimmy"
+}

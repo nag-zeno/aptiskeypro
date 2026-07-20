@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #016",
+  "club_name": "Garden club",
+  "questions1": {
+    "question1_1": "Where are you from?",
+    "question1_2": "What’s the weather like today?",
+    "question1_3": "What did you do last night?",
+    "question1_4": "First language?",
+    "question1_5": "What is your favorite color?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I’m from Vietnam.",
+    "question1_2_answer": "It’s sunny today.",
+    "question1_3_answer": "I watched a movie.",
+    "question1_4_answer": "My first language is Vietnamese.",
+    "question1_5_answer": "I like blue."
+  },
+  "questions2": {
+    "question2": "Why did you join the club?"
+  },
+  "questions2_answer": {
+    "question2": "I joined the garden club because I love plants and gardening. I want to learn more about growing different types of plants and how to take care of them."
+  },
+  "questions3": {
+    "question3_1": "Describe your garden?",
+    "question3_2": "Do people in your country like gardening?",
+    "question3_3": "What is your favorite season? Why?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "My garden is small but cozy, with lots of flowers and a few vegetable plants. I have a small area for relaxing, and I love spending time there, especially in the morning.",
+    "question3_2_answer": "Yes, gardening is quite popular in my country. Many people enjoy growing flowers, vegetables, and fruits. It’s a great way to relax and connect with nature while having fresh produce.",
+    "question3_3_answer": "My favorite season is spring because the weather is mild, and everything starts to bloom. It’s a time of renewal, and I love seeing the flowers and trees come to life."
+  },
+  "questions4_main": "Dear members, we are writing to tell you that the talk and slide show on The Gardens of Japan by Mr.Seiko has been canceled because the speaker has been taken ill. Mr.Jones has kindly agreed to give his talk on The Gardens of England again. I know that many of you have already heard Mr. Jones before but I hope you will be happy to hear him once again. Please give your suggestions.",
+  "question4_1_text": "Write a short email to your friend (about 50 words). ",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that the talk on \"The Gardens of Japan\" has been canceled because Mr. Seiko is ill. Mr. Jones will give his talk on \"The Gardens of England\" again. I’ve heard him before, but I think it’ll still be interesting. \n    <br>Let me know if you plan to attend! \n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I was disappointed to hear that the talk and slide show on \"The Gardens of Japan\" by Mr. Seiko has been canceled due to his illness. It’s unfortunate, as I was looking forward to it. However, I’m happy to hear that Mr. Jones will give his talk on \"The Gardens of England\" again. I’ve attended his previous talks, and I believe they are always informative and enjoyable.  \n    <br> In terms of suggestions, perhaps we could plan a future event on Japanese gardens once Mr. Seiko has recovered. Additionally, I would love to hear more about other international gardens or new gardening techniques in upcoming talks.  \n    <br> Thank you for your efforts in organizing these events. I look forward to hearing Mr. Jones again!  \n    <br> Best regards,  \n    <br> Jimmy"
+}

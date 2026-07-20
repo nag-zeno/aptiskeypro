@@ -1,0 +1,221 @@
+{
+  "label": "Bộ đề #03",
+  "questions1": [
+    {
+      "questionStart": "What time will you be ",
+      "answerOptions": [
+        "home",
+        "sea",
+        "park"
+      ],
+      "questionEnd": "tonight?",
+      "correctAnswer": "home"
+    },
+    {
+      "questionStart": "The shop assistant was very polite to the ",
+      "answerOptions": [
+        "customers",
+        "bird",
+        "chair"
+      ],
+      "questionEnd": "this morning.",
+      "correctAnswer": "customers"
+    },
+    {
+      "questionStart": "This exercise looks quite ",
+      "answerOptions": [
+        "easy",
+        "go",
+        "bring"
+      ],
+      "questionEnd": "to me.",
+      "correctAnswer": "easy"
+    },
+    {
+      "questionStart": "What time do you usually ",
+      "answerOptions": [
+        "prepare",
+        "big",
+        "team"
+      ],
+      "questionEnd": "lunch for your kids?",
+      "correctAnswer": "prepare"
+    },
+    {
+      "questionStart": "I like to ",
+      "answerOptions": [
+        "watch",
+        "read",
+        "take"
+      ],
+      "questionEnd": "the news before going to bed.",
+      "correctAnswer": "watch"
+    }
+  ],
+  "question2Topic": "Weekend activities",
+  "question2Content": [
+    {
+      "text": "It was held on Saturday morning, there was a 10 km race for adults.",
+      "id": "item1"
+    },
+    {
+      "text": "There were 60 participants, in which Ms. Kamus kept the fastest speed and won.",
+      "id": "item2"
+    },
+    {
+      "text": "After she received the prize, the following time was for children's activities.",
+      "id": "item3"
+    },
+    {
+      "text": "Activities including football, swimming, skipping rope, and the children played together very happily.",
+      "id": "item4"
+    },
+    {
+      "text": "After playing, the children were very hungry and ate with their parents.",
+      "id": "item5"
+    }
+  ],
+  "question3Topic": "The famous singer",
+  "question3Content": [
+    {
+      "text": "He is a famous singer who is loved by many fans.",
+      "id": "item1"
+    },
+    {
+      "text": "At the age of fifteen, he studied music at a special school.",
+      "id": "item2"
+    },
+    {
+      "text": "Before becoming famous, he had to practice very hard every day.",
+      "id": "item3"
+    },
+    {
+      "text": "With his unique style and clothes, he soon attracted attention.",
+      "id": "item4"
+    },
+    {
+      "text": "Thanks to his talent and personality, he became well-known to a large audience.",
+      "id": "item5"
+    }
+  ],
+  "question4Topic": "Games from childhood",
+  "question4Text": [
+    "<strong>Here is the perspective of four people on the above topic. Please read the content and answer the question.</strong>",
+    "<strong>A:</strong> In the past, I really liked playing board games. Now, to limit the children from using computers, I often spend time playing with them. However, I have struggled with them because the games nowadays have more characters and rules, making us think a lot every time we play. Despite this, my children and I still like it and have a good time together.",
+    "<strong>B:</strong> When I was a child, I often played soccer with other children of the same age. We usually played in the schoolyard and sometimes in the open spaces of the neighborhood. We divided into small teams and chased the ball until we were all tired.",
+    "<strong>C:</strong> When I was a child, I didn't like going out to play, so I chose reading books as a form of entertainment. The stories described in the pages of books helped me discover my own world. Later, when I grew up, I started liking modern games with eye-catching interfaces, which help me relax and increase my creativity.",
+    "<strong>D:</strong> When I was a child, I really liked outdoor activities. I remember that on bad weather days, I was always by the window, glued to it, looking outside and praying for the rain to stop. At those times, my mother often gave me paper and a box of crayons. I really enjoyed that drawing activity and often drew at home when the weather was bad."
+  ],
+  "question4Content": [
+    {
+      "question": "Who finds today’s games harder than before?",
+      "id": "question4_q1",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    {
+      "question": "Who enjoyed playing with friends in childhood?",
+      "id": "question4_q2",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    {
+      "question": "Who enjoys playing with their children?",
+      "id": "question4_q3",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    {
+      "question": "Who waited and hoped to go outside?",
+      "id": "question4_q4",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    {
+      "question": "Who prefers modern games?",
+      "id": "question4_q5",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    {
+      "question": "Who enjoyed arts as a child?",
+      "id": "question4_q6",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    {
+      "question": "Who enjoyed reading books as a child?",
+      "id": "question4_q7",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    }
+  ],
+  "correctAnswersQuestion4": [
+    "A",
+    "B",
+    "A",
+    "D",
+    "C",
+    "D",
+    "C"
+  ],
+  "question5Topic": "Digital transformation (Tech Forward)",
+  "options": [
+    "",
+    "Redefining business models with technology",
+    "Enhancing productivity through automation",
+    "Promoting digital skills training",
+    "Over-reliance on automated systems",
+    "Concerns about cybersecurity risks",
+    "Building inclusive digital ecosystems",
+    "Focusing on ethical technology development"
+  ],
+  "paragraph_question5": [
+    "The interaction between people and technology is continuously evolving. Modern gadgets and software are designed to be more user-friendly, enabling communication through voice commands, gestures, or even facial recognition. This transformation makes technology more intuitive and accessible, enhancing both personal and professional experiences.",
+    "Smart automation tools are revolutionizing workplaces by handling repetitive and time-consuming tasks. These technologies, often powered by AI, enable employees to concentrate on more valuable work, boosting efficiency and fostering innovation across various sectors.",
+    "Educational institutions are increasingly incorporating technology into their curricula to prepare students for future careers. Programs focused on coding, robotics, and digital literacy provide learners with vital skills for the digital age, promoting creativity and enhancing problem-solving abilities.",
+    "Although digital devices offer numerous advantages, over-reliance on screens can lead to negative consequences. Individuals may experience reduced social interactions, trouble concentrating, and higher stress levels. It’s crucial to balance digital engagement with offline activities for maintaining mental and physical well-being.",
+    "Not everyone has equal access to technology, which can result in significant social and economic divides. Those without reliable internet or modern devices may miss out on educational and employment opportunities, making it essential to address these inequalities through policies and community-driven efforts.",
+    "Tech communities unite individuals passionate about technology to exchange ideas, support projects, and collaborate. These groups encourage innovation and creativity, offering mentorship and resources to help transform new ideas into reality.",
+    "As technology continues to evolve, there is a growing focus on sustainability. Companies are developing eco-friendly products and adopting green practices to reduce environmental impact, ensuring that digital advancements contribute to long-term ecological health."
+  ],
+  "meohoc": [
+    "<strong>Mẹo nhớ Keyword:</strong> Redefining → productivity → digital skills → Over-reliance → risks → Building → development.",
+    "<strong>Nhớ theo đoạn văn:</strong> Việc <strong>định nghĩa lại (Redefining)</strong> mô hình kinh doanh bằng công nghệ giúp <strong>tăng năng suất (productivity)</strong>, đồng thời thúc đẩy <strong>kỹ năng số (digital skills)</strong>. Tuy nhiên, <strong>quá phụ thuộc (Over-reliance)</strong> vào hệ thống tự động có thể gây ra <strong>rủi ro (risks)</strong>. Việc <strong>xây dựng (Building)</strong> các hệ sinh thái số bao gồm tất cả là bước quan trọng trong quá trình <strong>phát triển (development)</strong> công nghệ có đạo đức."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #011",
+  "club_name": "Debate club",
+  "questions1": {
+    "question1_1": "Where are you from?",
+    "question1_2": "What’s the weather like today?",
+    "question1_3": "What do you do in your free time?",
+    "question1_4": "First language?",
+    "question1_5": "Who do you usually go to the movies with?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I’m from Vietnam.",
+    "question1_2_answer": "It’s sunny today.",
+    "question1_3_answer": "I read books.",
+    "question1_4_answer": "My first language is Vietnamese.",
+    "question1_5_answer": "I go with friends."
+  },
+  "questions2": {
+    "question2": "What do you usually talk about with your friend?"
+  },
+  "questions2_answer": {
+    "question2": "I usually talk with my friends about school, hobbies, and future plans. Sometimes we also share funny stories, discuss films, or chat about our favorite music together."
+  },
+  "questions3": {
+    "question3_1": "There are many ways to follow the news nowadays. How do you learn about world issues?",
+    "question3_2": "I will take part in a debate in front of 50 people next week. How can I make a good impression?",
+    "question3_3": "Before making a decision about an issue, you should consider both sides of it. What do you think about this?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I usually keep up with world issues by reading news articles, watching documentaries, and following updates on social media. I also listen to podcasts and discussions to get a broader perspective.",
+    "question3_2_answer": "To make a good impression, stay calm, confident, and well-prepared. Make eye contact, speak clearly, and back up your arguments with facts. Engaging with the audience and being respectful is key.",
+    "question3_3_answer": "I completely agree. Considering both sides of an issue allows for a more balanced perspective, helps make informed decisions, and shows an open-minded approach. It’s crucial for critical thinking."
+  },
+  "questions4_main": "Dear member, please give two important benefits of learning debate and speaking in public to attract new members.",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br>\n    I think learning debate and public speaking has great benefits. First, it helps improve communication skills. Second, it builds confidence in expressing ideas clearly and persuasively. This could be great for attracting new members! <br>\n    Best, <br>\n    Phuong",
+  "question4_2_text_answer": "Dear Club President, <br>\n    I believe learning debate and public speaking offers two major benefits that could attract new members to the club. Firstly, it greatly improves communication skills, allowing participants to express their thoughts clearly and persuasively. Secondly, it helps boost confidence, enabling members to speak in front of audiences and present ideas effectively. These skills are not only useful for personal growth but also beneficial for the club, as they can encourage more engagement in club activities. I would suggest incorporating more public speaking and debate-focused workshops to help new members develop these abilities. <br>\n    Best regards, <br>\n    Phuong"
+}

@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #001",
+  "club_name": "Art club",
+  "questions1": {
+    "question1_1": "How are you?",
+    "question1_2": "Which is your favorite season?",
+    "question1_3": "Which sports is the most popular in your country?",
+    "question1_4": "What are you wearing today?",
+    "question1_5": "What is your favorite kind of music?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I'm doing great, thanks!",
+    "question1_2_answer": "I love the spring.",
+    "question1_3_answer": "Football is popular.",
+    "question1_4_answer": "I’m wearing a dress.",
+    "question1_5_answer": "I enjoy listening to pop."
+  },
+  "questions2": {
+    "question2": "Tell me a painting or a photo that you like"
+  },
+  "questions2_answer": {
+    "question2": "I really like the painting Starry Night by Vincent van Gogh. The colors and swirls in the sky make me feel calm and inspired to create art."
+  },
+  "questions3": {
+    "question3_1": "I kept a painting for a long time. Tell me a thing that you have had for a long time.",
+    "question3_2": "I would like to learn painting, but I have not found an effective way. Should I take a course at my local college? Please, give me some advice.",
+    "question3_3": "Street art – where people paint on the building – is becoming popular. However, some people criticize that it is bad. What is your opinion?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I’ve had my old sketchbook for years. It holds a lot of memories, sketches from different stages of my life, and always reminds me of how much my art has evolved over time.",
+    "question3_2_answer": "If you're serious about learning painting, taking a course at your local college could be a great idea. Structured lessons with an experienced instructor can really boost your skills and provide useful feedback.",
+    "question3_3_answer": "I think street art can be a beautiful form of expression, but it also depends on the context and location. It’s important to respect the space, but when done well, it can really enhance a community's atmosphere."
+  },
+  "questions4_main": "Dear all members, The Art Club is organizing a talk to the public to attract more attention. We are going to invite an artist to give a talk to members. As a member of our club, could you give us an artist to join our talk and what topic should they share to gain more attention. We would like to have more both young and elderly members.",
+  "question4_1_text": "Write a short email to your friend (about 50 words). Tell your friend your feelings about this and what you plan to do.",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words). Tell them your thoughts about this and what you would like to do.",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that our music club is going to be closed. I'm really sad because I love spending time there with you and everyone. I plan to talk to the club president to see if there's anything we can do to keep it running. \n    <br>Let me know what you decide! \n    <br>Looking forward to hearing from you soon!\n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I was very surprised and disappointed to hear that the music club might be closed. The club means a lot to many students, including me, as it's a great place to relax, share our love for music, and make friends. I believe we should find ways to keep it active.  \n    <br> I would like to suggest organizing a fundraising event or asking the school for support. I'm also happy to volunteer to help with organizing activities or promoting the club to attract more members. Please consider giving us a chance to keep the club alive.  \n    <br> Best regards,  \n    <br> Jimmy"
+}

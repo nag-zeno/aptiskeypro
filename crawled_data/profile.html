@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trang cá nhân – AptisKey</title>
+  <meta name="description" content="Quản lý thông tin tài khoản, cập nhật mật khẩu và theo dõi hạn sử dụng VIP trên AptisKey." />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" crossorigin="anonymous" />
+  <!-- AdminLTE -->
+  <link rel="stylesheet" href="./css/adminlte/adminlte.css" />
+  <!-- OverlayScrollbars -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/styles/overlayscrollbars.min.css" crossorigin="anonymous" />
+  <!-- Neumorphism Design System -->
+  <link rel="stylesheet" href="./css/neumorphism.css" />
+
+  <style>
+    /* ===== PAGE-SPECIFIC OVERRIDES ===== */
+    .app-main { background: var(--nm-bg, #e0e5ec); }
+
+    /* ===== PROFILE CONTAINER ===== */
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 991.98px) {
+      .profile-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ===== LEFT CARD: OVERVIEW ===== */
+    .card-overview {
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-out-lg);
+      border-radius: var(--nm-r-xl, 28px);
+      padding: 36px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .avatar-wrapper {
+      position: relative;
+      width: 140px; height: 140px;
+      border-radius: 50%;
+      box-shadow: var(--nm-shadow-out, 6px 6px 16px #a3b1c6, -6px -6px 16px #fff);
+      padding: 8px;
+      background: var(--nm-bg);
+      margin-bottom: 24px;
+    }
+    
+    .avatar-inner {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      box-shadow: var(--nm-shadow-in, inset 4px 4px 10px #a3b1c6, inset -4px -4px 10px #fff);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .avatar-img {
+      width: 80%; height: 80%;
+      object-fit: contain;
+    }
+    
+    .avatar-select-btn {
+      position: absolute;
+      bottom: 2px; right: 2px;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      border: none;
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-out, 3px 3px 8px #a3b1c6, -3px -3px 8px #fff);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--nm-primary);
+      cursor: pointer;
+      font-size: 16px;
+      transition: var(--nm-transition-fast);
+    }
+    .avatar-select-btn:hover {
+      box-shadow: var(--nm-shadow-in, inset 2px 2px 5px #a3b1c6, inset -2px -2px 5px #fff);
+      color: var(--nm-secondary);
+    }
+
+    .profile-name {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--nm-text);
+      margin-bottom: 6px;
+    }
+    
+    .profile-email {
+      font-size: 14px;
+      color: var(--nm-text-muted);
+      margin-bottom: 20px;
+      word-break: break-all;
+    }
+    
+    .role-badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: var(--nm-r-full);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      box-shadow: var(--nm-shadow-flat);
+      background: var(--nm-bg);
+      color: var(--nm-primary);
+      margin-bottom: 24px;
+    }
+    
+    .vip-status-box {
+      width: 100%;
+      border-radius: var(--nm-r-m, 16px);
+      padding: 16px;
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-in);
+      text-align: left;
+    }
+    .vip-title {
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .vip-exp {
+      font-size: 12px;
+      color: var(--nm-text-muted);
+      font-weight: 600;
+    }
+
+    /* ===== RIGHT COLUMN: SETTINGS ===== */
+    .settings-card {
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-out-lg);
+      border-radius: var(--nm-r-xl, 28px);
+      padding: 32px;
+    }
+    
+    .settings-section-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--nm-text);
+      margin-bottom: 24px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid rgba(163,177,198,0.25);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .nm-form-group {
+      margin-bottom: 20px;
+    }
+    
+    .nm-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--nm-text-muted);
+      margin-bottom: 8px;
+    }
+    
+    .nm-input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    
+    .nm-input-icon {
+      position: absolute;
+      left: 16px;
+      color: var(--nm-text-muted);
+      font-size: 15px;
+      pointer-events: none;
+    }
+    
+    .nm-input {
+      width: 100%;
+      padding: 12px 16px 12px 42px;
+      border: none;
+      outline: none;
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-in);
+      border-radius: var(--nm-r-m, 16px);
+      color: var(--nm-text);
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      transition: var(--nm-transition);
+    }
+    .nm-input:focus {
+      box-shadow: var(--nm-shadow-in-lg);
+    }
+    
+    .nm-input.readonly {
+      background: rgba(163,177,198,0.1);
+      box-shadow: none;
+      cursor: not-allowed;
+      color: var(--nm-text-light);
+    }
+    
+    .pw-toggle-btn {
+      position: absolute;
+      right: 14px;
+      border: none;
+      background: transparent;
+      color: var(--nm-text-muted);
+      cursor: pointer;
+      padding: 4px;
+      font-size: 16px;
+    }
+    
+    .nm-btn-save {
+      border: none;
+      outline: none;
+      padding: 10px 24px;
+      border-radius: var(--nm-r-full);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--nm-primary), var(--nm-secondary));
+      box-shadow: 0 4px 16px var(--nm-primary-glow);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--nm-transition);
+    }
+    .nm-btn-save:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px var(--nm-primary-glow);
+    }
+    .nm-btn-save:active {
+      transform: translateY(1px);
+    }
+
+    /* ===== PRESET AVATAR CHOOSER ===== */
+    .avatar-presets {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding: 10px;
+    }
+    .preset-item {
+      aspect-ratio: 1;
+      border-radius: 50%;
+      box-shadow: var(--nm-shadow-out, 4px 4px 10px #a3b1c6, -4px -4px 10px #fff);
+      padding: 6px;
+      cursor: pointer;
+      background: var(--nm-bg);
+      transition: var(--nm-transition);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .preset-item img {
+      width: 80%; height: 80%;
+      object-fit: contain;
+    }
+    .preset-item:hover {
+      transform: scale(1.05);
+    }
+    .preset-item.active {
+      box-shadow: var(--nm-shadow-in, inset 4px 4px 10px #a3b1c6, inset -4px -4px 10px #fff);
+      border: 2px solid var(--nm-primary);
+    }
+  </style>
+</head>
+
+<body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+  <!--begin::App Wrapper-->
+  <div class="app-wrapper">
+    
+    <!--begin::Header-->
+    <nav class="app-header navbar navbar-expand bg-body">
+      <!--begin::Container-->
+      <div class="container-fluid">
+        <!--begin::Start Navbar Links-->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button">
+              <i class="bi bi-list"></i>
+            </a>
+          </li>
+          <li class="nav-item d-none d-md-block">
+            <a href="/home.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item d-none d-md-block">
+            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
+          </li>
+        </ul>
+        <!--end::Start Navbar Links-->
+
+        <!--begin::End Navbar Links-->
+        <ul class="navbar-nav ms-auto">
+          <!--begin::User Menu Dropdown-->
+          <li class="nav-item dropdown user-menu">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              <img id="userAvatarSmall" src="./images/assets/img/avatar.png" class="user-image rounded-circle shadow" alt="User Image" />
+              <span class="d-none d-md-inline" id="userName">Học viên</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+              <!--begin::User Image-->
+              <li class="user-header text-bg-primary">
+                <img id="userAvatarHeader" src="./images/assets/img/avatar.png" class="rounded-circle shadow" alt="User Image" />
+                <p>
+                  <span id="userNameDetail">Học viên</span>
+                  <small id="status_hocvien">Học viên chính thức</small>
+                </p>
+              </li>
+              <!--end::User Image-->
+              <!--begin::Menu Footer-->
+              <li class="user-footer">
+                <a href="/profile.html" class="btn btn-default btn-flat">Profile</a>
+                <a href="#" id="signOutBtn" class="btn btn-default btn-flat float-end">Đăng xuất</a>
+              </li>
+              <!--end::Menu Footer-->
+            </ul>
+          </li>
+          <!--end::User Menu Dropdown-->
+        </ul>
+        <!--end::End Navbar Links-->
+      </div>
+      <!--end::Container-->
+    </nav>
+    <!--end::Header-->
+
+    <!--begin::Sidebar-->
+    <aside class="app-sidebar bg-body-shadow shadow" data-background-color="dark">
+      <!--begin::Sidebar Brand-->
+      <div class="sidebar-brand">
+        <!--begin::Brand Link-->
+        <a href="/home.html" class="brand-link text-decoration-none">
+          <span class="brand-text fw-light">AptisKey</span>
+        </a>
+        <!--end::Brand Link-->
+      </div>
+      <!--end::Sidebar Brand-->
+
+      <!--begin::Sidebar Wrapper-->
+      <div class="sidebar-wrapper">
+        <nav class="mt-2">
+          <!--begin::Sidebar Menu-->
+          <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
+            
+            <li class="nav-item">
+              <a href="/home.html" class="nav-link">
+                <i class="nav-icon bi bi-speedometer"></i>
+                <p>Dashboard</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/history.html" class="nav-link">
+                <i class="nav-icon bi bi-journal-text"></i>
+                <p>Lịch sử làm bài</p>
+              </a>
+            </li>
+
+            <li class="nav-header">LUYỆN TẬP KỸ NĂNG</li>
+            <li class="nav-item">
+              <a href="/grammar_bode.html" class="nav-link">
+                <i class="nav-icon bi bi-circle text-primary"></i>
+                <p>Luyện Grammar</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/reading_bode.html" class="nav-link">
+                <i class="nav-icon bi bi-circle text-success"></i>
+                <p>Luyện Reading</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/listening_bode.html" class="nav-link">
+                <i class="nav-icon bi bi-circle text-warning"></i>
+                <p>Luyện Listening</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/writing_bode.html" class="nav-link">
+                <i class="nav-icon bi bi-circle text-danger"></i>
+                <p>Luyện Writing</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/speaking_question.html" class="nav-link">
+                <i class="nav-icon bi bi-circle text-info"></i>
+                <p>Luyện Speaking</p>
+              </a>
+            </li>
+
+            <li class="nav-header">TÀI KHOẢN</li>
+            <li class="nav-item">
+              <a href="/profile.html" class="nav-link active">
+                <i class="nav-icon bi bi-person-circle"></i>
+                <p>Trang cá nhân</p>
+              </a>
+            </li>
+          </ul>
+          <!--end::Sidebar Menu-->
+        </nav>
+      </div>
+      <!--end::Sidebar Wrapper-->
+    </aside>
+    <!--end::Sidebar-->
+
+    <!--begin::App Main-->
+    <main class="app-main">
+      <!--begin::App Content Header-->
+      <div class="app-content-header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <h3 class="mb-0">Trang cá nhân</h3>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                <li class="breadcrumb-item"><a href="/home.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Trang cá nhân</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end::App Content Header-->
+
+      <!--begin::App Content-->
+      <div class="app-content">
+        <div class="container-fluid">
+          
+          <div class="profile-grid">
+            
+            <!-- LEFT COLUMN: OVERVIEW -->
+            <div class="card-overview">
+              <div class="avatar-wrapper">
+                <div class="avatar-inner">
+                  <img id="profileAvatarLarge" src="./images/assets/img/avatar.png" class="avatar-img" alt="Avatar lớn" />
+                </div>
+                <button class="avatar-select-btn" id="changeAvatarBtn" title="Đổi ảnh đại diện" data-bs-toggle="modal" data-bs-target="#avatarChooserModal">
+                  <i class="bi bi-camera-fill"></i>
+                </button>
+              </div>
+              
+              <div class="profile-name" id="profileNameDisplay">Đang tải...</div>
+              <div class="profile-email" id="profileEmailDisplay">Đang tải...</div>
+              
+              <div class="role-badge" id="profileRoleDisplay">Học viên</div>
+              
+              <div class="vip-status-box">
+                <div class="vip-title" id="vipTitle">
+                  <i class="bi bi-star-fill text-warning"></i> VIP Member
+                </div>
+                <div class="vip-exp" id="vipExpiryDisplay">Thời hạn: Đang tải...</div>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN: SETTINGS -->
+            <div class="settings-card">
+              
+              <!-- SECTION 1: PERSONAL INFORMATION -->
+              <form id="profileInfoForm">
+                <div class="settings-section-title">
+                  <i class="bi bi-person-fill"></i> Thông tin tài khoản
+                </div>
+                
+                <div class="nm-form-group">
+                  <label class="nm-label">Địa chỉ Email (Không thể thay đổi)</label>
+                  <div class="nm-input-wrapper">
+                    <i class="bi bi-envelope-fill nm-input-icon"></i>
+                    <input type="email" id="profileEmailInput" class="nm-input readonly" readonly value="loading@example.com" />
+                  </div>
+                </div>
+                
+                <div class="nm-form-group">
+                  <label class="nm-label" for="profileNameInput">Họ và tên hiển thị</label>
+                  <div class="nm-input-wrapper">
+                    <i class="bi bi-person-fill nm-input-icon"></i>
+                    <input type="text" id="profileNameInput" class="nm-input" required placeholder="Họ và tên của bạn" />
+                  </div>
+                </div>
+                
+                <div class="text-end mb-4">
+                  <button type="submit" class="nm-btn-save" id="btnSaveInfo">
+                    <i class="bi bi-check-circle-fill"></i> Lưu thay đổi
+                  </button>
+                </div>
+              </form>
+              
+              <!-- SECTION 2: PASSWORD CHANGE -->
+              <form id="passwordChangeForm">
+                <div class="settings-section-title">
+                  <i class="bi bi-lock-fill"></i> Thay đổi mật khẩu
+                </div>
+                
+                <div class="nm-form-group">
+                  <label class="nm-label" for="oldPasswordInput">Mật khẩu hiện tại</label>
+                  <div class="nm-input-wrapper">
+                    <i class="bi bi-shield-lock-fill nm-input-icon"></i>
+                    <input type="password" id="oldPasswordInput" class="nm-input" required placeholder="Nhập mật khẩu đang dùng" />
+                    <button type="button" class="pw-toggle-btn" onclick="togglePasswordVisibility('oldPasswordInput')">
+                      <i class="bi bi-eye-fill" id="oldPasswordInput_eye"></i>
+                    </button>
+                  </div>
+                </div>
+                
+                <div class="nm-form-group">
+                  <label class="nm-label" for="newPasswordInput">Mật khẩu mới</label>
+                  <div class="nm-input-wrapper">
+                    <i class="bi bi-key-fill nm-input-icon"></i>
+                    <input type="password" id="newPasswordInput" class="nm-input" required placeholder="Tối thiểu 8 ký tự" />
+                    <button type="button" class="pw-toggle-btn" onclick="togglePasswordVisibility('newPasswordInput')">
+                      <i class="bi bi-eye-fill" id="newPasswordInput_eye"></i>
+                    </button>
+                  </div>
+                </div>
+                
+                <div class="nm-form-group">
+                  <label class="nm-label" for="confirmPasswordInput">Xác nhận mật khẩu mới</label>
+                  <div class="nm-input-wrapper">
+                    <i class="bi bi-key-fill nm-input-icon"></i>
+                    <input type="password" id="confirmPasswordInput" class="nm-input" required placeholder="Nhập lại mật khẩu mới" />
+                    <button type="button" class="pw-toggle-btn" onclick="togglePasswordVisibility('confirmPasswordInput')">
+                      <i class="bi bi-eye-fill" id="confirmPasswordInput_eye"></i>
+                    </button>
+                  </div>
+                </div>
+                
+                <div class="text-end">
+                  <button type="submit" class="nm-btn-save" id="btnChangePassword">
+                    <i class="bi bi-shield-check"></i> Cập nhật mật khẩu
+                  </button>
+                </div>
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <!--end::App Content-->
+    </main>
+    <!--end::App Main-->
+
+    <!--begin::Footer-->
+    <footer class="app-footer text-center bg-body py-3 border-top">
+      <strong>
+        Copyright &copy; 2026&nbsp;
+        <a href="/home.html" class="text-decoration-none">AptisPro</a>.
+      </strong>
+      All rights reserved.
+    </footer>
+    <!--end::Footer-->
+  </div>
+  <!--end::App Wrapper-->
+
+  <!-- Modal Liên hệ -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="contactModalLabel">📞 Thông tin liên hệ</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-center text-muted">Kênh hỗ trợ hiện đang được cập nhật. Vui lòng quay lại sau.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Chọn Avatar Preset -->
+  <div class="modal fade animate__animated animate__fadeIn" id="avatarChooserModal" tabindex="-1" aria-labelledby="avatarChooserLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 360px;">
+      <div class="modal-content" style="background: var(--nm-bg); box-shadow: var(--nm-shadow-out-lg); border-radius: var(--nm-r-xl); border: none;">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold" id="avatarChooserLabel" style="color: var(--nm-text);">✨ Chọn ảnh đại diện</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-muted small mb-3">Vui lòng chọn một trong các hình ảnh đại diện Neumorphic độc đáo dưới đây:</p>
+          
+          <div class="avatar-presets">
+            <div class="preset-item active" onclick="selectAvatar('./images/assets/img/avatar.png', this)">
+              <img src="./images/assets/img/avatar.png" alt="Avatar 1" />
+            </div>
+            <div class="preset-item" onclick="selectAvatar('./images/assets/img/avatar3.png', this)">
+              <img src="./images/assets/img/avatar3.png" alt="Avatar 2" />
+            </div>
+            <div class="preset-item" onclick="selectAvatar('./images/assets/img/avatar4.png', this)">
+              <img src="./images/assets/img/avatar4.png" alt="Avatar 3" />
+            </div>
+            <div class="preset-item" onclick="selectAvatar('./images/assets/img/avatar5.png', this)">
+              <img src="./images/assets/img/avatar5.png" alt="Avatar 4" />
+            </div>
+            <div class="preset-item" onclick="selectAvatar('./images/assets/img/avatar2.png', this)">
+              <img src="./images/assets/img/avatar2.png" alt="Avatar 5" />
+            </div>
+            <div class="preset-item" onclick="selectAvatar('./images/assets/img/user.png', this)">
+              <img src="./images/assets/img/user.png" alt="Avatar 6" />
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-0 pt-0">
+          <button type="button" class="btn btn-secondary" style="border-radius: var(--nm-r-full); padding: 6px 18px;" data-bs-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container cho thông báo Neumorphic -->
+  <div id="toastContainer" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 10px;"></div>
+
+  <!-- Script Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/browser/overlayscrollbars.browser.es6.min.js" crossorigin="anonymous"></script>
+  <script src="./js/adminlte/adminlte.js"></script>
+  <script src="./js/common.js?v=1.0.1"></script>
+
+  <!-- Script điều khiển trang profile -->
+  <script>
+    // 1. Phục vụ bật tắt ẩn/hiện mật khẩu
+    function togglePasswordVisibility(inputId) {
+      const input = document.getElementById(inputId);
+      const eye = document.getElementById(inputId + '_eye');
+      if (input.type === 'password') {
+        input.type = 'text';
+        eye.className = 'bi bi-eye-slash-fill';
+      } else {
+        input.type = 'password';
+        eye.className = 'bi bi-eye-fill';
+      }
+    }
+
+    // 2. Quản lý Avatar Preset
+    // Lưu avatar hiện tại vào localStorage
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedAvatar = localStorage.getItem('profile_avatar') || './images/assets/img/avatar.png';
+      applyAvatar(savedAvatar);
+
+      // Đồng bộ trạng thái active trong chooser modal
+      const presets = document.querySelectorAll('.preset-item');
+      presets.forEach(item => {
+        const img = item.querySelector('img');
+        if (img && img.getAttribute('src') === savedAvatar) {
+          presets.forEach(p => p.classList.remove('active'));
+          item.classList.add('active');
+        }
+      });
+    });
+
+    function selectAvatar(avatarPath, element) {
+      localStorage.setItem('profile_avatar', avatarPath);
+      applyAvatar(avatarPath);
+      
+      // Đổi class active trong modal
+      const presets = document.querySelectorAll('.preset-item');
+      presets.forEach(item => item.classList.remove('active'));
+      element.classList.add('active');
+      
+      showToast('success', 'Đổi ảnh đại diện', 'Đã cập nhật ảnh đại diện mới.');
+    }
+
+    function applyAvatar(path) {
+      document.getElementById('profileAvatarLarge').src = path;
+      document.getElementById('userAvatarSmall').src = path;
+      document.getElementById('userAvatarHeader').src = path;
+    }
+
+    // 3. Tải thông tin cá nhân lúc đầu
+    document.addEventListener("DOMContentLoaded", async () => {
+      // Đợi common.js load user xong hoặc tự gọi API lấy
+      const token = localStorage.getItem('ak_token');
+      const headers = {};
+      if (token) {
+        headers['Authorization'] = 'Bearer ' + token;
+      }
+      
+      try {
+        const resp = await fetch('/api/me', { headers, credentials: 'include' });
+        if (!resp.ok) return;
+        
+        const data = await resp.json();
+        
+        // Điền dữ liệu vào form cài đặt
+        document.getElementById('profileEmailInput').value = data.email;
+        document.getElementById('profileNameInput').value = data.full_name;
+        
+        // Điền dữ liệu vào card tổng quan
+        document.getElementById('profileNameDisplay').textContent = data.full_name;
+        document.getElementById('profileEmailDisplay').textContent = data.email;
+        
+        const roleDisplay = document.getElementById('profileRoleDisplay');
+        if (data.role === 'admin') {
+          roleDisplay.textContent = 'Administrator';
+          roleDisplay.style.color = 'var(--nm-secondary)';
+        } else {
+          roleDisplay.textContent = 'Học viên';
+        }
+        
+        // Xử lý VIP status
+        const expiryDisplay = document.getElementById('vipExpiryDisplay');
+        const vipTitle = document.getElementById('vipTitle');
+        if (data.vip_expires_at) {
+          const expDate = new Date(data.vip_expires_at);
+          const now = new Date();
+          
+          if (expDate > now) {
+            vipTitle.innerHTML = `<i class="bi bi-star-fill text-warning"></i> Tài khoản VIP`;
+            expiryDisplay.textContent = 'Ngày hết hạn: ' + expDate.toLocaleDateString('vi-VN');
+          } else {
+            vipTitle.innerHTML = `<i class="bi bi-star text-muted"></i> Tài khoản thường`;
+            expiryDisplay.innerHTML = `VIP đã hết hạn từ: ${expDate.toLocaleDateString('vi-VN')}. <a href="/gia-han" style="color:var(--nm-primary); text-decoration:underline;">Gia hạn</a>`;
+          }
+        } else {
+          vipTitle.innerHTML = `<i class="bi bi-star text-muted"></i> Tài khoản thường`;
+          expiryDisplay.innerHTML = `Bạn chưa đăng ký VIP. <a href="/gia-han" style="color:var(--nm-primary); text-decoration:underline;">Nâng cấp ngay</a>`;
+        }
+        
+      } catch (err) {
+        console.error('Không tải được thông tin cá nhân:', err);
+      }
+    });
+
+    // 4. Submit form thay đổi thông tin cá nhân
+    document.getElementById('profileInfoForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const newName = document.getElementById('profileNameInput').value.trim();
+      if (!newName) {
+        showToast('error', 'Lỗi nhập liệu', 'Vui lòng điền họ và tên.');
+        return;
+      }
+      
+      const token = localStorage.getItem('ak_token');
+      const headers = { 
+        'Content-Type': 'application/json'
+      };
+      if (token) {
+        headers['Authorization'] = 'Bearer ' + token;
+      }
+      
+      const btn = document.getElementById('btnSaveInfo');
+      btn.disabled = true;
+      btn.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Đang lưu...`;
+      
+      try {
+        const resp = await fetch('/auth/profile', {
+          method: 'PUT',
+          headers,
+          body: JSON.stringify({ full_name: newName }),
+          credentials: 'include'
+        });
+        
+        const data = await resp.json();
+        if (resp.ok) {
+          showToast('success', 'Thành công', 'Thông tin cá nhân đã được cập nhật.');
+          
+          // Cập nhật lại hiển thị trên giao diện
+          document.getElementById('profileNameDisplay').textContent = data.full_name;
+          document.getElementById('userName').textContent = data.full_name;
+          document.getElementById('userNameDetail').textContent = data.full_name;
+        } else {
+          showToast('error', 'Lưu thất bại', data.detail || 'Có lỗi xảy ra, vui lòng thử lại.');
+        }
+      } catch (err) {
+        showToast('error', 'Lỗi kết nối', 'Không thể kết nối với máy chủ.');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = `<i class="bi bi-check-circle-fill"></i> Lưu thay đổi`;
+      }
+    });
+
+    // 5. Submit form đổi mật khẩu
+    document.getElementById('passwordChangeForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const oldPw = document.getElementById('oldPasswordInput').value;
+      const newPw = document.getElementById('newPasswordInput').value;
+      const confirmPw = document.getElementById('confirmPasswordInput').value;
+      
+      if (newPw.length < 8) {
+        showToast('error', 'Độ mạnh mật khẩu', 'Mật khẩu mới phải có ít nhất 8 ký tự.');
+        return;
+      }
+      
+      if (newPw !== confirmPw) {
+        showToast('error', 'Xác nhận mật khẩu', 'Mật khẩu xác nhận không trùng khớp.');
+        return;
+      }
+      
+      const token = localStorage.getItem('ak_token');
+      const headers = { 
+        'Content-Type': 'application/json'
+      };
+      if (token) {
+        headers['Authorization'] = 'Bearer ' + token;
+      }
+      
+      const btn = document.getElementById('btnChangePassword');
+      btn.disabled = true;
+      btn.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Đang xử lý...`;
+      
+      try {
+        const resp = await fetch('/auth/change-password', {
+          method: 'POST',
+          headers,
+          body: JSON.stringify({
+            old_password: oldPw,
+            new_password: newPw,
+            confirm_new_password: confirmPw
+          }),
+          credentials: 'include'
+        });
+        
+        const data = await resp.json();
+        if (resp.ok) {
+          showToast('success', 'Thành công', 'Đã thay đổi mật khẩu thành công!');
+          document.getElementById('passwordChangeForm').reset();
+        } else {
+          showToast('error', 'Thay đổi thất bại', data.detail || 'Mật khẩu cũ không chính xác.');
+        }
+      } catch (err) {
+        showToast('error', 'Lỗi kết nối', 'Không thể kết nối với máy chủ.');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = `<i class="bi bi-shield-check"></i> Cập nhật mật khẩu`;
+      }
+    });
+
+    // 6. Hiển thị thông báo Toast Neumorphic
+    function showToast(type, title, msg, duration = 4000) {
+      const icons = { success: '✅', error: '❌', info: '💡' };
+      const toast = document.createElement('div');
+      
+      // CSS Neumorphic Toast
+      toast.style.background = 'var(--nm-bg)';
+      toast.style.boxShadow = 'var(--nm-shadow-out)';
+      toast.style.borderRadius = 'var(--nm-r-m)';
+      toast.style.padding = '12px 20px';
+      toast.style.display = 'flex';
+      toast.style.alignItems = 'center';
+      toast.style.gap = '12px';
+      toast.style.minWidth = '280px';
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateY(10px)';
+      toast.style.transition = 'all 0.3s ease';
+      
+      toast.innerHTML = `
+        <span style="font-size: 20px;">${icons[type] || 'ℹ️'}</span>
+        <div style="flex-grow: 1;">
+          <div style="font-weight: 800; font-size: 13px; color: var(--nm-text);">${title}</div>
+          ${msg ? `<div style="font-size: 11px; color: var(--nm-text-muted); margin-top: 2px;">${msg}</div>` : ''}
+        </div>
+        <button style="border: none; background: transparent; font-size: 16px; color: var(--nm-text-muted); cursor: pointer;" onclick="this.parentElement.remove()">×</button>
+      `;
+      
+      document.getElementById('toastContainer').appendChild(toast);
+      
+      // Kích hoạt animation hiện
+      setTimeout(() => {
+        toast.style.opacity = '1';
+        toast.style.transform = 'translateY(0)';
+      }, 50);
+      
+      // Tự động xóa
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(-10px)';
+        setTimeout(() => toast.remove(), 300);
+      }, duration);
+    }
+  </script>
+</body>
+</html>

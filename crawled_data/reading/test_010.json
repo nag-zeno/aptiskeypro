@@ -1,0 +1,228 @@
+{
+  "label": "Bộ đề #10",
+  "questions1": [
+    {
+      "questionStart": "I would like to visit a different ",
+      "answerOptions": [
+        "country",
+        "small",
+        "big"
+      ],
+      "questionEnd": " next year.",
+      "correctAnswer": "country"
+    },
+    {
+      "questionStart": "Please make sure to keep the kitchen ",
+      "answerOptions": [
+        "green",
+        "boring",
+        "clean"
+      ],
+      "questionEnd": " after cooking.",
+      "correctAnswer": "clean"
+    },
+    {
+      "questionStart": "We have a math ",
+      "answerOptions": [
+        "class",
+        "lunch",
+        "sea"
+      ],
+      "questionEnd": " every Tuesday morning.",
+      "correctAnswer": "class"
+    },
+    {
+      "questionStart": "I really enjoy volunteering to help ",
+      "answerOptions": [
+        "myself",
+        "father",
+        "other"
+      ],
+      "questionEnd": " students with homework.",
+      "correctAnswer": "other"
+    },
+    {
+      "questionStart": "Could you please explain these new ",
+      "answerOptions": [
+        "small",
+        "bring",
+        "words"
+      ],
+      "questionEnd": " in the lesson?",
+      "correctAnswer": "words"
+    }
+  ],
+  "question2Topic": "University open day",
+  "question2Content": [
+    {
+      "text": "Before the open day, please contact us by phone or email so we can record your personal details.",
+      "id": "item1"
+    },
+    {
+      "text": "Using this information, we’ll prepare an identification card for you to collect upon arrival.",
+      "id": "item2"
+    },
+    {
+      "text": "You’ll need to show this card to enter the introductory talk and morning lectures.",
+      "id": "item3"
+    },
+    {
+      "text": "Every visitor will have the chance to join a Q&A session with current students.",
+      "id": "item4"
+    },
+    {
+      "text": "After the presentations, you’ll be able to explore different departments across the campus.",
+      "id": "item5"
+    }
+  ],
+  "question3Topic": "AI - Artificial Intelligence",
+  "question3Content": [
+    {
+      "text": "Over the past decade, artificial intelligence has reshaped industries around the world.",
+      "id": "item1"
+    },
+    {
+      "text": "Early AI systems were capable of handling only simple pattern recognition tasks.",
+      "id": "item2"
+    },
+    {
+      "text": "In the past, high computational costs slowed down the progress of AI development.",
+      "id": "item3"
+    },
+    {
+      "text": "Today, AI engineers design sophisticated models for applications such as language translation.",
+      "id": "item4"
+    },
+    {
+      "text": "Modern AI tools enable businesses to analyze vast amounts of data and make smarter decisions.",
+      "id": "item5"
+    }
+  ],
+  "question4Topic": "Music festival (phiên bản 2)",
+  "question4Text": [
+    "<strong>Here are four people's opinions about the same topic. Read carefully and answer the questions below.</strong>",
+    "<strong>A:</strong> I went to the festival, but on the first day, I didn’t enjoy it much. It felt a bit dull and not very exciting. Still, the stage was bright with lights and fireworks, and the overall atmosphere was unforgettable. The music lifted my mood and made me feel truly happy. Interestingly, by the final day, everything seemed different—I began to enjoy it a lot more. In the end, I was really glad I decided to go.",
+    "<strong>B:</strong> I’ve been to this festival every year, and of course, I joined again this time. But honestly, I didn’t enjoy the music, and the weather made things worse. It kept raining, turning the ground muddy and uncomfortable for everyone. After this experience, I think I won’t go again next year.",
+    "<strong>C:</strong> I absolutely loved the energy of the music and enjoyed every part of the program from start to finish. Although it rained a little, it didn’t bother me at all. The only thing I didn’t like was the expensive ticket — I spent more than I had planned. Despite that, I still had a great time and hope the organizers consider lowering the price in the future.",
+    "<strong>D:</strong> I was one of the musicians performing on the first day of the festival, and I also met several familiar bands there. Even though I only played a few songs, I stayed until the event ended. The pay wasn’t great, but I really enjoyed myself because I got to reconnect with friends. However, I’m still thinking about the long travel distance since the venue was quite far from the city center."
+  ],
+  "question4Content": [
+    {
+      "question": "Who enjoyed the music throughout all the festival?",
+      "id": "question4_q1",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who only liked the last day?",
+      "id": "question4_q2",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Who was disappointed with the weather?",
+      "id": "question4_q3",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who met old friends again?",
+      "id": "question4_q4",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Who thought the location was not good?",
+      "id": "question4_q5",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Who didn’t like the festival overall?",
+      "id": "question4_q6",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who thought it was expensive?",
+      "id": "question4_q7",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    }
+  ],
+  "correctAnswersQuestion4": [
+    "C",
+    "A",
+    "B",
+    "D",
+    "D",
+    "B",
+    "C"
+  ],
+  "question5Topic": "Women mathematicians (phiên bản 2)",
+  "options": [
+    "",
+    "Achievements obscured by gender",
+    "Recognizing the accomplishments of pioneering women",
+    "Men are unfairly given credit",
+    "A long career demonstrates exceptional ability",
+    "The labels can change perceptions",
+    "Striving to create gender balance",
+    "Uniformity can be a disadvantage"
+  ],
+  "paragraph_question5": [
+    "Achievements often go unnoticed when gender biases come into play. Many groundbreaking contributions from women in science, technology, and other fields are overshadowed by societal expectations, leading to a lack of recognition for their hard work and dedication.",
+    "Recognizing the accomplishments of pioneering women is essential for breaking stereotypes and inspiring future generations. Women like Marie Curie, Ada Lovelace, and Katherine Johnson changed the world with their brilliance, yet their achievements were often marginalized due to their gender.",
+    "Men are unfairly given credit for work that was often a joint effort or even led by women. History has been shaped by this bias, where the achievements of women were either ignored or misattributed, despite their immense contributions to progress.",
+    "A long career is a testament to one's exceptional abilities. Take the story of a female engineer who spent decades improving infrastructure in underdeveloped regions. Despite her groundbreaking work, she was often overlooked simply because of her gender, but her work left an indelible mark on society.",
+    "Labels can change perceptions dramatically. The label of 'genius' or 'pioneer' is often reserved for men, but when a woman is labeled in the same way, it challenges stereotypes and forces society to recognize her contributions. This shift in perception is key to breaking down barriers and opening doors for others.",
+    "Striving to create gender balance in the workplace and society at large has become a movement. Companies and governments are starting to realize that diverse teams lead to better solutions, yet the struggle for equal representation continues. The push for gender balance is not just about fairness but also about enhancing productivity and creativity.",
+    "Uniformity can be a disadvantage in many settings. When everyone is expected to conform to the same mold, innovation and individuality suffer. The story of a diverse team at a tech startup shows how embracing different perspectives led to creative breakthroughs, proving that diversity is a powerful asset."
+  ],
+  "meohoc": [
+    "<strong>Mẹo nhớ Keyword:</strong> Obscured → Pioneering → Unfairly → A long career → Labels → Gender balance → Disadvantage.",
+    "<strong>Nhớ theo đoạn văn:</strong> Đôi khi, thành tựu bị <strong>che mờ (Obscured)</strong> bởi định kiến giới. Những phụ nữ <strong>tiên phong (Pioneering)</strong> thường gặp khó khăn trong việc được công nhận, trong khi đàn ông đôi khi được khen <strong>không công bằng (Unfairly)</strong>. <strong>Một sự nghiệp dài (A long career)</strong> thể hiện năng lực thật sự, nhưng <strong>nhãn mác (Labels)</strong> xã hội có thể làm sai lệch cách nhìn. Cần thúc đẩy <strong>cân bằng giới (Gender balance)</strong>, dù sự <strong>đồng nhất tuyệt đối</strong> đôi khi lại là <strong>bất lợi (Disadvantage)</strong>."
+  ]
+}

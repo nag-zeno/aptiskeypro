@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #005",
+  "club_name": "Car club",
+  "questions1": {
+    "question1_1": "What is your favourite colour?",
+    "question1_2": "What is the weather like today?",
+    "question1_3": "How are you?",
+    "question1_4": "Which is your favorite season?",
+    "question1_5": "What do you do on the weekend?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "Blue.",
+    "question1_2_answer": "It's sunny.",
+    "question1_3_answer": "I'm doing great.",
+    "question1_4_answer": "I love the spring.",
+    "question1_5_answer": "I relax at home."
+  },
+  "questions2": {
+    "question2": "Do you usually travel by car?"
+  },
+  "questions2_answer": {
+    "question2": "Yes, I usually travel by car, especially for trips to places that are not easily accessible by public transport. It’s more convenient and comfortable, especially for long distances."
+  },
+  "questions3": {
+    "question3_1": "Tell me about a time you traveled by car.",
+    "question3_2": "Tell me about memories when traveling by car.",
+    "question3_3": "Should we take public transportation or buy a car?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I once traveled by car to a nearby beach. It was a scenic drive, and we stopped at some small towns along the way. The trip was smooth and enjoyable, with great conversations and beautiful views.",
+    "question3_2_answer": "One memorable car trip was when my family drove to the mountains. We played music, shared stories, and had fun stops for snacks. It was one of those trips that felt timeless and unforgettable.",
+    "question3_3_answer": "Whether to take public transportation or buy a car depends on your needs. If you live in a city with good transport, public transit may be better. However, owning a car gives flexibility and convenience for trips."
+  },
+  "questions4_main": "There will be a car program running across Europe. The program invites the Car Club to send 2 representatives (1 main driver and 1 passenger) and both must have good driving skills.",
+  "question4_1_text": "Write a short email to your friend (about 50 words). Do you have any suggestions for the above positions.",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words). Do you have any suggestions for the above positions.",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I heard about the car program across Europe. I think you should be the main driver because you have excellent driving skills. As for the passenger, I suggest I take the role since I'm good with navigation and assisting. \n    <br>Let me know your thoughts! \n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I am excited to hear about the car program running across Europe. I have a suggestion for the positions. For the main driver, I recommend someone with strong driving skills and experience, like Linh. As for the passenger, I believe someone who is good at navigation and assisting with the trip details would be ideal, and I’d be happy to take on that role if needed. This way, we can ensure a smooth and enjoyable trip. \n    <br> I look forward to hearing your thoughts.  \n    <br> Best regards,  \n    <br> Phuong"
+}

@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #018",
+  "club_name": "Home living club",
+  "questions1": {
+    "question1_1": "What is your first school?",
+    "question1_2": "What’s the weather like today?",
+    "question1_3": "What is your favorite type of music?",
+    "question1_4": "What kinds of movies do you like?",
+    "question1_5": "What is your favorite film?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "My first school was ABC.",
+    "question1_2_answer": "It's sunny today.",
+    "question1_3_answer": "I love pop music.",
+    "question1_4_answer": "I like action movies.",
+    "question1_5_answer": "My favorite film is Inception."
+  },
+  "questions2": {
+    "question2": "Describe where you live?"
+  },
+  "questions2_answer": {
+    "question2": "I live in Hanoi, the capital of Vietnam. It's a bustling city known for its rich history, beautiful lakes, ancient temples, and vibrant street food culture."
+  },
+  "questions3": {
+    "question3_1": "You have to stay in the bedroom but have to share with your brother. How do you feel?",
+    "question3_2": "It is better to live in the city than in the countryside. Do you agree? Why?",
+    "question3_3": "It is better to live in the city than in the countryside. Do you agree? Why?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "Sharing a bedroom with my brother can be challenging, but it also has its benefits. We get to spend time together, and it helps build a stronger bond despite the limited space.",
+    "question3_2_answer": "Living in the city offers many conveniences such as better job opportunities, healthcare, and entertainment. However, the countryside provides peace, fresh air, and a slower pace of life, which some people prefer.",
+    "question3_3_answer": "I agree that living in the city has its advantages, like access to modern amenities and social opportunities. However, I also appreciate the tranquility and natural beauty that the countryside offers."
+  },
+  "questions4_main": "Currently, there are many young families who want to buy a house or an apartment. The club wants the members to make suggestions to help them find homes.",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that the club is asking for suggestions on how to help young families find a home. I think we could suggest offering affordable housing options and providing helpful resources like financial advice.\n    <br>Let me know what you think!\n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I understand that many young families are currently looking to buy a home or apartment. I believe the club can make a positive impact by offering practical suggestions to help them in their search.  \n    <br> First, I suggest organizing a workshop where experts can provide advice on affordable housing options, mortgages, and how to find the best deals. Additionally, we could provide a list of trusted real estate agents and financial consultants who specialize in first-time home buyers. \n    <br> Lastly, creating a community of people who have successfully purchased homes could be helpful for sharing their experiences and advice. I believe these steps will assist young families in their search and make the process easier for them.  \n    <br> Thank you for considering these suggestions. I look forward to your feedback.  \n    <br> Best regards,  \n    <br> Jimmy"
+}

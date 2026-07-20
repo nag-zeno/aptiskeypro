@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #004",
+  "club_name": "Business club",
+  "questions1": {
+    "question1_1": "What is your hobby?",
+    "question1_2": "What is your favourite food?",
+    "question1_3": "What is your favourite time of a day?",
+    "question1_4": "How do you get to work?",
+    "question1_5": "Where are you from?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I like listening to music.",
+    "question1_2_answer": "I love Pizza.",
+    "question1_3_answer": "The evening.",
+    "question1_4_answer": "I ride my bike.",
+    "question1_5_answer": "I'm From Vietnam."
+  },
+  "questions2": {
+    "question2": "Where do you usually go shopping?"
+  },
+  "questions2_answer": {
+    "question2": "I usually shop at premium stores in the city center for business attire and essentials. For gadgets, I prefer specialized outlets or online platforms."
+  },
+  "questions3": {
+    "question3_1": "I know there are a lot of successful small businesses these days. Tell me about a successful small business in your area.",
+    "question3_2": "I have a friend who wants to open a second coffee shop. She opened her first one a year ago and it was quite successful. What advice do you have to help her be more successful in her second shop?",
+    "question3_3": "Can you tell me what qualities and skills are needed to create a successful small business?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "In my area, a bakery has become successful due to its high-quality products and friendly service. It expanded by offering unique recipes and became a local favorite. People recommend it to others.",
+    "question3_2_answer": "For the second shop, she should maintain product quality and focus on customer service. Choosing a good location, promoting on social media, and creating special promotions can help attract more customers and keep them loyal.",
+    "question3_3_answer": "To build a successful small business, one needs qualities like perseverance, creativity, and adaptability. Important skills include problem-solving, communication, marketing, and the ability to understand customer needs and provide quality service."
+  },
+  "questions4_main": "Currently our club is planning to support local individuals who want to start up a small business. The club has 2 proposals: First, create a call center where customers can call to ask questions and request help. Second, create free courses to support local universities nearby. Let us know which option you would use and why.",
+  "question4_1_text": "Write a short email to your friend (about 50 words). Write a letter to a friend about your choice and the idea.",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words). Write a letter to the club manager about your choice and why.",
+  "question4_1_text_answer": "Hi Hang, <br>\n    I hope you're doing well! Our Business Club has two proposals: a call center for customer support or free courses for local universities. I think the free courses would be a better option as they would help students prepare for real-world challenges and create long-term benefits. <br>\n    Let me know what you think! <br>\n    Best, <br>\n    Nguyen",
+  "question4_2_text_answer": "Dear Club President, <br>\n    I hope this email finds you well. I am writing in response to the club's plan to support local individuals in starting small businesses. After considering the two proposals, I believe creating free courses for local universities nearby would be the better option. These courses can help students gain essential knowledge about running a business and prepare them for future challenges. Additionally, offering these courses would create a strong connection between the club and the community. <br>\n    I appreciate your consideration of my opinion and look forward to hearing more about the club's plans. <br>\n    Best regards, <br>\n    Nguyen Van Hung"
+}

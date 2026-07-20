@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaking Part 3 – Giới thiệu</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/listeningkey.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; padding-bottom: 30px; }
+
+        .intro-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        .intro-table th, .intro-table td {
+            padding: 22px 26px;
+            border: 1px solid #dee2e6;
+            vertical-align: top;
+        }
+        .intro-table thead th {
+            background-color: #e8f0fe;
+            font-weight: 700;
+            font-size: 15px;
+            color: #1a237e;
+            text-align: center;
+        }
+        .intro-table tbody td:first-child {
+            font-weight: 700;
+            font-size: 15px;
+            color: #1a1a2e;
+            background: #f5f7ff;
+            white-space: nowrap;
+        }
+        .intro-table tbody td { font-size: 14.5px; line-height: 1.75; color: #333; }
+
+        @media (max-width: 767px) {
+            .intro-table thead { display: none; }
+            .intro-table, .intro-table tbody, .intro-table tr, .intro-table td {
+                display: block;
+                width: 100%;
+            }
+            .intro-table tr {
+                border: 1px solid #dee2e6;
+                border-radius: 10px;
+                overflow: hidden;
+                margin-bottom: 14px;
+                box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+            }
+            .intro-table td {
+                border: none;
+                border-bottom: 1px solid #f0f0f0;
+                padding: 14px 18px;
+                white-space: normal !important;
+            }
+            .intro-table td:last-child { border-bottom: none; }
+            .intro-table td::before {
+                content: attr(data-label);
+                display: block;
+                font-size: 11px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.8px;
+                color: #1a237e;
+                margin-bottom: 6px;
+            }
+        }
+
+        .tip-block { margin-bottom: 12px; }
+        .tip-block:last-child { margin-bottom: 0; }
+        .tip-icon { color: #0d6efd; margin-right: 6px; }
+
+        .action-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 32px 28px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .action-card h5 { font-size: 16px; color: #6c757d; margin-bottom: 20px; }
+
+        .btn-action {
+            font-size: 16px;
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 50px;
+            width: 100%;
+            max-width: 300px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+        .btn-action:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.15); }
+    </style>
+    <!-- begin::Material You Theme Integration -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/neumorphism.css" />
+    <!-- end::Material You Theme Integration -->
+</head>
+<body>
+    <!-- begin::Material You Background Elements -->
+    <div class="nm-blob nm-blob-blue"></div><div class="nm-blob nm-blob-violet"></div>
+    <!-- end::Material You Background Elements -->
+
+
+<!-- HEADER -->
+<div class="header d-flex justify-content-between align-items-center p-3 bg-white text-dark shadow-sm">
+    <div class="d-flex align-items-center">
+        <a href="/speaking_question.html" class="me-3 text-decoration-none text-dark fs-4">
+            <i class="bi bi-house-door-fill me-2"></i>
+            <span>AptisPro</span>
+        </a>
+    </div>
+    <div class="fs-5 fw-bold">Speaking Part 3</div>
+</div>
+
+<!-- MAIN -->
+<div class="container py-4" style="max-width: 900px;">
+
+    <h4 class="fw-bold mb-4">
+        <i class="bi bi-info-circle-fill text-primary me-2"></i>
+        Giới thiệu – Speaking Part 3
+    </h4>
+
+    <table class="intro-table mb-4">
+        <thead>
+            <tr>
+                <th style="width:20%;">Phần thi</th>
+                <th style="width:40%;">Mô tả</th>
+                <th style="width:40%;">Hướng dẫn ôn tập</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Phần thi">Part 3:<br>Mô tả, so sánh, cung cấp lý do và giải thích.</td>
+                <td data-label="Mô tả">
+                    Trong phần này, bạn sẽ được yêu cầu <strong>so sánh hai bức ảnh</strong> và sau đó trả lời
+                    <strong>hai câu hỏi</strong> liên quan đến chủ đề. Ba câu hỏi sẽ tăng dần độ khó
+                    (từ mô tả đến suy đoán).<br><br>
+                    Thời gian nói: <strong>45 giây / câu hỏi</strong>.
+                </td>
+                <td data-label="Hướng dẫn ôn tập">
+                    <div class="tip-block">
+                        <i class="bi bi-check-circle-fill tip-icon"></i>
+                        Để chuẩn bị cho bài tập này, tốt nhất là bạn nên luyện nói so sánh hai vật thể khác nhau
+                        (ví dụ: hai thành phố hoặc hai ngôi nhà). Hãy tập trung mô tả những ưu điểm và nhược điểm của chúng.
+                    </div>
+                    <div class="tip-block">
+                        <i class="bi bi-check-circle-fill tip-icon"></i>
+                        Với phần suy đoán, điều quan trọng là bạn phải đảm bảo sử dụng đúng các cấu trúc ngữ pháp
+                        (ví dụ: <em>might, could, seem to, appear to</em>…).
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="alert alert-info d-flex align-items-start gap-3 mb-4" role="alert">
+        <i class="bi bi-bar-chart-fill fs-4 mt-1"></i>
+        <div>
+            <strong>Thang điểm APTIS:</strong> từ <strong>A0</strong> đến <strong>C1</strong>.
+            Part 3 đánh giá khả năng so sánh, lập luận và suy đoán bằng tiếng Anh.
+        </div>
+    </div>
+
+    <div class="action-card">
+        <h5>Chọn chế độ học</h5>
+        <div class="d-flex justify-content-center">
+            <a href="/speaking_question3_practice" class="btn btn-primary btn-action">
+                <i class="bi bi-mic-fill"></i> Trang luyện tập
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

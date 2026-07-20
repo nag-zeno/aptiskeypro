@@ -1,0 +1,228 @@
+{
+  "label": "Bộ đề #09",
+  "questions1": [
+    {
+      "questionStart": "My whole family stays ",
+      "answerOptions": [
+        "cloud",
+        "home",
+        "road"
+      ],
+      "questionEnd": " on public holidays.",
+      "correctAnswer": "home"
+    },
+    {
+      "questionStart": "My older brother can ",
+      "answerOptions": [
+        "fly",
+        "drive",
+        "big"
+      ],
+      "questionEnd": " a truck safely.",
+      "correctAnswer": "drive"
+    },
+    {
+      "questionStart": "I really enjoy chatting with my ",
+      "answerOptions": [
+        "tree",
+        "friends",
+        "go"
+      ],
+      "questionEnd": " during lunch break.",
+      "correctAnswer": "friends"
+    },
+    {
+      "questionStart": "Let's take a short ",
+      "answerOptions": [
+        "walk",
+        "big",
+        "sea"
+      ],
+      "questionEnd": " along the riverside.",
+      "correctAnswer": "walk"
+    },
+    {
+      "questionStart": "The garden looks really ",
+      "answerOptions": [
+        "pretty",
+        "father",
+        "went"
+      ],
+      "questionEnd": " in spring.",
+      "correctAnswer": "pretty"
+    }
+  ],
+  "question2Topic": "The first american woman in space",
+  "question2Content": [
+    {
+      "text": "Encouraged by her parents, she decided to study science at university.",
+      "id": "item1"
+    },
+    {
+      "text": "Her strong academic record earned her a place in a training program in the United States.",
+      "id": "item2"
+    },
+    {
+      "text": "Her passion for space led Mae to join a dedicated research team.",
+      "id": "item3"
+    },
+    {
+      "text": "As a member of the team, she traveled into space and carried out numerous experiments.",
+      "id": "item4"
+    },
+    {
+      "text": "Some of these experiments involved growing plants and observing animals aboard the spacecraft.",
+      "id": "item5"
+    }
+  ],
+  "question3Topic": "Social Media",
+  "question3Content": [
+    {
+      "text": "In the past, slow internet speeds made streaming or uploading videos difficult.",
+      "id": "item1"
+    },
+    {
+      "text": "Early platforms offered only basic features like text posts and simple images.",
+      "id": "item2"
+    },
+    {
+      "text": "Over time, social media platforms have greatly evolved in both design and functionality.",
+      "id": "item3"
+    },
+    {
+      "text": "Today’s platforms use complex algorithms to personalize and shape each user’s feed.",
+      "id": "item4"
+    },
+    {
+      "text": "Many influencers now earn income primarily through brand sponsorships and online ads.",
+      "id": "item5"
+    }
+  ],
+  "question4Topic": "Job and trainning",
+  "question4Text": [
+    "<strong>Here are four people's experiences about choosing or starting their careers. Read carefully and answer the questions below.</strong>",
+    "<strong>A:</strong> When I first graduated from school, I wasn’t sure what to do, so I joined several volunteer programs with different companies and organizations to gain experience. I really enjoyed volunteering because it helped me decide on a career path and gave me many valuable lessons. I also believe I was able to make a difference through my work.",
+    "<strong>B:</strong> Back in school, I already knew I wanted to become a teacher, so I didn’t need to try other jobs. I decided to study education at university, which is free in my country. Last summer, I did some practical training in local schools, and it was extremely helpful for my future career.",
+    "<strong>C:</strong> When I was young, I used to help my neighbor, a plumber, with simple jobs like measuring pipes, loosening screws, and handling tools. It felt very natural for me to learn that kind of work, so later I studied for two years at university to become an electrician. Now, I’ve learned that there are shorter courses available in this field, and I regret not choosing that option instead.",
+    "<strong>D:</strong> After graduating, I found it really difficult to get a job. I applied to many companies, but none accepted me because I lacked experience. Eventually, I found work at a gaming company that allowed me to work from home. It didn’t affect my daily schedule — I worked at night while my colleagues worked during the day — and that arrangement suited me perfectly."
+  ],
+  "question4Content": [
+    {
+      "question": "Who likes working with their hands?",
+      "id": "question4_q1",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who enjoys working during their training?",
+      "id": "question4_q2",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who thinks it is very hard to get your first job?",
+      "id": "question4_q3",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Who thinks their training was too long?",
+      "id": "question4_q4",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who did not want to choose another job?",
+      "id": "question4_q5",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who enjoys working in a flexible working environment?",
+      "id": "question4_q6",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Who thinks they benefited from working for free?",
+      "id": "question4_q7",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    }
+  ],
+  "correctAnswersQuestion4": [
+    "C",
+    "B",
+    "D",
+    "C",
+    "B",
+    "D",
+    "A"
+  ],
+  "question5Topic": "Digital innovation",
+  "options": [
+    "",
+    "Redefining Leisure in the Digital age",
+    "Enhancing Connectivity with Mobile Apps",
+    "Promoting Essential Digital Literacy",
+    "Risks of Excessive Screen-Based Entertainment",
+    "Concerns About Data Privacy",
+    "Building Inclusive and Respectful Online Communities",
+    "Prioritize human-friendly designs"
+  ],
+  "paragraph_question5": [
+    "In today’s digital age, technology has fundamentally transformed the way people experience leisure. It has changed how individuals relax, interact with others, and consume entertainment. With innovations such as on-demand streaming services and virtual reality gaming, users can now enjoy highly customized entertainment experiences that match their personal preferences. Nevertheless, these technological advances can blur the line between work and leisure, as smartphones and online platforms constantly compete for people’s attention. Therefore, redefining leisure in the modern digital world involves finding a balance between technological convenience and maintaining offline well-being, ensuring that technology improves quality of life rather than creating excessive dependence on digital devices.",
+    "Mobile applications have emerged as powerful tools that strengthen global connectivity. They have significantly changed the way people communicate, cooperate, and build relationships. Through services such as instant messaging, video calls, and AI-powered social platforms, mobile apps allow individuals to interact instantly regardless of geographic or cultural distances. In addition to supporting personal communication, app ecosystems also facilitate professional networking, online education, telemedicine, and international trade. However, the increasing dependence on these technologies can also create challenges, including digital exhaustion and fierce competition for users’ attention. To fully realize their advantages, developers should design applications that emphasize accessibility, inclusiveness, and smooth integration into everyday life.",
+    "As the world becomes more digitally oriented, digital literacy has become a crucial competency for education, career development, and civic engagement. This skill goes beyond basic technical knowledge and also includes the ability to think critically, evaluate information sources, and behave responsibly in online environments. Educational institutions, businesses, and governments need to work together to create initiatives that help individuals effectively navigate digital platforms, protect their personal data, and identify misinformation. Reducing the digital divide is especially important so that disadvantaged communities can also access economic and social opportunities. Strengthening digital literacy ultimately promotes equal access and prepares people for success in an increasingly technology-driven society.",
+    "Although modern technology has greatly expanded entertainment options, excessive dependence on screen-based activities can lead to serious health and social problems. Spending long periods using smartphones, playing video games, or watching online streaming content may cause eye strain, disrupted sleep patterns, decreased physical activity, and shorter attention spans. On a social level, people may feel isolated if digital entertainment replaces meaningful real-life interactions. Addressing these concerns requires a balanced strategy that encourages digital well-being, promotes outdoor activities, and supports mindful media consumption. As technology continues to evolve, society must redefine healthy forms of entertainment that provide benefits without harming physical or mental health.",
+    "The rapid expansion of digital technologies has intensified discussions about protecting personal data. As AI-based services, online shopping, and social media platforms grow quickly, users frequently share sensitive information, often without fully understanding the potential consequences. Issues such as data breaches, unauthorized monitoring, and algorithm-based profiling have raised worries about surveillance, misuse of information, and reduced personal autonomy. To address these risks, governments, technology companies, and advocacy organizations need to cooperate in establishing stronger data protection regulations, improving transparency, and giving users greater control over their personal information. In a world where data is increasingly valuable for innovation, safeguarding privacy is vital to maintaining trust and ethical technological development.",
+    "Online platforms have the potential to connect individuals from around the world, but they can also intensify division, misinformation, and exclusion if they are not properly managed. Creating inclusive digital communities requires thoughtful design that ensures people from various backgrounds feel respected and represented. This process involves addressing problems such as cyberbullying, hate speech, and bias in algorithms, while also ensuring fair access for underrepresented groups. Social media platforms and community-based applications should emphasize transparency, diversity, and cooperative governance, allowing users to influence the standards of online interaction. When inclusivity becomes a central design principle, digital environments can encourage meaningful connections rather than deepen social fragmentation.",
+    "In a time of rapid technological progress, intuitive and user-friendly design has become a key factor in the success of digital products. An effective interface is not only visually appealing but also simplifies complex systems, improves accessibility, and ensures that technology supports users instead of overwhelming them. Many companies now follow human-centered design principles by using user feedback, behavioral data analysis, and accessibility testing to develop products that address a wide range of needs. Focusing on usability not only increases customer satisfaction but also encourages digital inclusion, ensuring that technological innovation remains practical, engaging, and accessible to people of all ages, abilities, and levels of technical expertise."
+  ],
+  "meohoc": [
+    "<strong>Mẹo nhớ Keyword:</strong> Digital Age → Mobile Apps → Digital Literacy → Risks → Data Privacy → Online Communities → Prioritize.",
+    "<strong>Nhớ theo đoạn văn:</strong> Trong kỷ nguyên số (<strong>Digital Age</strong>), con người kết nối qua các ứng dụng di động (<strong>Mobile Apps</strong>) và cần hiểu biết kỹ thuật số cơ bản (<strong>Digital Literacy</strong>). Tuy nhiên, việc sử dụng quá mức mang lại nhiều rủi ro (<strong>Risks</strong>) và lo ngại về quyền riêng tư dữ liệu (<strong>Data Privacy</strong>). Vì vậy, cần xây dựng cộng đồng mạng lành mạnh (<strong>Online Communities</strong>) và ưu tiên thiết kế thân thiện, hướng đến con người (<strong>Prioritize</strong>)."
+  ]
+}

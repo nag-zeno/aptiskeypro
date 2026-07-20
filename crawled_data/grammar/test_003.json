@@ -1,0 +1,670 @@
+{
+  "keyid": "Grammar Test3",
+  "question1_list": [
+    {
+      "question_ask": "By 2030, AI _______ many aspects of daily life.",
+      "question_answer": [
+        "will have transformed",
+        "will transform",
+        "transforms"
+      ]
+    },
+    {
+      "question_ask": "If the internet _______ down, we can't attend the meeting.",
+      "question_answer": [
+        "goes",
+        "went",
+        "will go"
+      ]
+    },
+    {
+      "question_ask": "This app _______ by millions of people worldwide.",
+      "question_answer": [
+        "is used",
+        "uses",
+        "has use"
+      ]
+    },
+    {
+      "question_ask": "She _______ her password before she could log in.",
+      "question_answer": [
+        "had forgotten",
+        "forgot",
+        "forgets"
+      ]
+    },
+    {
+      "question_ask": "I've had this laptop _______ three years.",
+      "question_answer": [
+        "for",
+        "since",
+        "during"
+      ]
+    },
+    {
+      "question_ask": "You should update the software if it _______ outdated.",
+      "question_answer": [
+        "becomes",
+        "will become",
+        "became"
+      ]
+    },
+    {
+      "question_ask": "He _______ his old phone for a newer model.",
+      "question_answer": [
+        "upgraded",
+        "upgrades",
+        "upgrading"
+      ]
+    },
+    {
+      "question_ask": "_______ you backed up your files yet?",
+      "question_answer": [
+        "Have",
+        "Did",
+        "Do"
+      ]
+    },
+    {
+      "question_ask": "The signal was _______ weak that the call kept dropping.",
+      "question_answer": [
+        "so",
+        "such",
+        "too"
+      ]
+    },
+    {
+      "question_ask": "If I _______ my phone charged, I wouldn't have missed the call.",
+      "question_answer": [
+        "had kept",
+        "kept",
+        "would keep"
+      ]
+    },
+    {
+      "question_ask": "This device _______ charged overnight.",
+      "question_answer": [
+        "should be",
+        "should",
+        "should to be"
+      ]
+    },
+    {
+      "question_ask": "The engineer, _______ designed this chip, works at our company.",
+      "question_answer": [
+        "who",
+        "which",
+        "whose"
+      ]
+    },
+    {
+      "question_ask": "I'm not used to _______ a virtual keyboard.",
+      "question_answer": [
+        "typing on",
+        "type on",
+        "typed on"
+      ]
+    },
+    {
+      "question_ask": "There is _______ storage space left on this drive.",
+      "question_answer": [
+        "less",
+        "fewer",
+        "least"
+      ]
+    },
+    {
+      "question_ask": "By the time I opened the app, the update _______ already installed.",
+      "question_answer": [
+        "had",
+        "has",
+        "was"
+      ]
+    },
+    {
+      "question_ask": "I need _______ information about this software update.",
+      "question_answer": [
+        "some",
+        "an",
+        "much"
+      ]
+    },
+    {
+      "question_ask": "She _______ launching a new app next month.",
+      "question_answer": [
+        "is planning",
+        "plans",
+        "planned"
+      ]
+    },
+    {
+      "question_ask": "You _______ share your password with anyone.",
+      "question_answer": [
+        "shouldn’t",
+        "mustn’t",
+        "couldn’t"
+      ]
+    },
+    {
+      "question_ask": "He asked me if I _______ ever used cloud storage.",
+      "question_answer": [
+        "had",
+        "have",
+        "did"
+      ]
+    },
+    {
+      "question_ask": "This network is _______ than the one at the office.",
+      "question_answer": [
+        "faster",
+        "more fast",
+        "fastest"
+      ]
+    },
+    {
+      "question_ask": "I've _______ installed the new update.",
+      "question_answer": [
+        "just",
+        "yet",
+        "already just"
+      ]
+    },
+    {
+      "question_ask": "If she learns to code, she _______ find a better job.",
+      "question_answer": [
+        "will",
+        "would",
+        "had"
+      ]
+    },
+    {
+      "question_ask": "The technician told him _______ restart the computer.",
+      "question_answer": [
+        "to",
+        "that he",
+        "restart"
+      ]
+    },
+    {
+      "question_ask": "We _______ video calls instead of emails these days.",
+      "question_answer": [
+        "prefer",
+        "prefers",
+        "preferring"
+      ]
+    },
+    {
+      "question_ask": "His laptop has been malfunctioning _______ a week.",
+      "question_answer": [
+        "for",
+        "since",
+        "during"
+      ]
+    }
+  ],
+  "question2_list": [
+    {
+      "question_orginal": "transmit",
+      "question_answer": [
+        "",
+        "recover",
+        "send",
+        "update",
+        "download",
+        "upload",
+        "communicate",
+        "delete",
+        "surf",
+        "install",
+        "connect",
+        "secure"
+      ],
+      "correct_answer": "send"
+    },
+    {
+      "question_orginal": "encrypt",
+      "question_answer": [
+        "",
+        "recover",
+        "send",
+        "update",
+        "download",
+        "upload",
+        "communicate",
+        "delete",
+        "surf",
+        "install",
+        "connect",
+        "secure"
+      ],
+      "correct_answer": "secure"
+    },
+    {
+      "question_orginal": "retrieve",
+      "question_answer": [
+        "",
+        "recover",
+        "send",
+        "update",
+        "download",
+        "upload",
+        "communicate",
+        "delete",
+        "surf",
+        "install",
+        "connect",
+        "secure"
+      ],
+      "correct_answer": "recover"
+    },
+    {
+      "question_orginal": "browse",
+      "question_answer": [
+        "",
+        "recover",
+        "send",
+        "update",
+        "download",
+        "upload",
+        "communicate",
+        "delete",
+        "surf",
+        "install",
+        "connect",
+        "secure"
+      ],
+      "correct_answer": "surf"
+    },
+    {
+      "question_orginal": "interact",
+      "question_answer": [
+        "",
+        "recover",
+        "send",
+        "update",
+        "download",
+        "upload",
+        "communicate",
+        "delete",
+        "surf",
+        "install",
+        "connect",
+        "secure"
+      ],
+      "correct_answer": "communicate"
+    }
+  ],
+  "question3_list": [
+    {
+      "question_orginal": "To copy information onto your device from the internet is to…",
+      "question_answer": [
+        "",
+        "keyboard",
+        "uninstall",
+        "network",
+        "software",
+        "server",
+        "download",
+        "router",
+        "browser",
+        "upload",
+        "firewall",
+        "malware"
+      ],
+      "correct_answer": "download"
+    },
+    {
+      "question_orginal": "To send a copy of a file to the internet is to…",
+      "question_answer": [
+        "",
+        "keyboard",
+        "uninstall",
+        "network",
+        "software",
+        "server",
+        "download",
+        "router",
+        "browser",
+        "upload",
+        "firewall",
+        "malware"
+      ],
+      "correct_answer": "upload"
+    },
+    {
+      "question_orginal": "To remove a program from your device is to…",
+      "question_answer": [
+        "",
+        "keyboard",
+        "uninstall",
+        "network",
+        "software",
+        "server",
+        "download",
+        "router",
+        "browser",
+        "upload",
+        "firewall",
+        "malware"
+      ],
+      "correct_answer": "uninstall"
+    },
+    {
+      "question_orginal": "A device that connects to the internet wirelessly is called…",
+      "question_answer": [
+        "",
+        "keyboard",
+        "uninstall",
+        "network",
+        "software",
+        "server",
+        "download",
+        "router",
+        "browser",
+        "upload",
+        "firewall",
+        "malware"
+      ],
+      "correct_answer": "router"
+    },
+    {
+      "question_orginal": "Software designed to harm a computer is called…",
+      "question_answer": [
+        "",
+        "keyboard",
+        "uninstall",
+        "network",
+        "software",
+        "server",
+        "download",
+        "router",
+        "browser",
+        "upload",
+        "firewall",
+        "malware"
+      ],
+      "correct_answer": "malware"
+    }
+  ],
+  "question4_list": [
+    {
+      "question_start": "Please remember to",
+      "question_answer": [
+        "",
+        "bandwidth",
+        "backup",
+        "connection",
+        "malware",
+        "password",
+        "firewall",
+        "server",
+        "cache",
+        "traffic",
+        "firmware",
+        "breach"
+      ],
+      "question_end": "your files before formatting the drive.",
+      "correct_answer": "backup"
+    },
+    {
+      "question_start": "The company suffered a data",
+      "question_answer": [
+        "",
+        "bandwidth",
+        "backup",
+        "connection",
+        "malware",
+        "password",
+        "firewall",
+        "server",
+        "cache",
+        "traffic",
+        "firmware",
+        "breach"
+      ],
+      "question_end": "last month.",
+      "correct_answer": "breach"
+    },
+    {
+      "question_start": "You'll need a strong",
+      "question_answer": [
+        "",
+        "bandwidth",
+        "backup",
+        "connection",
+        "malware",
+        "password",
+        "firewall",
+        "server",
+        "cache",
+        "traffic",
+        "firmware",
+        "breach"
+      ],
+      "question_end": "to protect your account.",
+      "correct_answer": "password"
+    },
+    {
+      "question_start": "The website crashed due to a sudden surge in",
+      "question_answer": [
+        "",
+        "bandwidth",
+        "backup",
+        "connection",
+        "malware",
+        "password",
+        "firewall",
+        "server",
+        "cache",
+        "traffic",
+        "firmware",
+        "breach"
+      ],
+      "question_end": ".",
+      "correct_answer": "traffic"
+    },
+    {
+      "question_start": "Our office relies on a stable internet",
+      "question_answer": [
+        "",
+        "bandwidth",
+        "backup",
+        "connection",
+        "malware",
+        "password",
+        "firewall",
+        "server",
+        "cache",
+        "traffic",
+        "firmware",
+        "breach"
+      ],
+      "question_end": "for video calls.",
+      "correct_answer": "connection"
+    }
+  ],
+  "question5_list": [
+    {
+      "question_orginal": "reliable",
+      "question_answer": [
+        "",
+        "dependable",
+        "flexible",
+        "durable",
+        "fragile",
+        "effective",
+        "wireless",
+        "obsolete",
+        "compact",
+        "advanced",
+        "protected",
+        "complex"
+      ],
+      "correct_answer": "dependable"
+    },
+    {
+      "question_orginal": "outdated",
+      "question_answer": [
+        "",
+        "dependable",
+        "flexible",
+        "durable",
+        "fragile",
+        "effective",
+        "wireless",
+        "obsolete",
+        "compact",
+        "advanced",
+        "protected",
+        "complex"
+      ],
+      "correct_answer": "obsolete"
+    },
+    {
+      "question_orginal": "efficient",
+      "question_answer": [
+        "",
+        "dependable",
+        "flexible",
+        "durable",
+        "fragile",
+        "effective",
+        "wireless",
+        "obsolete",
+        "compact",
+        "advanced",
+        "protected",
+        "complex"
+      ],
+      "correct_answer": "effective"
+    },
+    {
+      "question_orginal": "portable",
+      "question_answer": [
+        "",
+        "dependable",
+        "flexible",
+        "durable",
+        "fragile",
+        "effective",
+        "wireless",
+        "obsolete",
+        "compact",
+        "advanced",
+        "protected",
+        "complex"
+      ],
+      "correct_answer": "compact"
+    },
+    {
+      "question_orginal": "secure",
+      "question_answer": [
+        "",
+        "dependable",
+        "flexible",
+        "durable",
+        "fragile",
+        "effective",
+        "wireless",
+        "obsolete",
+        "compact",
+        "advanced",
+        "protected",
+        "complex"
+      ],
+      "correct_answer": "protected"
+    }
+  ],
+  "question6_list": [
+    {
+      "question_orginal": "social",
+      "question_answer": [
+        "",
+        "breach",
+        "software",
+        "intelligence",
+        "connection",
+        "device",
+        "media",
+        "network",
+        "platform",
+        "storage",
+        "footprint",
+        "interface"
+      ],
+      "correct_answer": "media"
+    },
+    {
+      "question_orginal": "artificial",
+      "question_answer": [
+        "",
+        "breach",
+        "software",
+        "intelligence",
+        "connection",
+        "device",
+        "media",
+        "network",
+        "platform",
+        "storage",
+        "footprint",
+        "interface"
+      ],
+      "correct_answer": "intelligence"
+    },
+    {
+      "question_orginal": "digital",
+      "question_answer": [
+        "",
+        "breach",
+        "software",
+        "intelligence",
+        "connection",
+        "device",
+        "media",
+        "network",
+        "platform",
+        "storage",
+        "footprint",
+        "interface"
+      ],
+      "correct_answer": "footprint"
+    },
+    {
+      "question_orginal": "wireless",
+      "question_answer": [
+        "",
+        "breach",
+        "software",
+        "intelligence",
+        "connection",
+        "device",
+        "media",
+        "network",
+        "platform",
+        "storage",
+        "footprint",
+        "interface"
+      ],
+      "correct_answer": "connection"
+    },
+    {
+      "question_orginal": "data",
+      "question_answer": [
+        "",
+        "breach",
+        "software",
+        "intelligence",
+        "connection",
+        "device",
+        "media",
+        "network",
+        "platform",
+        "storage",
+        "footprint",
+        "interface"
+      ],
+      "correct_answer": "breach"
+    }
+  ]
+}

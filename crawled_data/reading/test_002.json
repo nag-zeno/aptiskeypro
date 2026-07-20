@@ -1,0 +1,228 @@
+{
+  "label": "Bộ đề #02",
+  "questions1": [
+    {
+      "questionStart": "She likes to go jogging in the ",
+      "answerOptions": [
+        "morning",
+        "sea",
+        "roof"
+      ],
+      "questionEnd": "before breakfast.",
+      "correctAnswer": "morning"
+    },
+    {
+      "questionStart": "All of my ",
+      "answerOptions": [
+        "friends",
+        "dog",
+        "tree"
+      ],
+      "questionEnd": "came to my birthday party.",
+      "correctAnswer": "friends"
+    },
+    {
+      "questionStart": "Please don't ",
+      "answerOptions": [
+        "leave",
+        "go",
+        "love"
+      ],
+      "questionEnd": "your shoes in the hallway.",
+      "correctAnswer": "leave"
+    },
+    {
+      "questionStart": "Fresh vegetables are really ",
+      "answerOptions": [
+        "hate",
+        "lovely",
+        "good"
+      ],
+      "questionEnd": "for children.",
+      "correctAnswer": "good"
+    },
+    {
+      "questionStart": "The restaurant serves delicious ",
+      "answerOptions": [
+        "food",
+        "books",
+        "games"
+      ],
+      "questionEnd": "at a fair price.",
+      "correctAnswer": "food"
+    }
+  ],
+  "question2Topic": "Writing about a place",
+  "question2Content": [
+    {
+      "text": "Before writing about a place, you need to do some research on it.",
+      "id": "item1"
+    },
+    {
+      "text": "It is important to learn about the people and the history there carefully.",
+      "id": "item2"
+    },
+    {
+      "text": "Even if you can not visit the place, your writing will still look similar to real experiences.",
+      "id": "item3"
+    },
+    {
+      "text": "You should also compare that place with your own country.",
+      "id": "item4"
+    },
+    {
+      "text": "Such comparisons will make your writing more interesting and meaningful.",
+      "id": "item5"
+    }
+  ],
+  "question3Topic": "Movies then and now",
+  "question3Content": [
+    {
+      "text": "Movies today are very different from movies in the past",
+      "id": "item1"
+    },
+    {
+      "text": "In the old days, films were only in black and white, and sometimes even without sound.",
+      "id": "item2"
+    },
+    {
+      "text": "In addition to these technological limits, producers had very low budgets.",
+      "id": "item3"
+    },
+    {
+      "text": "Because of the lack of money, actors also earn little money from acting.",
+      "id": "item4"
+    },
+    {
+      "text": "Nowadays, everything has changed: actors and producers can earn a lot of money from producing films.",
+      "id": "item5"
+    }
+  ],
+  "question4Topic": "Extreme sports",
+  "question4Text": [
+    "<strong>Here is the perspective of four people on the above topic. Please read the content and answer the question.</strong>",
+    "<strong>A:</strong> Before diving into any extreme sport, I truly believe it’s crucial to undergo proper training. While these activities can be thrilling, they also carry risks if you're not well-prepared. I've witnessed people injuring themselves simply because they didn't take the necessary precautions. That’s why I always make sure to complete a training program and familiarize myself with the safety guidelines before trying something new. With the right preparation, extreme sports can be an amazing experience.",
+    "<strong>B:</strong> I've always had a fondness for more traditional sports such as swimming, running, and tennis. They're enjoyable and easy to incorporate into a routine. However, a few months ago, I had the chance to go bungee jumping during a vacation, and it turned out to be an unforgettable experience. I didn’t anticipate having so much fun! While I still prefer regular sports for daily exercise, I now feel much more open to trying extreme sports occasionally for the thrill.",
+    "<strong>C:</strong> What I appreciate most about extreme sports is the unique way they allow me to connect with nature. Activities like rock climbing and mountain biking enable me to explore stunning landscapes while also pushing my physical and mental limits. It’s an escape from the everyday routine, and it makes me feel truly alive. If I had more time and resources, I would love to engage in these sports more frequently, particularly in wild, remote locations.",
+    "<strong>D:</strong> I understand that some people find extreme sports exhilarating, but they’ve never been significant to me. In fact, I try to avoid them whenever I can. I’m not fond of the idea of placing myself in risky situations just for the sake of excitement. There are many safer alternatives to staying active and enjoying life. I’d much rather take a peaceful walk or do some yoga than jump out of an airplane or scale a mountain. It’s simply not my cup of tea."
+  ],
+  "question4Content": [
+    {
+      "question": "Who finds extreme sport unimportant?",
+      "id": "question4_q1",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Who finds training before participating is important?",
+      "id": "question4_q2",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Who still likes extreme sports after playing once?",
+      "id": "question4_q3",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who wants to play more extreme sport?",
+      "id": "question4_q4",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who likes traditional sports like swimming?",
+      "id": "question4_q5",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who enjoys nature?",
+      "id": "question4_q6",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who always avoids playing extreme sport?",
+      "id": "question4_q7",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    }
+  ],
+  "correctAnswersQuestion4": [
+    "D",
+    "A",
+    "B",
+    "C",
+    "B",
+    "C",
+    "D"
+  ],
+  "question5Topic": "Four-Day Workweek",
+  "options": [
+    "",
+    "A way of life now out date",
+    "Benefits for employees",
+    "Undesirable finalcial consequences",
+    "Unforeseen challenges for employees",
+    "Difficult to change old habits",
+    "Unfair for some people",
+    "Alternative solutions worth considering"
+  ],
+  "paragraph_question5": [
+    "For many years, a workweek of five or even six days was the standard. However, advancements in technology, evolving social values, and an increasing emphasis on work-life balance are making this traditional schedule less relevant. Both employees and employers are starting to question whether spending the majority of one’s week at work is truly necessary or productive.",
+    "Proponents of a four-day workweek highlight various benefits for workers. With an extra day off, employees gain more time to recharge, connect with family, or explore personal interests. Research shows that shorter workweeks can enhance focus and efficiency, leading to improved job performance and higher levels of job satisfaction.",
+    "While appealing, a reduced workweek could have financial downsides. Companies might incur higher expenses from the need to hire additional staff or adjust compensation models. For sectors that rely on hourly employees, it may be difficult to maintain profitability, potentially leading to service reductions or job cuts.",
+    "Adapting to a new work schedule can be difficult for some employees. The pressure to complete tasks within a shorter timeframe can lead to stress, and fast-paced industries may face challenges such as missed deadlines or conflicting schedules, complicating the transition to a shorter workweek.",
+    "For individuals accustomed to traditional work hours, the shift to a four-day workweek can be challenging. Breaking long-established routines is tough, and some may resist change even when it offers potential benefits. Adapting to a new work pattern often requires time and support.",
+    "While a four-day workweek may sound ideal to many, it isn’t necessarily fair to all. Essential workers, healthcare providers, and employees in the hospitality industry may not have the option to reduce their hours. This could create disparities among different worker groups and lead to tension within the workforce.",
+    "Rather than universally implementing a four-day workweek, experts suggest considering more flexible arrangements. Options such as allowing employees to choose their days off or offering shorter daily hours can provide similar advantages without disrupting industries that depend on a traditional work schedule."
+  ],
+  "meohoc": [
+    "<strong>Mẹo nhớ Keyword:</strong> out date → Benefits → Undesirable → challenges → Difficult → Unfair → solutions.",
+    "<strong>Nhớ theo đoạn văn:</strong> Phương pháp làm việc cũ đã <strong>lỗi thời (out date)</strong>, nhưng <strong>lợi ích (Benefits)</strong> cho nhân viên vẫn quan trọng. Tuy nhiên, có thể có <strong>hệ quả không mong muốn (Undesirable)</strong> và <strong>thách thức (challenges)</strong> khi thay đổi. Điều này khiến nhân viên cảm thấy <strong>khó khăn (Difficult)</strong> và <strong>không công bằng (Unfair)</strong>. Các <strong>giải pháp thay thế (solutions)</strong> có thể giúp cải thiện."
+  ]
+}

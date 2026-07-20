@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #009",
+  "club_name": "Computer club",
+  "questions1": {
+    "question1_1": "What is your job?",
+    "question1_2": "What is your favorite subject in high school?",
+    "question1_3": "What is your favorite color?",
+    "question1_4": "What do you like to do in the evening?",
+    "question1_5": "What is your favorite food?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I’m a teacher.",
+    "question1_2_answer": "I like math.",
+    "question1_3_answer": "I love blue.",
+    "question1_4_answer": "I read books.",
+    "question1_5_answer": "I love pizza."
+  },
+  "questions2": {
+    "question2": "When and where do you use a computer?"
+  },
+  "questions2_answer": {
+    "question2": "I use a computer every day at home and at work. I primarily use it for work tasks, browsing the internet, and staying connected with friends through social media."
+  },
+  "questions3": {
+    "question3_1": "My grandmother doesn’t know how to use the computer. Your solutions.",
+    "question3_2": "The last time you used your computer. Your purpose.",
+    "question3_3": "Nowadays people use computers a lot. This is not good. Your opinion."
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I would suggest teaching her the basics step by step, starting with simple tasks like browsing the web or using email. It would be helpful to provide a patient, hands-on approach.",
+    "question3_2_answer": "The last time I used my computer was to finish some work tasks. I used it for writing reports and responding to emails. It’s an essential tool for productivity in my job.",
+    "question3_3_answer": "While computers are useful tools, I believe overuse can lead to physical and mental health issues. It’s important to balance screen time with outdoor activities and personal interactions to maintain overall well-being."
+  },
+  "questions4_main": "The club has a plan to adjust our website in order to attract more members. Your feelings and suggestions",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that the club plans to improve the website to attract more members. I think it’s a great idea! A more user-friendly design and highlighting our events can really help. What do you think? <br>\n    Best, <br> \n    Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I’m excited to hear that the club is planning to enhance the website to attract more members. This is a great step forward! I suggest making the website more visually appealing and easy to navigate. Additionally, we could highlight upcoming events, member testimonials, and success stories to show the benefits of joining the club. Another idea would be to create an interactive blog or forum to engage potential members. Promoting the club on social media and through email newsletters would also help spread the word. \n    <br> I’m happy to assist with any tasks to help improve the website. \n    <br> Best regards,  \n    <br> Phuong"
+}

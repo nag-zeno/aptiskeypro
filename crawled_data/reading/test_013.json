@@ -1,0 +1,228 @@
+{
+  "label": "Bộ đề #13",
+  "questions1": [
+    {
+      "questionStart": "I usually go for a run early in the ",
+      "answerOptions": [
+        "morning",
+        "sky",
+        "free"
+      ],
+      "questionEnd": ".",
+      "correctAnswer": "morning"
+    },
+    {
+      "questionStart": "The kids are flying kites in the ",
+      "answerOptions": [
+        "park",
+        "big",
+        "hot"
+      ],
+      "questionEnd": ".",
+      "correctAnswer": "park"
+    },
+    {
+      "questionStart": "What time does your flight ",
+      "answerOptions": [
+        "leave",
+        "bring",
+        "stop"
+      ],
+      "questionEnd": " the airport?",
+      "correctAnswer": "leave"
+    },
+    {
+      "questionStart": "We usually eat toast and eggs for ",
+      "answerOptions": [
+        "breakfast",
+        "train",
+        "time"
+      ],
+      "questionEnd": ".",
+      "correctAnswer": "breakfast"
+    },
+    {
+      "questionStart": "It was great to ",
+      "answerOptions": [
+        "meet",
+        "hate",
+        "look"
+      ],
+      "questionEnd": " you at the conference.",
+      "correctAnswer": "meet"
+    }
+  ],
+  "question2Topic": "Workplace evolution (phiên bản 2)",
+  "question2Content": [
+    {
+      "text": "In the past, most workers followed fixed schedules from nine to five.",
+      "id": "item1"
+    },
+    {
+      "text": "Because technology was limited, working from home was almost impossible.",
+      "id": "item2"
+    },
+    {
+      "text": "Modern offices are now moving toward more flexible ways of working.",
+      "id": "item3"
+    },
+    {
+      "text": "Managers now use digital tools to follow project progress remotely.",
+      "id": "item4"
+    },
+    {
+      "text": "Many companies today are trying shorter workweeks to increase efficiency.",
+      "id": "item5"
+    }
+  ],
+  "question3Topic": "The famous singer (phiên bản 2)",
+  "question3Content": [
+    {
+      "text": "He is a famous singer.",
+      "id": "item1"
+    },
+    {
+      "text": "Before becoming famous, he studied music at school when he was 15.",
+      "id": "item2"
+    },
+    {
+      "text": "His unique way of dressing and performing made him stand out from others.",
+      "id": "item3"
+    },
+    {
+      "text": "This helped him receive many invitations for collaborations and performances.",
+      "id": "item4"
+    },
+    {
+      "text": "He eventually became famous among audiences around the world.",
+      "id": "item5"
+    }
+  ],
+  "question4Topic": "Extreme sports (phiên bản 2)",
+  "question4Text": [
+    "<strong>Here are four people's opinions about extreme sports. Read carefully and answer the questions below.</strong>",
+    "<strong>A:</strong> For me, the most important thing about extreme sports is being well-prepared. Many people think it’s all about excitement and courage, but I don’t see it that way. Without proper training, it’s easy to get hurt or even put others at risk. I once took a rock-climbing course and spent weeks learning how to use the equipment correctly. After that, the actual climb was much more enjoyable because I felt confident. I believe training not only keeps you safe but also makes the experience more relaxed and rewarding.",
+    "<strong>B:</strong> I’ve always preferred traditional sports like swimming and running because they help me stay healthy without being too risky. Still, I was curious about how extreme sports might feel, so I tried bungee jumping during a holiday last year. At first, I was really nervous, but once I jumped, the feeling was incredible. It was a kind of thrill I had never felt before. Even so, I still swim every week because it’s safer and more practical, though I admit extreme sports can be exciting to try at least once.",
+    "<strong>C:</strong> Honestly, I don’t really understand why people enjoy extreme sports. They seem dangerous and unnecessary to me. I’ve never tried one, and I don’t intend to. Some friends have invited me to go snowboarding or paragliding, but I always refuse. It’s not that I dislike sports—I actually enjoy cycling and tennis—but I just don’t see any reason to risk my health for a few seconds of excitement. In my opinion, extreme sports aren’t essential for happiness, so I stay away from them whenever I can.",
+    "<strong>D:</strong> What I love most about extreme sports is that they often take place in beautiful natural settings. Last summer, I went kayaking on a wild river, and the scenery was breathtaking. I also tried mountain biking through the forest and loved the feeling of fresh air and freedom. For me, it’s not just about the sport itself but also about being surrounded by mountains, trees, and rivers. I sometimes wish I had more time and money to do these activities more often. Extreme sports give me energy and make me feel close to nature."
+  ],
+  "question4Content": [
+    {
+      "question": "Who enjoys being outdoors when doing extreme sports?",
+      "id": "question4_q1",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Who believes extreme sports are not important?",
+      "id": "question4_q2",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who once tried an extreme sport and enjoyed it?",
+      "id": "question4_q3",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who wishes to do more extreme sports in the future?",
+      "id": "question4_q4",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Who thinks preparation is necessary before doing extreme sports?",
+      "id": "question4_q5",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Who always avoids extreme sports?",
+      "id": "question4_q6",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who usually does ordinary sports?",
+      "id": "question4_q7",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    }
+  ],
+  "correctAnswersQuestion4": [
+    "D",
+    "C",
+    "B",
+    "D",
+    "A",
+    "C",
+    "B"
+  ],
+  "question5Topic": "Mountain (Mountain summits)",
+  "options": [
+    "",
+    "Changing the definition of mountain",
+    "The unique feeling of achievement",
+    "Publicity of achievement",
+    "The mistake of misplaced priorities",
+    "Worrying connections",
+    "Focus on stability",
+    "Intimate relationships"
+  ],
+  "paragraph_question5": [
+    "The term \"mountain\" has evolved over time, reflecting not only physical characteristics but also cultural significance. In contemporary discussions, mountains may symbolize challenges to overcome or destinations for adventure, transcending their geographical attributes.",
+    "Climbing a mountain often leads to a profound sense of accomplishment. It represents not just reaching a physical summit but also conquering personal fears and pushing one's limits, creating memories that last a lifetime.",
+    "In today's digital age, sharing achievements has become prevalent. Climbing a mountain is frequently documented on social media, turning personal milestones into public spectacles that inspire others while also raising questions about authenticity.",
+    "The pursuit of climbing mountains can sometimes lead to misplaced priorities. While seeking adventure and recognition, individuals may neglect personal relationships or responsibilities, emphasizing the need for a balanced approach to life.",
+    "Engaging in extreme sports, such as mountain climbing, can forge strong bonds among participants. However, it may also create worrying connections where individuals prioritize adrenaline over safety, potentially leading to dangerous situations.",
+    "While adventure is thrilling, there is a growing recognition of the importance of stability in life. Balancing the desire for adventure with the need for security is crucial, prompting individuals to reflect on their life choices and long-term goals.",
+    "Shared experiences in challenging environments, like mountains, can deepen intimacy in relationships. Couples or friends who navigate the challenges of climbing together often find their bonds strengthened through mutual support and understanding."
+  ],
+  "meohoc": [
+    "<strong>Mẹo nhớ Keyword:</strong> mountain → achievement → Publicity → mistake → Worrying → stability → relationships.",
+    "<strong>Nhớ theo đoạn văn:</strong> Ngọn núi (<strong>mountain</strong>) là biểu tượng của thành tựu (<strong>achievement</strong>), nhưng việc phô trương thành tích leo núi để có danh tiếng (<strong>publicity</strong>) là một sai lầm (<strong>mistake</strong>). Điều này dẫn đến lo ngại (<strong>worrying</strong>) và làm tâm lý dễ mất ổn định (<strong>stability</strong>). Từ đó, hiềm khích có thể nảy sinh trong các mối quan hệ (<strong>relationships</strong>) giữa những người leo núi. Tốt nhất là giữ bình tĩnh và không khoe khoang."
+  ]
+}

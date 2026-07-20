@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #012",
+  "club_name": "English club",
+  "questions1": {
+    "question1_1": "What do you like doing with your friend?",
+    "question1_2": "How are you?",
+    "question1_3": "Where do you wanna go on holiday?",
+    "question1_4": "What is your favorite sport?",
+    "question1_5": "What is your favorite time of the year?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "We love playing games.",
+    "question1_2_answer": "I'm doing great!",
+    "question1_3_answer": "I want to visit Japan.",
+    "question1_4_answer": "I enjoy playing basketball.",
+    "question1_5_answer": "I love the spring."
+  },
+  "questions2": {
+    "question2": "•\tWhat do you usually use the internet for?"
+  },
+  "questions2_answer": {
+    "question2": "I usually use the internet for browsing social media, watching videos, reading news, shopping online, and researching information for my work or studies."
+  },
+  "questions3": {
+    "question3_1": "I usually spend 6 hours a day studying English. How do you learn English?",
+    "question3_2": "English is a popular language in the world. What are your thoughts on this idea?",
+    "question3_3": "When do you usually use English?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I learn English by practicing speaking, listening to podcasts, reading books, and watching English movies. I also take online courses to improve my grammar and writing skills regularly.",
+    "question3_2_answer": "English's popularity is due to its use in international business, education, and communication. It's a global language that connects people across cultures, making it essential for global interaction and understanding.",
+    "question3_3_answer": "I usually use English when communicating with friends, reading articles online, watching movies or shows, and during my work. It's also essential when traveling or attending international events."
+  },
+  "questions4_main": "Nowadays more and more new words and phrases are added to the language, so many people have strong reactions on this issue. Some people gladly accept others argue that there should be rules for language. Write a letter to your friend and the club manager to express your views and explain why so many people react like this.",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words). ",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I've been thinking a lot about the recent debate on new words being added to the language. Some people accept it while others want stricter rules. I personally think language evolves naturally and shouldn't be restricted. What do you think? \n    <br>Looking forward to your thoughts! \n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I wanted to share my thoughts on the recent concerns regarding the addition of new words and phrases to our language. While many people are excited about these changes, some argue for stricter rules to maintain clarity. In my opinion, language is constantly evolving, and this adaptation should be embraced. It reflects society’s growth and diverse culture.\n    <br> I believe it's important to find a balance between preserving language integrity and allowing it to grow. Perhaps we could organize a discussion or workshop to explore both sides of this issue. \n    <br> I look forward to hearing your thoughts.\n    <br> Best regards,  \n    <br> Jimmy"
+}

@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #031",
+  "club_name": "Technology club",
+  "questions1": {
+    "question1_1": "How are you?",
+    "question1_2": "Which is your favorite season?",
+    "question1_3": "Which sports is the most popular in your country?",
+    "question1_4": "What are you wearing today?",
+    "question1_5": "What is your favorite kind of music?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I'm doing great, thanks!",
+    "question1_2_answer": "I love the spring.",
+    "question1_3_answer": "Football is popular.",
+    "question1_4_answer": "I’m wearing a dress.",
+    "question1_5_answer": "I enjoy listening to pop."
+  },
+  "questions2": {
+    "question2": "What do you usually use your laptop for?"
+  },
+  "questions2_answer": {
+    "question2": "I usually use my laptop for work, studying, and entertainment. I browse the internet, watch videos, do research, and sometimes play games or connect with friends online."
+  },
+  "questions3": {
+    "question3_1": "Do you often watch movies on your laptop or go to the theater?",
+    "question3_2": "I used to work on a laptop and it stopped and I lost all my notes. Tell me about a bad time with your computer?",
+    "question3_3": "Technological improvements have made our lives easier. what do you think?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I prefer watching movies in the theater because of the large screen and immersive sound. However, I do watch movies on my laptop when I want convenience and comfort at home.",
+    "question3_2_answer": "Once, my laptop crashed while I was working on an important project, and I lost all my notes. It was incredibly frustrating, but I learned to back up my data regularly afterward.",
+    "question3_3_answer": "Technological improvements have certainly made life easier. With advanced tools, we can communicate faster, work more efficiently, and have access to vast amounts of information right at our fingertips."
+  },
+  "questions4_main": "Dear member, members often post on the website's club. But lately there’s been a few negatives on the other member's post. We are thinking of changing the website to identify anyone who makes a comment. Please give your opinion to fix the situation.",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that the club is considering identifying users who post comments on the website. I think this is a good idea to prevent negativity and ensure more respectful interactions. \n    <br>Let me know your thoughts!\n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I am aware of the negative comments on the club’s website recently, and I believe implementing a system that identifies users posting comments is a great idea to address the issue. This could help reduce disrespectful behavior and foster a more positive atmosphere within the club.  \n    <br> Additionally, I suggest we introduce guidelines for posting comments, encouraging members to express their opinions constructively. It may also help to appoint moderators to monitor content and ensure compliance.  \n    <br> I’m happy to assist in developing or enforcing these changes and believe that with these improvements, the club’s website will be a more welcoming and supportive space for all members.  \n    <br> Best regards,  \n    <br> Jimmy"
+}

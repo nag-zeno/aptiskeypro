@@ -1,0 +1,242 @@
+{
+  "q1_13": [
+    {
+      "heading": "Question 1 of 17",
+      "audioUrl": "audio/question1_13/audio_de7_q1.mp3",
+      "question": "Listen to a voice message. How does Evan feel?",
+      "options": [
+        "Happy",
+        "Tired",
+        "Sick"
+      ],
+      "correctAnswer": "Sick",
+      "transcript": "Hi, Evan! This is Mom. I just wanted to leave you a message to check on you. I heard you’re not feeling well, and I’m really worried about you. Make sure you’re resting and drinking plenty of fluids. Do you need anything? I can bring you some soup or your favorite snacks. Please take care of yourself! I love you and hope you feel better soon. Call me back when you can!"
+    },
+    {
+      "heading": "Question 2 of 17",
+      "audioUrl": "audio/question1_13/audio_de7_q2.mp3",
+      "question": "The train was delayed. What time does the train leave? / Listen to a man talking about their train journey. What time did the train depart?",
+      "options": [
+        "9:00",
+        "9:15",
+        "9:30"
+      ],
+      "correctAnswer": "9:30",
+      "transcript": "This morning was rough at the station. I thought the train would leave around 9:00, but I heard it would be delayed. It finally departed at 9:30, though some people said it might be even later. Usually, if it’s delayed, it could leave as late as 10:00. I’m glad it didn’t take that long today!"
+    },
+    {
+      "heading": "Question 3 of 17",
+      "audioUrl": "audio/question1_13/audio_de7_q3.mp3",
+      "question": "A man and woman are discussing their plans for the evening. What do the man and woman decide to do in the evening?",
+      "options": [
+        "Go to the movies",
+        "Make plans later",
+        "Stay at home"
+      ],
+      "correctAnswer": "Make plans later",
+      "transcript": "I’m thinking about what to do this evening. I could go to the movies, but I’m not sure if that’s the best idea. I might prefer to stay at home and relax. However, I want to discuss this with my friend first. It might be better to plan when we can decide together. I believe keeping our options open is a good idea. So for now, I’ll wait and see what we want to do."
+    },
+    {
+      "heading": "Question 4 of 17",
+      "audioUrl": "audio/question1_13/audio_de7_q4.mp3",
+      "question": "A woman is talking about her holiday plan. Where is she going on holidays?",
+      "options": [
+        "The beach",
+        "The mountains",
+        "The city"
+      ],
+      "correctAnswer": "The mountains",
+      "transcript": "I'm so excited about my upcoming holiday! I've been thinking about where to go for a long time. Some of my friends suggested going to a nice beach. Others talked about exploring interesting caves. But I've made up my mind - I'm going to the mountains! The mountains are so beautiful with their green forests. I can't wait to breathe the fresh air up there. They are perfect for relaxing and enjoying nature."
+    },
+    {
+      "heading": "Question 5 of 17",
+      "audioUrl": "audio/question1_13/audio_de7_q5.mp3",
+      "question": "A tour guide is talking about the group's traveling schedule. Where will the group wait for the bus?",
+      "options": [
+        "By the hotel's main entrance",
+        "In the lobby",
+        "At the train station"
+      ],
+      "correctAnswer": "By the hotel's main entrance",
+      "transcript": "Good morning, everyone! Let me walk you through today’s schedule. First, we’ll start the day at 9:00 AM with a visit to the City Museum, where you’ll have about two hours to explore the exhibits. After that, at 12:30 PM, we’ll head to the Central Park for a picnic lunch and a relaxing stroll. Around 3:00 PM, we’ll make our way to the Old Town Market, where you can shop for souvenirs and enjoy some local treats. We’ll wrap up our activities by 6:00 PM, giving you a little free time back at the hotel. Finally, at 8:00 PM, we’ll meet at the hotel’s main entrance to catch the bus to the airport. Make sure to be on time, and we’ll head to the airport together!"
+    },
+    {
+      "heading": "Question 6 of 17",
+      "audioUrl": "audio/question1_13/audio_de7_q6.mp3",
+      "question": "Listen to a tour guide introducing the tour. Where will tea be served?",
+      "options": [
+        "In the park",
+        "The hotel",
+        "The river boat"
+      ],
+      "correctAnswer": "The river boat",
+      "transcript": "Welcome to our scenic tour! I’m excited to show you this beautiful area. We’ll start along the coast to enjoy the amazing ocean views. Then, we’ll go up to the mountain looking for some breathtaking views. After that, we’ll head down to the harbor and take a relaxing riverboat cruise. While on the boat, you can enjoy afternoon tea and see the charming riverside scenery. After the boat trip, we’ll end the day with a walk on the beach. Don’t forget your camera—there will be lots of chances for great photos!"
+    },
+    {
+      "heading": "Question 7 of 17",
+      "audioUrl": "audio/question1_13/audio_de7_q7.mp3",
+      "question": "A man is talking about the city concert. How will the concert end?",
+      "options": [
+        "With a fireworks display",
+        "With a famous singer",
+        "With the city's favorite group"
+      ],
+      "correctAnswer": "With the city's favorite group",
+      "transcript": "I can’t wait for the concert this weekend! It’s going to be such an exciting event. The highlight ending will be the city’s favorite group performing on stage. I’ve heard they have some amazing songs planned. There will also be a fireworks performance to celebrate before that, and I’m sure the orchestra will do some singing as well. It’s going to be a night to remember!"
+    },
+    {
+      "heading": "Question 8 of 17",
+      "audioUrl": "audio/question1_13/audio_de7_q8.mp3",
+      "question": "What is the phone number of the store? (0080...) / A man calls the teleshop. What is the teleshop number?",
+      "options": [
+        "201030",
+        "102030",
+        "301020"
+      ],
+      "correctAnswer": "201030",
+      "transcript": "Hello, I need to call the teleshop for some information. My phone is not working. Can you remind me of the number? I think it starts with 20 or 10 or 30 something. Is it 102030 or 301020? No, wait! I remember now—it’s 201030! I really need to order that new gadget. Thanks for your help!"
+    },
+    {
+      "heading": "Question 9 of 17",
+      "audioUrl": "audio/question1_13/audio_de7_q9.mp3",
+      "question": "Alice is calling her friend. What did she lose?",
+      "options": [
+        "Book",
+        "Phone",
+        "Laptop"
+      ],
+      "correctAnswer": "Phone",
+      "transcript": "Hey, it's Alice. I think I might have left something at your house. I had my book with me. It's in my backpack. My laptop’s here too. But I can’t find my phone anywhere! Did you happen to see it after I left? I think I might have left it on the table."
+    },
+    {
+      "heading": "Question 10 of 17",
+      "audioUrl": "audio/question1_13/audio_de7_q10.mp3",
+      "question": "What time should they meet at the library? What time do men and women meet? / Two people are talking about meeting for dinner. What time does Ahmed meet Rose?",
+      "options": [
+        "8:00 PM",
+        "Quarter to eight",
+        "7:30 PM"
+      ],
+      "correctAnswer": "Quarter to eight",
+      "transcript": "Hi Rose. It’s Ahmed, what time should we meet for dinner tonight? How about we meet at quarter past seven instead? Oh wait, I just remembered—I have a meeting ending at a half past seven. Let’s make it quarter to eight instead so we could have 15 minutes to travel. Does that work for you?"
+    },
+    {
+      "heading": "Question 11 of 17",
+      "audioUrl": "audio/question1_13/audio_de7_q11.mp3",
+      "question": "A woman is talking about her family’s holidays. What did the family do last year?",
+      "options": [
+        "Camping",
+        "Beach trip",
+        "Road trip"
+      ],
+      "correctAnswer": "Camping",
+      "transcript": "This year, my family and I are going to the beach for our holiday. I’m really excited because I love swimming and relaxing by the sea. Last year, we went camping on the mountain, which was fun, but this time we wanted to do something different. We’re staying in a small house near the beach, and I can’t wait to watch the sunset every evening. My kids are excited too; they want to build sandcastles and play in the water. I think it’s going to be a great holiday!"
+    },
+    {
+      "heading": "Question 12 of 17",
+      "audioUrl": "audio/question1_13/audio_de7_q12.mp3",
+      "question": "The woman is walking into a local store. How much are the cleaning products?",
+      "options": [
+        "Two pounds",
+        "One pound fifty",
+        "Three pounds"
+      ],
+      "correctAnswer": "One pound fifty",
+      "transcript": "As I walk into the store, I notice that the cleaning products are on sale. They’re usually a bit more expensive, but today they’re only one pound fifty. I was expecting to pay three pounds fifty, so it’s a nice surprise. I grab a few items since I know I’ll need them later. It’s a small store, but the deals are always good here. Time to check out!"
+    },
+    {
+      "heading": "Question 13 of 17",
+      "audioUrl": "audio/question1_13/audio_de7_q13.mp3",
+      "question": "What advice do they need for decorating their living room? / Mary is talking to her friend about her new home. What does she ask her friend about?",
+      "options": [
+        "Where to buy a new table",
+        "Where to buy a sofa",
+        "Where to buy curtains"
+      ],
+      "correctAnswer": "Where to buy a new table",
+      "transcript": "Hi Ivan. It’s Mary. I just moved into my new house. I want something nice for the dining area. I also saw a cute coffee shop nearby, and I’m thinking about getting a mirror for the living room. I need to get some furniture, especially a coffee table. Do you know where to buy one?"
+    }
+  ],
+  "q14": {
+    "audioUrl": "audio/question14/audio_de7.mp3",
+    "topic": "Topic: Do exercise",
+    "options": [
+      "hate exercising",
+      "help improve work performance",
+      "find exercise tiring",
+      "has fun when exercising with friends",
+      "in the library",
+      "at the supermarket"
+    ],
+    "transcript": "A: \"My friends often advise me to exercise to maintain a good physique and health. However, I am very busy with a tight work schedule. Even if I weren’t busy, I still wouldn’t like to exercise. I feel uncomfortable as soon as I put on workout clothes. I don’t think exercise is something that suits me.\"\n\nB: \"I know that working out every day is good for my health and helps me get in shape. But what I've found is that exercising actually boosts my productivity a lot and really helps me focus better. So, I always try to squeeze in some exercise before heading to work—it definitely makes me more productive.\"\n\nC: \"We’ve all heard about the many benefits of exercising, and I know about them too. My friends often invite me to work out, but after I exercise, I end up feeling extremely exhausted and spend the rest of the day just lying around to recover.\"\n\nD: \"I often go to the gym to work out, but what really motivates me to workout is catching up with my friends there, not just for improving my health. Plus, it’s a great way to meet and make new friends. For me, exercising is just another chance to socialize.\""
+  },
+  "q15": {
+    "audioUrl": "audio/question15/audio_de7.mp3",
+    "topic": "Topic: The music",
+    "transcript": "M: Did you hear about the concert last night? A lot of young people attended.\n\nW: Yes, I know about that concert; it was very popular. I don’t understand why so many young people are so eager to attend. They're blindly idolizing young singers, and these idols don’t really teach them anything good.\n\nM: I see it differently. The young singers today are very talented, and they do a lot of charitable work for society. I think young people look up to them and follow their example.\n\nW: Yes, they volunteer a lot, but they do it for the wrong reasons. They only want to boost their own fame.\n\nM: Oh, I think you don't like young singers because you don't enjoy their music, right?\n\nW: Exactly, I only like listening to classical music from previous generations. I think music preferences are very personal and each generation has its own unique taste in music. But music is always a universal language that conveys emotions everyone can understand.\n\nM: I didn’t study music like you, so I don’t really have any ideas about this.\n\nW: You don’t need to study music to understand it. Just think about why you cry during a sad movie scene when the music plays or why you feel energized when you hear a happy song. Isn’t that right?\n\nM: Yes, I think that’s why films always try to include at least one piece of music.",
+    "questions": [
+      "1. Singers play a good role for young people",
+      "2. Taste in music is a highly personal thing",
+      "3. Music is a universal language",
+      "4. Music can manipulate people's feelings"
+    ],
+    "correctAnswer": [
+      "Man",
+      "Both",
+      "Woman",
+      "Both"
+    ]
+  },
+  "q16_17": [
+    {
+      "audioUrl": "audio/question16/25_research_appiness.mp3",
+      "topic": "A research into happiness",
+      "questions": [
+        {
+          "id": "16.1",
+          "question": "How has this research into happiness been responded to?",
+          "options": [
+            "It has not been accurately reported by the media",
+            "It has been completely ignored by the public",
+            "It has led to immediate changes in government policy"
+          ]
+        },
+        {
+          "id": "16.2",
+          "question": "What is the speaker's opinion on this research in general?",
+          "options": [
+            "The research is unlikely to find a conclusive answer",
+            "The research has already changed public attitudes",
+            "The researchers are biased in their approach"
+          ]
+        }
+      ],
+      "transcript": "Research into happiness has attracted considerable attention, as scientists try to understand what truly contributes to people’s sense of well-being. Although the topic appears frequently in newspapers and online articles, the way it is presented is often misleading. A common problem is that the media does not report the findings accurately. Instead, complex studies are simplified or taken out of context, with headlines focusing on surprising or appealing conclusions rather than the full picture. This can give the public an incomplete or even incorrect understanding of what the research actually shows.\n\nRegarding the overall value of this research, the speaker expresses a cautious opinion. While these studies offer interesting perspectives on human behavior and emotions, it seems unlikely that they will lead to a single, definitive answer. Happiness is a complex concept that varies greatly from person to person and is influenced by many different factors, including culture, lifestyle, and personal expectations. Because of this complexity, the research may continue to evolve, but it is unlikely to produce one clear conclusion that applies universally."
+    },
+    {
+      "audioUrl": "audio/question16/27_criticism_new_novel_ver1.mp3",
+      "topic": "Criticism of the new novel",
+      "questions": [
+        {
+          "id": "17.1",
+          "question": "What attracts readers to this novel?",
+          "options": [
+            "The characters were interesting",
+            "The book includes detailed historical facts",
+            "The chapters are very short and easy to read"
+          ]
+        },
+        {
+          "id": "17.2",
+          "question": "What is the speaker's opinion about this novel?",
+          "options": [
+            "It will establish the author's popularity",
+            "It needs major editing before publication",
+            "It’s unlikely to appeal to international readers"
+          ]
+        }
+      ],
+      "transcript": "The new novel has recently received a great deal of attention from readers and critics alike. One of the main reasons it has attracted such interest is the strength of its characters. Rather than relying on complex plots or detailed background information, the story focuses on creating individuals who feel realistic and engaging. Readers are drawn to these characters because of their unique personalities and emotional depth, which makes it easier to connect with the story and remain interested throughout.\n\nAs for the overall opinion of the novel, the speaker is quite positive about its potential impact. Although it may not be perfect in every aspect, it is believed that the book will play an important role in increasing the author’s recognition. In fact, the success of this novel is likely to help establish the author's popularity among a wider audience. With strong character development and an engaging narrative style, the book has the potential to become a significant milestone in the writer’s career."
+    }
+  ]
+}

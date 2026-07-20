@@ -1,0 +1,228 @@
+{
+  "label": "Bộ đề #01",
+  "questions1": [
+    {
+      "questionStart": "You can catch the next train at the ",
+      "answerOptions": [
+        "station",
+        "school",
+        "market"
+      ],
+      "questionEnd": "near the city center.",
+      "correctAnswer": "station"
+    },
+    {
+      "questionStart": "The number 5 bus ",
+      "answerOptions": [
+        "runs",
+        "stops",
+        "flies"
+      ],
+      "questionEnd": "right in front of my house.",
+      "correctAnswer": "stops"
+    },
+    {
+      "questionStart": "Wait until the light turns ",
+      "answerOptions": [
+        "red",
+        "yellow",
+        "green"
+      ],
+      "questionEnd": "before you cross the street.",
+      "correctAnswer": "green"
+    },
+    {
+      "questionStart": "My family likes to eat ",
+      "answerOptions": [
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "questionEnd": "together in the evening.",
+      "correctAnswer": "dinner"
+    },
+    {
+      "questionStart": "My little brother loves watching ",
+      "answerOptions": [
+        "books",
+        "films",
+        "hotdog"
+      ],
+      "questionEnd": "every Saturday night.",
+      "correctAnswer": "films"
+    }
+  ],
+  "question2Topic": "New coffee shop",
+  "question2Content": [
+    {
+      "text": "I arrived at the shop early in the morning, but it was crowded with people.",
+      "id": "item1"
+    },
+    {
+      "text": "A waiter assisted me in finding a table and handed me the menu.",
+      "id": "item2"
+    },
+    {
+      "text": "The menu was not as good as expected and quite pricey, so I decided to order a sandwich.",
+      "id": "item3"
+    },
+    {
+      "text": "The sandwich was both delicious and beautifully presented.",
+      "id": "item4"
+    },
+    {
+      "text": "I might return to try different types of drinks next time.",
+      "id": "item5"
+    }
+  ],
+  "question3Topic": "Films",
+  "question3Content": [
+    {
+      "text": "Old movies were very different from today's movies.",
+      "id": "item1"
+    },
+    {
+      "text": "That's because the movies were only in black and white, and sometimes without sound.",
+      "id": "item2"
+    },
+    {
+      "text": "Not only did these technological limitations exist, the movies were also low budget.",
+      "id": "item3"
+    },
+    {
+      "text": "Due to the lack of money, actors also had few opportunities to earn money through acting.",
+      "id": "item4"
+    },
+    {
+      "text": "Now things have changed, actors and filmmakers can earn thousands of dollars from film production.",
+      "id": "item5"
+    }
+  ],
+  "question4Topic": "Music festival",
+  "question4Text": [
+    "<strong>Here is the perspective of four people on the above topic. Please read the content and answer the question.</strong>",
+    "<strong>A:</strong> I stayed until the very last moment of the festival and absolutely loved the grand finale. The stage lit up with dazzling lights and fireworks, creating an unforgettable atmosphere. Although getting there was a hassle due to heavy traffic and packed buses, once I arrived, all those inconveniences faded away. In the end, the final performance made every bit of the struggle worthwhile.",
+    "<strong>B:</strong> Normally, I steer clear of festivals, but I decided to give this one a try. Unfortunately, I didn’t have a great time. The sound quality was poor, the event schedule seemed chaotic, and to top it off, it started raining heavily. The muddy ground made things even worse, and I spent most of the day feeling uncomfortable. Honestly, I didn’t think it was worth the trouble. The only highlight for me was the beautiful park where the festival took place.",
+    "<strong>C:</strong> I really enjoyed the lively atmosphere created by the music. One of the bands on the opening night was so amazing that I couldn’t help but sing along. However, everything was quite expensive. The tickets were pricey, and the food and drinks were ridiculously overcharged. I ended up spending more than I had planned. Even though the performances were great, I do hope the organizers will bring the prices down next year.",
+    "<strong>D:</strong> For me, the most memorable part of the festival was its location. The park by the river was vast and picturesque, with plenty of spots to sit and unwind between performances. I enjoyed a nice lunch there, though it was a bit pricey. Some of the shows were enjoyable, but I didn’t stay for the entire event. Overall, it was the venue that left the biggest impression on me."
+  ],
+  "question4Content": [
+    {
+      "question": "Who experienced bad weather?",
+      "id": "question4_q1",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who loved one of the performances?",
+      "id": "question4_q2",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who thought it was too expensive?",
+      "id": "question4_q3",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who found the traffic difficult?",
+      "id": "question4_q4",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Who liked the final performance of the show?",
+      "id": "question4_q5",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Who didn’t like the festival overall?",
+      "id": "question4_q6",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who liked the location?",
+      "id": "question4_q7",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    }
+  ],
+  "correctAnswersQuestion4": [
+    "B",
+    "C",
+    "C",
+    "A",
+    "A",
+    "B",
+    "D"
+  ],
+  "question5Topic": "Mountain (Mountain summits)",
+  "options": [
+    "",
+    "Changing the definition of mountain",
+    "The unique feeling of achievement",
+    "Publicity of achievement",
+    "The mistake of misplaced priorities",
+    "Worrying connections",
+    "Focus on stability",
+    "Intimate relationships"
+  ],
+  "paragraph_question5": [
+    "The term \"mountain\" has evolved over time, reflecting not only physical characteristics but also cultural significance. In contemporary discussions, mountains may symbolize challenges to overcome or destinations for adventure, transcending their geographical attributes.",
+    "Climbing a mountain often leads to a profound sense of accomplishment. It represents not just reaching a physical summit but also conquering personal fears and pushing one's limits, creating memories that last a lifetime.",
+    "In today's digital age, sharing achievements has become prevalent. Climbing a mountain is frequently documented on social media, turning personal milestones into public spectacles that inspire others while also raising questions about authenticity.",
+    "The pursuit of climbing mountains can sometimes lead to misplaced priorities. While seeking adventure and recognition, individuals may neglect personal relationships or responsibilities, emphasizing the need for a balanced approach to life.",
+    "Engaging in extreme sports, such as mountain climbing, can forge strong bonds among participants. However, it may also create worrying connections where individuals prioritize adrenaline over safety, potentially leading to dangerous situations.",
+    "While adventure is thrilling, there is a growing recognition of the importance of stability in life. Balancing the desire for adventure with the need for security is crucial, prompting individuals to reflect on their life choices and long-term goals.",
+    "Shared experiences in challenging environments, like mountains, can deepen intimacy in relationships. Couples or friends who navigate the challenges of climbing together often find their bonds strengthened through mutual support and understanding."
+  ],
+  "meohoc": [
+    "<strong>Mẹo nhớ Keyword:</strong> mountain → achievement → Publicity → mistake → Worrying → stability → relationships.",
+    "<strong>Nhớ theo đoạn văn:</strong> Ngọn núi (<strong>mountain</strong>) là biểu tượng của thành tựu (<strong>achievement</strong>), nhưng việc phô trương thành tích leo núi để có danh tiếng (<strong>publicity</strong>) là một sai lầm (<strong>mistake</strong>). Điều này dẫn đến lo ngại (<strong>worrying</strong>) và làm tâm lý dễ mất ổn định (<strong>stability</strong>). Từ đó, hiềm khích có thể nảy sinh trong các mối quan hệ (<strong>relationships</strong>) giữa những người leo núi. Tốt nhất là giữ bình tĩnh và không khoe khoang."
+  ]
+}

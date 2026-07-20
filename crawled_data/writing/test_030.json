@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #030",
+  "club_name": "Sports club",
+  "questions1": {
+    "question1_1": "Tell me the last time you watched TV?",
+    "question1_2": "Why do you learn English?",
+    "question1_3": "What is your favorite subject in high school?",
+    "question1_4": "What do you like doing with your friend?",
+    "question1_5": "Where do you wanna go on holiday?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I watched TV last night.",
+    "question1_2_answer": "I learn English for travel.",
+    "question1_3_answer": "My favorite subject is Math.",
+    "question1_4_answer": "I like going shopping.",
+    "question1_5_answer": "I want to go to Paris."
+  },
+  "questions2": {
+    "question2": "Why did you decide to join the club?"
+  },
+  "questions2_answer": {
+    "question2": "I joined the sports club to stay fit, meet new people, and enjoy playing sports. I love being active, and this club provides a great opportunity to do so regularly."
+  },
+  "questions3": {
+    "question3_1": "When was the last time you played sports?",
+    "question3_2": "I usually play sports with my friends and watch sports programs. What about you?",
+    "question3_3": "I like playing sports with my friend but my brother likes playing sports alone. What do you think about this issue?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "The last time I played sports was last weekend. I went jogging in the park with a friend. It felt refreshing and helped me clear my mind after a busy week.",
+    "question3_2_answer": "I also play sports with my friends and enjoy watching sports events on TV. It’s a great way to bond with others and stay motivated to stay active and healthy.",
+    "question3_3_answer": "I think it’s perfectly fine for your brother to enjoy playing sports alone if that’s what he prefers. People have different preferences, and some enjoy solitary activities for peace and focus."
+  },
+  "questions4_main": "Dear members, the club needs suggestions about the organization of a sports competition for young members.",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that the club is planning to organize a sports competition for young members. I think it would be fun to include a variety of sports like football, basketball, and running. \n    <br>Let me know your thoughts!\n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I am excited to hear that the club is organizing a sports competition for young members. I think this event is a great way to engage everyone and promote a healthy lifestyle.  \n    <br> To make it more exciting and inclusive, I suggest organizing different types of activities such as football, basketball, and a relay race. We could also include fun games like tug-of-war or obstacle courses.  \n    <br> To attract more participants, we could offer small prizes or certificates for winners. I am happy to assist with organizing the event and helping in any way needed. Please let me know how I can contribute.\n    <br> Best regards,  \n    <br> Jimmy"
+}

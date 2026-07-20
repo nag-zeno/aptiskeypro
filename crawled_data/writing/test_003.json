@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #003",
+  "club_name": "Book club",
+  "questions1": {
+    "question1_1": "What’s your favorite hobby?",
+    "question1_2": "How do you get to work?",
+    "question1_3": "What do you like to do in the evening?",
+    "question1_4": "What kinds of movies do you like?",
+    "question1_5": "What’s your favorite food?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I love painting.",
+    "question1_2_answer": "I drive my car.",
+    "question1_3_answer": "I watch TV shows.",
+    "question1_4_answer": "I enjoy comedies.",
+    "question1_5_answer": "I love pizza."
+  },
+  "questions2": {
+    "question2": "I am a final year student so I need to find a research a lot of materials such as books and scientific journals."
+  },
+  "questions2_answer": {
+    "question2": "I usually visit libraries, search online databases, and use academic platforms like Google Scholar and JSTOR to find relevant materials. These sources help me gather books, journals, and papers for my research."
+  },
+  "questions3": {
+    "question3_1": "Hi! Welcome to the club. When and where do you like reading books?",
+    "question3_2": "Hi! I would like to give my friend a book. What would you suggest for me to buy?",
+    "question3_3": "Online books replace traditional books? What do you think about that?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I like to read books in the evenings when I can relax. I usually read at home, in my cozy corner, with a cup of tea. It's a great way to unwind after a busy day.",
+    "question3_2_answer": "If your friend enjoys fiction, I'd recommend a bestseller like 'The Night Circus.' For non-fiction, something motivational or educational, like 'Atomic Habits,' would be a great choice to inspire them.",
+    "question3_3_answer": "Online books are convenient and portable, but they don't fully replace traditional books. The experience of reading a physical book is unique and many still prefer the tactile feel and scent of paper."
+  },
+  "questions4_main": "Dear member, From next month we will no longer be able to continue our offer of one free book every month. Also, because of problems with our delivery service, please expect a wait 4-6 weeks before your order arrives.",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just received an update that starting next month, we won't be able to get one free book each month anymore. Additionally, there will be delays in delivery, so expect your orders to arrive in 4-6 weeks. \n    <br>Let's catch up soon! \n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I was surprised to learn that we will no longer be able to receive a free book each month and that there will be significant delays in delivery. As a loyal member, I rely on these benefits, and this news is quite disappointing. I understand that delivery issues can happen, but I hope the club can find alternative solutions to continue offering books or communicate any updates in advance. It would be greatly appreciated if the club could work on improving the service and offer alternative options for the members. \n    <br> Best regards,  \n    <br> Linh"
+}

@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #0",
+  "club_name": "Travel club 2",
+  "questions1": {
+    "question1_1": "Where are you from?",
+    "question1_2": "Where do you live?",
+    "question1_3": "Where would you like to live?",
+    "question1_4": "Where do you like to go in the summer?",
+    "question1_5": "A place you would like to visit in your country?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I’m from Hanoi.",
+    "question1_2_answer": "I live in Hanoi.",
+    "question1_3_answer": "I’d like to live in Paris.",
+    "question1_4_answer": "I like going to the beach.",
+    "question1_5_answer": "I’d like to visit Hoi An."
+  },
+  "questions2": {
+    "question2": "Tell me a place you often visit?"
+  },
+  "questions2_answer": {
+    "question2": "I often visit a nearby park. It’s a peaceful place where I enjoy walking, reading, or just relaxing. I love the natural surroundings and the fresh air there."
+  },
+  "questions3": {
+    "question3_1": "What is the most exciting journey you’ve been on?",
+    "question3_2": "Can you remember the first time you went on a journey by yourself? What was it like?",
+    "question3_3": "Some people like taking photos when they have vacation. Your opinion?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "The most exciting journey I’ve been on was a trip to the mountains last year. I hiked through beautiful trails, enjoyed stunning views, and experienced the thrill of being surrounded by nature.",
+    "question3_2_answer": "I remember my first solo journey when I traveled to a nearby city. It was both exciting and intimidating, but I learned so much about independence, navigation, and making new connections.",
+    "question3_3_answer": "I believe taking photos during vacations is a great way to preserve memories and capture beautiful moments. It allows us to relive the experiences and share them with others, making the trip more memorable."
+  },
+  "questions4_main": "Dear members, the club wants members to give their opinions to make it easier for those traveling abroad for the first time and suggest the best way to communicate easily abroad. Please raise your voice and give some suggestions.",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I heard that the Travel Club is asking for ideas to help those traveling abroad for the first time. I think providing a guide on common phrases and using translation apps would be helpful.\n    <br>Let me know your thoughts! \n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I’m excited to hear that the club is looking for ways to support travelers abroad, especially those traveling for the first time. I suggest providing a travel guide with common phrases in different languages to help with communication. Also, recommending useful apps like Google Translate and local language learning apps could ease the process.  \n    <br> Additionally, organizing workshops or online resources to familiarize members with cultural norms and etiquette in different countries would be valuable. It’s important to prepare travelers for common situations they might encounter abroad.  \n    <br> I am happy to assist in gathering resources or organizing these initiatives. I believe these efforts will make international travel a smoother experience for first-time travelers.  \n    <br> Best regards,  \n    <br> Jimmy"
+}

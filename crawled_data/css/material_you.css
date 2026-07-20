@@ -1,0 +1,496 @@
+/* ====================================================================================
+   MATERIAL YOU (MATERIAL DESIGN 3) DESIGN SYSTEM - APTISPRO
+   
+   Palette (Purple/Violet seed #6750A4):
+   - Primary:            #6750A4 (violet)
+   - On Primary:         #FFFFFF
+   - Primary Container:  #EADDFF (light lavender)
+   - Secondary:          #625B71 (muted violet-gray)
+   - Secondary Container:#E8DEF8 (pale lavender)
+   - Tertiary:           #7D5260 (dusty rose)
+   - Background:         #FFFBFE (warm off-white)
+   - Surface Container:  #F3EDF7 (tinted lavender)
+   - Surface Low:        #E7E0EC
+   - Outline:            #79747E
+   ==================================================================================== */
+
+/* --- 0. FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* --- 1. DESIGN TOKENS (CSS CUSTOM PROPERTIES) --- */
+:root {
+  --md-primary:             #6750A4;
+  --md-primary-dark:        #4F378B;  /* pressed/hover state */
+  --md-primary-container:   #EADDFF;
+  --md-on-primary:          #FFFFFF;
+
+  --md-secondary:           #625B71;
+  --md-secondary-container: #E8DEF8;
+  --md-on-secondary-container: #1D192B;
+
+  --md-tertiary:            #7D5260;
+  --md-tertiary-container:  #FFD8E4;
+  --md-on-tertiary:         #FFFFFF;
+
+  --md-background:          #FFFBFE;
+  --md-on-background:       #1C1B1F;
+  --md-surface:             #FFFBFE;
+  --md-surface-container:   #F3EDF7;
+  --md-surface-container-low: #E7E0EC;
+  --md-outline:             #79747E;
+  --md-on-surface-variant:  #49454F;
+
+  /* Tonal surface for footer/header */
+  --md-surface-footer:      #ECE6F0;
+
+  /* Easing & Duration */
+  --md-easing:    cubic-bezier(0.2, 0, 0, 1);
+  --md-dur:       300ms;
+
+  /* Radii */
+  --md-r-s:   12px;
+  --md-r-m:   16px;
+  --md-r-l:   24px;
+  --md-r-xl:  28px;
+  --md-r-xxl: 32px;
+  --md-r-full:9999px;
+}
+
+/* --- 2. GLOBAL BASE --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif !important;
+  background-color: var(--md-background) !important;
+  color: var(--md-on-background) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 500 !important;
+  color: var(--md-on-background) !important;
+}
+
+/* --- 3. BUTTONS - UNIFIED MD3 PILL SYSTEM --- */
+/* All variants become pill-shaped and use the MD3 color system */
+.btn {
+  border-radius: var(--md-r-full) !important;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 0.01em !important;
+  padding: 0.55rem 1.5rem !important;
+  border: none !important;
+  transition: all var(--md-dur) var(--md-easing) !important;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.95) !important;
+  transition-duration: 120ms !important;
+}
+
+/* Primary Filled (most common action) */
+.btn-primary {
+  background-color: var(--md-primary) !important;
+  color: var(--md-on-primary) !important;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--md-primary-dark) !important;
+  box-shadow: 0 4px 12px rgba(103, 80, 164, 0.3) !important;
+  color: var(--md-on-primary) !important;
+}
+
+/* Warning → Tonal (secondary container) */
+.btn-warning {
+  background-color: var(--md-secondary-container) !important;
+  color: var(--md-on-secondary-container) !important;
+}
+.btn-warning:hover, .btn-warning:focus {
+  background-color: #D9CDF0 !important;
+  color: var(--md-on-secondary-container) !important;
+  box-shadow: 0 4px 8px rgba(103, 80, 164, 0.15) !important;
+}
+
+/* Danger/Red → Primary variant (high-emphasis action) */
+.btn-danger {
+  background-color: var(--md-primary) !important;
+  color: var(--md-on-primary) !important;
+}
+.btn-danger:hover, .btn-danger:focus {
+  background-color: var(--md-primary-dark) !important;
+  color: var(--md-on-primary) !important;
+  box-shadow: 0 4px 12px rgba(103, 80, 164, 0.3) !important;
+}
+
+/* Success/Green → Tertiary */
+.btn-success {
+  background-color: var(--md-tertiary) !important;
+  color: var(--md-on-tertiary) !important;
+}
+.btn-success:hover, .btn-success:focus {
+  background-color: #6A4250 !important;
+  color: var(--md-on-tertiary) !important;
+  box-shadow: 0 4px 8px rgba(125, 82, 96, 0.25) !important;
+}
+
+/* Info/Blue → Secondary container tonal */
+.btn-info {
+  background-color: var(--md-secondary-container) !important;
+  color: var(--md-on-secondary-container) !important;
+}
+.btn-info:hover {
+  background-color: #D9CDF0 !important;
+  color: var(--md-on-secondary-container) !important;
+}
+
+/* Secondary → outlined style */
+.btn-secondary {
+  background-color: transparent !important;
+  color: var(--md-primary) !important;
+  border: 1px solid var(--md-outline) !important;
+}
+.btn-secondary:hover {
+  background-color: rgba(103, 80, 164, 0.08) !important;
+  border-color: var(--md-primary) !important;
+  color: var(--md-primary) !important;
+}
+
+/* Light → surface container */
+.btn-light {
+  background-color: var(--md-surface-container) !important;
+  color: var(--md-on-background) !important;
+}
+.btn-light:hover {
+  background-color: var(--md-surface-container-low) !important;
+}
+
+/* Dark → on-background */
+.btn-dark {
+  background-color: var(--md-on-background) !important;
+  color: var(--md-background) !important;
+}
+
+/* --- 4. QUIZ PAGE FOOTER NAVIGATION (Back / Next) --- */
+.footer {
+  background-color: var(--md-surface-footer) !important;
+  border-top: none !important;
+  box-shadow: 0 -2px 8px rgba(103, 80, 164, 0.08) !important;
+}
+
+/* Back button → secondary tonal */
+.footer .btn-back, .btn-back {
+  background-color: var(--md-secondary-container) !important;
+  color: var(--md-on-secondary-container) !important;
+}
+.footer .btn-back:hover, .btn-back:hover {
+  background-color: #D9CDF0 !important;
+}
+
+/* Next button → primary filled */
+.footer .btn-next, .btn-next {
+  background-color: var(--md-primary) !important;
+  color: var(--md-on-primary) !important;
+}
+.footer .btn-next:hover, .btn-next:hover {
+  background-color: var(--md-primary-dark) !important;
+  box-shadow: 0 4px 12px rgba(103, 80, 164, 0.3) !important;
+}
+
+/* Check result button → tertiary */
+.footer .btn-check-result, .btn-check-result {
+  background-color: var(--md-tertiary) !important;
+  color: var(--md-on-tertiary) !important;
+}
+.footer .btn-check-result:hover {
+  background-color: #6A4250 !important;
+}
+
+/* Disabled state */
+.btn:disabled, .btn.disabled {
+  opacity: 0.38 !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+}
+
+/* --- 5. QUIZ PAGE HEADER --- */
+.header {
+  background-color: rgba(255, 251, 254, 0.92) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 2px solid var(--md-secondary-container) !important; /* replaces red border */
+}
+
+/* --- 6. TOP BAR / AUDIO PLAYER BAR --- */
+.top-bar {
+  background-color: var(--md-primary) !important;
+  border-radius: var(--md-r-m) !important;
+  margin-bottom: 1rem !important;
+}
+
+/* --- 7. CARDS & CONTAINERS --- */
+.card {
+  background-color: var(--md-surface-container) !important;
+  border-radius: var(--md-r-l) !important;
+  border: none !important;
+  box-shadow: 0 2px 6px rgba(103, 80, 164, 0.06) !important;
+  transition: transform var(--md-dur) var(--md-easing),
+              box-shadow var(--md-dur) var(--md-easing) !important;
+}
+.card:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 20px rgba(103, 80, 164, 0.14) !important;
+}
+
+.card-header {
+  background-color: var(--md-primary-container) !important;
+  color: var(--md-on-background) !important;
+  border-bottom: none !important;
+  border-radius: var(--md-r-l) var(--md-r-l) 0 0 !important;
+  font-weight: 500 !important;
+}
+
+.info-box, .small-box {
+  background-color: var(--md-surface-container) !important;
+  border-radius: var(--md-r-l) !important;
+  border: none !important;
+  box-shadow: 0 2px 6px rgba(103, 80, 164, 0.06) !important;
+}
+
+/* Question container (quiz pages) */
+.question-container {
+  background-color: var(--md-surface-container) !important;
+  border-radius: var(--md-r-l) !important;
+  padding: 1.5rem !important;
+  border: none !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Answer box */
+.answer-box {
+  background-color: var(--md-primary-container) !important;
+  border: 1.5px solid var(--md-secondary-container) !important;
+  border-radius: var(--md-r-l) !important;
+  color: var(--md-on-background) !important;
+}
+
+/* Slot drop zones */
+.slot {
+  border: 2px dashed var(--md-outline) !important;
+  background-color: var(--md-surface-container-low) !important;
+  border-radius: var(--md-r-s) !important;
+}
+.drag-over {
+  border-color: var(--md-primary) !important;
+  background-color: var(--md-primary-container) !important;
+}
+
+/* --- 8. FORMS & INPUTS --- */
+.form-control, .form-select, .form-control-sm {
+  font-family: 'Roboto', sans-serif !important;
+  background-color: var(--md-surface-container-low) !important;
+  border: none !important;
+  border-bottom: 2px solid var(--md-outline) !important;
+  border-radius: var(--md-r-s) var(--md-r-s) 0 0 !important;
+  color: var(--md-on-background) !important;
+  padding: 0.65rem 0.85rem !important;
+  transition: border-color 200ms ease, background-color 200ms ease !important;
+}
+.form-control:focus, .form-select:focus {
+  border-bottom-color: var(--md-primary) !important;
+  background-color: var(--md-surface-container) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.form-control::placeholder {
+  color: var(--md-on-surface-variant) !important;
+  opacity: 0.7 !important;
+}
+
+/* Radio buttons */
+.form-check-input[type="radio"] {
+  border: 2px solid var(--md-outline) !important;
+  transition: all 200ms var(--md-easing) !important;
+}
+.form-check-input[type="radio"]:checked {
+  background-color: var(--md-primary) !important;
+  border-color: var(--md-primary) !important;
+}
+
+/* Volume range slider */
+input[type="range"] {
+  accent-color: var(--md-primary) !important;
+}
+
+/* --- 9. SIDEBAR & NAV (ADMINLTE) --- */
+.app-sidebar, .sidebar, .main-sidebar {
+  background-color: var(--md-surface-container) !important;
+  border-right: 1px solid var(--md-surface-container-low) !important;
+}
+
+.sidebar-brand, .brand-link {
+  background-color: var(--md-surface-container) !important;
+  border-bottom: 1px solid var(--md-surface-container-low) !important;
+}
+
+.sidebar .nav-link, .app-sidebar .nav-link {
+  border-radius: var(--md-r-full) !important;
+  color: var(--md-on-background) !important;
+  font-weight: 400 !important;
+  transition: background-color var(--md-dur) var(--md-easing) !important;
+}
+
+.sidebar .nav-link.active,
+.app-sidebar .nav-link.active,
+.sidebar .active > .nav-link {
+  background-color: var(--md-secondary-container) !important;
+  color: var(--md-on-secondary-container) !important;
+  font-weight: 500 !important;
+}
+
+.sidebar .nav-link:hover:not(.active),
+.app-sidebar .nav-link:hover:not(.active) {
+  background-color: rgba(103, 80, 164, 0.08) !important;
+  color: var(--md-primary) !important;
+}
+
+/* --- 10. APP HEADER / TOP NAVBAR --- */
+.app-header, .main-header {
+  background-color: rgba(255, 251, 254, 0.9) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid var(--md-surface-container-low) !important;
+  box-shadow: 0 1px 4px rgba(103, 80, 164, 0.06) !important;
+}
+
+/* --- 11. BADGES & ALERTS --- */
+.badge.bg-primary, .badge.bg-success,
+.badge.bg-warning, .badge.bg-danger {
+  background-color: var(--md-primary) !important;
+  color: var(--md-on-primary) !important;
+}
+
+.alert-primary {
+  background-color: var(--md-primary-container) !important;
+  color: var(--md-on-background) !important;
+  border: 1px solid var(--md-secondary-container) !important;
+  border-radius: var(--md-r-l) !important;
+}
+
+.alert-success {
+  background-color: var(--md-tertiary-container) !important;
+  color: var(--md-on-background) !important;
+  border: 1px solid #F0B8CC !important;
+  border-radius: var(--md-r-l) !important;
+}
+
+/* --- 12. MODAL --- */
+.modal-content {
+  border-radius: var(--md-r-xl) !important;
+  background-color: var(--md-surface-container) !important;
+  border: none !important;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.12) !important;
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--md-surface-container-low) !important;
+  border-radius: var(--md-r-xl) var(--md-r-xl) 0 0 !important;
+  background-color: var(--md-primary-container) !important;
+}
+
+/* --- 13. TABLES --- */
+.table {
+  color: var(--md-on-background) !important;
+}
+.table > thead {
+  background-color: var(--md-secondary-container) !important;
+}
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: rgba(103, 80, 164, 0.04) !important;
+}
+.table-hover > tbody > tr:hover > * {
+  background-color: rgba(103, 80, 164, 0.08) !important;
+}
+
+/* --- 14. RESULT COMPARISON TABLE (quiz pages) --- */
+.text-success {
+  color: var(--md-tertiary) !important;
+}
+.text-danger {
+  color: var(--md-primary) !important;
+}
+
+/* --- 15. ATMOSPHERIC BLUR SHAPES --- */
+.md-bg-shape {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  border-radius: var(--md-r-full);
+  filter: blur(100px);
+  z-index: -1;
+  opacity: 0.12;
+  pointer-events: none;
+  animation: md-float 8s ease-in-out infinite alternate;
+}
+.md-bg-shape-primary {
+  background-color: var(--md-primary);
+  top: -5%;
+  right: -8%;
+}
+.md-bg-shape-tertiary {
+  background-color: var(--md-tertiary);
+  bottom: 5%;
+  left: -8%;
+  animation-delay: -4s;
+}
+
+@keyframes md-float {
+  from { transform: scale(1) translate(0, 0); }
+  to   { transform: scale(1.1) translate(20px, -20px); }
+}
+
+/* --- 16. FOCUS RINGS (accessibility) --- */
+*:focus-visible {
+  outline: 2px solid var(--md-primary) !important;
+  outline-offset: 3px !important;
+}
+
+/* --- 17. NAVIGATION PILLS / TABS --- */
+.nav-pills .nav-link.active {
+  background-color: var(--md-secondary-container) !important;
+  color: var(--md-on-secondary-container) !important;
+  border-radius: var(--md-r-full) !important;
+}
+.nav-pills .nav-link {
+  border-radius: var(--md-r-full) !important;
+  color: var(--md-on-background) !important;
+}
+.nav-pills .nav-link:hover:not(.active) {
+  background-color: rgba(103, 80, 164, 0.08) !important;
+}
+
+/* --- 18. TRANSCRIPT BOX (listening) --- */
+#transcriptBox, .transcriptBox {
+  background-color: var(--md-primary-container) !important;
+  border: 1px solid var(--md-secondary-container) !important;
+  border-radius: var(--md-r-l) !important;
+  color: var(--md-on-background) !important;
+}
+
+/* --- 19. COUNTDOWN TIMER --- */
+.countdown, #countdownTimer {
+  color: var(--md-primary) !important;
+  font-weight: 700 !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+/* --- 20. MOTION PREFERENCE --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

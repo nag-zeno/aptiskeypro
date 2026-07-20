@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+backend/aptispro_dev.db
+
+# Environment & Credentials
+.env
+*.env
+!.env.example
+!backend/.env.example
+session_cookies.json
+
+# Logs & System
+*.log
+.DS_Store
+Thumbs.db
+
+# IDEs & Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# AI & Internal Config
+.agents/
+.gemini/

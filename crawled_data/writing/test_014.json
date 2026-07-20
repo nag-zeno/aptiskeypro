@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #014",
+  "club_name": "Fitness club",
+  "questions1": {
+    "question1_1": "What is your hobby?",
+    "question1_2": "What's the weather like today?",
+    "question1_3": "How do you relax?",
+    "question1_4": "What do you usually do in your free time?",
+    "question1_5": "Why do you learn English?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I love reading books.",
+    "question1_2_answer": "It's sunny and warm.",
+    "question1_3_answer": "I listen to music.",
+    "question1_4_answer": "I watch movies.",
+    "question1_5_answer": "To communicate globally."
+  },
+  "questions2": {
+    "question2": "Please talk about the last time you went for a run?"
+  },
+  "questions2_answer": {
+    "question2": "The last time I went for a run was last weekend. It felt refreshing, and I ran for about 30 minutes in the park, enjoying the fresh air and nature."
+  },
+  "questions3": {
+    "question3_1": "I live in a tall building, I usually walk downstairs to exercise, how do you usually exercise?",
+    "question3_2": "I usually get up early to run in the morning because I usually get tired in the evening. What about you?",
+    "question3_3": "Nowadays, technology makes people's lives easier, but it also makes them lazy and dislike exercise. Do you agree with this opinion?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I usually exercise by going to the gym or doing home workouts like yoga or bodyweight exercises. I find them effective for staying fit without needing a lot of space or equipment.",
+    "question3_2_answer": "I prefer exercising in the evening when I have more energy. I usually go for a jog or take a brisk walk around my neighborhood. It helps me relax after a busy day.",
+    "question3_3_answer": "I do agree that technology has made life more convenient, but it often leads to less physical activity. While tech helps in many ways, it’s essential to make time for regular exercise."
+  },
+  "questions4_main": "Dear members, some equipment in the club is old and needs to be replaced. Our club is planning to hold a sponsorship event to raise money for the upgrade of sports equipment. On the other hand, there are also some opinions that the club should increase the membership fee to 50%.",
+  "question4_1_text": "Write a short email to your friend (about 50 words). ",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words). ",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that the club is planning a sponsorship event to raise money for new sports equipment. I think it’s a great idea! Some people also want to raise membership fees. What do you think? \n    <br>Let me know! \n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I understand that some of the equipment in our club is getting old, and I think hosting a sponsorship event to raise funds is a good idea. It would help us upgrade our sports equipment and improve our overall facilities. \n    <br> However, I have heard that some members suggest raising the membership fee by 50%. I believe this could lead to dissatisfaction among many members, especially those who already struggle with the current fees. \n    <br> I would like to propose exploring other options to raise funds, such as hosting charity events or reaching out to local businesses for donations. I am happy to help organize any activities or events that could support the club’s goals. \n    <br> I look forward to hearing your thoughts on this matter.  \n    <br> Best regards,  \n    <br> Jimmy"
+}

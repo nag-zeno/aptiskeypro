@@ -1,0 +1,228 @@
+{
+  "label": "Bộ đề #05",
+  "questions1": [
+    {
+      "questionStart": "The people in my hometown are very ",
+      "answerOptions": [
+        "friendly",
+        "hate",
+        "big"
+      ],
+      "questionEnd": "to visitors.",
+      "correctAnswer": "friendly"
+    },
+    {
+      "questionStart": "I prefer to ",
+      "answerOptions": [
+        "run",
+        "walk",
+        "buy"
+      ],
+      "questionEnd": "to the market instead of driving.",
+      "correctAnswer": "walk"
+    },
+    {
+      "questionStart": "Where did you meet your best friend ",
+      "answerOptions": [
+        "first",
+        "love",
+        "bring"
+      ],
+      "questionEnd": "?",
+      "correctAnswer": "first"
+    },
+    {
+      "questionStart": "Can your sister ",
+      "answerOptions": [
+        "speak",
+        "big",
+        "most"
+      ],
+      "questionEnd": "Japanese fluently?",
+      "correctAnswer": "speak"
+    },
+    {
+      "questionStart": "We usually go camping ",
+      "answerOptions": [
+        "alone",
+        "together",
+        "morning"
+      ],
+      "questionEnd": "every summer.",
+      "correctAnswer": "together"
+    }
+  ],
+  "question2Topic": "Artificial intelligence",
+  "question2Content": [
+    {
+      "text": "Over the past decade, artificial intelligence has revolutionized various industries.",
+      "id": "item1"
+    },
+    {
+      "text": "The early AI systems were limited to simple pattern recognition tasks.",
+      "id": "item2"
+    },
+    {
+      "text": "High computational costs previously hindered the development of AI.",
+      "id": "item3"
+    },
+    {
+      "text": "Nowadays, AI engineers build advanced models for complex tasks such as language translation.",
+      "id": "item4"
+    },
+    {
+      "text": "Modern AI tools help businesses to analyze data and make better decisions.",
+      "id": "item5"
+    }
+  ],
+  "question3Topic": "Company wellness day",
+  "question3Content": [
+    {
+      "text": "This month, the wellness day took place on Friday, focusing on work-life balance.",
+      "id": "item1"
+    },
+    {
+      "text": "More than 50 (con số bất kỳ) employees participated, with Mr.A (tên người) leading a workshop on stress relief.",
+      "id": "item2"
+    },
+    {
+      "text": "Activities included team yoga, time management seminars, and a group walk.",
+      "id": "item3"
+    },
+    {
+      "text": "After the workshops, awards were given for the most creative wellness ideas.",
+      "id": "item4"
+    },
+    {
+      "text": "Employees enjoyed healthy snacks and exchanged tips for managing stress.",
+      "id": "item5"
+    }
+  ],
+  "question4Topic": "Work and life balance",
+  "question4Text": [
+    "<strong>Here is the perspective of four people on the above topic. Please read the content and answer the question.</strong>",
+    "<strong>A:</strong> When I was a child, I enjoyed playing board games with my parents after their busy workdays. Now, I get to share that experience with my own kids, and having a four-day workweek gives us more time together. Flexible schedules are a big help, but I always make sure to plan ahead so I can balance both work and family life. These are the moments that create lasting memories.",
+    "<strong>B:</strong> As a kid, I would set up pretend offices with my friends, using toy phones and notebooks. I loved taking on the role of 'boss' and organizing our tasks. Those imaginative games taught me valuable lessons in organization and leadership, and I still laugh thinking about the 'serious' meetings we held.",
+    "<strong>C:</strong> When I was younger, I devoured books about different professions, dreaming about what my future career might be. Those books inspired my ambition. Today, I rely on productivity apps to keep track of my tasks in my four-day workweek. While the apps make my work more efficient, the excitement of organizing and planning is still the same.",
+    "<strong>D:</strong> As a child, I spent countless evenings playing tag with my friends in the neighborhood. On rainy days, though, I often found myself feeling bored indoors. Now, after work, I practice mindfulness to help me relax and recharge. It’s especially helpful with a shorter workweek, as it keeps me focused and refreshed."
+  ],
+  "question4Content": [
+    {
+      "question": "Who now enjoys productivity apps?",
+      "id": "question4_q1",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who loved outdoor play as a child?",
+      "id": "question4_q2",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Who enjoys family time with board games?",
+      "id": "question4_q3",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Who loved organizing pretend offices as a child?",
+      "id": "question4_q4",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who finds modern schedules more flexible?",
+      "id": "question4_q5",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Who loved reading about careers as a child?",
+      "id": "question4_q6",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who now prefers mindfulness practices?",
+      "id": "question4_q7",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    }
+  ],
+  "correctAnswersQuestion4": [
+    "C",
+    "D",
+    "A",
+    "B",
+    "A",
+    "C",
+    "D"
+  ],
+  "question5Topic": "Women mathematicians",
+  "options": [
+    "",
+    "Breaking New Ground in Ancient Mathematics",
+    "Trailblazing Computer Science",
+    "Driving Space Exploration Forward",
+    "Transforming Geometry and Motion",
+    "Connecting Symmetry to Physics",
+    "Encouraging Diversity in STEM",
+    "Breaking Through Educational Barriers"
+  ],
+  "paragraph_question5": [
+    "Long before modern scientific institutions emerged, certain individuals in ancient history established the foundations of mathematics as we know it. One such pioneer was Hypatia of Alexandria, a famous philosopher and mathematician in the 4th century.",
+    "The early 20th century saw remarkable advancements in computing, largely propelled by the innovative work of figures like Alan Turing. Turing’s concept of a universal machine, capable of performing any computable task, laid the foundation for modern computers.",
+    "Humanity’s quest to explore the cosmos has been defined by groundbreaking milestones. From the launch of Sputnik 1 to the Apollo moon landings, each mission has broadened our understanding of space and our place in the universe.",
+    "The study of geometry and motion was irrevocably altered by the works of Isaac Newton and later Albert Einstein. Newton’s laws provided the mathematical foundation for understanding motion on Earth and in space, while Einstein’s theory of general relativity revolutionized our understanding of gravity.",
+    "One of the most profound ideas in modern physics is the link between symmetry and the laws of nature. Emmy Noether, a brilliant German mathematician, proved a theorem that demonstrated how physical laws are intrinsically linked to symmetrical properties.",
+    "Despite advancements in science and technology, many groups remain underrepresented in STEM fields. In recent decades, educators and organizations have worked to foster more inclusive environments, offering scholarships, mentorship, and outreach programs.",
+    "In many parts of the world, individuals have had to fight for the right to education, particularly in scientific disciplines. A well-known example is the story of 19th-century women who were denied entry to universities."
+  ],
+  "meohoc": [
+    "Mathematics → Computer → Space → Motion → Connecting → Diversity → Educational",
+    "<strong>Nhớ theo đoạn văn:</strong> Toán học (<strong>Mathematics</strong>) là nền tảng cho khoa học máy tính (<strong>Computer</strong>) và khám phá không gian (<strong>Space</strong>), giúp chúng ta hiểu về chuyển động (<strong>Motion</strong>) và kết nối (<strong>Connecting</strong>) các kiến thức đa dạng (<strong>Diversity</strong>), từ đó phát triển giáo dục (<strong>Educational</strong>) cho tương lai."
+  ]
+}

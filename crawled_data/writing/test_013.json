@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #013",
+  "club_name": "Film club",
+  "questions1": {
+    "question1_1": "What’s your favorite sport?",
+    "question1_2": "How many people in your family?",
+    "question1_3": "What did you do yesterday?",
+    "question1_4": "How do you go to school?",
+    "question1_5": "What’s your hobby?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I love football.",
+    "question1_2_answer": "There are four people.",
+    "question1_3_answer": "I went to work.",
+    "question1_4_answer": "I go by bike.",
+    "question1_5_answer": "I enjoy reading books."
+  },
+  "questions2": {
+    "question2": "Please write some of your favorite films and why do you like watching them?"
+  },
+  "questions2_answer": {
+    "question2": "Some of my favorite films are 'Inception' and 'The Dark Knight'. I enjoy them for their complex plots, amazing visuals, and the incredible performances by the actors."
+  },
+  "questions3": {
+    "question3_1": "Hi. Welcome to the club. How often do you watch films?",
+    "question3_2": "Hi. Can you remember the first film you what? What was it like?",
+    "question3_3": "What would you like to learn from the film club?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I watch films about 2-3 times a week, mostly on weekends. I enjoy a variety of genres, from action to drama, and I love discussing them with friends afterward.",
+    "question3_2_answer": "The first film I watched was a cartoon when I was very young. It was colorful and exciting, and I still remember how much it fascinated me at that time.",
+    "question3_3_answer": "From the film club, I would like to learn more about different film genres, improve my film analysis skills, and engage in discussions that enhance my understanding of storytelling techniques."
+  },
+  "questions4_main": "We are writing to tell you that the guest actor, James Mc Avoy, will unfortunately not be able to give a talk at our next club meeting due to personal reasons. He has requested we reschedule the talk for the next year in either January or March. Please contact the club secretary if you have a preference for one of the two months. Our meeting will take place as usual with a discussion on the advantages and disadvantages of learning on the Internet.",
+  "question4_1_text": "Write an email to your friend. Write about your feelings and what you would like to do (50 words).",
+  "question4_2_text": "Write an email the the manager of the club. Write about your feelings and possible alternatives (120 – 150 words)",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that James McAvoy won't be able to give the talk at our next meeting, which is such a disappointment! I was really looking forward to it. I hope we can reschedule for March or January next year. \n    <br>Let me know your thoughts! \n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club Manager, \n    <br> I was disappointed to hear that James McAvoy won't be able to attend the meeting due to personal reasons. It’s unfortunate because we were all really looking forward to his talk. However, I completely understand, and I hope we can reschedule for either January or March next year as suggested. I believe this delay will give us all the chance to look forward to the talk even more.  \n    <br> In the meantime, I’m excited about the discussion on the advantages and disadvantages of learning on the internet. I’m sure it will be an engaging topic! Perhaps we could also consider inviting another guest speaker to fill in, or organize a fun activity related to the internet learning theme.  \n    <br> I look forward to your feedback and suggestions.  \n    <br> Best regards,  \n    <br> Jimmy"
+}

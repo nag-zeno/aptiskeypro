@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng Nhập / Đăng Ký – AptisKey</title>
+  <meta name="description"
+    content="Đăng nhập hoặc tạo tài khoản AptisKey để bắt đầu luyện thi Aptis với AI thông minh nhất Việt Nam." />
+
+  <!-- Fonts (match neumorphism.css) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Bootstrap Icons (match main app) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    crossorigin="anonymous" />
+
+  <style>
+    /* ===================================================================
+       NEUMORPHISM DESIGN TOKENS  (mirrors neumorphism.css)
+       =================================================================== */
+    :root {
+      --nm-bg: #e0e5ec;
+      --nm-bg-alt: #dce1e8;
+
+      --nm-shadow-light: #ffffff;
+      --nm-shadow-dark: #a3b1c6;
+
+      --nm-shadow-out: 6px 6px 16px #a3b1c6, -6px -6px 16px #ffffff;
+      --nm-shadow-out-lg: 10px 10px 24px #a3b1c6, -10px -10px 24px #ffffff;
+      --nm-shadow-in: inset 4px 4px 10px #a3b1c6, inset -4px -4px 10px #ffffff;
+      --nm-shadow-in-lg: inset 6px 6px 14px #a3b1c6, inset -6px -6px 14px #ffffff;
+      --nm-shadow-flat: 2px 2px 5px #a3b1c6, -2px -2px 5px #ffffff;
+
+      --nm-primary: #4f8ef7;
+      --nm-primary-dark: #3a76e0;
+      --nm-primary-glow: rgba(79, 142, 247, 0.35);
+      --nm-secondary: #6c63ff;
+      --nm-secondary-glow: rgba(108, 99, 255, 0.25);
+      --nm-success: #27ae60;
+      --nm-success-glow: rgba(39, 174, 96, 0.3);
+      --nm-danger: #e74c3c;
+      --nm-danger-glow: rgba(231, 76, 60, 0.3);
+      --nm-warning: #f39c12;
+      --nm-warning-glow: rgba(243, 156, 18, 0.3);
+
+      --nm-text: #2d3748;
+      --nm-text-muted: #718096;
+      --nm-text-light: #a0aec0;
+      --nm-on-accent: #ffffff;
+
+      --nm-r-s: 10px;
+      --nm-r-m: 16px;
+      --nm-r-l: 20px;
+      --nm-r-xl: 28px;
+      --nm-r-full: 9999px;
+
+      --nm-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --nm-transition-fast: all 0.15s ease;
+    }
+
+    /* ===================================================================
+       RESET & BASE
+       =================================================================== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: var(--nm-bg);
+      color: var(--nm-text);
+      min-height: 100vh;
+      display: flex;
+      align-items: stretch;
+      position: relative;
+      overflow: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      color: var(--nm-text);
+    }
+
+    /* Decorative blobs (match index.html nm-blob pattern) */
+    .nm-blob {
+      position: fixed;
+      border-radius: 9999px;
+      filter: blur(80px);
+      z-index: 0;
+      opacity: 0.07;
+      pointer-events: none;
+      animation: nm-drift 10s ease-in-out infinite alternate;
+    }
+
+    .nm-blob-blue {
+      width: 450px;
+      height: 450px;
+      background: var(--nm-primary);
+      top: -8%;
+      right: -10%;
+    }
+
+    .nm-blob-violet {
+      width: 380px;
+      height: 380px;
+      background: var(--nm-secondary);
+      bottom: 0%;
+      left: -8%;
+      animation-delay: -5s;
+    }
+
+    @keyframes nm-drift {
+      from {
+        transform: scale(1) translate(0, 0);
+      }
+
+      to {
+        transform: scale(1.12) translate(24px, -18px);
+      }
+    }
+
+    /* ===================================================================
+       LAYOUT
+       =================================================================== */
+    .auth-wrapper {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    /* ===================================================================
+       LEFT PANEL
+       =================================================================== */
+    .left-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 48px 56px;
+      background: var(--nm-bg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Inset "groove" divider between panels */
+    .left-panel::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 5%;
+      bottom: 5%;
+      width: 2px;
+      background: linear-gradient(180deg, transparent, #a3b1c6 30%, #a3b1c6 70%, transparent);
+      opacity: 0.5;
+    }
+
+    /* Brand */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .brand-logo {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #5b9bff, #6c63ff);
+      border-radius: var(--nm-r-m);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      box-shadow: 5px 5px 12px #a3b1c6, -3px -3px 8px #ffffff,
+        0 4px 20px var(--nm-primary-glow);
+      letter-spacing: -1px;
+    }
+
+    .brand-name {
+      font-size: 26px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #4f8ef7, #6c63ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Hero */
+    .left-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .left-tagline {
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+      margin-bottom: 18px;
+      color: var(--nm-text);
+    }
+
+    .left-tagline .highlight {
+      background: linear-gradient(135deg, #4f8ef7, #6c63ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .left-desc {
+      font-size: 15px;
+      color: var(--nm-text-muted);
+      line-height: 1.7;
+      max-width: 400px;
+      margin-bottom: 36px;
+    }
+
+    /* Features */
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--nm-r-s);
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-out);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+      transition: var(--nm-transition);
+    }
+
+    .feature-icon:hover {
+      box-shadow: var(--nm-shadow-out-lg);
+      transform: translateY(-2px);
+    }
+
+    .feature-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--nm-text-muted);
+    }
+
+    /* Stats */
+    .left-footer {
+      display: flex;
+      gap: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .stat-card {
+      flex: 1;
+      background: var(--nm-bg);
+      border-radius: var(--nm-r-m);
+      padding: 16px 20px;
+      box-shadow: var(--nm-shadow-out);
+      text-align: center;
+      transition: var(--nm-transition);
+    }
+
+    .stat-card:hover {
+      box-shadow: var(--nm-shadow-out-lg);
+      transform: translateY(-3px);
+    }
+
+    .stat-num {
+      font-size: 24px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #4f8ef7, #6c63ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: var(--nm-text-light);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 2px;
+    }
+
+    /* ===================================================================
+       RIGHT PANEL
+       =================================================================== */
+    .right-panel {
+      width: 500px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 44px;
+      background: var(--nm-bg);
+      overflow-y: auto;
+    }
+
+    .auth-card {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    /* ===================================================================
+       TABS
+       =================================================================== */
+    .auth-tabs {
+      display: flex;
+      background: var(--nm-bg);
+      border-radius: var(--nm-r-full);
+      padding: 5px;
+      margin-bottom: 36px;
+      box-shadow: var(--nm-shadow-in);
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 11px 16px;
+      border: none;
+      background: transparent;
+      color: var(--nm-text-muted);
+      font-family: 'Nunito', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: var(--nm-r-full);
+      transition: var(--nm-transition);
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, #5b9bff, #6c63ff);
+      color: #fff;
+      box-shadow: 3px 3px 8px #a3b1c6, -2px -2px 6px #ffffff,
+        0 4px 16px var(--nm-primary-glow);
+    }
+
+    .tab-btn:not(.active):hover {
+      color: var(--nm-primary);
+    }
+
+    /* ===================================================================
+       FORM PANELS
+       =================================================================== */
+    .form-panel {
+      display: none;
+      animation: fadeInUp 0.4s ease;
+    }
+
+    .form-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .form-title {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 4px;
+      color: var(--nm-text);
+    }
+
+    .form-subtitle {
+      font-size: 14px;
+      color: var(--nm-text-muted);
+      margin-bottom: 28px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--nm-text-muted);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Input wrapper */
+    .input-wrapper {
+      position: relative;
+    }
+
+    .input-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--nm-text-light);
+      font-size: 16px;
+      transition: var(--nm-transition-fast);
+      pointer-events: none;
+    }
+
+    .input-wrapper:focus-within .input-icon {
+      color: var(--nm-primary);
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 14px 16px 14px 44px;
+      background: var(--nm-bg);
+      border: none;
+      border-radius: var(--nm-r-m);
+      color: var(--nm-text);
+      font-family: 'Nunito', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      outline: none;
+      box-shadow: var(--nm-shadow-in);
+      transition: var(--nm-transition);
+    }
+
+    .form-input::placeholder {
+      color: var(--nm-text-light);
+    }
+
+    .form-input:focus {
+      box-shadow: inset 4px 4px 10px #a3b1c6,
+        inset -4px -4px 10px #ffffff,
+        0 0 0 3px var(--nm-primary-glow);
+    }
+
+    .form-input.has-toggle {
+      padding-right: 48px;
+    }
+
+    /* Password toggle */
+    .pw-toggle {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--nm-text-light);
+      font-size: 16px;
+      cursor: pointer;
+      padding: 4px;
+      transition: var(--nm-transition-fast);
+    }
+
+    .pw-toggle:hover {
+      color: var(--nm-primary);
+    }
+
+    /* Password strength */
+    .pw-strength {
+      margin-top: 8px;
+      display: none;
+    }
+
+    .pw-strength.visible {
+      display: block;
+    }
+
+    .pw-strength-track {
+      height: 5px;
+      border-radius: var(--nm-r-full);
+      box-shadow: var(--nm-shadow-in);
+      background: var(--nm-bg);
+      overflow: hidden;
+      margin-bottom: 6px;
+    }
+
+    .pw-strength-fill {
+      height: 100%;
+      border-radius: var(--nm-r-full);
+      transition: width 0.4s ease, background 0.3s;
+      width: 0%;
+    }
+
+    .pw-strength-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--nm-text-light);
+    }
+
+    /* Field error */
+    .field-error {
+      display: none;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--nm-danger);
+      margin-top: 7px;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .field-error.visible {
+      display: flex;
+    }
+
+    /* ===================================================================
+       SUBMIT BUTTON
+       =================================================================== */
+    .btn-submit {
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(145deg, #5b9bff, #4080ed);
+      border: none;
+      border-radius: var(--nm-r-full);
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      margin-top: 24px;
+      position: relative;
+      overflow: hidden;
+      transition: var(--nm-transition);
+      letter-spacing: 0.03em;
+      box-shadow: 5px 5px 12px #a3b1c6, -3px -3px 8px #ffffff,
+        0 4px 20px var(--nm-primary-glow);
+    }
+
+    .btn-submit::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.15);
+      opacity: 0;
+      transition: opacity 0.2s;
+      border-radius: inherit;
+    }
+
+    .btn-submit:hover {
+      box-shadow: 6px 6px 16px #a3b1c6, -4px -4px 10px #ffffff,
+        0 6px 24px var(--nm-primary-glow);
+      transform: translateY(-2px);
+    }
+
+    .btn-submit:hover::after {
+      opacity: 1;
+    }
+
+    .btn-submit:active {
+      transform: scale(0.97);
+      box-shadow: inset 3px 3px 8px rgba(60, 100, 200, 0.4),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-submit:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .btn-spinner {
+      display: none;
+      width: 18px;
+      height: 18px;
+      border: 2.5px solid rgba(255, 255, 255, 0.35);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      margin: 0 auto;
+    }
+
+    .btn-text {
+      display: block;
+    }
+
+    .btn-submit.loading .btn-text {
+      display: none;
+    }
+
+    .btn-submit.loading .btn-spinner {
+      display: block;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* ===================================================================
+       DIVIDER
+       =================================================================== */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 22px 0;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--nm-text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #a3b1c6, transparent);
+    }
+
+    /* ===================================================================
+       SOCIAL BUTTONS
+       =================================================================== */
+    .social-btns {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn-social {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 16px;
+      background: var(--nm-bg);
+      border: none;
+      border-radius: var(--nm-r-full);
+      color: var(--nm-text-muted);
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: var(--nm-shadow-out);
+      transition: var(--nm-transition);
+    }
+
+    .btn-social:hover {
+      color: var(--nm-primary);
+      box-shadow: 8px 8px 18px #a3b1c6, -8px -8px 18px #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .btn-social:active {
+      box-shadow: var(--nm-shadow-in);
+      transform: scale(0.97);
+    }
+
+    .btn-social svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* ===================================================================
+       HELPER LINKS
+       =================================================================== */
+    .forgot-link {
+      display: block;
+      text-align: right;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--nm-primary);
+      text-decoration: none;
+      margin-top: -8px;
+      margin-bottom: 4px;
+      cursor: pointer;
+      transition: var(--nm-transition-fast);
+    }
+
+    .forgot-link:hover {
+      color: var(--nm-primary-dark);
+    }
+
+    .terms-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--nm-text-light);
+      text-align: center;
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+
+    .terms-text a {
+      color: var(--nm-primary);
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .terms-text a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===================================================================
+       REGISTER SUCCESS
+       =================================================================== */
+    .success-panel {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 24px 0;
+      animation: fadeInUp 0.5s ease;
+    }
+
+    .success-panel.visible {
+      display: flex;
+    }
+
+    .success-icon-wrap {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-out-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+      animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes popIn {
+      from {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .success-title {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .success-desc {
+      font-size: 14px;
+      color: var(--nm-text-muted);
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    /* ===================================================================
+       FORGOT PASSWORD MODAL
+       =================================================================== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(45, 55, 72, 0.5);
+      backdrop-filter: blur(6px);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    .modal-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* ===================================================================
+       RESET PASSWORD PANEL (hiển thị khi URL có ?token=...)
+       =================================================================== */
+    .reset-pw-panel {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 44px;
+      width: 100%;
+      min-height: 100vh;
+      animation: fadeInUp 0.4s ease;
+    }
+
+    .reset-pw-panel.active {
+      display: flex;
+    }
+
+    .reset-pw-card {
+      width: 100%;
+      max-width: 420px;
+      background: var(--nm-bg);
+      border-radius: var(--nm-r-xl);
+      padding: 40px 36px;
+      box-shadow: var(--nm-shadow-out-lg);
+    }
+
+    .reset-pw-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-out);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin: 0 auto 20px;
+    }
+
+    .reset-pw-success {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      animation: fadeInUp 0.5s ease;
+    }
+
+    .reset-pw-success.visible {
+      display: flex;
+    }
+
+    .modal-card {
+      background: var(--nm-bg);
+      border: none;
+      border-radius: var(--nm-r-xl);
+      padding: 36px;
+      width: 420px;
+      max-width: 92vw;
+      box-shadow: 16px 16px 40px #a3b1c6, -10px -10px 30px #ffffff;
+      transform: scale(0.95) translateY(20px);
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .modal-overlay.open .modal-card {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal-header-nm {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(163, 177, 198, 0.35);
+    }
+
+    .modal-title-nm {
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .modal-close-nm {
+      width: 36px;
+      height: 36px;
+      background: var(--nm-bg);
+      border: none;
+      border-radius: 50%;
+      box-shadow: var(--nm-shadow-flat);
+      color: var(--nm-text-muted);
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--nm-transition);
+    }
+
+    .modal-close-nm:hover {
+      box-shadow: var(--nm-shadow-out);
+      color: var(--nm-danger);
+    }
+
+    .modal-desc-nm {
+      font-size: 14px;
+      color: var(--nm-text-muted);
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+
+    /* ===================================================================
+       TOAST
+       =================================================================== */
+    .toast-container {
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .toast {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 18px;
+      border-radius: var(--nm-r-l);
+      min-width: 300px;
+      max-width: 400px;
+      background: var(--nm-bg);
+      animation: toastIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .toast-success {
+      box-shadow: var(--nm-shadow-out), 0 4px 16px rgba(39, 174, 96, 0.2);
+    }
+
+    .toast-error {
+      box-shadow: var(--nm-shadow-out), 0 4px 16px rgba(231, 76, 60, 0.2);
+    }
+
+    .toast-info {
+      box-shadow: var(--nm-shadow-out), 0 4px 16px rgba(79, 142, 247, 0.2);
+    }
+
+    .toast-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .toast-body {
+      flex: 1;
+    }
+
+    .toast-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--nm-text);
+      margin-bottom: 2px;
+    }
+
+    .toast-msg {
+      font-size: 13px;
+      color: var(--nm-text-muted);
+      line-height: 1.4;
+    }
+
+    .toast-close {
+      background: none;
+      border: none;
+      color: var(--nm-text-light);
+      cursor: pointer;
+      font-size: 16px;
+      padding: 0;
+      flex-shrink: 0;
+      transition: var(--nm-transition-fast);
+    }
+
+    .toast-close:hover {
+      color: var(--nm-danger);
+    }
+
+    @keyframes toastIn {
+      from {
+        opacity: 0;
+        transform: translateX(20px) scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+      }
+    }
+
+    /* ===================================================================
+       FOCUS RING (accessibility — match neumorphism.css rule 26)
+       =================================================================== */
+    *:focus-visible {
+      outline: 3px solid var(--nm-primary) !important;
+      outline-offset: 3px !important;
+    }
+
+    /* ===================================================================
+       SCROLLBAR (match neumorphism.css rule 27)
+       =================================================================== */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--nm-bg);
+      border-radius: 9999px;
+      box-shadow: var(--nm-shadow-in);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(135deg, #4f8ef7, #6c63ff);
+      border-radius: 9999px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(135deg, #6c63ff, #4f8ef7);
+    }
+
+    /* ===================================================================
+       SELECTION
+       =================================================================== */
+    ::selection {
+      background-color: var(--nm-primary-glow) !important;
+      color: var(--nm-text) !important;
+    }
+
+    /* ===================================================================
+       RESPONSIVE
+       =================================================================== */
+    @media (max-width: 900px) {
+      .left-panel {
+        display: none;
+      }
+
+      .right-panel {
+        width: 100%;
+        padding: 32px 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .right-panel {
+        padding: 24px 16px;
+      }
+
+      .auth-card {
+        max-width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Decorative blobs (match index.html) -->
+  <div class="nm-blob nm-blob-blue" aria-hidden="true"></div>
+  <div class="nm-blob nm-blob-violet" aria-hidden="true"></div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer" role="alert" aria-live="polite"></div>
+
+  <!-- Forgot Password Modal -->
+  <div class="modal-overlay" id="forgotModal" role="dialog" aria-modal="true" aria-labelledby="forgotModalTitle">
+    <div class="modal-card">
+      <div class="modal-header-nm">
+        <h2 class="modal-title-nm" id="forgotModalTitle">
+          <i class="bi bi-key-fill me-2" style="color:var(--nm-primary)"></i>Quên mật khẩu
+        </h2>
+        <button class="modal-close-nm" id="forgotModalClose" aria-label="Đóng">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <p class="modal-desc-nm">
+        Nhập địa chỉ email của bạn. Nếu email tồn tại trong hệ thống, bạn sẽ nhận được hướng dẫn đặt lại mật khẩu.
+      </p>
+      <div class="form-group">
+        <label class="form-label" for="forgotEmail">Email</label>
+        <div class="input-wrapper">
+          <i class="bi bi-envelope-fill input-icon"></i>
+          <input type="email" class="form-input" id="forgotEmail" placeholder="email@example.com"
+            autocomplete="email" />
+        </div>
+      </div>
+      <button class="btn-submit" id="forgotSubmitBtn" style="margin-top:8px;" onclick="submitForgotPassword()">
+        <span class="btn-text"><i class="bi bi-send-fill me-2"></i>Gửi hướng dẫn</span>
+        <div class="btn-spinner"></div>
+      </button>
+    </div>
+  </div>
+
+  <!-- ====== RESET PASSWORD FULL-PAGE PANEL (shown when URL has ?token) ====== -->
+  <div class="reset-pw-panel" id="resetPwPanel">
+    <div class="reset-pw-card">
+
+      <!-- Brand -->
+      <div style="text-align:center;margin-bottom:24px;">
+        <div style="display:inline-flex;align-items:center;gap:10px;">
+          <div style="width:40px;height:40px;background:linear-gradient(135deg,#5b9bff,#6c63ff);border-radius:var(--nm-r-s);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;box-shadow:4px 4px 10px #a3b1c6,-2px -2px 6px #ffffff;">AK</div>
+          <span style="font-size:20px;font-weight:800;background:linear-gradient(135deg,#4f8ef7,#6c63ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">AptisKey</span>
+        </div>
+      </div>
+
+      <!-- Form đặt mật khẩu mới -->
+      <div id="resetFormWrap">
+        <div class="reset-pw-icon">🔑</div>
+        <h2 class="form-title" style="text-align:center;margin-bottom:6px;">Đặt mật khẩu mới</h2>
+        <p class="form-subtitle" style="text-align:center;margin-bottom:28px;">Nhập mật khẩu mới cho tài khoản của bạn</p>
+
+        <form id="resetPwForm" onsubmit="submitResetPassword(event)" novalidate>
+
+          <div class="form-group">
+            <label class="form-label" for="resetNewPw">Mật khẩu mới</label>
+            <div class="input-wrapper">
+              <i class="bi bi-lock-fill input-icon"></i>
+              <input type="password" class="form-input has-toggle" id="resetNewPw"
+                placeholder="Tối thiểu 8 ký tự"
+                autocomplete="new-password"
+                oninput="updateResetStrength(this.value)" required />
+              <button type="button" class="pw-toggle" onclick="togglePw('resetNewPw',this)"
+                aria-label="Hiện/ẩn mật khẩu">
+                <i class="bi bi-eye-fill"></i>
+              </button>
+            </div>
+            <div class="pw-strength" id="resetPwStrengthBar">
+              <div class="pw-strength-track">
+                <div class="pw-strength-fill" id="resetPwStrengthFill"></div>
+              </div>
+              <div class="pw-strength-label" id="resetPwStrengthLabel"></div>
+            </div>
+            <div class="field-error" id="resetNewPwError" role="alert">
+              <i class="bi bi-exclamation-circle-fill"></i><span></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="resetConfirmPw">Xác nhận mật khẩu mới</label>
+            <div class="input-wrapper">
+              <i class="bi bi-shield-lock-fill input-icon"></i>
+              <input type="password" class="form-input has-toggle" id="resetConfirmPw"
+                placeholder="Nhập lại mật khẩu mới"
+                autocomplete="new-password" required />
+              <button type="button" class="pw-toggle" onclick="togglePw('resetConfirmPw',this)"
+                aria-label="Hiện/ẩn mật khẩu">
+                <i class="bi bi-eye-fill"></i>
+              </button>
+            </div>
+            <div class="field-error" id="resetConfirmPwError" role="alert">
+              <i class="bi bi-exclamation-circle-fill"></i><span></span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit" id="resetSubmitBtn">
+            <span class="btn-text"><i class="bi bi-check2-circle me-2"></i>Xác nhận đặt mật khẩu</span>
+            <div class="btn-spinner"></div>
+          </button>
+        </form>
+      </div>
+
+      <!-- Thành công -->
+      <div class="reset-pw-success" id="resetPwSuccess">
+        <div style="font-size:56px;margin-bottom:16px;">🎉</div>
+        <h3 class="form-title" style="text-align:center;margin-bottom:10px;">Thành công!</h3>
+        <p class="form-subtitle" style="text-align:center;margin-bottom:28px;">
+          Mật khẩu của bạn đã được cập nhật.<br/>Hãy đăng nhập với mật khẩu mới.
+        </p>
+        <button class="btn-submit" style="margin-top:0;" onclick="goToLogin()">
+          <span class="btn-text"><i class="bi bi-box-arrow-in-right me-2"></i>Đăng nhập ngay</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Main layout -->
+  <div class="auth-wrapper">
+
+    <!-- ==================== LEFT PANEL ==================== -->
+    <div class="left-panel">
+
+      <!-- Brand -->
+      <div class="brand">
+        <div class="brand-logo">AK</div>
+        <span class="brand-name">AptisKey</span>
+      </div>
+
+      <!-- Hero -->
+      <div class="left-content">
+        <h1 class="left-tagline">
+          Chinh phục<br />
+          <span class="highlight">APTIS</span><br />
+          cùng AI ✨
+        </h1>
+        <p class="left-desc">
+          Luyện tập thông minh với hệ thống chấm điểm AI, đề thi chuẩn format quốc tế và lộ trình học tập cá nhân hoá.
+        </p>
+
+        <ul class="feature-list">
+          <li class="feature-item">
+            <div class="feature-icon">🤖</div>
+            <span class="feature-text">Chấm điểm Writing &amp; Speaking bằng AI</span>
+          </li>
+          <li class="feature-item">
+            <div class="feature-icon">📊</div>
+            <span class="feature-text">Theo dõi tiến độ chi tiết theo từng kỹ năng</span>
+          </li>
+          <li class="feature-item">
+            <div class="feature-icon">🎯</div>
+            <span class="feature-text">Đề thi chuẩn Aptis Core &amp; Expert</span>
+          </li>
+          <li class="feature-item">
+            <div class="feature-icon">⚡</div>
+            <span class="feature-text">Phản hồi tức thì, học mọi lúc mọi nơi</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Stats -->
+      <div class="left-footer">
+        <div class="stat-card">
+          <span class="stat-num">10K+</span>
+          <span class="stat-label">Học viên</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">5K+</span>
+          <span class="stat-label">Câu hỏi</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">98%</span>
+          <span class="stat-label">Hài lòng</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== RIGHT PANEL ==================== -->
+    <div class="right-panel">
+      <div class="auth-card">
+
+        <!-- Tabs -->
+        <div class="auth-tabs" role="tablist">
+          <button class="tab-btn active" id="loginTabBtn" role="tab" aria-selected="true" aria-controls="loginPanel"
+            onclick="switchTab('login')">
+            <i class="bi bi-box-arrow-in-right me-1"></i>Đăng Nhập
+          </button>
+          <button class="tab-btn" id="registerTabBtn" role="tab" aria-selected="false" aria-controls="registerPanel"
+            onclick="switchTab('register')">
+            <i class="bi bi-person-plus-fill me-1"></i>Đăng Ký
+          </button>
+        </div>
+
+        <!-- ===== LOGIN PANEL ===== -->
+        <div class="form-panel active" id="loginPanel" role="tabpanel">
+          <h2 class="form-title">Chào mừng trở lại 👋</h2>
+          <p class="form-subtitle">Đăng nhập để tiếp tục luyện tập</p>
+
+          <form id="loginForm" onsubmit="submitLogin(event)" novalidate>
+
+            <div class="form-group">
+              <label class="form-label" for="loginEmail">Email</label>
+              <div class="input-wrapper">
+                <i class="bi bi-envelope-fill input-icon"></i>
+                <input type="email" class="form-input" id="loginEmail" placeholder="email@example.com"
+                  autocomplete="email" required />
+              </div>
+              <div class="field-error" id="loginEmailError" role="alert">
+                <i class="bi bi-exclamation-circle-fill"></i><span></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="loginPassword">Mật khẩu</label>
+              <div class="input-wrapper">
+                <i class="bi bi-lock-fill input-icon"></i>
+                <input type="password" class="form-input has-toggle" id="loginPassword" placeholder="••••••••"
+                  autocomplete="current-password" required />
+                <button type="button" class="pw-toggle" onclick="togglePw('loginPassword',this)"
+                  aria-label="Hiện/ẩn mật khẩu">
+                  <i class="bi bi-eye-fill"></i>
+                </button>
+              </div>
+              <div class="field-error" id="loginPasswordError" role="alert">
+                <i class="bi bi-exclamation-circle-fill"></i><span></span>
+              </div>
+            </div>
+
+            <a class="forgot-link" tabindex="0" onclick="openForgotModal()"
+              onkeydown="if(event.key==='Enter')openForgotModal()">
+              Quên mật khẩu?
+            </a>
+
+            <button type="submit" class="btn-submit" id="loginSubmitBtn">
+              <span class="btn-text"><i class="bi bi-box-arrow-in-right me-2"></i>Đăng Nhập</span>
+              <div class="btn-spinner"></div>
+            </button>
+          </form>
+
+          <div class="divider">hoặc tiếp tục với</div>
+
+          <div class="social-btns">
+            <button class="btn-social" id="googleLoginBtn"
+              onclick="showToast('info','Sắp ra mắt','Đăng nhập Google sẽ sớm có mặt!')">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                  fill="#4285F4" />
+                <path
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                  fill="#34A853" />
+                <path
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                  fill="#FBBC05" />
+                <path
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                  fill="#EA4335" />
+              </svg>
+              Google
+            </button>
+            <button class="btn-social" id="fbLoginBtn"
+              onclick="showToast('info','Sắp ra mắt','Đăng nhập Facebook sẽ sớm có mặt!')">
+              <svg viewBox="0 0 24 24" fill="#1877F2">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+              Facebook
+            </button>
+          </div>
+
+          <p class="terms-text">
+            Chưa có tài khoản? <a onclick="switchTab('register')">Đăng ký ngay</a>
+          </p>
+        </div><!-- /loginPanel -->
+
+        <!-- ===== REGISTER PANEL ===== -->
+        <div class="form-panel" id="registerPanel" role="tabpanel">
+
+          <div id="registerFormWrap">
+            <h2 class="form-title">Tạo tài khoản mới ✨</h2>
+            <p class="form-subtitle">Miễn phí · Không cần thẻ tín dụng</p>
+
+            <form id="registerForm" onsubmit="submitRegister(event)" novalidate>
+
+              <div class="form-group">
+                <label class="form-label" for="regFullName">Họ và tên</label>
+                <div class="input-wrapper">
+                  <i class="bi bi-person-fill input-icon"></i>
+                  <input type="text" class="form-input" id="regFullName" placeholder="Nguyễn Văn A" autocomplete="name"
+                    required />
+                </div>
+                <div class="field-error" id="regFullNameError" role="alert">
+                  <i class="bi bi-exclamation-circle-fill"></i><span></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="regEmail">Email</label>
+                <div class="input-wrapper">
+                  <i class="bi bi-envelope-fill input-icon"></i>
+                  <input type="email" class="form-input" id="regEmail" placeholder="email@example.com"
+                    autocomplete="email" required />
+                </div>
+                <div class="field-error" id="regEmailError" role="alert">
+                  <i class="bi bi-exclamation-circle-fill"></i><span></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="regPassword">Mật khẩu</label>
+                <div class="input-wrapper">
+                  <i class="bi bi-lock-fill input-icon"></i>
+                  <input type="password" class="form-input has-toggle" id="regPassword" placeholder="Tối thiểu 8 ký tự"
+                    autocomplete="new-password" oninput="updatePasswordStrength(this.value)" required />
+                  <button type="button" class="pw-toggle" onclick="togglePw('regPassword',this)"
+                    aria-label="Hiện/ẩn mật khẩu">
+                    <i class="bi bi-eye-fill"></i>
+                  </button>
+                </div>
+                <div class="pw-strength" id="pwStrengthBar">
+                  <div class="pw-strength-track">
+                    <div class="pw-strength-fill" id="pwStrengthFill"></div>
+                  </div>
+                  <div class="pw-strength-label" id="pwStrengthLabel"></div>
+                </div>
+                <div class="field-error" id="regPasswordError" role="alert">
+                  <i class="bi bi-exclamation-circle-fill"></i><span></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="regPasswordConfirm">Xác nhận mật khẩu</label>
+                <div class="input-wrapper">
+                  <i class="bi bi-shield-lock-fill input-icon"></i>
+                  <input type="password" class="form-input has-toggle" id="regPasswordConfirm"
+                    placeholder="Nhập lại mật khẩu" autocomplete="new-password" required />
+                  <button type="button" class="pw-toggle" onclick="togglePw('regPasswordConfirm',this)"
+                    aria-label="Hiện/ẩn mật khẩu">
+                    <i class="bi bi-eye-fill"></i>
+                  </button>
+                </div>
+                <div class="field-error" id="regPasswordConfirmError" role="alert">
+                  <i class="bi bi-exclamation-circle-fill"></i><span></span>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-submit" id="registerSubmitBtn">
+                <span class="btn-text"><i class="bi bi-rocket-takeoff-fill me-2"></i>Tạo tài khoản</span>
+                <div class="btn-spinner"></div>
+              </button>
+            </form>
+
+            <p class="terms-text">
+              Bằng cách đăng ký, bạn đồng ý với
+              <a href="#">Điều khoản sử dụng</a> và <a href="#">Chính sách bảo mật</a>.
+            </p>
+            <p class="terms-text" style="margin-top:8px;">
+              Đã có tài khoản? <a onclick="switchTab('login')">Đăng nhập</a>
+            </p>
+          </div>
+
+          <!-- Register Success State -->
+          <div class="success-panel" id="registerSuccess">
+            <div class="success-icon-wrap">🎉</div>
+            <h3 class="success-title">Đăng ký thành công!</h3>
+            <p class="success-desc">
+              Tài khoản của bạn đã được tạo thành công.<br />
+              Hãy đăng nhập để bắt đầu hành trình chinh phục APTIS!
+            </p>
+            <button class="btn-submit" style="margin-top:0;" onclick="switchTab('login')">
+              <span class="btn-text"><i class="bi bi-box-arrow-in-right me-2"></i>Đăng Nhập Ngay</span>
+            </button>
+          </div>
+        </div><!-- /registerPanel -->
+
+      </div><!-- /auth-card -->
+    </div><!-- /right-panel -->
+  </div><!-- /auth-wrapper -->
+
+  <script>
+    /* ===== CONFIG ===== */
+    const API_BASE = window.location.origin;
+
+    /* ===== TAB SWITCHING ===== */
+    function switchTab(tab) {
+      const loginPanel = document.getElementById('loginPanel');
+      const registerPanel = document.getElementById('registerPanel');
+      const loginBtn = document.getElementById('loginTabBtn');
+      const registerBtn = document.getElementById('registerTabBtn');
+
+      if (tab === 'login') {
+        loginPanel.classList.add('active'); registerPanel.classList.remove('active');
+        loginBtn.classList.add('active'); loginBtn.setAttribute('aria-selected', 'true');
+        registerBtn.classList.remove('active'); registerBtn.setAttribute('aria-selected', 'false');
+      } else {
+        registerPanel.classList.add('active'); loginPanel.classList.remove('active');
+        registerBtn.classList.add('active'); registerBtn.setAttribute('aria-selected', 'true');
+        loginBtn.classList.remove('active'); loginBtn.setAttribute('aria-selected', 'false');
+        document.getElementById('registerFormWrap').style.display = 'block';
+        document.getElementById('registerSuccess').classList.remove('visible');
+      }
+    }
+
+    /* ===== PASSWORD TOGGLE ===== */
+    function togglePw(inputId, btn) {
+      const input = document.getElementById(inputId);
+      const icon = btn.querySelector('i');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.className = 'bi bi-eye-slash-fill';
+      } else {
+        input.type = 'password';
+        icon.className = 'bi bi-eye-fill';
+      }
+    }
+
+    /* ===== PASSWORD STRENGTH ===== */
+    function updatePasswordStrength(value) {
+      const bar = document.getElementById('pwStrengthBar');
+      const fill = document.getElementById('pwStrengthFill');
+      const label = document.getElementById('pwStrengthLabel');
+      if (!value) { bar.classList.remove('visible'); return; }
+      bar.classList.add('visible');
+
+      let score = 0;
+      if (value.length >= 8) score++;
+      if (value.length >= 12) score++;
+      if (/[A-Z]/.test(value)) score++;
+      if (/[0-9]/.test(value)) score++;
+      if (/[^A-Za-z0-9]/.test(value)) score++;
+
+      const levels = [
+        { label: 'Rất yếu', color: '#e74c3c', width: '15%' },
+        { label: 'Yếu', color: '#f39c12', width: '30%' },
+        { label: 'Trung bình', color: '#f5a623', width: '55%' },
+        { label: 'Mạnh', color: '#27ae60', width: '80%' },
+        { label: 'Rất mạnh', color: '#16a085', width: '100%' },
+      ];
+      const l = levels[Math.min(score, 4)];
+      fill.style.width = l.width;
+      fill.style.background = l.color;
+      label.textContent = l.label;
+      label.style.color = l.color;
+    }
+
+    /* ===== FIELD ERROR ===== */
+    function showFieldError(id, msg) {
+      const el = document.getElementById(id);
+      el.querySelector('span').textContent = msg;
+      el.classList.add('visible');
+    }
+    function clearFieldError(id) {
+      const el = document.getElementById(id);
+      if (el) el.classList.remove('visible');
+    }
+
+    /* ===== TOAST ===== */
+    function showToast(type, title, msg, duration = 4500) {
+      const icons = { success: '✅', error: '❌', info: '💡' };
+      const toast = document.createElement('div');
+      toast.className = 'toast toast-' + type;
+      toast.innerHTML = `
+      <span class="toast-icon">${icons[type] || 'ℹ️'}</span>
+      <div class="toast-body">
+        <div class="toast-title">${title}</div>
+        ${msg ? '<div class="toast-msg">' + msg + '</div>' : ''}
+      </div>
+      <button class="toast-close" onclick="removeToast(this.parentElement)" aria-label="Đóng">×</button>
+    `;
+      document.getElementById('toastContainer').appendChild(toast);
+      setTimeout(() => removeToast(toast), duration);
+    }
+    function removeToast(toast) {
+      if (!toast || !toast.parentElement) return;
+      toast.style.transition = 'all 0.3s ease';
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateX(20px)';
+      setTimeout(() => toast.remove(), 300);
+    }
+
+    /* ===== BUTTON LOADING ===== */
+    function setLoading(btnId, loading) {
+      const btn = document.getElementById(btnId);
+      btn.classList.toggle('loading', loading);
+      btn.disabled = loading;
+    }
+
+    /* ===== LOGIN ===== */
+    async function submitLogin(e) {
+      e.preventDefault();
+      ['loginEmailError', 'loginPasswordError'].forEach(clearFieldError);
+
+      const email = document.getElementById('loginEmail').value.trim();
+      const password = document.getElementById('loginPassword').value;
+      let err = false;
+
+      if (!email) { showFieldError('loginEmailError', 'Vui lòng nhập email'); err = true; }
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showFieldError('loginEmailError', 'Email không hợp lệ'); err = true; }
+      if (!password) { showFieldError('loginPasswordError', 'Vui lòng nhập mật khẩu'); err = true; }
+      if (err) return;
+
+      setLoading('loginSubmitBtn', true);
+      try {
+        const fd = new URLSearchParams();
+        fd.append('username', email);
+        fd.append('password', password);
+
+        const resp = await fetch(API_BASE + '/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: fd.toString(),
+        });
+        const data = await resp.json();
+
+        if (!resp.ok) {
+          showToast('error', 'Đăng nhập thất bại', data.detail || 'Thông tin không đúng');
+          if (resp.status === 401) showFieldError('loginPasswordError', 'Email hoặc mật khẩu không đúng');
+          return;
+        }
+
+        localStorage.setItem('ak_token', data.access_token);
+        localStorage.setItem('ak_token_type', data.token_type);
+        showToast('success', 'Đăng nhập thành công!', 'Đang chuyển hướng...');
+        // Nếu người dùng bị redirect từ trang khác → quay lại trang đó
+        const redirectUrl = new URLSearchParams(window.location.search).get('redirect');
+        setTimeout(() => { window.location.href = redirectUrl ? decodeURIComponent(redirectUrl) : '/'; }, 1200);
+      } catch {
+        showToast('error', 'Lỗi kết nối', 'Không thể kết nối đến máy chủ.');
+      } finally {
+        setLoading('loginSubmitBtn', false);
+      }
+    }
+
+    /* ===== REGISTER ===== */
+    async function submitRegister(e) {
+      e.preventDefault();
+      ['regFullNameError', 'regEmailError', 'regPasswordError', 'regPasswordConfirmError'].forEach(clearFieldError);
+
+      const fullName = document.getElementById('regFullName').value.trim();
+      const email = document.getElementById('regEmail').value.trim();
+      const password = document.getElementById('regPassword').value;
+      const pwConfirm = document.getElementById('regPasswordConfirm').value;
+      let err = false;
+
+      if (!fullName) { showFieldError('regFullNameError', 'Vui lòng nhập họ và tên'); err = true; }
+      if (!email) { showFieldError('regEmailError', 'Vui lòng nhập email'); err = true; }
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showFieldError('regEmailError', 'Email không hợp lệ'); err = true; }
+      if (!password) { showFieldError('regPasswordError', 'Vui lòng nhập mật khẩu'); err = true; }
+      else if (password.length < 8) { showFieldError('regPasswordError', 'Mật khẩu phải có ít nhất 8 ký tự'); err = true; }
+      if (password !== pwConfirm) { showFieldError('regPasswordConfirmError', 'Mật khẩu xác nhận không khớp'); err = true; }
+      if (err) return;
+
+      setLoading('registerSubmitBtn', true);
+      try {
+        const resp = await fetch(API_BASE + '/auth/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, full_name: fullName, password }),
+        });
+        const data = await resp.json();
+
+        if (!resp.ok) {
+          showToast('error', 'Đăng ký thất bại', data.detail || 'Đã xảy ra lỗi');
+          if (resp.status === 409) showFieldError('regEmailError', 'Email này đã được đăng ký');
+          return;
+        }
+
+        document.getElementById('registerFormWrap').style.display = 'none';
+        document.getElementById('registerSuccess').classList.add('visible');
+        showToast('success', 'Tài khoản đã được tạo!', 'Chào mừng ' + fullName + ' đến với AptisKey 🎉');
+      } catch {
+        showToast('error', 'Lỗi kết nối', 'Không thể kết nối đến máy chủ.');
+      } finally {
+        setLoading('registerSubmitBtn', false);
+      }
+    }
+
+    /* ===== FORGOT PASSWORD MODAL ===== */
+    function openForgotModal() {
+      document.getElementById('forgotModal').classList.add('open');
+      setTimeout(() => document.getElementById('forgotEmail').focus(), 320);
+    }
+    function closeForgotModal() {
+      document.getElementById('forgotModal').classList.remove('open');
+    }
+    document.getElementById('forgotModalClose').addEventListener('click', closeForgotModal);
+    document.getElementById('forgotModal').addEventListener('click', e => {
+      if (e.target === document.getElementById('forgotModal')) closeForgotModal();
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeForgotModal(); });
+
+    async function submitForgotPassword() {
+      const email = document.getElementById('forgotEmail').value.trim();
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showToast('error', 'Email không hợp lệ', 'Vui lòng nhập địa chỉ email hợp lệ.');
+        return;
+      }
+      const btn = document.getElementById('forgotSubmitBtn');
+      btn.classList.add('loading'); btn.disabled = true;
+      try {
+        const resp = await fetch(API_BASE + '/auth/forgot-password', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        });
+        const data = await resp.json();
+        closeForgotModal();
+        // Hiển thị thành công rõ ràng hơn
+        showToast('success', 'Đã gửi hướng dẫn!',
+          'Kiểm tra hộp thư ' + email + '. Link hết hạn sau 15 phút.');
+        document.getElementById('forgotEmail').value = '';
+      } catch {
+        showToast('error', 'Lỗi kết nối', 'Không thể kết nối đến máy chủ.');
+      } finally {
+        btn.classList.remove('loading'); btn.disabled = false;
+      }
+    }
+
+    /* ===== RESET PASSWORD (khi URL có ?token=...) ===== */
+    function updateResetStrength(value) {
+      const bar = document.getElementById('resetPwStrengthBar');
+      const fill = document.getElementById('resetPwStrengthFill');
+      const label = document.getElementById('resetPwStrengthLabel');
+      if (!value) { bar.classList.remove('visible'); return; }
+      bar.classList.add('visible');
+      let score = 0;
+      if (value.length >= 8) score++;
+      if (value.length >= 12) score++;
+      if (/[A-Z]/.test(value)) score++;
+      if (/[0-9]/.test(value)) score++;
+      if (/[^A-Za-z0-9]/.test(value)) score++;
+      const levels = [
+        { label: 'Rất yếu', color: '#e74c3c', width: '15%' },
+        { label: 'Yếu', color: '#f39c12', width: '30%' },
+        { label: 'Trung bình', color: '#f5a623', width: '55%' },
+        { label: 'Mạnh', color: '#27ae60', width: '80%' },
+        { label: 'Rất mạnh', color: '#16a085', width: '100%' },
+      ];
+      const l = levels[Math.min(score, 4)];
+      fill.style.width = l.width;
+      fill.style.background = l.color;
+      label.textContent = l.label;
+      label.style.color = l.color;
+    }
+
+    function goToLogin() {
+      // Xóa token khỏi URL và chuyển về tab đăng nhập
+      window.history.replaceState({}, document.title, window.location.pathname);
+      document.getElementById('resetPwPanel').classList.remove('active');
+      document.getElementById('resetPwSuccess').classList.remove('visible');
+      document.getElementById('resetFormWrap').style.display = 'block';
+      document.getElementById('resetPwForm').reset();
+      document.getElementById('resetPwStrengthBar').classList.remove('visible');
+      switchTab('login');
+    }
+
+    async function submitResetPassword(e) {
+      e.preventDefault();
+      ['resetNewPwError', 'resetConfirmPwError'].forEach(clearFieldError);
+
+      const token = new URLSearchParams(window.location.search).get('token');
+      const newPw = document.getElementById('resetNewPw').value;
+      const confirmPw = document.getElementById('resetConfirmPw').value;
+      let err = false;
+
+      if (!newPw) { showFieldError('resetNewPwError', 'Vui lòng nhập mật khẩu mới'); err = true; }
+      else if (newPw.length < 8) { showFieldError('resetNewPwError', 'Mật khẩu phải có ít nhất 8 ký tự'); err = true; }
+      if (newPw !== confirmPw) { showFieldError('resetConfirmPwError', 'Mật khẩu xác nhận không khớp'); err = true; }
+      if (err) return;
+
+      setLoading('resetSubmitBtn', true);
+      try {
+        const resp = await fetch(API_BASE + '/auth/reset-password', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ token, new_password: newPw }),
+        });
+        const data = await resp.json();
+
+        if (!resp.ok) {
+          // Token hết hạn hoặc không hợp lệ
+          showToast('error', 'Link không hợp lệ', data.detail || 'Vui lòng yêu cầu link mới.');
+          showFieldError('resetNewPwError', data.detail || 'Link hết hạn, vui lòng yêu cầu lại.');
+          return;
+        }
+
+        // Thành công
+        document.getElementById('resetFormWrap').style.display = 'none';
+        document.getElementById('resetPwSuccess').classList.add('visible');
+        showToast('success', 'Đổi mật khẩu thành công!', 'Bạn có thể đăng nhập với mật khẩu mới.');
+      } catch {
+        showToast('error', 'Lỗi kết nối', 'Không thể kết nối đến máy chủ.');
+      } finally {
+        setLoading('resetSubmitBtn', false);
+      }
+    }
+
+    /* ===== KHỞI TẠO: Kiểm tra URL có ?token không ===== */
+    (function initResetMode() {
+      const urlToken = new URLSearchParams(window.location.search).get('token');
+      if (!urlToken) return;
+
+      // Ẩn auth wrapper (tab đăng nhập / đăng ký), hiện reset panel
+      document.getElementById('resetPwPanel').classList.add('active');
+      // Ẩn auth-wrapper để reset panel chiếm full màn hình
+      const authWrapper = document.querySelector('.auth-wrapper');
+      if (authWrapper) authWrapper.style.display = 'none';
+    })();
+
+    /* ===== AUTO-CHECK EXISTING TOKEN ===== */
+    (function checkToken() {
+      const token = localStorage.getItem('ak_token');
+      // Kiểm tra bằng /api/me - cùng endpoint mà common.js dùng
+      // credentials: 'include' → gửi kèm Cookie HttpOnly nếu có
+      fetch(API_BASE + '/api/me', {
+        headers: token ? { 'Authorization': 'Bearer ' + token } : {},
+        credentials: 'include'
+      }).then(r => {
+        if (r.ok) {
+          showToast('info', 'Bạn đã đăng nhập', 'Đang chuyển hướng...');
+          const redirectUrl = new URLSearchParams(window.location.search).get('redirect');
+          setTimeout(() => { window.location.href = redirectUrl ? decodeURIComponent(redirectUrl) : '/'; }, 1200);
+        } else {
+          // Token hết hạn: xóa để tránh kiểm tra vô nghĩa lần sau
+          localStorage.removeItem('ak_token');
+          localStorage.removeItem('ak_token_type');
+        }
+      }).catch(() => { });
+    })();
+  </script>
+</body>
+
+</html>

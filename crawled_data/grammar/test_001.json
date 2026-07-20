@@ -1,0 +1,670 @@
+{
+  "keyid": "Grammar Test1",
+  "question1_list": [
+    {
+      "question_ask": "If I _______ more time, I would learn a new language.",
+      "question_answer": [
+        "had",
+        "have",
+        "will have"
+      ]
+    },
+    {
+      "question_ask": "She _______ to Japan twice this year.",
+      "question_answer": [
+        "has been",
+        "went",
+        "was going"
+      ]
+    },
+    {
+      "question_ask": "The bridge _______ in 1998.",
+      "question_answer": [
+        "was built",
+        "built",
+        "has built"
+      ]
+    },
+    {
+      "question_ask": "The man _______ car was stolen called the police.",
+      "question_answer": [
+        "whose",
+        "who",
+        "which"
+      ]
+    },
+    {
+      "question_ask": "When he was young, he _______ collect stamps.",
+      "question_answer": [
+        "used to",
+        "would used to",
+        "was used to"
+      ]
+    },
+    {
+      "question_ask": "She's not answering her phone. She _______ be busy.",
+      "question_answer": [
+        "must",
+        "should",
+        "would"
+      ]
+    },
+    {
+      "question_ask": "This road is _______ than the other one.",
+      "question_answer": [
+        "narrower",
+        "more narrow",
+        "narrowest"
+      ]
+    },
+    {
+      "question_ask": "He said that he _______ finished the report.",
+      "question_answer": [
+        "had",
+        "has",
+        "have"
+      ]
+    },
+    {
+      "question_ask": "_______ moon orbits the Earth.",
+      "question_answer": [
+        "The",
+        "A",
+        "-"
+      ]
+    },
+    {
+      "question_ask": "You haven't seen my keys, _______?",
+      "question_answer": [
+        "have you",
+        "haven't you",
+        "did you"
+      ]
+    },
+    {
+      "question_ask": "I look forward to _______ you soon.",
+      "question_answer": [
+        "seeing",
+        "see",
+        "saw"
+      ]
+    },
+    {
+      "question_ask": "This time tomorrow, I _______ on a plane to London.",
+      "question_answer": [
+        "will be flying",
+        "fly",
+        "will have flown"
+      ]
+    },
+    {
+      "question_ask": "If you _______ me earlier, I could have helped.",
+      "question_answer": [
+        "had told",
+        "told",
+        "would tell"
+      ]
+    },
+    {
+      "question_ask": "There isn't _______ traffic on this road today.",
+      "question_answer": [
+        "much",
+        "many",
+        "few"
+      ]
+    },
+    {
+      "question_ask": "This form _______ signed by a parent.",
+      "question_answer": [
+        "must be",
+        "must",
+        "must to be"
+      ]
+    },
+    {
+      "question_ask": "She is responsible _______ managing the team.",
+      "question_answer": [
+        "for",
+        "of",
+        "with"
+      ]
+    },
+    {
+      "question_ask": "Could you please _______ the form before Friday?",
+      "question_answer": [
+        "fill in",
+        "fill up",
+        "fill on"
+      ]
+    },
+    {
+      "question_ask": "I _______ for two hours and I'm exhausted.",
+      "question_answer": [
+        "have been studying",
+        "studied",
+        "am studying"
+      ]
+    },
+    {
+      "question_ask": "If it _______ tomorrow, the match will be cancelled.",
+      "question_answer": [
+        "rains",
+        "will rain",
+        "rained"
+      ]
+    },
+    {
+      "question_ask": "This is _______ hotel I have ever stayed in.",
+      "question_answer": [
+        "the worst",
+        "the more worse",
+        "worse"
+      ]
+    },
+    {
+      "question_ask": "You _______ wear a seatbelt while driving.",
+      "question_answer": [
+        "must",
+        "can",
+        "might"
+      ]
+    },
+    {
+      "question_ask": "I will call you as soon as I _______ home.",
+      "question_answer": [
+        "get",
+        "will get",
+        "got"
+      ]
+    },
+    {
+      "question_ask": "The letters _______ delivered every morning.",
+      "question_answer": [
+        "are",
+        "is",
+        "were being"
+      ]
+    },
+    {
+      "question_ask": "I wish I _______ speak French fluently.",
+      "question_answer": [
+        "could",
+        "can",
+        "would"
+      ]
+    },
+    {
+      "question_ask": "The flight was delayed; _______, we missed our connection.",
+      "question_answer": [
+        "therefore",
+        "although",
+        "despite"
+      ]
+    }
+  ],
+  "question2_list": [
+    {
+      "question_orginal": "itinerary",
+      "question_answer": [
+        "",
+        "currency",
+        "ticket",
+        "baggage",
+        "keepsake",
+        "lodging",
+        "passport",
+        "language",
+        "trip",
+        "schedule",
+        "guide",
+        "map"
+      ],
+      "correct_answer": "schedule"
+    },
+    {
+      "question_orginal": "accommodation",
+      "question_answer": [
+        "",
+        "currency",
+        "ticket",
+        "baggage",
+        "keepsake",
+        "lodging",
+        "passport",
+        "language",
+        "trip",
+        "schedule",
+        "guide",
+        "map"
+      ],
+      "correct_answer": "lodging"
+    },
+    {
+      "question_orginal": "souvenir",
+      "question_answer": [
+        "",
+        "currency",
+        "ticket",
+        "baggage",
+        "keepsake",
+        "lodging",
+        "passport",
+        "language",
+        "trip",
+        "schedule",
+        "guide",
+        "map"
+      ],
+      "correct_answer": "keepsake"
+    },
+    {
+      "question_orginal": "excursion",
+      "question_answer": [
+        "",
+        "currency",
+        "ticket",
+        "baggage",
+        "keepsake",
+        "lodging",
+        "passport",
+        "language",
+        "trip",
+        "schedule",
+        "guide",
+        "map"
+      ],
+      "correct_answer": "trip"
+    },
+    {
+      "question_orginal": "luggage",
+      "question_answer": [
+        "",
+        "currency",
+        "ticket",
+        "baggage",
+        "keepsake",
+        "lodging",
+        "passport",
+        "language",
+        "trip",
+        "schedule",
+        "guide",
+        "map"
+      ],
+      "correct_answer": "baggage"
+    }
+  ],
+  "question3_list": [
+    {
+      "question_orginal": "A document that allows you to travel abroad is a…",
+      "question_answer": [
+        "",
+        "wander",
+        "board",
+        "cancel",
+        "guide",
+        "passport",
+        "depart",
+        "accommodation",
+        "reserve",
+        "explore",
+        "arrive",
+        "currency"
+      ],
+      "correct_answer": "passport"
+    },
+    {
+      "question_orginal": "Money used in a particular country is called…",
+      "question_answer": [
+        "",
+        "wander",
+        "board",
+        "cancel",
+        "guide",
+        "passport",
+        "depart",
+        "accommodation",
+        "reserve",
+        "explore",
+        "arrive",
+        "currency"
+      ],
+      "correct_answer": "currency"
+    },
+    {
+      "question_orginal": "A person who shows tourists around is called a…",
+      "question_answer": [
+        "",
+        "wander",
+        "board",
+        "cancel",
+        "guide",
+        "passport",
+        "depart",
+        "accommodation",
+        "reserve",
+        "explore",
+        "arrive",
+        "currency"
+      ],
+      "correct_answer": "guide"
+    },
+    {
+      "question_orginal": "A place where you stay overnight is called…",
+      "question_answer": [
+        "",
+        "wander",
+        "board",
+        "cancel",
+        "guide",
+        "passport",
+        "depart",
+        "accommodation",
+        "reserve",
+        "explore",
+        "arrive",
+        "currency"
+      ],
+      "correct_answer": "accommodation"
+    },
+    {
+      "question_orginal": "To officially cancel a booking is to…",
+      "question_answer": [
+        "",
+        "wander",
+        "board",
+        "cancel",
+        "guide",
+        "passport",
+        "depart",
+        "accommodation",
+        "reserve",
+        "explore",
+        "arrive",
+        "currency"
+      ],
+      "correct_answer": "cancel"
+    }
+  ],
+  "question4_list": [
+    {
+      "question_start": "Before flying abroad, make sure your",
+      "question_answer": [
+        "",
+        "delay",
+        "airfare",
+        "passport",
+        "customs",
+        "overview",
+        "refund",
+        "jetlag",
+        "visa",
+        "boarding",
+        "book",
+        "luggage"
+      ],
+      "question_end": "hasn't expired.",
+      "correct_answer": "passport"
+    },
+    {
+      "question_start": "We need to",
+      "question_answer": [
+        "",
+        "delay",
+        "airfare",
+        "passport",
+        "customs",
+        "overview",
+        "refund",
+        "jetlag",
+        "visa",
+        "boarding",
+        "book",
+        "luggage"
+      ],
+      "question_end": "our flight before the price goes up.",
+      "correct_answer": "book"
+    },
+    {
+      "question_start": "The airline lost my",
+      "question_answer": [
+        "",
+        "delay",
+        "airfare",
+        "passport",
+        "customs",
+        "overview",
+        "refund",
+        "jetlag",
+        "visa",
+        "boarding",
+        "book",
+        "luggage"
+      ],
+      "question_end": "during the connecting flight.",
+      "correct_answer": "luggage"
+    },
+    {
+      "question_start": "Tourists should always carry a valid",
+      "question_answer": [
+        "",
+        "delay",
+        "airfare",
+        "passport",
+        "customs",
+        "overview",
+        "refund",
+        "jetlag",
+        "visa",
+        "boarding",
+        "book",
+        "luggage"
+      ],
+      "question_end": "when travelling abroad.",
+      "correct_answer": "visa"
+    },
+    {
+      "question_start": "The tour guide gave us a detailed",
+      "question_answer": [
+        "",
+        "delay",
+        "airfare",
+        "passport",
+        "customs",
+        "overview",
+        "refund",
+        "jetlag",
+        "visa",
+        "boarding",
+        "book",
+        "luggage"
+      ],
+      "question_end": "of the city's history.",
+      "correct_answer": "overview"
+    }
+  ],
+  "question5_list": [
+    {
+      "question_orginal": "exhausted",
+      "question_answer": [
+        "",
+        "boring",
+        "spacious",
+        "noisy",
+        "packed",
+        "ancient",
+        "tired",
+        "narrow",
+        "cheap",
+        "stunning",
+        "modern",
+        "isolated"
+      ],
+      "correct_answer": "tired"
+    },
+    {
+      "question_orginal": "breathtaking",
+      "question_answer": [
+        "",
+        "boring",
+        "spacious",
+        "noisy",
+        "packed",
+        "ancient",
+        "tired",
+        "narrow",
+        "cheap",
+        "stunning",
+        "modern",
+        "isolated"
+      ],
+      "correct_answer": "stunning"
+    },
+    {
+      "question_orginal": "crowded",
+      "question_answer": [
+        "",
+        "boring",
+        "spacious",
+        "noisy",
+        "packed",
+        "ancient",
+        "tired",
+        "narrow",
+        "cheap",
+        "stunning",
+        "modern",
+        "isolated"
+      ],
+      "correct_answer": "packed"
+    },
+    {
+      "question_orginal": "affordable",
+      "question_answer": [
+        "",
+        "boring",
+        "spacious",
+        "noisy",
+        "packed",
+        "ancient",
+        "tired",
+        "narrow",
+        "cheap",
+        "stunning",
+        "modern",
+        "isolated"
+      ],
+      "correct_answer": "cheap"
+    },
+    {
+      "question_orginal": "remote",
+      "question_answer": [
+        "",
+        "boring",
+        "spacious",
+        "noisy",
+        "packed",
+        "ancient",
+        "tired",
+        "narrow",
+        "cheap",
+        "stunning",
+        "modern",
+        "isolated"
+      ],
+      "correct_answer": "isolated"
+    }
+  ],
+  "question6_list": [
+    {
+      "question_orginal": "scenic",
+      "question_answer": [
+        "",
+        "route",
+        "insurance",
+        "transport",
+        "budget",
+        "season",
+        "heritage",
+        "guide",
+        "map",
+        "agency",
+        "attraction",
+        "visa"
+      ],
+      "correct_answer": "route"
+    },
+    {
+      "question_orginal": "public",
+      "question_answer": [
+        "",
+        "route",
+        "insurance",
+        "transport",
+        "budget",
+        "season",
+        "heritage",
+        "guide",
+        "map",
+        "agency",
+        "attraction",
+        "visa"
+      ],
+      "correct_answer": "transport"
+    },
+    {
+      "question_orginal": "cultural",
+      "question_answer": [
+        "",
+        "route",
+        "insurance",
+        "transport",
+        "budget",
+        "season",
+        "heritage",
+        "guide",
+        "map",
+        "agency",
+        "attraction",
+        "visa"
+      ],
+      "correct_answer": "heritage"
+    },
+    {
+      "question_orginal": "travel",
+      "question_answer": [
+        "",
+        "route",
+        "insurance",
+        "transport",
+        "budget",
+        "season",
+        "heritage",
+        "guide",
+        "map",
+        "agency",
+        "attraction",
+        "visa"
+      ],
+      "correct_answer": "insurance"
+    },
+    {
+      "question_orginal": "tourist",
+      "question_answer": [
+        "",
+        "route",
+        "insurance",
+        "transport",
+        "budget",
+        "season",
+        "heritage",
+        "guide",
+        "map",
+        "agency",
+        "attraction",
+        "visa"
+      ],
+      "correct_answer": "attraction"
+    }
+  ]
+}

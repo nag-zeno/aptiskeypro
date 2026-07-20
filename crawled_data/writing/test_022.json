@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #022",
+  "club_name": "Museum club",
+  "questions1": {
+    "question1_1": "How do you go to school?",
+    "question1_2": "How do you get to work?",
+    "question1_3": "How do you relax?",
+    "question1_4": "How are you?",
+    "question1_5": "How many people are there in your family?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I go by bike.",
+    "question1_2_answer": "I drive to work.",
+    "question1_3_answer": "I listen to music.",
+    "question1_4_answer": "I'm doing great!",
+    "question1_5_answer": "There are four people."
+  },
+  "questions2": {
+    "question2": "Tell me the last time you went to a museum?"
+  },
+  "questions2_answer": {
+    "question2": "The last time I went to a museum was last month. I visited the History Museum in my city, and it was fascinating to learn about the culture and artifacts."
+  },
+  "questions3": {
+    "question3_1": "Please talk about the first museum you visited when you were a child?",
+    "question3_2": "What kind of museum do you like?",
+    "question3_3": "Nowadays, many museums use technology to create online exhibitions. Do you think that will be successful?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "The first museum I visited was a children's museum. I remember being fascinated by the interactive exhibits and learning about science and nature in a fun, hands-on way. It left a lasting impression.",
+    "question3_2_answer": "I like museums that focus on history and culture, especially those that showcase ancient artifacts or art. I enjoy learning about the past and how it shapes our present world.",
+    "question3_3_answer": "I believe online exhibitions can be very successful, especially in making museums more accessible. However, physical visits will still offer a more immersive and engaging experience that technology can't fully replicate."
+  },
+  "questions4_main": "Dear members, Currently, the museum club is considering that members must pay a fee to visit the museum.",
+  "question4_1_text": "Write a short email to your friend (about 50 words). Please give your opinions.",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words). Please give your opinions.",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that the museum club is considering charging a fee for visits. I think it's a great idea as it could help maintain the museum, but it might discourage some people from visiting. What do you think?\n    <br>Let me know! \n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I recently learned that the museum club is considering implementing a fee for visiting the museum. While I understand that it could generate funds for maintenance and improvements, I am concerned that it may limit access for some members.  \n    <br> Perhaps we could explore alternative funding methods such as organizing events or applying for grants. Another idea could be offering a membership system where paying members could get discounts or exclusive access. I believe these options could ensure the museum remains accessible while still being financially sustainable. \n    <br> Thank you for considering my suggestions. I look forward to hearing your thoughts.  \n    <br> Best regards,  \n    <br> Jimmy"
+}

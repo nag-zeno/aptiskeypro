@@ -1,0 +1,670 @@
+{
+  "keyid": "Grammar Test4",
+  "question1_list": [
+    {
+      "question_ask": "By 2050, global temperatures _______ significantly if nothing changes.",
+      "question_answer": [
+        "will have risen",
+        "will rise",
+        "rise"
+      ]
+    },
+    {
+      "question_ask": "If we _______ less plastic, the oceans would be cleaner.",
+      "question_answer": [
+        "used",
+        "use",
+        "will use"
+      ]
+    },
+    {
+      "question_ask": "This forest _______ by conservationists for decades.",
+      "question_answer": [
+        "has been protected",
+        "protects",
+        "protected"
+      ]
+    },
+    {
+      "question_ask": "The river _______ before the new dam was built.",
+      "question_answer": [
+        "had flooded",
+        "flooded",
+        "floods"
+      ]
+    },
+    {
+      "question_ask": "I've lived near this park _______ I was a child.",
+      "question_answer": [
+        "since",
+        "for",
+        "ago"
+      ]
+    },
+    {
+      "question_ask": "Wildlife will suffer if pollution _______ unchecked.",
+      "question_answer": [
+        "continues",
+        "will continue",
+        "continued"
+      ]
+    },
+    {
+      "question_ask": "The government _______ new recycling laws last year.",
+      "question_answer": [
+        "introduced",
+        "introduces",
+        "introducing"
+      ]
+    },
+    {
+      "question_ask": "_______ you recycled your bottles today?",
+      "question_answer": [
+        "Have",
+        "Did",
+        "Do"
+      ]
+    },
+    {
+      "question_ask": "The smoke was _______ thick that we couldn't see the mountain.",
+      "question_answer": [
+        "so",
+        "such",
+        "too"
+      ]
+    },
+    {
+      "question_ask": "If we _______ more trees, the air would be cleaner now.",
+      "question_answer": [
+        "had planted",
+        "planted",
+        "would plant"
+      ]
+    },
+    {
+      "question_ask": "This area _______ protected from construction.",
+      "question_answer": [
+        "should be",
+        "should",
+        "should to be"
+      ]
+    },
+    {
+      "question_ask": "The scientist, _______ research focuses on climate change, gave a talk.",
+      "question_answer": [
+        "whose",
+        "who",
+        "which"
+      ]
+    },
+    {
+      "question_ask": "I'm not used to _______ so much rain in summer.",
+      "question_answer": [
+        "seeing",
+        "see",
+        "seen"
+      ]
+    },
+    {
+      "question_ask": "There is _______ rainfall this year than last year.",
+      "question_answer": [
+        "less",
+        "fewer",
+        "least"
+      ]
+    },
+    {
+      "question_ask": "By the time we arrived, the storm _______ already passed.",
+      "question_answer": [
+        "had",
+        "has",
+        "was"
+      ]
+    },
+    {
+      "question_ask": "I need _______ information about renewable energy.",
+      "question_answer": [
+        "some",
+        "an",
+        "much"
+      ]
+    },
+    {
+      "question_ask": "The city _______ building more solar farms next year.",
+      "question_answer": [
+        "is planning",
+        "plans",
+        "planned"
+      ]
+    },
+    {
+      "question_ask": "We _______ litter in national parks.",
+      "question_answer": [
+        "shouldn’t",
+        "mustn’t",
+        "couldn’t"
+      ]
+    },
+    {
+      "question_ask": "She asked me if I _______ ever seen a glacier.",
+      "question_answer": [
+        "had",
+        "have",
+        "did"
+      ]
+    },
+    {
+      "question_ask": "This region is _______ than it was ten years ago.",
+      "question_answer": [
+        "drier",
+        "more dry",
+        "driest"
+      ]
+    },
+    {
+      "question_ask": "The forest has _______ recovered from the wildfire.",
+      "question_answer": [
+        "just",
+        "yet",
+        "already just"
+      ]
+    },
+    {
+      "question_ask": "If we reduce emissions, the planet _______ benefit.",
+      "question_answer": [
+        "will",
+        "would",
+        "had"
+      ]
+    },
+    {
+      "question_ask": "The ranger told us _______ stay on the marked trail.",
+      "question_answer": [
+        "to",
+        "that we",
+        "stay"
+      ]
+    },
+    {
+      "question_ask": "We _______ renewable energy over fossil fuels.",
+      "question_answer": [
+        "prefer",
+        "prefers",
+        "preferring"
+      ]
+    },
+    {
+      "question_ask": "The drought has lasted _______ several months.",
+      "question_answer": [
+        "for",
+        "since",
+        "during"
+      ]
+    }
+  ],
+  "question2_list": [
+    {
+      "question_orginal": "conserve",
+      "question_answer": [
+        "",
+        "erode",
+        "emit",
+        "preserve",
+        "deplete",
+        "environment",
+        "restore",
+        "cultivate",
+        "renewable",
+        "recycle",
+        "contaminate",
+        "vanished"
+      ],
+      "correct_answer": "preserve"
+    },
+    {
+      "question_orginal": "pollute",
+      "question_answer": [
+        "",
+        "erode",
+        "emit",
+        "preserve",
+        "deplete",
+        "environment",
+        "restore",
+        "cultivate",
+        "renewable",
+        "recycle",
+        "contaminate",
+        "vanished"
+      ],
+      "correct_answer": "contaminate"
+    },
+    {
+      "question_orginal": "extinct",
+      "question_answer": [
+        "",
+        "erode",
+        "emit",
+        "preserve",
+        "deplete",
+        "environment",
+        "restore",
+        "cultivate",
+        "renewable",
+        "recycle",
+        "contaminate",
+        "vanished"
+      ],
+      "correct_answer": "vanished"
+    },
+    {
+      "question_orginal": "sustainable",
+      "question_answer": [
+        "",
+        "erode",
+        "emit",
+        "preserve",
+        "deplete",
+        "environment",
+        "restore",
+        "cultivate",
+        "renewable",
+        "recycle",
+        "contaminate",
+        "vanished"
+      ],
+      "correct_answer": "renewable"
+    },
+    {
+      "question_orginal": "habitat",
+      "question_answer": [
+        "",
+        "erode",
+        "emit",
+        "preserve",
+        "deplete",
+        "environment",
+        "restore",
+        "cultivate",
+        "renewable",
+        "recycle",
+        "contaminate",
+        "vanished"
+      ],
+      "correct_answer": "environment"
+    }
+  ],
+  "question3_list": [
+    {
+      "question_orginal": "To use resources carefully so they last is to…",
+      "question_answer": [
+        "",
+        "recycle",
+        "habitat",
+        "drought",
+        "restore",
+        "emissions",
+        "biodiversity",
+        "conserve",
+        "erosion",
+        "extinct",
+        "deforestation",
+        "pollute"
+      ],
+      "correct_answer": "conserve"
+    },
+    {
+      "question_orginal": "The natural home of a plant or animal is called a…",
+      "question_answer": [
+        "",
+        "recycle",
+        "habitat",
+        "drought",
+        "restore",
+        "emissions",
+        "biodiversity",
+        "conserve",
+        "erosion",
+        "extinct",
+        "deforestation",
+        "pollute"
+      ],
+      "correct_answer": "habitat"
+    },
+    {
+      "question_orginal": "Gases released into the air are called…",
+      "question_answer": [
+        "",
+        "recycle",
+        "habitat",
+        "drought",
+        "restore",
+        "emissions",
+        "biodiversity",
+        "conserve",
+        "erosion",
+        "extinct",
+        "deforestation",
+        "pollute"
+      ],
+      "correct_answer": "emissions"
+    },
+    {
+      "question_orginal": "To bring something back to its original state is to…",
+      "question_answer": [
+        "",
+        "recycle",
+        "habitat",
+        "drought",
+        "restore",
+        "emissions",
+        "biodiversity",
+        "conserve",
+        "erosion",
+        "extinct",
+        "deforestation",
+        "pollute"
+      ],
+      "correct_answer": "restore"
+    },
+    {
+      "question_orginal": "A species that no longer exists is called…",
+      "question_answer": [
+        "",
+        "recycle",
+        "habitat",
+        "drought",
+        "restore",
+        "emissions",
+        "biodiversity",
+        "conserve",
+        "erosion",
+        "extinct",
+        "deforestation",
+        "pollute"
+      ],
+      "correct_answer": "extinct"
+    }
+  ],
+  "question4_list": [
+    {
+      "question_start": "The government introduced a new law to reduce carbon",
+      "question_answer": [
+        "",
+        "extinct",
+        "emissions",
+        "erosion",
+        "conservation",
+        "ecosystem",
+        "sustainable",
+        "renewable",
+        "drought",
+        "deforestation",
+        "wildlife",
+        "pollution"
+      ],
+      "question_end": ".",
+      "correct_answer": "emissions"
+    },
+    {
+      "question_start": "Illegal logging has caused severe",
+      "question_answer": [
+        "",
+        "extinct",
+        "emissions",
+        "erosion",
+        "conservation",
+        "ecosystem",
+        "sustainable",
+        "renewable",
+        "drought",
+        "deforestation",
+        "wildlife",
+        "pollution"
+      ],
+      "question_end": "in this region.",
+      "correct_answer": "deforestation"
+    },
+    {
+      "question_start": "Many species are at risk of becoming",
+      "question_answer": [
+        "",
+        "extinct",
+        "emissions",
+        "erosion",
+        "conservation",
+        "ecosystem",
+        "sustainable",
+        "renewable",
+        "drought",
+        "deforestation",
+        "wildlife",
+        "pollution"
+      ],
+      "question_end": "due to habitat loss.",
+      "correct_answer": "extinct"
+    },
+    {
+      "question_start": "Local farmers are adopting more",
+      "question_answer": [
+        "",
+        "extinct",
+        "emissions",
+        "erosion",
+        "conservation",
+        "ecosystem",
+        "sustainable",
+        "renewable",
+        "drought",
+        "deforestation",
+        "wildlife",
+        "pollution"
+      ],
+      "question_end": "methods of farming.",
+      "correct_answer": "sustainable"
+    },
+    {
+      "question_start": "The long",
+      "question_answer": [
+        "",
+        "extinct",
+        "emissions",
+        "erosion",
+        "conservation",
+        "ecosystem",
+        "sustainable",
+        "renewable",
+        "drought",
+        "deforestation",
+        "wildlife",
+        "pollution"
+      ],
+      "question_end": "has caused crops to fail across the country.",
+      "correct_answer": "drought"
+    }
+  ],
+  "question5_list": [
+    {
+      "question_orginal": "toxic",
+      "question_answer": [
+        "",
+        "polluted",
+        "pristine",
+        "barren",
+        "lush",
+        "threatened",
+        "plentiful",
+        "sustainable",
+        "delicate",
+        "poisonous",
+        "contaminated",
+        "arid"
+      ],
+      "correct_answer": "poisonous"
+    },
+    {
+      "question_orginal": "endangered",
+      "question_answer": [
+        "",
+        "polluted",
+        "pristine",
+        "barren",
+        "lush",
+        "threatened",
+        "plentiful",
+        "sustainable",
+        "delicate",
+        "poisonous",
+        "contaminated",
+        "arid"
+      ],
+      "correct_answer": "threatened"
+    },
+    {
+      "question_orginal": "abundant",
+      "question_answer": [
+        "",
+        "polluted",
+        "pristine",
+        "barren",
+        "lush",
+        "threatened",
+        "plentiful",
+        "sustainable",
+        "delicate",
+        "poisonous",
+        "contaminated",
+        "arid"
+      ],
+      "correct_answer": "plentiful"
+    },
+    {
+      "question_orginal": "fragile",
+      "question_answer": [
+        "",
+        "polluted",
+        "pristine",
+        "barren",
+        "lush",
+        "threatened",
+        "plentiful",
+        "sustainable",
+        "delicate",
+        "poisonous",
+        "contaminated",
+        "arid"
+      ],
+      "correct_answer": "delicate"
+    },
+    {
+      "question_orginal": "renewable",
+      "question_answer": [
+        "",
+        "polluted",
+        "pristine",
+        "barren",
+        "lush",
+        "threatened",
+        "plentiful",
+        "sustainable",
+        "delicate",
+        "poisonous",
+        "contaminated",
+        "arid"
+      ],
+      "correct_answer": "sustainable"
+    }
+  ],
+  "question6_list": [
+    {
+      "question_orginal": "natural",
+      "question_answer": [
+        "",
+        "biodiversity",
+        "species",
+        "energy",
+        "emissions",
+        "pollution",
+        "footprint",
+        "change",
+        "conservation",
+        "habitat",
+        "ecosystem",
+        "resources"
+      ],
+      "correct_answer": "resources"
+    },
+    {
+      "question_orginal": "climate",
+      "question_answer": [
+        "",
+        "biodiversity",
+        "species",
+        "energy",
+        "emissions",
+        "pollution",
+        "footprint",
+        "change",
+        "conservation",
+        "habitat",
+        "ecosystem",
+        "resources"
+      ],
+      "correct_answer": "change"
+    },
+    {
+      "question_orginal": "renewable",
+      "question_answer": [
+        "",
+        "biodiversity",
+        "species",
+        "energy",
+        "emissions",
+        "pollution",
+        "footprint",
+        "change",
+        "conservation",
+        "habitat",
+        "ecosystem",
+        "resources"
+      ],
+      "correct_answer": "energy"
+    },
+    {
+      "question_orginal": "endangered",
+      "question_answer": [
+        "",
+        "biodiversity",
+        "species",
+        "energy",
+        "emissions",
+        "pollution",
+        "footprint",
+        "change",
+        "conservation",
+        "habitat",
+        "ecosystem",
+        "resources"
+      ],
+      "correct_answer": "species"
+    },
+    {
+      "question_orginal": "carbon",
+      "question_answer": [
+        "",
+        "biodiversity",
+        "species",
+        "energy",
+        "emissions",
+        "pollution",
+        "footprint",
+        "change",
+        "conservation",
+        "habitat",
+        "ecosystem",
+        "resources"
+      ],
+      "correct_answer": "footprint"
+    }
+  ]
+}

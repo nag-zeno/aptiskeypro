@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #028",
+  "club_name": "Science club",
+  "questions1": {
+    "question1_1": "What is your favorite color?",
+    "question1_2": "What is your first school?",
+    "question1_3": "What do you do in your free time?",
+    "question1_4": "What is your favorite sport?",
+    "question1_5": "What did you do last night?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "My favorite color is blue.",
+    "question1_2_answer": "My first school was ABC.",
+    "question1_3_answer": "I like reading books.",
+    "question1_4_answer": "I love football.",
+    "question1_5_answer": "I watched a movie."
+  },
+  "questions2": {
+    "question2": "Why do you like science?"
+  },
+  "questions2_answer": {
+    "question2": "I like science because it helps me understand how the world works. It answers many questions and allows me to explore new discoveries and innovations that improve our lives."
+  },
+  "questions3": {
+    "question3_1": "Why did you decide to join our Science Club? How often can you go to the club?",
+    "question3_2": "In the past, you learnt about Science in school. Do you remember something about Science?",
+    "question3_3": "Who is your favorite inventor or scientist? Why?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I decided to join the Science Club because I’m passionate about learning new scientific concepts and experiments. I can attend meetings twice a week, as I enjoy the hands-on activities and discussions.",
+    "question3_2_answer": "Yes, I remember learning about the scientific method and topics like physics and biology in school. I especially enjoyed studying ecosystems and how different species interact with each other in nature.",
+    "question3_3_answer": "My favorite scientist is Albert Einstein because of his groundbreaking theories in physics. His work revolutionized our understanding of space, time, and energy, which continues to impact science today."
+  },
+  "questions4_main": "Dear all members in our club, our club is preparing to organize the science exhibition next month. Both young people and elderly people can take part in our activities in the exhibition. Could you contribute some ideas for our event team? Whether our club issues tickets for participants? I would like to hear your contribution.",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that our club is preparing for the science exhibition next month. I think it would be great if we could have interactive displays for all ages. Maybe we could issue tickets for entry, too. Let me know what you think!\n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I’m excited to hear about the upcoming science exhibition next month! I believe this event is a wonderful opportunity for both young and old to engage with science in a fun and educational way.  \n    <br> To ensure the success of the exhibition, I suggest we have interactive displays and hands-on experiments. We could also offer workshops for all age groups, allowing them to learn and participate actively. As for the tickets, I think it might be a good idea to issue tickets to manage the number of participants and to raise funds for future events. \n    <br> I am happy to contribute my ideas and help organize the event. I believe this exhibition will be a fantastic learning experience for everyone. \n    <br> Best regards,  \n    <br> Jimmy"
+}

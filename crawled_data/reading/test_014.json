@@ -1,0 +1,228 @@
+{
+  "label": "Bộ đề #14",
+  "questions1": [
+    {
+      "questionStart": "Every morning, my mother ",
+      "answerOptions": [
+        "drives",
+        "reads",
+        "paints"
+      ],
+      "questionEnd": "the newspaper before breakfast.",
+      "correctAnswer": "reads"
+    },
+    {
+      "questionStart": "My father usually rides his ",
+      "answerOptions": [
+        "kite",
+        "boat",
+        "bicycle"
+      ],
+      "questionEnd": "to work.",
+      "correctAnswer": "bicycle"
+    },
+    {
+      "questionStart": "I always ",
+      "answerOptions": [
+        "brush",
+        "cook",
+        "drive"
+      ],
+      "questionEnd": "my teeth twice a day.",
+      "correctAnswer": "brush"
+    },
+    {
+      "questionStart": "The children usually ",
+      "answerOptions": [
+        "sell",
+        "swim",
+        "eat"
+      ],
+      "questionEnd": "breakfast before school.",
+      "correctAnswer": "eat"
+    },
+    {
+      "questionStart": "We often ",
+      "answerOptions": [
+        "watch",
+        "drive",
+        "sleep"
+      ],
+      "questionEnd": "the morning news together.",
+      "correctAnswer": "watch"
+    }
+  ],
+  "question2Topic": "The famous singer (phiên bản 3)",
+  "question2Content": [
+    {
+      "text": "He is a famous singer who is loved by many people.",
+      "id": "item1"
+    },
+    {
+      "text": "Before becoming famous, he studied music at school when he was 15 years old.",
+      "id": "item2"
+    },
+    {
+      "text": "He spent years practicing and improving his performance skills.",
+      "id": "item3"
+    },
+    {
+      "text": "His unique clothing style and stage presence made him stand out.",
+      "id": "item4"
+    },
+    {
+      "text": "Because of this, more and more people began to recognize and admire him.",
+      "id": "item5"
+    }
+  ],
+  "question3Topic": "Writing about a place (phiên bản 2)",
+  "question3Content": [
+    {
+      "text": "Before writing, it is important to research the place thoroughly.",
+      "id": "item1"
+    },
+    {
+      "text": "To prepare well, you should learn about the people and the history of the area.",
+      "id": "item2"
+    },
+    {
+      "text": "Sometimes you may not be able to visit the place, but you can still find similar information from other sources.",
+      "id": "item3"
+    },
+    {
+      "text": "Comparing that place with your own country can be very helpful.",
+      "id": "item4"
+    },
+    {
+      "text": "This comparison will help you gain a deeper understanding and write more effectively.",
+      "id": "item5"
+    }
+  ],
+  "question4Topic": "Music festival (phiên bản 3)",
+  "question4Text": [
+    "<strong>Here is the perspective of four people on the above topic. Please read the content and answer the question.</strong>",
+    "<strong>A:</strong> This was my first time attending the Music Festival, and to be honest, the weather really didn't cooperate. It rained heavily on the first two days, which made it difficult to enjoy the outdoor activities. I still got wet in the tent. But I didn't let that ruin the experience. On the final day, the skies cleared up and the performances were truly amazing - especially the final act in the evening. That last day made it all worthwhile, and I left with some great memories despite the poor weather.",
+    "<strong>B:</strong> I've been to this festival a couple of times in the past, the quality was good the last times I came, but this time is completely different. The sound quality wasn't great, and the whole event just felt disorganised. There weren't enough facilities, and the staff didn't seem prepared to handle the crowd. I couldn't even interact with the band. I don't think I'll be coming back next year. It's simply not worth the money or the time anymore.",
+    "<strong>C:</strong> The festival this year had one of the best line-ups I've seen so far. I absolutely loved the energy of the performances, and the music was spot on throughout the weekend. However, I have to say the ticket prices were far too high, especially for students. I paid almost double what I did two years ago, and although I enjoyed the music, I'm not sure it offered good value for money. If they don't lower the prices next year, a lot of people might skip it.",
+    "<strong>D:</strong> We were playing in a band and we finished our performance in the morning. However, I stayed at the festival to meet up with some old band mates. We talked a lot. However, I didn't like the venue. It was too crowded and not well organised. The road to the tent village was also congested. I think they should choose a better location next year."
+  ],
+  "question4Content": [
+    {
+      "question": "Who liked the last performance of the show?",
+      "id": "question4_q1",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Who was disappointed with the festival?",
+      "id": "question4_q2",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who thought it was too expensive?",
+      "id": "question4_q3",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who experienced bad weather?",
+      "id": "question4_q4",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Who liked to meet old friends?",
+      "id": "question4_q5",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Who enjoyed the music at the event?",
+      "id": "question4_q6",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who didn't like the venue?",
+      "id": "question4_q7",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    }
+  ],
+  "correctAnswersQuestion4": [
+    "A",
+    "B",
+    "C",
+    "A",
+    "D",
+    "C",
+    "D"
+  ],
+  "question5Topic": "Digital transformation (Tech Forward)",
+  "options": [
+    "",
+    "Redefining business models with technology",
+    "Enhancing productivity through automation",
+    "Promoting digital skills training",
+    "Over-reliance on automated systems",
+    "Concerns about cybersecurity risks",
+    "Building inclusive digital ecosystems",
+    "Focusing on ethical technology development"
+  ],
+  "paragraph_question5": [
+    "The interaction between people and technology is continuously evolving. Modern gadgets and software are designed to be more user-friendly, enabling communication through voice commands, gestures, or even facial recognition. This transformation makes technology more intuitive and accessible, enhancing both personal and professional experiences.",
+    "Smart automation tools are revolutionizing workplaces by handling repetitive and time-consuming tasks. These technologies, often powered by AI, enable employees to concentrate on more valuable work, boosting efficiency and fostering innovation across various sectors.",
+    "Educational institutions are increasingly incorporating technology into their curricula to prepare students for future careers. Programs focused on coding, robotics, and digital literacy provide learners with vital skills for the digital age, promoting creativity and enhancing problem-solving abilities.",
+    "Although digital devices offer numerous advantages, over-reliance on screens can lead to negative consequences. Individuals may experience reduced social interactions, trouble concentrating, and higher stress levels. It’s crucial to balance digital engagement with offline activities for maintaining mental and physical well-being.",
+    "Not everyone has equal access to technology, which can result in significant social and economic divides. Those without reliable internet or modern devices may miss out on educational and employment opportunities, making it essential to address these inequalities through policies and community-driven efforts.",
+    "Tech communities unite individuals passionate about technology to exchange ideas, support projects, and collaborate. These groups encourage innovation and creativity, offering mentorship and resources to help transform new ideas into reality.",
+    "As technology continues to evolve, there is a growing focus on sustainability. Companies are developing eco-friendly products and adopting green practices to reduce environmental impact, ensuring that digital advancements contribute to long-term ecological health."
+  ],
+  "meohoc": [
+    "<strong>Mẹo nhớ Keyword:</strong> Redefining → productivity → digital skills → Over-reliance → risks → Building → development.",
+    "<strong>Nhớ theo đoạn văn:</strong> Việc <strong>định nghĩa lại (Redefining)</strong> mô hình kinh doanh bằng công nghệ giúp <strong>tăng năng suất (productivity)</strong>, đồng thời thúc đẩy <strong>kỹ năng số (digital skills)</strong>. Tuy nhiên, <strong>quá phụ thuộc (Over-reliance)</strong> vào hệ thống tự động có thể gây ra <strong>rủi ro (risks)</strong>. Việc <strong>xây dựng (Building)</strong> các hệ sinh thái số bao gồm tất cả là bước quan trọng trong quá trình <strong>phát triển (development)</strong> công nghệ có đạo đức."
+  ]
+}

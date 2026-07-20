@@ -1,0 +1,670 @@
+{
+  "keyid": "Grammar Test2",
+  "question1_list": [
+    {
+      "question_ask": "By next year, she _______ yoga for five years.",
+      "question_answer": [
+        "will have practised",
+        "will practise",
+        "practises"
+      ]
+    },
+    {
+      "question_ask": "If you _______ more water, you would feel more energetic.",
+      "question_answer": [
+        "drank",
+        "drink",
+        "will drink"
+      ]
+    },
+    {
+      "question_ask": "He _______ jogging every morning before work.",
+      "question_answer": [
+        "goes",
+        "go",
+        "going"
+      ]
+    },
+    {
+      "question_ask": "The patient _______ by the doctor this morning.",
+      "question_answer": [
+        "was examined",
+        "examined",
+        "has examine"
+      ]
+    },
+    {
+      "question_ask": "I haven't been to the gym _______ last month.",
+      "question_answer": [
+        "since",
+        "for",
+        "ago"
+      ]
+    },
+    {
+      "question_ask": "You should see a doctor if the pain _______ worse.",
+      "question_answer": [
+        "gets",
+        "will get",
+        "got"
+      ]
+    },
+    {
+      "question_ask": "She _______ smoking two years ago.",
+      "question_answer": [
+        "gave up",
+        "gives up",
+        "giving up"
+      ]
+    },
+    {
+      "question_ask": "_______ you exercised today?",
+      "question_answer": [
+        "Have",
+        "Did",
+        "Do"
+      ]
+    },
+    {
+      "question_ask": "He was _______ tired that he fell asleep instantly.",
+      "question_answer": [
+        "so",
+        "such",
+        "too"
+      ]
+    },
+    {
+      "question_ask": "If I _______ earlier, I wouldn't feel so groggy now.",
+      "question_answer": [
+        "had slept",
+        "slept",
+        "would sleep"
+      ]
+    },
+    {
+      "question_ask": "This medicine _______ taken twice a day.",
+      "question_answer": [
+        "should be",
+        "should",
+        "should to be"
+      ]
+    },
+    {
+      "question_ask": "My trainer, _______ is very experienced, designed this program.",
+      "question_answer": [
+        "who",
+        "which",
+        "whose"
+      ]
+    },
+    {
+      "question_ask": "I'm not used to _______ up so early.",
+      "question_answer": [
+        "waking",
+        "wake",
+        "woken"
+      ]
+    },
+    {
+      "question_ask": "There are _______ calories in this salad than in the burger.",
+      "question_answer": [
+        "fewer",
+        "less",
+        "least"
+      ]
+    },
+    {
+      "question_ask": "By the time I arrived at the clinic, the doctor _______ already left.",
+      "question_answer": [
+        "had",
+        "has",
+        "was"
+      ]
+    },
+    {
+      "question_ask": "I need _______ advice about my diet.",
+      "question_answer": [
+        "some",
+        "an",
+        "much"
+      ]
+    },
+    {
+      "question_ask": "She _______ running a marathon next month.",
+      "question_answer": [
+        "is planning",
+        "plans",
+        "planned"
+      ]
+    },
+    {
+      "question_ask": "You _______ skip breakfast; it's the most important meal.",
+      "question_answer": [
+        "shouldn’t",
+        "mustn’t",
+        "couldn’t"
+      ]
+    },
+    {
+      "question_ask": "He asked me if I _______ ever tried yoga.",
+      "question_answer": [
+        "had",
+        "have",
+        "did"
+      ]
+    },
+    {
+      "question_ask": "This gym is _______ than the one downtown.",
+      "question_answer": [
+        "cleaner",
+        "more clean",
+        "cleanest"
+      ]
+    },
+    {
+      "question_ask": "I've _______ finished my workout.",
+      "question_answer": [
+        "just",
+        "yet",
+        "already just"
+      ]
+    },
+    {
+      "question_ask": "If she eats healthily, she _______ lose weight.",
+      "question_answer": [
+        "will",
+        "would",
+        "had"
+      ]
+    },
+    {
+      "question_ask": "The nurse told him _______ rest for a week.",
+      "question_answer": [
+        "to",
+        "that he",
+        "rest"
+      ]
+    },
+    {
+      "question_ask": "We _______ walking instead of driving whenever possible.",
+      "question_answer": [
+        "prefer",
+        "prefers",
+        "preferring"
+      ]
+    },
+    {
+      "question_ask": "He’s been feeling unwell _______ a few days.",
+      "question_answer": [
+        "for",
+        "since",
+        "during"
+      ]
+    }
+  ],
+  "question2_list": [
+    {
+      "question_orginal": "fatigue",
+      "question_answer": [
+        "",
+        "measure",
+        "heal",
+        "cure",
+        "strengthen",
+        "stretch",
+        "injure",
+        "identify",
+        "monitor",
+        "rest",
+        "avoid",
+        "exhaustion"
+      ],
+      "correct_answer": "exhaustion"
+    },
+    {
+      "question_orginal": "recover",
+      "question_answer": [
+        "",
+        "measure",
+        "heal",
+        "cure",
+        "strengthen",
+        "stretch",
+        "injure",
+        "identify",
+        "monitor",
+        "rest",
+        "avoid",
+        "exhaustion"
+      ],
+      "correct_answer": "heal"
+    },
+    {
+      "question_orginal": "diagnose",
+      "question_answer": [
+        "",
+        "measure",
+        "heal",
+        "cure",
+        "strengthen",
+        "stretch",
+        "injure",
+        "identify",
+        "monitor",
+        "rest",
+        "avoid",
+        "exhaustion"
+      ],
+      "correct_answer": "identify"
+    },
+    {
+      "question_orginal": "prevent",
+      "question_answer": [
+        "",
+        "measure",
+        "heal",
+        "cure",
+        "strengthen",
+        "stretch",
+        "injure",
+        "identify",
+        "monitor",
+        "rest",
+        "avoid",
+        "exhaustion"
+      ],
+      "correct_answer": "avoid"
+    },
+    {
+      "question_orginal": "treat",
+      "question_answer": [
+        "",
+        "measure",
+        "heal",
+        "cure",
+        "strengthen",
+        "stretch",
+        "injure",
+        "identify",
+        "monitor",
+        "rest",
+        "avoid",
+        "exhaustion"
+      ],
+      "correct_answer": "cure"
+    }
+  ],
+  "question3_list": [
+    {
+      "question_orginal": "To become well again after an illness is to…",
+      "question_answer": [
+        "",
+        "diagnose",
+        "hydrate",
+        "rest",
+        "injure",
+        "exercise",
+        "examine",
+        "recover",
+        "prescribe",
+        "vaccinate",
+        "diet",
+        "medicine"
+      ],
+      "correct_answer": "recover"
+    },
+    {
+      "question_orginal": "A regular pattern of eating is called a…",
+      "question_answer": [
+        "",
+        "diagnose",
+        "hydrate",
+        "rest",
+        "injure",
+        "exercise",
+        "examine",
+        "recover",
+        "prescribe",
+        "vaccinate",
+        "diet",
+        "medicine"
+      ],
+      "correct_answer": "diet"
+    },
+    {
+      "question_orginal": "To check someone's health condition is to…",
+      "question_answer": [
+        "",
+        "diagnose",
+        "hydrate",
+        "rest",
+        "injure",
+        "exercise",
+        "examine",
+        "recover",
+        "prescribe",
+        "vaccinate",
+        "diet",
+        "medicine"
+      ],
+      "correct_answer": "examine"
+    },
+    {
+      "question_orginal": "A substance used to treat illness is called…",
+      "question_answer": [
+        "",
+        "diagnose",
+        "hydrate",
+        "rest",
+        "injure",
+        "exercise",
+        "examine",
+        "recover",
+        "prescribe",
+        "vaccinate",
+        "diet",
+        "medicine"
+      ],
+      "correct_answer": "medicine"
+    },
+    {
+      "question_orginal": "To do physical activity to stay fit is to…",
+      "question_answer": [
+        "",
+        "diagnose",
+        "hydrate",
+        "rest",
+        "injure",
+        "exercise",
+        "examine",
+        "recover",
+        "prescribe",
+        "vaccinate",
+        "diet",
+        "medicine"
+      ],
+      "correct_answer": "exercise"
+    }
+  ],
+  "question4_list": [
+    {
+      "question_start": "The doctor gave me a",
+      "question_answer": [
+        "",
+        "therapy",
+        "hydrated",
+        "diet",
+        "exercise",
+        "checkup",
+        "prescription",
+        "nutrient",
+        "immune",
+        "fatigue",
+        "injury",
+        "posture"
+      ],
+      "question_end": "for some antibiotics.",
+      "correct_answer": "prescription"
+    },
+    {
+      "question_start": "Regular",
+      "question_answer": [
+        "",
+        "therapy",
+        "hydrated",
+        "diet",
+        "exercise",
+        "checkup",
+        "prescription",
+        "nutrient",
+        "immune",
+        "fatigue",
+        "injury",
+        "posture"
+      ],
+      "question_end": "helps reduce the risk of heart disease.",
+      "correct_answer": "exercise"
+    },
+    {
+      "question_start": "She followed a strict",
+      "question_answer": [
+        "",
+        "therapy",
+        "hydrated",
+        "diet",
+        "exercise",
+        "checkup",
+        "prescription",
+        "nutrient",
+        "immune",
+        "fatigue",
+        "injury",
+        "posture"
+      ],
+      "question_end": "to lose weight before summer.",
+      "correct_answer": "diet"
+    },
+    {
+      "question_start": "He suffered a minor",
+      "question_answer": [
+        "",
+        "therapy",
+        "hydrated",
+        "diet",
+        "exercise",
+        "checkup",
+        "prescription",
+        "nutrient",
+        "immune",
+        "fatigue",
+        "injury",
+        "posture"
+      ],
+      "question_end": "during football practice.",
+      "correct_answer": "injury"
+    },
+    {
+      "question_start": "Drinking enough water keeps your body properly",
+      "question_answer": [
+        "",
+        "therapy",
+        "hydrated",
+        "diet",
+        "exercise",
+        "checkup",
+        "prescription",
+        "nutrient",
+        "immune",
+        "fatigue",
+        "injury",
+        "posture"
+      ],
+      "question_end": ".",
+      "correct_answer": "hydrated"
+    }
+  ],
+  "question5_list": [
+    {
+      "question_orginal": "exhausted",
+      "question_answer": [
+        "",
+        "flexible",
+        "restless",
+        "lively",
+        "anxious",
+        "healthy",
+        "alert",
+        "strong",
+        "frail",
+        "relaxed",
+        "drained",
+        "sore"
+      ],
+      "correct_answer": "drained"
+    },
+    {
+      "question_orginal": "energetic",
+      "question_answer": [
+        "",
+        "flexible",
+        "restless",
+        "lively",
+        "anxious",
+        "healthy",
+        "alert",
+        "strong",
+        "frail",
+        "relaxed",
+        "drained",
+        "sore"
+      ],
+      "correct_answer": "lively"
+    },
+    {
+      "question_orginal": "fit",
+      "question_answer": [
+        "",
+        "flexible",
+        "restless",
+        "lively",
+        "anxious",
+        "healthy",
+        "alert",
+        "strong",
+        "frail",
+        "relaxed",
+        "drained",
+        "sore"
+      ],
+      "correct_answer": "healthy"
+    },
+    {
+      "question_orginal": "weak",
+      "question_answer": [
+        "",
+        "flexible",
+        "restless",
+        "lively",
+        "anxious",
+        "healthy",
+        "alert",
+        "strong",
+        "frail",
+        "relaxed",
+        "drained",
+        "sore"
+      ],
+      "correct_answer": "frail"
+    },
+    {
+      "question_orginal": "calm",
+      "question_answer": [
+        "",
+        "flexible",
+        "restless",
+        "lively",
+        "anxious",
+        "healthy",
+        "alert",
+        "strong",
+        "frail",
+        "relaxed",
+        "drained",
+        "sore"
+      ],
+      "correct_answer": "relaxed"
+    }
+  ],
+  "question6_list": [
+    {
+      "question_orginal": "balanced",
+      "question_answer": [
+        "",
+        "pain",
+        "wellbeing",
+        "system",
+        "health",
+        "checkup",
+        "therapy",
+        "fitness",
+        "routine",
+        "diet",
+        "recovery",
+        "condition"
+      ],
+      "correct_answer": "diet"
+    },
+    {
+      "question_orginal": "physical",
+      "question_answer": [
+        "",
+        "pain",
+        "wellbeing",
+        "system",
+        "health",
+        "checkup",
+        "therapy",
+        "fitness",
+        "routine",
+        "diet",
+        "recovery",
+        "condition"
+      ],
+      "correct_answer": "fitness"
+    },
+    {
+      "question_orginal": "mental",
+      "question_answer": [
+        "",
+        "pain",
+        "wellbeing",
+        "system",
+        "health",
+        "checkup",
+        "therapy",
+        "fitness",
+        "routine",
+        "diet",
+        "recovery",
+        "condition"
+      ],
+      "correct_answer": "health"
+    },
+    {
+      "question_orginal": "immune",
+      "question_answer": [
+        "",
+        "pain",
+        "wellbeing",
+        "system",
+        "health",
+        "checkup",
+        "therapy",
+        "fitness",
+        "routine",
+        "diet",
+        "recovery",
+        "condition"
+      ],
+      "correct_answer": "system"
+    },
+    {
+      "question_orginal": "chronic",
+      "question_answer": [
+        "",
+        "pain",
+        "wellbeing",
+        "system",
+        "health",
+        "checkup",
+        "therapy",
+        "fitness",
+        "routine",
+        "diet",
+        "recovery",
+        "condition"
+      ],
+      "correct_answer": "pain"
+    }
+  ]
+}

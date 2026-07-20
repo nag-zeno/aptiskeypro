@@ -1,0 +1,228 @@
+{
+  "label": "Bộ đề #07",
+  "questions1": [
+    {
+      "questionStart": "Next month, I plan to ",
+      "answerOptions": [
+        "visit",
+        "clean",
+        "run"
+      ],
+      "questionEnd": " my old university friends.",
+      "correctAnswer": "visit"
+    },
+    {
+      "questionStart": "My ",
+      "answerOptions": [
+        "room",
+        "father",
+        "mother"
+      ],
+      "questionEnd": " has a large window facing the garden.",
+      "correctAnswer": "room"
+    },
+    {
+      "questionStart": "It has been extremely ",
+      "answerOptions": [
+        "big",
+        "hot",
+        "small"
+      ],
+      "questionEnd": " this whole week.",
+      "correctAnswer": "hot"
+    },
+    {
+      "questionStart": "We traveled to the countryside by ",
+      "answerOptions": [
+        "spaceship",
+        "plane",
+        "train"
+      ],
+      "questionEnd": ".",
+      "correctAnswer": "train"
+    },
+    {
+      "questionStart": "My cousin can ",
+      "answerOptions": [
+        "make",
+        "speak",
+        "love"
+      ],
+      "questionEnd": " three languages fluently.",
+      "correctAnswer": "speak"
+    }
+  ],
+  "question2Topic": "Mae - The Math Girl",
+  "question2Content": [
+    {
+      "text": "Mae’s father worked as a nurse, and her mother was a teacher.",
+      "id": "item1"
+    },
+    {
+      "text": "Her parents motivated Mae to pursue higher education and focus on scientific studies.",
+      "id": "item2"
+    },
+    {
+      "text": "Mae worked diligently and achieved several remarkable milestones.",
+      "id": "item3"
+    },
+    {
+      "text": "She later joined a team, contributing her skills and knowledge.",
+      "id": "item4"
+    },
+    {
+      "text": "Eventually, she had the opportunity to undergo a training program in the United States.",
+      "id": "item5"
+    }
+  ],
+  "question3Topic": "IoT - Internet of Things ",
+  "question3Content": [
+    {
+      "text": "The Internet of Things (IoT) links everyday devices to improve their capabilities.",
+      "id": "item1"
+    },
+    {
+      "text": "Early IoT devices faced limitations due to slow internet speeds and compatibility challenges.",
+      "id": "item2"
+    },
+    {
+      "text": "High development costs previously slowed the widespread adoption of IoT technology.",
+      "id": "item3"
+    },
+    {
+      "text": "Nowadays, engineers create smart devices for both residential and industrial applications.",
+      "id": "item4"
+    },
+    {
+      "text": "Modern IoT systems provide real-time data tracking and automation features.",
+      "id": "item5"
+    }
+  ],
+  "question4Topic": "Childhood memories",
+  "question4Text": [
+    "<strong>Here is the perspective of four people on the above topic. Please read the content and answer the question.</strong>",
+    "<strong>A:</strong> When I was a child, I loved sitting by the fireplace listening to my grandfather’s folktales. His voice brought every character to life, and those evenings always felt magical—they taught me the power of imagination. Nowadays, I share that same joy with my nieces by reading interactive storybooks on tablets. The animations and sounds make the stories more vivid and exciting for them. Still, I always take care to choose content that’s suitable for their age. To me, blending old traditions with modern technology is a beautiful way to keep storytelling alive across generations.",
+    "<strong>B:</strong> When I was a young, I used to ride my bike around the village with my friends almost every afternoon. I can still recall the feeling of the wind brushing against my face, the excitement of racing each other, and the pure sense of freedom it brought. Those simple rides weren’t just fun—they taught me what independence and adventure felt like, lessons that stayed with me as I grew up. Nowadays, it’s a bit sad to see that many children spend more time indoors, glued to screens instead of exploring outside. Sometimes I find myself missing those carefree afternoons when happiness was as simple as pedaling down a dusty road. Thinking back, I realize those moments helped me develop a love for the outdoors and a lasting appreciation for friendship.",
+    "<strong>C:</strong> As a kid, I could spend hours drawing animals, trees, and landscapes with my box of crayons and pencils. I loved playing with bright colors and shapes, and I always felt proud showing my drawings to my family. What started as a simple childhood hobby slowly turned into a lifelong passion. Now, I’m a graphic designer, creating digital art for various clients. Modern design tools help me bring my ideas to life with more precision, yet the creative joy I feel is just like it was back then. For me, drawing has always been a way to express myself—and it still fills my days with happiness.",
+    "<strong>D:</strong> When I was growing up, I loved going on camping trips with my family in the countryside. We pitched our tents, cooked simple meals over a fire, and spent long nights gazing at the stars. Those moments made me feel deeply connected to nature and left me with unforgettable memories. Sometimes, though, rainy weather would ruin our plans, and I always felt a bit sad when we had to stay indoors. These days, my adventures have taken a different form — I enjoy visiting museums and exhibitions instead. Exploring history through artifacts and stories gives me a similar sense of curiosity and wonder, just in a quieter, more comfortable setting. To me, museums are a gentle way to travel through time and appreciate the beauty of the past."
+  ],
+  "question4Content": [
+    {
+      "question": "Who now enjoys graphic design?",
+      "id": "question4_q1",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who loved camping as a child?",
+      "id": "question4_q2",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Who finds modern books more engaging?",
+      "id": "question4_q3",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Who loved drawing as a child?",
+      "id": "question4_q4",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who now prefers museum visits?",
+      "id": "question4_q5",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Who enjoys storytelling with family?",
+      "id": "question4_q6",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Who loved bike riding as a child?",
+      "id": "question4_q7",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    }
+  ],
+  "correctAnswersQuestion4": [
+    "C",
+    "D",
+    "A",
+    "C",
+    "D",
+    "A",
+    "B"
+  ],
+  "question5Topic": "Cultural Exchange",
+  "options": [
+    "",
+    "Redefining Global Cultural Understanding",
+    "Encouraging Cross-Cultural Festivals",
+    "Promoting Language Exchange Programs",
+    "Overemphasis on Commercial Tourism",
+    "Concerns About Cultural Preservation",
+    "Building Mutual Respect Among Communities",
+    "Focusing on Authentic Cultural Experiences"
+  ],
+  "paragraph_question5": [
+    "In the modern interconnected world, understanding global cultures involves much more than simply learning about customs and traditions. It requires the development of cultural intelligence and awareness. Redefining cultural understanding means moving beyond surface-level knowledge and gaining a deeper appreciation of shared human experiences while still respecting the unique identities of different cultures.",
+    "Festivals that celebrate multiple cultures play an important role in promoting unity and inclusiveness among diverse communities. Such events create opportunities for different groups to present and celebrate their art, music, food, and cultural heritage while encouraging people to appreciate cultural diversity.",
+    "Language exchange programs are among the most effective ways to encourage intercultural communication. By participating in these programs, individuals can better understand cultural subtleties such as humor, idiomatic expressions, and nonverbal communication.",
+    "Although tourism can contribute significantly to economic development, excessive commercialization may weaken genuine cultural exchange. Many well-known destinations face the risk of being turned into commercialized attractions rather than places that reflect authentic cultural values.",
+    "The rapid pace of globalization and urban development has increased concerns about the disappearance of intangible cultural heritage. Many traditional elements such as languages, rituals, folk customs, and handicrafts are gradually fading away.",
+    "Successful cultural exchange depends strongly on mutual respect and empathy between communities. Instead of merely tolerating differences, people should aim to develop sincere understanding and appreciation of other cultures.",
+    "Interest in authentic cultural experiences is steadily increasing. Many travelers now prefer opportunities to interact with local communities, learn traditional skills, and take part in everyday cultural activities."
+  ],
+  "meohoc": [
+    "<strong>Mẹo nhớ Keyword:</strong> Global → Festivals → Language → Overemphasis → Preservation → Building → Authentic.",
+    "<strong>Nhớ theo đoạn văn:</strong> Hiểu biết toàn cầu (<strong>Global</strong>) thúc đẩy các lễ hội văn hóa (<strong>Festivals</strong>) và trao đổi ngôn ngữ (<strong>Language</strong>), nhưng đôi khi có sự tập trung quá mức vào du lịch thương mại (<strong>Overemphasis</strong>). Vì thế, cần quan tâm đến việc bảo tồn văn hóa (<strong>Preservation</strong>), xây dựng sự tôn trọng lẫn nhau (<strong>Building</strong>) và hướng đến trải nghiệm văn hóa chân thực (<strong>Authentic</strong>)."
+  ]
+}

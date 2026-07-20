@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #033",
+  "club_name": "Travel club",
+  "questions1": {
+    "question1_1": "What is your favorite subject in high school?",
+    "question1_2": "What do you like doing with your friend?",
+    "question1_3": "Where do you wanna go on holiday?",
+    "question1_4": "Why are you interested in travel?",
+    "question1_5": "Tell me a place you often visit?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I love studying math.",
+    "question1_2_answer": "I enjoy going shopping.",
+    "question1_3_answer": "I want to go to Paris.",
+    "question1_4_answer": "I love exploring new places.",
+    "question1_5_answer": "I often visit the park."
+  },
+  "questions2": {
+    "question2": "Why are you interested in travel?"
+  },
+  "questions2_answer": {
+    "question2": "I’m interested in travel because it allows me to experience different cultures, try new foods, and explore beautiful landscapes. It’s a great way to broaden my perspective and learn."
+  },
+  "questions3": {
+    "question3_1": "Tell me a time you had a trip in bad weather.",
+    "question3_2": "Traveling a long distance by some means of transportation is not good for the environment? Do you agree?",
+    "question3_3": "What are the most interesting places to visit in your country?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I once went on a hiking trip, and the weather turned bad with heavy rain and wind. Despite the tough conditions, we continued, and it became an unforgettable adventure. The weather made it more challenging but memorable.",
+    "question3_2_answer": "Yes, I agree that traveling long distances by transportation, especially air travel, negatively impacts the environment due to high carbon emissions. It's important to consider alternatives like trains or more eco-friendly options to reduce harm.",
+    "question3_3_answer": "Some of the most interesting places to visit in my country include Ha Long Bay, the ancient town of Hoi An, and the bustling city of Ho Chi Minh, each offering a unique cultural and natural experience."
+  },
+  "questions4_main": "Dear members, Travel club is planning to encourage tourists to visit an area. We also want visitors coming to our areas to behave politely. Please raise your voice and give some suggestions for this plan.",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I heard the Travel Club is planning to encourage tourists to visit the area. It’s important to ensure they behave politely. We could provide guidelines or even have guides to teach proper manners. \n    <br>What do you think?\n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I’m excited to hear that the Travel Club is planning to promote tourism in the area. It’s important to ensure that visitors behave respectfully. I suggest providing clear guidelines on acceptable behavior for tourists, including respecting local customs and traditions.  \n    <br> We could also create welcome packages with information on etiquette and local norms. Organizing awareness sessions or having volunteers available to assist tourists would further encourage good behavior. Additionally, offering incentives for respectful tourists, like discounts at local businesses, could be effective.  \n    <br> I am happy to help implement these ideas and ensure that visitors have a positive experience while maintaining respect for the area.  \n    <br> Best regards,  \n    <br> Jimmy"
+}

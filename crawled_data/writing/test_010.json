@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #010",
+  "club_name": "Cooking club",
+  "questions1": {
+    "question1_1": "What do you do on the weekend?",
+    "question1_2": "Which sport do you like to play the most?",
+    "question1_3": "What did you do last night?",
+    "question1_4": "Do you like shopping?",
+    "question1_5": "What do you usually do in the morning?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I relax at home.",
+    "question1_2_answer": "I like football.",
+    "question1_3_answer": "I watched TV.",
+    "question1_4_answer": "Yes, I do.",
+    "question1_5_answer": "I read the news."
+  },
+  "questions2": {
+    "question2": "Tell me about the day and time you can join the club and which food/dish you want to cook."
+  },
+  "questions2_answer": {
+    "question2": "I can join the club on Saturday afternoons. I would love to cook pasta with tomato sauce, or perhaps try making some homemade pizza. I enjoy cooking Italian food."
+  },
+  "questions3": {
+    "question3_1": "Hi! Welcome to the club. Why did you decide to join the club?",
+    "question3_2": "Hi! What do you think about the club’s price/ membership fee?",
+    "question3_3": "How often do you go to the club?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I decided to join the club because I wanted to meet new people, learn new skills, and participate in interesting activities. It seemed like a fun and engaging community to be a part of.",
+    "question3_2_answer": "I think the club’s membership fee is quite reasonable considering the activities and benefits offered. It’s affordable, and the variety of events makes it worth the cost for me.",
+    "question3_3_answer": "I usually go to the club twice a week. I try to attend the events that interest me most, such as workshops and social gatherings, to make the most of my membership."
+  },
+  "questions4_main": "Dear member, All classes will be canceled next week. Because the instructor will go on holiday. Classes will be announced later. Fees won’t be refunded to the participants.",
+  "question4_1_text": "Write a short email to your friend (about 50 words). Tell your friend your feelings about this and what you plan to do.",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words). Tell them your thoughts about this and what you would like to do.",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that all classes are canceled next week because the instructor is going on holiday. I’m disappointed because I was looking forward to attending. I plan to wait for the next announcement. <br>\n    Best, <br>\n    Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I was disappointed to hear that all classes are canceled next week due to the instructor's holiday. While I understand the situation, I was looking forward to the lessons. I suggest organizing some alternative activities during this time, such as practice sessions or discussions, to keep the participants engaged. Additionally, it would be helpful if the club could provide more notice in the future to better manage expectations. I look forward to hearing more about the upcoming schedule and any changes. \n    <br> Best regards,  \n    <br> Phuong"
+}

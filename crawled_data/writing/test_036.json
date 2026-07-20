@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #036",
+  "club_name": "Writing club",
+  "questions1": {
+    "question1_1": "What’s the weather like today?",
+    "question1_2": "How are you?",
+    "question1_3": "What’s your favorite hobby?",
+    "question1_4": "How do you get to work?",
+    "question1_5": "What do you like to do in the evening?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "It’s sunny today.",
+    "question1_2_answer": "I’m doing great, thanks!",
+    "question1_3_answer": "I love reading books.",
+    "question1_4_answer": "I drive to work.",
+    "question1_5_answer": "I like watching TV."
+  },
+  "questions2": {
+    "question2": "Tell me about the last time you wrote something."
+  },
+  "questions2_answer": {
+    "question2": "The last time I wrote something was when I completed a project report for work. It took some time, but I was satisfied with the outcome and learned new things."
+  },
+  "questions3": {
+    "question3_1": "I usually write at the coffee shop. What about you?",
+    "question3_2": "Do you prefer handwriting or typing?",
+    "question3_3": "There are many people who like to write, but only a few become writers. What makes a successful writer?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I usually write at home in a quiet space. I find it helps me concentrate better, allowing me to focus on my thoughts without distractions like noise or crowds.",
+    "question3_2_answer": "I prefer typing because it's faster and more efficient. I can also easily edit and organize my work. However, I sometimes enjoy handwriting for its personal touch and slower pace.",
+    "question3_3_answer": "A successful writer combines creativity, persistence, and a deep understanding of their audience. It’s not just about writing well, but also about being dedicated, disciplined, and constantly improving their craft."
+  },
+  "questions4_main": "Dear members, many people complain that the website is unprofessional and difficult to use. Please send us your suggestions.",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that many people are complaining about the website being unprofessional and hard to use. I think we could suggest a more user-friendly design and improve its navigation.\n    <br>Let me know your thoughts! \n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I was informed that many members are unhappy with the current state of the club website, citing it as unprofessional and difficult to navigate. I believe a website redesign is necessary to make it more user-friendly.  \n    <br> My suggestions include simplifying the layout, improving the search function, and making the design more visually appealing. Adding more interactive features, such as forums or a blog, could enhance the user experience and engagement.  \n    <br> I would be happy to assist in gathering feedback from members and working with a designer to bring these ideas to life. Improving the website would definitely improve members' satisfaction and participation.  \n    <br> Best regards,  \n    <br> Jimmy"
+}

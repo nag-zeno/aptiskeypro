@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #020",
+  "club_name": "Language club 2",
+  "questions1": {
+    "question1_1": "Where are you from?",
+    "question1_2": "What’s the weather like today?",
+    "question1_3": "What do you do in your free time?",
+    "question1_4": "First language?",
+    "question1_5": "Who do you usually go to the movies with?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I’m from Hanoi.",
+    "question1_2_answer": "It’s sunny today.",
+    "question1_3_answer": "I read books.",
+    "question1_4_answer": "My first language is Vietnamese.",
+    "question1_5_answer": "I go with friends."
+  },
+  "questions2": {
+    "question2": "In which cases do you often use foreign languages?"
+  },
+  "questions2_answer": {
+    "question2": "I often use foreign languages when traveling, communicating with international friends, reading books or articles, and watching movies or shows in their original language to improve my skills."
+  },
+  "questions3": {
+    "question3_1": "I used to learn French and found it very interesting. Tell me about a memory you have with a foreign language?",
+    "question3_2": "I am very forgetful. Can you give me some tips on how to remember new words?",
+    "question3_3": "Some people learn English through videos and reading books. However, there are also many private classes and teachers. What do you think is the most effective way to learn?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I have a great memory of using English when traveling abroad. I practiced speaking with locals, which helped me improve my fluency and gave me the confidence to continue learning the language.",
+    "question3_2_answer": "To remember new words, try associating them with images, creating sentences, and reviewing them regularly. Flashcards and spaced repetition can also be helpful for reinforcing memory over time.",
+    "question3_3_answer": "I believe a combination of methods is most effective. Private classes with teachers provide structure and feedback, while videos and books help with immersion. A balanced approach accelerates learning."
+  },
+  "questions4_main": "Dear members, The club will have a lecture soon. The club needs a guest speaker and a theme of learning language.",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that the club is organizing a lecture soon and is looking for a guest speaker. The theme will be about learning languages. It sounds like a great opportunity! \n    <br>Let me know if you’re interested! \n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I was excited to hear about the upcoming lecture the club is organizing, and I believe it’s a wonderful opportunity to discuss the theme of learning languages. I would like to suggest a few ideas for the guest speaker and the presentation.  \n    <br> For the guest speaker, I recommend inviting someone who has experience in language learning, perhaps a polyglot or a language teacher. They could share practical tips and strategies for mastering a new language. As for the theme, I believe focusing on methods like immersive learning and language exchange would engage our members and provide them with valuable insights.  \n    <br> I’m happy to assist with organizing or reaching out to potential speakers. I look forward to hearing your thoughts on these suggestions.  \n    <br> Best regards,  \n    <br> Jimmy"
+}

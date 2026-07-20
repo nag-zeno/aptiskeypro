@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #0",
+  "club_name": "English club 3",
+  "questions1": {
+    "question1_1": "What are you wearing today?",
+    "question1_2": "What language do you speak?",
+    "question1_3": "What is your first language?",
+    "question1_4": "What is your first school?",
+    "question1_5": "What’s the weather like today?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I’m wearing a shirt.",
+    "question1_2_answer": "I speak Vietnamese.",
+    "question1_3_answer": "My first language is Vietnamese.",
+    "question1_4_answer": "My first school was ABC School.",
+    "question1_5_answer": "It’s sunny today."
+  },
+  "questions2": {
+    "question2": "When do you usually use English?"
+  },
+  "questions2_answer": {
+    "question2": "I usually use English when I watch movies, read books, or communicate with friends online. It's also necessary for school and work-related tasks."
+  },
+  "questions3": {
+    "question3_1": "Hi! I heard that you attended a club meeting this afternoon. How do you feel about the meeting?",
+    "question3_2": "We have weekly meetings on Saturday afternoons. What topic are you expecting us to talk about?",
+    "question3_3": "We are thinking of holding some English games next week. Can you suggest some?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I really enjoyed the club meeting this afternoon. The discussions were engaging, and I liked how everyone shared their ideas. It was a great chance to learn something new.",
+    "question3_2_answer": "I'm hoping we will talk about improving our English communication skills. Maybe we could discuss some effective ways to practice speaking or introduce some interesting language games.",
+    "question3_3_answer": "For the English games, I suggest playing word association or a spelling bee competition. These games are fun and can help everyone improve their vocabulary and spelling skills."
+  },
+  "questions4_main": "Dear Members, we are sorry to inform you that the Talk show has been canceled as the guests are unexpectedly busy. We do not have any back-up plan, so there will be no meeting this week. We will inform you of the reopening of the Talk show as soon as we can. We are sorry for the inconvenience.",
+  "question4_1_text": "Write a short email to your friend (about 50 words). Write about your feelings and what you would like to do.",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words). Write about your feelings suggest possible.",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that the Talk show has been canceled because the guests are busy. I'm really disappointed because I was looking forward to it. How about we hang out this week instead? \n    <br> Let me know! \n    <br> Best, \n    <br> Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I was disappointed to hear that the Talk show has been canceled. Many of us were really looking forward to it. While I understand the situation, I believe we should find a way to keep members engaged. Perhaps we could reschedule the event with the guests or arrange another activity like a discussion session or a group chat to maintain excitement. Additionally, we could explore having other speakers or organizing smaller events in the meantime. \n    <br> Please consider these options to keep the club members engaged during this break. I am happy to help with any of these ideas. \n    <br> Best regards,  \n    <br> Jimmy"
+}

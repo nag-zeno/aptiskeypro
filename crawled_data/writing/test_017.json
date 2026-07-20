@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #017",
+  "club_name": "Healthy club",
+  "questions1": {
+    "question1_1": "What do you usually do on weekends?",
+    "question1_2": "What do you do to keep fit?",
+    "question1_3": "What are you wearing today?",
+    "question1_4": "What language do you speak?",
+    "question1_5": "What is your first language?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I usually relax and read.",
+    "question1_2_answer": "I jog and do yoga.",
+    "question1_3_answer": "I’m wearing a jacket.",
+    "question1_4_answer": "I speak Vietnamese.",
+    "question1_5_answer": "My first language is Vietnamese."
+  },
+  "questions2": {
+    "question2": "Tell me the classes you want to take and what times and days are suitable for you?"
+  },
+  "questions2_answer": {
+    "question2": "I would like to take yoga and cardio classes. I’m available on weekdays in the evenings, preferably around 6 PM. Weekend morning sessions would also work for me."
+  },
+  "questions3": {
+    "question3_1": "Hi! Welcome to the club. How did you hear about the club?",
+    "question3_2": "Hi! What do you hope to achieve by joining the club?",
+    "question3_3": "A manager of Fitness club has an announcement for club’s members"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I heard about the club from a friend who has been a member for a while. She recommended it because of the great facilities and friendly atmosphere, so I decided to join.",
+    "question3_2_answer": "By joining the club, I hope to improve my overall fitness, learn new exercises, and make healthier lifestyle choices. I also want to meet new people who share similar fitness goals.",
+    "question3_3_answer": "The manager of the Fitness Club has announced new fitness classes starting next month. Members can sign up for a variety of classes including yoga, pilates, and high-intensity training."
+  },
+  "questions4_main": "Dear all, Because of personal reasons, the instructor will be away for the next two weeks. We will use our facilities by ourselves without the assistance of an instructor. I am so sorry about this situation and hope you doing well in next two weeks",
+  "question4_1_text": "Write a short email to your friend (about 50 words). ",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that the instructor will be away for the next two weeks. We will have to use the facilities on our own during this time. It might be challenging, but we’ll manage. \n    <br>Let me know if you need help! \n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I understand that due to personal reasons, the instructor will be absent for the next two weeks, and we will be using the facilities without assistance. Although it’s unfortunate, I believe we can manage by following the usual routines and helping each other out. It might be a good opportunity for us to learn more independently and improve our skills.  \n    <br> However, if any members feel uncertain, I suggest we organize a few group sessions where we can support each other. Additionally, it might be helpful to have a guideline available for everyone during this period.  \n    <br> I hope everything goes well, and I look forward to seeing everyone continue their training.  \n    <br> Best regards,  \n    <br> Jimmy"
+}

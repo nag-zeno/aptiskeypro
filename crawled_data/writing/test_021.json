@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #021",
+  "club_name": "Movie club",
+  "questions1": {
+    "question1_1": "What is your favorite sport?",
+    "question1_2": "What is your favorite color?",
+    "question1_3": "What is your favorite device?",
+    "question1_4": "What do you do?",
+    "question1_5": "Which job would you like to do in the future?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I love football.",
+    "question1_2_answer": "My favorite color is blue.",
+    "question1_3_answer": "I like my phone.",
+    "question1_4_answer": "I’m a student.",
+    "question1_5_answer": "I’d like to be a teacher."
+  },
+  "questions2": {
+    "question2": "Why did you join the club?"
+  },
+  "questions2_answer": {
+    "question2": "I joined the movie club because I love watching films and discussing them with others. It's a great way to discover new movies and share thoughts with fellow movie enthusiasts."
+  },
+  "questions3": {
+    "question3_1": "Hi! When and where do you usually watch movies?",
+    "question3_2": "I want to make movies for young children. Give me some suggestions?",
+    "question3_3": "How do you think technology affects the way we watch movies in the future?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I usually watch movies in the evenings at home with friends or family. Sometimes, I go to the theater for new releases. I enjoy watching a mix of genres depending on my mood.",
+    "question3_2_answer": "For making movies for young children, I suggest focusing on colorful visuals, engaging characters, and simple yet meaningful stories. Keep the content educational, fun, and age-appropriate to hold their attention.",
+    "question3_3_answer": "Technology will revolutionize the way we watch movies by offering more immersive experiences through VR and AR. Streaming services will continue to grow, and interactive films may become more common in the future."
+  },
+  "questions4_main": "Dear member, The club will be repaired. Please suggest an alternative meeting or activity.",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that the club is going to be repaired. We need to find an alternative place to meet. How about meeting at the park or organizing an outdoor activity for now? Let me know!\n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I was informed that the club will be undergoing repairs soon, and I understand the situation. While we wait for the renovation to be completed, I would like to suggest organizing meetings at an alternative location, such as a nearby park or community center. We could also plan some outdoor activities or small workshops that will allow members to continue meeting and interacting. \n    <br> If possible, we could even host a virtual event or discussion for members who are unable to attend in person. I believe these alternatives would help keep the members engaged and maintain the sense of community during this period of transition. \n    <br> I hope these suggestions are helpful, and I look forward to hearing your thoughts.  \n    <br> Best regards,  \n    <br> Jimmy"
+}

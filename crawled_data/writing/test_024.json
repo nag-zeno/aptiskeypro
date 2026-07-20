@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #024",
+  "club_name": "Nature club",
+  "questions1": {
+    "question1_1": "Where do you like to go in the summer?",
+    "question1_2": "A place you would like to visit in your country?",
+    "question1_3": "When and where do you usually listen to music?",
+    "question1_4": "When do you usually watch TV?",
+    "question1_5": "When was the last time you went out?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I like going to the beach.",
+    "question1_2_answer": "I want to visit Hanoi.",
+    "question1_3_answer": "I listen to music in the evening.",
+    "question1_4_answer": "I watch TV at night.",
+    "question1_5_answer": "I went out last weekend."
+  },
+  "questions2": {
+    "question2": "Please tell me about your free time and hobbies?"
+  },
+  "questions2_answer": {
+    "question2": "In my free time, I enjoy reading books, watching movies, and listening to music. I also like exploring new places, cooking, and spending time with my friends and family."
+  },
+  "questions3": {
+    "question3_1": "Hi! Welcome to the club. Where do you like to visit?",
+    "question3_2": "Hi! Why did you decide to join the club?",
+    "question3_3": "The bigger the club, the more environmentally conscious people are, right?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I like to visit natural places like mountains, beaches, and national parks. I enjoy exploring new environments, connecting with nature, and experiencing different cultures through travel.",
+    "question3_2_answer": "I decided to join the club because I love meeting new people, sharing common interests, and learning from others. I believe it's a great way to expand my knowledge and have fun.",
+    "question3_3_answer": "While having a larger club can encourage more environmentally conscious behavior, it's not guaranteed. A club's size doesn't necessarily correlate with its members' level of awareness or commitment to the environment."
+  },
+  "questions4_main": "Dear member, the club wants to make a plan for the young people because they just love to stay home and play games.",
+  "question4_1_text": "Write a short email to your friend (about 50 words).",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words).",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that the club is planning to create a program to encourage young people to be more active instead of staying home playing games. I think it's a great idea! Let me know your thoughts.\n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I understand that many young people prefer staying at home and playing games, and this is affecting their physical and social activities. I think the club can help by organizing events that encourage them to be more active and engage with others.  \n    <br> My suggestion is to create a fun and interactive program where young people can participate in games, sports, and team-building activities. These events should also include educational sessions about balancing technology use and physical activity.  \n    <br> I would be happy to assist in organizing such events and believe this could help make a positive impact on the younger generation. Thank you for considering my ideas, and I look forward to your feedback.  \n    <br> Best regards,  \n    <br> Jimmy"
+}

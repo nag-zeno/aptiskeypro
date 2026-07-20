@@ -1,0 +1,228 @@
+{
+  "label": "Bộ đề #04",
+  "questions1": [
+    {
+      "questionStart": "Children love to play in the ",
+      "answerOptions": [
+        "park",
+        "moon",
+        "tree"
+      ],
+      "questionEnd": "after school.",
+      "correctAnswer": "park"
+    },
+    {
+      "questionStart": "The new gym offers dance ",
+      "answerOptions": [
+        "classes",
+        "running",
+        "books"
+      ],
+      "questionEnd": "every weekend.",
+      "correctAnswer": "classes"
+    },
+    {
+      "questionStart": "This math problem is quite ",
+      "answerOptions": [
+        "easy",
+        "try",
+        "bye"
+      ],
+      "questionEnd": "to solve.",
+      "correctAnswer": "easy"
+    },
+    {
+      "questionStart": "What do you usually cook for ",
+      "answerOptions": [
+        "breakfast",
+        "love",
+        "cold"
+      ],
+      "questionEnd": "on weekends?",
+      "correctAnswer": "breakfast"
+    },
+    {
+      "questionStart": "My mother does ",
+      "answerOptions": [
+        "meditation",
+        "book",
+        "healthy"
+      ],
+      "questionEnd": "every morning to feel calm.",
+      "correctAnswer": "meditation"
+    }
+  ],
+  "question2Topic": "Family sports day",
+  "question2Content": [
+    {
+      "text": "It took place on Sunday morning in the park, there was a race for adults.",
+      "id": "item1"
+    },
+    {
+      "text": "Sixty people took part, and among them, Ms Kamus kept the fastest pace and won the race.",
+      "id": "item2"
+    },
+    {
+      "text": "After she got her prize, the next part was for children's activities.",
+      "id": "item3"
+    },
+    {
+      "text": "The activities were football, swimming, skipping, and more, and the kids had fun playing together.",
+      "id": "item4"
+    },
+    {
+      "text": "After the games, the kids were really hungry and ate with their parents.",
+      "id": "item5"
+    }
+  ],
+  "question3Topic": "The history of transportation",
+  "question3Content": [
+    {
+      "text": "In the past, transportation was primarily accessible to the wealthy.",
+      "id": "item1"
+    },
+    {
+      "text": "Later, air travel became popular among business professionals.",
+      "id": "item2"
+    },
+    {
+      "text": "Eventually, buses and trains were introduced as affordable alternatives.",
+      "id": "item3"
+    },
+    {
+      "text": "These made traveling more accessible to everyone.",
+      "id": "item4"
+    },
+    {
+      "text": "Today, buses and trains are among the most common transportation options.",
+      "id": "item5"
+    }
+  ],
+  "question4Topic": "Technology in childhood",
+  "question4Text": [
+    "<strong>Here is the perspective of four people on the above topic. Please read the content and answer the question.</strong>",
+    "<strong>A:</strong> When I was young, I enjoyed playing simple computer games that my dad had programmed for me. Today, I teach my children to code using easy-to-use platforms like Scratch. These tools make learning programming enjoyable, though I spend time helping them grasp the logic behind it. Working together on coding fosters both creativity and teamwork.",
+    "<strong>B:</strong> As a child, I loved spending time with my friends, building and controlling toy robots. I’ll never forget the thrill of making them move. Those experiences sparked my passion for technology, and I still look back fondly on those moments of discovery.",
+    "<strong>C:</strong> When I was younger, I was fascinated by science magazines about robots and computers. The articles fueled my curiosity. Now, I develop mobile apps, creating tools for daily life. Thanks to modern software, the development process has become faster, but the excitement of innovation remains the same.",
+    "<strong>D:</strong> As a kid, I spent rainy days with my siblings watching TV shows about gadgets and inventions. We eagerly awaited each new episode. Today, I prefer taking online courses to stay up-to-date with AI and blockchain. They offer flexibility and are a great way to keep pace with the rapidly changing tech world."
+  ],
+  "question4Content": [
+    {
+      "question": "Who finds modern tools more accessible?",
+      "id": "question4_q1",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Who now enjoys app development?",
+      "id": "question4_q2",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    },
+    {
+      "question": "Who loved playing with toy robots as a child?",
+      "id": "question4_q3",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "B"
+    },
+    {
+      "question": "Who loved watching tech shows as a child?",
+      "id": "question4_q4",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Who now prefers online learning?",
+      "id": "question4_q5",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "D"
+    },
+    {
+      "question": "Who enjoys coding with family?",
+      "id": "question4_q6",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A"
+    },
+    {
+      "question": "Who loved science magazines as a child?",
+      "id": "question4_q7",
+      "options": [
+        "",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "C"
+    }
+  ],
+  "correctAnswersQuestion4": [
+    "A",
+    "C",
+    "B",
+    "D",
+    "D",
+    "A",
+    "C"
+  ],
+  "question5Topic": "Wellness trend",
+  "options": [
+    "",
+    "Redefining holistic health approaches",
+    "Promoting mental health awareness",
+    "Encouraging community fitness programs",
+    "Overemphasis on trendy diets",
+    "Concerns about wellness misinformation",
+    "Building supportive health communities",
+    "Focusing on sustainable lifestyle changes"
+  ],
+  "paragraph_question5": [
+    "In recent years, the definition of health has broadened to encompass more than just physical well-being. Holistic approaches emphasize the interconnection of the body, mind, and environment, encouraging individuals to consider emotional balance, mental clarity, nutrition, and lifestyle habits collectively. This more comprehensive view helps people achieve deeper and more sustainable wellness by addressing various aspects of life rather than isolated symptoms.",
+    "Mental health has become a growing priority in public health discussions. Awareness campaigns aim to reduce the stigma surrounding mental health disorders and encourage open conversations about personal struggles. Educating people on recognizing early signs of anxiety, depression, and stress empowers them to seek help sooner. Many organizations also provide support networks and resources to build a more compassionate and understanding society.",
+    "Community-based fitness initiatives are becoming more popular as a way to make exercise enjoyable and accessible. By participating in group activities such as yoga, walking clubs, or sports leagues, individuals not only improve their physical health but also form meaningful social connections. These programs foster a sense of belonging and help individuals stay committed to their fitness goals over time, contributing to healthier and happier communities.",
+    "Although trendy diets often promise quick weight loss or improved health, relying too heavily on these fads can be problematic. Many popular diets lack scientific support and may eliminate essential nutrients, leading to unbalanced nutrition. Nutrition experts emphasize that sustainable eating should focus on balanced meals, moderation, and individual needs rather than quick fixes. Building a healthy relationship with food is more beneficial than chasing the latest diet trend.",
+    "The rise of social media and online platforms has led to widespread sharing of health information, but not all of it is accurate or safe. Misinformation about supplements, treatments, and health practices can cause confusion or even harm. It’s crucial for individuals to critically assess sources, consult healthcare professionals, and rely on evidence-based guidance when making decisions about their wellness routines.",
+    "Supportive wellness-focused communities play an essential role in helping people maintain healthy lifestyles. Whether online or through local meetups, these groups offer encouragement, share tips, and provide accountability. Members can exchange experiences, celebrate successes, and find motivation during challenges, creating an environment where individuals feel empowered to achieve their health goals.",
+    "Achieving long-term health requires more than temporary diets or exercise bursts. Sustainable wellness involves making gradual changes that can be maintained over time, such as improving sleep habits, managing stress, and incorporating regular physical activity. By setting realistic goals and making incremental adjustments, individuals are more likely to experience lasting benefits and enhance their overall quality of life."
+  ],
+  "meohoc": [
+    "<strong>Mẹo nhớ Keyword:</strong> Redefining → Promoting mental → fitness → Overemphasis → misinformation → health communities → lifestyle changes.",
+    "<strong>Nhớ theo đoạn văn:</strong> Định nghĩa lại (<strong>Redefining</strong>) chăm sóc sức khỏe, quảng bá sức khỏe tâm thần (<strong>Promoting mental</strong>), thể dục cộng đồng (<strong>fitness</strong>), quá nhấn mạnh (<strong>Overemphasis</strong>) vào chế độ ăn kiêng, thông tin sai lệch (<strong>misinformation</strong>), xây dựng cộng đồng chăm sóc sức khỏe (<strong>health communities</strong>) và thay đổi lối sống bền vững (<strong>lifestyle changes</strong>)."
+  ]
+}

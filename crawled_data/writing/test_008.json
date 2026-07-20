@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #008",
+  "club_name": "Community club",
+  "questions1": {
+    "question1_1": "Which sport is the most popular in your country?",
+    "question1_2": "What is your favorite animal?",
+    "question1_3": "What is the weather like today?",
+    "question1_4": "Where did you go last night?",
+    "question1_5": "What is your favorite time of year?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "Football is popular.",
+    "question1_2_answer": "I love dogs.",
+    "question1_3_answer": "It's sunny today.",
+    "question1_4_answer": "I stayed home.",
+    "question1_5_answer": "I love the spring."
+  },
+  "questions2": {
+    "question2": "Why did you join this Community club?"
+  },
+  "questions2_answer": {
+    "question2": "I joined the Community club to meet new people, participate in activities, and contribute to local causes. I enjoy being part of a group that makes a positive impact."
+  },
+  "questions3": {
+    "question3_1": "My friend wants to go to the hair salon, but her car isn't working. Can you suggest some ways for her to get there?",
+    "question3_2": "Volunteering provides great learning opportunities and helps others a lot. Do you agree with this?",
+    "question3_3": "Do you agree with the view that volunteering is a form of learning, especially for young people? Why?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "She can use public transportation or take a taxi. Alternatively, she could ask a friend or family member for a ride, or even use a ride-sharing service like Uber or Lyft.",
+    "question3_2_answer": "Yes, volunteering not only helps others but also provides valuable learning experiences. It teaches practical skills, empathy, and the importance of contributing to the community, benefiting both the volunteer and those served.",
+    "question3_3_answer": "I agree that volunteering is a form of learning, especially for young people. It offers hands-on experiences, teaches responsibility, and fosters important social skills, all of which are crucial for personal and professional development."
+  },
+  "questions4_main": "Dear Member, Our club needs support with several tasks this year. First, we need more members who can actively participate in our ongoing projects. Second, we are looking for creative ideas to develop new activities. Could you share some suggestions with us to help support our projects this year?",
+  "question4_1_text": "Write a short email to your friend (about 50 words). Write about your feelings and what you would like to do.",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words). Write about your feelings and what you would like to do.",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that our club needs more members and creative ideas to improve. I think we could organize some fun events and invite new members. We should also brainstorm fresh ideas for activities. What do you think? <br> \n    Best, <br> \n    Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I’m glad to hear the club is actively working to grow and improve this year. To support our projects, I suggest hosting interactive workshops or social events to encourage new members to join and participate. Additionally, we could organize a brainstorming session to gather creative ideas for future activities. This would engage both current and potential members and help us develop exciting initiatives. I’d love to contribute to these efforts by helping organize events and promote them on social media to attract more people. \n    <br> I look forward to hearing your thoughts. \n    <br> Best regards,  \n    <br> Phuong"
+}

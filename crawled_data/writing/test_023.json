@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #023",
+  "club_name": "Music club",
+  "questions1": {
+    "question1_1": "How many phones do you have?",
+    "question1_2": "How often do you go shopping?",
+    "question1_3": "Where are you from?",
+    "question1_4": "Where do you live?",
+    "question1_5": "Where would you like to live?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "I have two phones.",
+    "question1_2_answer": "I shop once a week.",
+    "question1_3_answer": "I’m from Hanoi.",
+    "question1_4_answer": "I live in Hanoi.",
+    "question1_5_answer": "I’d like to live abroad."
+  },
+  "questions2": {
+    "question2": "What do you usually do when you listen to music?"
+  },
+  "questions2_answer": {
+    "question2": "When I listen to music, I usually relax, close my eyes, and enjoy the rhythm. Sometimes, I sing along or focus on the lyrics to understand the song better."
+  },
+  "questions3": {
+    "question3_1": "There are songs that make me relax and there are songs that make me sad. What about you?",
+    "question3_2": "Playing loud music annoys people around you, what do you think?",
+    "question3_3": "I want to learn how to play music and I want to find a good teacher. Can you give me some advice?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "I agree! Some songs really help me relax, especially slow instrumental music. But there are also songs that bring back memories and make me feel sad, depending on the mood.",
+    "question3_2_answer": "I think playing loud music can be disruptive, especially in shared spaces. It's important to respect others by using headphones or keeping the volume at a reasonable level when possible.",
+    "question3_3_answer": "To learn music, I recommend starting with simple instruments like piano or guitar. Look for a teacher who can adapt to your learning pace. Online lessons or local music schools are good options."
+  },
+  "questions4_main": "Dear members, The club wants to find volunteers to organize the event. The club does not require experience but you need to be free in the evenings.",
+  "question4_1_text": "Write a short email to your friend (about 50 words). Write an email about why you want to be a volunteer and contribute your ideas to the event.",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words). Write an email about why you want to be a volunteer and contribute your ideas to the event.",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that the club is looking for volunteers to help organize the event. I think it’s a great opportunity to contribute and share my ideas. I’m available in the evenings, so I’d love to participate!\n    <br>Let me know if you want to join!\n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I am excited to hear that the club is looking for volunteers to organize the upcoming event. I would love to contribute by helping with the planning and execution. I believe my experience in organizing smaller events can bring value to the team.  \n    <br> I would also like to share some ideas for the event, such as incorporating interactive activities and creating a social media campaign to promote it. I’m available in the evenings, and I’m happy to contribute my time to make this event successful.  \n    <br> I look forward to working with the team and contributing to the success of the event.  \n    <br> Best regards,  \n    <br> Jimmy"
+}

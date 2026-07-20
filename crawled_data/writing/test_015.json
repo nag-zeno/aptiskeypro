@@ -1,0 +1,39 @@
+{
+  "key_id": "Bộ đề #015",
+  "club_name": "Food club",
+  "questions1": {
+    "question1_1": "What is your full name?",
+    "question1_2": "What is your surname?",
+    "question1_3": "What did you do yesterday / last night / last week?",
+    "question1_4": "What do you like to do every morning / in the afternoon / in the evening?",
+    "question1_5": "What do you do in the free time?"
+  },
+  "questions1_answer": {
+    "question1_1_answer": "Nguyen Van An.",
+    "question1_2_answer": "My surname is Nguyen.",
+    "question1_3_answer": "I stayed at home.",
+    "question1_4_answer": "I read books every morning.",
+    "question1_5_answer": "I enjoy watching movies."
+  },
+  "questions2": {
+    "question2": "When and where do you usually have meals?"
+  },
+  "questions2_answer": {
+    "question2": "I usually have breakfast at home around 7 AM, lunch at work or school around noon, and dinner at home around 7 PM. I prefer eating with family."
+  },
+  "questions3": {
+    "question3_1": "Tell me the last time you had a good meal?",
+    "question3_2": "I want to visit your country? Do you have any suggestions for me on what delicious food to eat?",
+    "question3_3": "3.\tToday, many people eat pizza. But it is not healthy and they should limit eating it. What is your opinion?"
+  },
+  "questions3_answer": {
+    "question3_1_answer": "The last time I had a great meal was at a family gathering last weekend. We had grilled fish, fried rice, and a delicious dessert. Everything was so tasty and satisfying.",
+    "question3_2_answer": "If you visit my country, I highly recommend trying pho, banh mi, and fresh spring rolls. These dishes are famous for their unique flavors and are a must-try when you're here.",
+    "question3_3_answer": "I agree that pizza is delicious but not very healthy. It’s high in fat and calories, so it should be eaten in moderation. It’s fine as an occasional treat but not a regular meal."
+  },
+  "questions4_main": "Dear members, the club needs volunteers to be guest speakers for the talk show with a famous chef. Please suggest your desire to be a speaker and what topic will you talk about?",
+  "question4_1_text": "Write a short email to your friend (about 50 words). Tell your friend what suggestions you will make and why?",
+  "question4_2_text": "Write an email to the president of the club (about 120-150 words). Tell the manager what suggestions you will make and why?",
+  "question4_1_text_answer": "Hi Linh, <br> \n    I just heard that the club needs volunteers to be guest speakers for the talk show with the famous chef. I plan to suggest talking about healthy cooking tips. What do you think? \n    <br>Let me know soon! \n    <br>Best, \n    <br>Phuong",
+  "question4_2_text_answer": "Dear Club President, \n    <br> I’m excited to hear about the opportunity to volunteer as a guest speaker for the upcoming talk show with the famous chef. I would love to talk about healthy cooking techniques and how to prepare simple yet nutritious meals at home. I believe this topic will be useful for many club members, and it can inspire others to focus more on health-conscious cooking. \n    <br> I am passionate about this subject and would be happy to share some easy recipes and tips. Please let me know if you would like me to participate.  \n    <br> Best regards,  \n    <br> Phuong"
+}
