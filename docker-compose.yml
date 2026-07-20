@@ -16,7 +16,7 @@ services:
 
   # --- FastAPI Backend ---
   api:
-    build: ./backend
+    build: .
     restart: always
     ports:
       - "8001:8001"

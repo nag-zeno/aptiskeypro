@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: aptiskeypro
+    env: docker
+    dockerfilePath: Dockerfile
+    plan: free
+    region: singapore
+    envVars:
+      - key: DEBUG
+        value: "false"
+      - key: APP_NAME
+        value: "AptisPro"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: aptispro-db
+          property: connectionString
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: "gemini-2.5-flash"
+      - key: ALLOWED_ORIGINS
+        value: '["*"]'
+
+databases:
+  - name: aptispro-db
+    databaseName: aptispro_db
+    user: aptispro
+    region: singapore
+    plan: free
