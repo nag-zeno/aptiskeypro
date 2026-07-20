@@ -553,30 +553,28 @@ async function scoreAnswer() {
     }
 
     const modalBody = document.getElementById('scoreModalBody');
-    modalBody.textContent = 'Đang chấm điểm...';
+    modalBody.innerHTML = '<div class="text-center py-3"><span class="spinner-border text-primary me-2"></span>Gemini AI đang phân tích câu trả lời...</div>';
     const modal = new bootstrap.Modal(document.getElementById('scoreModal'));
     modal.show();
 
     // Lấy reference từ answerBox (nội dung đang hiển thị) — strip HTML tags
     const refAnswer = answerText.innerText || answerText.textContent || '';
 
-    let prompt;
-    if (currentQuestionNum === 1) {
-        prompt = `Hãy chấm điểm APTIS Speaking Part 3 với thông tin sau.\nBand chấm của APTIS từ A0 đến C1.\n\nCâu hỏi: ${qText}\nThông tin tham khảo về 2 bức ảnh: ${refAnswer}\nCâu trả lời của học viên: ${userAnswer}\n\nHãy chấm điểm dựa trên khả năng mô tả và so sánh 2 ảnh, từ vựng, ngữ pháp và độ trôi chảy. Trả về kết quả chấm điểm chi tiết.\n\nLưu ý khi chấm: đây là học viên đang luyện tập, không phải người bản ngữ, nên hãy chấm khoan dung và mang tính khích lệ. Tập trung vào khả năng truyền đạt ý tưởng có rõ ràng hay không, đừng trừ điểm nặng vì các lỗi ngữ pháp/phát âm nhỏ không ảnh hưởng tới việc hiểu nội dung. Nếu phân vân giữa 2 band liền kề, hãy chọn band cao hơn.`;
-    } else {
-        prompt = `Hãy chấm điểm APTIS Speaking Part 3 với thông tin sau.\nBand chấm của APTIS từ A0 đến C1.\n\nCâu hỏi: ${qText}\nThông tin tham khảo: ${refAnswer}\nCâu trả lời của học viên: ${userAnswer}\n\nHãy chấm điểm dựa trên từ vựng, ngữ pháp, độ trôi chảy và mức độ phù hợp với câu hỏi. Trả về kết quả chấm điểm chi tiết.\n\nLưu ý khi chấm: đây là học viên đang luyện tập, không phải người bản ngữ, nên hãy chấm khoan dung và mang tính khích lệ. Tập trung vào khả năng truyền đạt ý tưởng có rõ ràng hay không, đừng trừ điểm nặng vì các lỗi ngữ pháp/phát âm nhỏ không ảnh hưởng tới việc hiểu nội dung. Nếu phân vân giữa 2 band liền kề, hãy chọn band cao hơn.`;
-    }
-
     try {
-        const res = await fetch('/ask', {
+        const res = await fetch('/ask-speaking', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ question: prompt })
+            body: JSON.stringify({
+                part: 3,
+                question: qText,
+                userAnswer: userAnswer,
+                refAnswer: refAnswer
+            })
         });
         const data = await res.json();
-        modalBody.textContent = data.answer || data.error || JSON.stringify(data);
+        modalBody.innerHTML = data.answer || data.error || JSON.stringify(data);
     } catch (err) {
-        modalBody.textContent = 'Lỗi kết nối: ' + err.message;
+        modalBody.innerHTML = '<div class="alert alert-danger">Lỗi kết nối: ' + err.message + '</div>';
     }
 }
 

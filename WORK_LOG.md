@@ -1,105 +1,112 @@
-# AptisKey â Work Log
-> Cáº­p nháº­t láº§n cuá»i: 2026-07-20 12:46 (GMT+7)
+# AptisKey – Work Log
+> Cập nhật lần cuối: 2026-07-20 22:05 (GMT+7)
 
 ---
 
-## â CÃ´ng viá»c ÄÃ£ hoÃ n thÃ nh
+## ✅ Công việc đã hoàn thành
 
-### 1. Khá»i Äá»ng Backend Server â
-- Cháº¡y `python -m uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload` tá»« thÆ° má»¥c `backend/`
-- Server khá»i Äá»ng thÃ nh cÃ´ng, khÃ´ng cÃ³ lá»i
+### 1. Khởi động Backend Server ✅
+- Chạy `python -m uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload` từ thư mục `backend/`
+- Server khởi động thành công, không có lỗi
 
-### 2. Sá»­a role admin â
-- `admin@aptiskey.com` ÄÃ£ cÃ³ `role: "admin"`
+### 2. Sửa role admin ✅
+- `admin@aptiskey.com` đã có `role: "admin"`
 
-### 3. Fix FutureWarning â Migrate google.generativeai â google.genai â
-- `compat.py` vÃ  `grader.py` ÄÃ£ dÃ¹ng `from google import genai`
-- `requirements.txt` â `google-genai>=1.0.0`
-- Package `google-genai==2.12.1` ÄÃ£ cÃ i
+### 3. Fix FutureWarning – Migrate google.generativeai → google.genai ✅
+- `compat.py` và `grader.py` đã dùng `from google import genai`
+- `requirements.txt` → `google-genai>=1.0.0`
+- Package `google-genai==2.12.1` đã cài
 
-### 4. Sá»­a lá»i bcrypt (Python 3.12) â
-- Thay tháº¿ thÆ° viá»n `passlib` báº±ng viá»c sá»­ dá»¥ng trá»±c tiáº¿p `bcrypt` Äá» bÄm vÃ  so khá»p máº­t kháº©u trong `security.py`.
-- Kháº¯c phá»¥c triá»t Äá» lá»i `ValueError: Invalid salt` khi ÄÄng nháº­p hoáº·c ÄÄng kÃ½ trÃªn Python 3.12.
+### 4. Sửa lỗi bcrypt (Python 3.12) ✅
+- Thay thế thư viện `passlib` bằng việc sử dụng trực tiếp `bcrypt` để băm và so khớp mật khẩu trong `security.py`.
+- Khắc phục triệt để lỗi `ValueError: Invalid salt` khi đăng nhập hoặc đăng ký trên Python 3.12.
 
-### 5. PhÃ¡t triá»n tÃ­nh nÄng Lá»ch sá»­ lÃ m bÃ i (Exam History) & XÃ¡c minh ná»p bÃ i â
+### 5. Phát triển tính năng Lịch sử làm bài (Exam History) & Xác minh nộp bài ✅
 - **Backend**:
-  - Bá» sung `test_title` vÃ  `test_skill` vÃ o schema `ResultDetail`.
-  - Cáº­p nháº­t API `GET /api/results` Äá» tráº£ vá» thÃªm thÃ´ng tin tÃªn Äá» vÃ  ká»¹ nÄng (join tá»« báº£ng `tests`).
-  - ThÃªm API má»i `GET /api/results/{result_id}` Äá» láº¥y chi tiáº¿t káº¿t quáº£ bÃ i thi cá»¥ thá» cá»§a há»c viÃªn.
-  - ThÃªm API `POST /api/compat/save-result` Äá» há» trá»£ frontend gá»­i lÆ°u Äiá»m sá», band, nháº­n xÃ©t AI trá»±c tiáº¿p sau khi hoÃ n thÃ nh bÃ i thi.
+  - Bổ sung `test_title` và `test_skill` vào schema `ResultDetail`.
+  - Cập nhật API `GET /api/results` để trả về thêm thông tin tên đề và kỹ năng (join từ bảng `tests`).
+  - Thêm API mới `GET /api/results/{result_id}` để lấy chi tiết kết quả bài thi cụ thể của học viên.
+  - Thêm API `POST /api/compat/save-result` để hỗ trợ frontend gửi lưu điểm số, band, nhận xét AI trực tiếp sau khi hoàn thành bài thi.
 - **Frontend**:
-  - Táº¡o trang má»i [history.html](file:///g:/My%20Drive/code/aptiskey/crawled_data/history.html) Äá»ng bá» theo thiáº¿t káº¿ **Neumorphism (Soft UI)** vá»i Äáº§y Äá»§ cÃ¡c bá» lá»c ká»¹ nÄng, thanh tÃ¬m kiáº¿m theo tÃªn Äá», phÃ¢n trang vÃ  stats cards tá»ng quan.
-  - TÃ­ch há»£p modal xem chi tiáº¿t káº¿t quáº£ (Äiá»m, band, thá»i gian, nháº­n xÃ©t chi tiáº¿t cá»§a AI vÃ  ÄÃ¡p Ã¡n ÄÃ£ chá»n).
-  - ThÃªm liÃªn káº¿t "Lá»ch sá»­ lÃ m bÃ i" vÃ o sidebar menu cá»§a táº¥t cáº£ cÃ¡c file HTML chÃ­nh.
-- **XÃ¡c minh**: Cháº¡y mÃ´ phá»ng ná»p bÃ i thi Reading Test #01 thÃ nh cÃ´ng. Káº¿t quáº£ lÆ°u vÃ o DB vÃ  hiá»n thá» chÃ­nh xÃ¡c trÃªn giao diá»n lá»ch sá»­ cá»§a há»c viÃªn.
+  - Tạo trang mới `history.html` đồng bộ theo thiết kế **Neumorphism (Soft UI)** với đầy đủ các bộ lọc kỹ năng, thanh tìm kiếm theo tên đề, phân trang và stats cards tổng quan.
+  - Tích hợp modal xem chi tiết kết quả (điểm, band, thời gian, nhận xét chi tiết của AI và đáp án đã chọn).
+  - Thêm liên kết "Lịch sử làm bài" vào sidebar menu của tất cả các file HTML chính.
+- **Xác minh**: Chạy mô phỏng nộp bài thi Reading Test #01 thành công. Kết quả lưu vào DB và hiển thị chính xác trên giao diện lịch sử của học viên.
 
-### 6. Fix lá»i ÄÄng nháº­p láº·p láº¡i (Redirect Loop) & LÆ°u phiÃªn á» trang lÃ m Äá» tÄ©nh â
-- **Váº¥n Äá»**: API `/auth/login` cÅ© khÃ´ng Äáº·t cookie khiáº¿n cÃ¡c trang lÃ m Äá» tÄ©nh khÃ´ng ÄÃ­nh kÃ¨m ÄÆ°á»£c token vÃ  bá» lá»i 401. Äá»ng thá»i trang chá»§ bá» 401 thÃ¬ redirect vá» trang ÄÄng nháº­p, trang ÄÄng nháº­p tháº¥y token trong localStorage láº¡i tá»± Äá»ng redirect láº¡i trang chá»§, táº¡o ra vÃ²ng láº·p vÃ´ háº¡n.
-- **Giáº£i phÃ¡p**:
-  - Cáº­p nháº­t `/auth/login` Äá» Äáº·t thÃªm HttpOnly cookie `access_token` giÃºp cÃ¡c trang tÄ©nh tá»± Äá»ng gá»­i thÃ´ng tin xÃ¡c thá»±c.
-  - Cáº­p nháº­t [common.js](file:///g:/My%20Drive/code/aptiskey/crawled_data/js/common.js) vÃ  [auth.html](file:///g:/My%20Drive/code/aptiskey/frontend/auth.html) Äá» ÄÃ­nh kÃ¨m `credentials: 'include'` khi fetch, Äá»ng thá»i xÃ³a sáº¡ch token cÅ© trong localStorage khi nháº­n mÃ£ lá»i 401 Äá» phÃ¡ vá»¡ vÃ²ng láº·p redirect.
+### 6. Fix lỗi Đăng nhập lặp lại (Redirect Loop) & Lưu phiên ở trang làm đề tĩnh ✅
+- **Vấn đề**: API `/auth/login` cũ không đặt cookie khiến các trang làm đề tĩnh không đính kèm được token và bị lỗi 401. Đồng thời trang chủ bị 401 thì redirect về trang đăng nhập, trang đăng nhập thấy token trong localStorage lại tự động redirect lại trang chủ, tạo ra vòng lặp vô hạn.
+- **Giải pháp**:
+  - Cập nhật `/auth/login` để đặt thêm HttpOnly cookie `access_token` giúp các trang tĩnh tự động gửi thông tin xác thực.
+  - Cập nhật `common.js` và `auth.html` để đính kèm `credentials: 'include'` khi fetch, đồng thời xóa sạch token cũ trong localStorage khi nhận mã lỗi 401 để phá vỡ vòng lặp redirect.
 
-### 7. TÃ­ch há»£p tá»± Äá»ng lÆ°u káº¿t quáº£ thi tá»« Giao diá»n lÃ m bÃ i â
-- Bá» sung hÃ m tá»± Äá»ng gá»­i lÆ°u káº¿t quáº£ vÃ o file JS lÃ m bÃ i:
-  - **Grammar** trong [grammar_test.js](file:///g:/My%20Drive/code/aptiskey/crawled_data/js/grammar/grammar_test.js).
-  - **Reading** trong [readingtest.js](file:///g:/My%20Drive/code/aptiskey/crawled_data/js/reading/readingtest.js).
-  - **Listening** trong [listening_test.js](file:///g:/My%20Drive/code/aptiskey/crawled_data/js/listening/listening_test.js).
-  - **Writing** trong [writing_test.js](file:///g:/My%20Drive/code/aptiskey/crawled_data/js/writing/writing_test.js).
+### 7. Tích hợp tự động lưu kết quả thi từ Giao diện làm bài ✅
+- Bổ sung hàm tự động gửi lưu kết quả vào file JS làm bài:
+  - **Grammar** trong `grammar_test.js`.
+  - **Reading** trong `readingtest.js`.
+  - **Listening** trong `listening_test.js`.
+  - **Writing** trong `writing_test.js`.
 
-### 8. Ãp dá»¥ng ká»¹ thuáº­t Cache Busting â
-- Cháº¡y script Python tá»± Äá»ng thÃªm phiÃªn báº£n `?v=1.0.1` vÃ o cÃ¡c file script tÄ©nh JS (`common.js`, `readingtest.js`, `listening_test.js`, `grammar_test.js`, `writing_test.js`) trÃªn toÃ n bá» **88 file HTML** trong `crawled_data/`. Kháº¯c phá»¥c triá»t Äá» lá»i do trÃ¬nh duyá»t cá»§a ngÆ°á»i dÃ¹ng cache file JS cÅ©, giÃºp há» thá»ng luÃ´n táº£i phiÃªn báº£n logic ná»p bÃ i má»i nháº¥t.
+### 8. Áp dụng kỹ thuật Cache Busting ✅
+- Chạy script Python tự động thêm phiên bản `?v=1.0.1` vào các file script tĩnh JS (`common.js`, `readingtest.js`, `listening_test.js`, `grammar_test.js`, `writing_test.js`) trên toàn bộ **88 file HTML** trong `crawled_data/`. Khắc phục triệt để lỗi do trình duyệt của người dùng cache file JS cũ, giúp hệ thống luôn tải phiên bản logic nộp bài mới nhất.
 
-### 9. XÃ³a thÃ´ng tin liÃªn há» Admin cÃ¡ nhÃ¢n â
-- XÃ³a toÃ n bá» sá» Äiá»n thoáº¡i Zalo `0889 489 814` vÃ  link Facebook Admin táº¡i táº¥t cáº£ 12 trang HTML chÃ­nh trong thÆ° má»¥c `crawled_data/` Äá» báº£o máº­t thÃ´ng tin cÃ¡ nhÃ¢n. Thay tháº¿ modal báº±ng ná»i dung thÃ´ng bÃ¡o nÃ¢ng cáº¥p kÃªnh há» trá»£.
+### 9. Xóa thông tin liên hệ Admin cá nhân ✅
+- Xóa toàn bộ số điện thoại Zalo `0889 489 814` và link Facebook Admin tại tất cả 12 trang HTML chính trong thư mục `crawled_data/` để bảo mật thông tin cá nhân. Thay thế modal bằng nội dung thông báo nâng cấp kênh hỗ trợ.
 
-### 10. PhÃ¡t triá»n trang Quáº£n trá» há» thá»ng (Admin Dashboard) â
-- **Backend API dÃ nh riÃªng cho Admin**:
-  - `GET /api/admin/users`: Láº¥y danh sÃ¡ch toÃ n bá» há»c viÃªn ÄÄng kÃ½ trÃªn há» thá»ng.
-  - `PUT /api/admin/users/{user_id}/vip`: Gia háº¡n, Äáº·t thá»i háº¡n, hoáº·c há»§y VIP cá»§a há»c viÃªn báº¥t ká»³.
-  - `GET /api/admin/results`: Láº¥y danh sÃ¡ch lá»ch sá»­ ná»p bÃ i thi cá»§a táº¥t cáº£ cÃ¡c tÃ i khoáº£n trÃªn há» thá»ng.
-  - `GET /api/admin/users/{user_id}/results`: Xem lá»ch sá»­ ná»p bÃ i cá»§a má»t há»c viÃªn cá»¥ thá».
-  - Báº£o máº­t phÃ¢n quyá»n: TÃ­ch há»£p dependency `get_current_admin` cháº·n 100% tÃ i khoáº£n há»c viÃªn thÆ°á»ng truy cáº­p (`403 Forbidden`).
-- **Giao diá»n quáº£n trá» Neumorphic ([admin_dashboard.html](file:///g:/My%20Drive/code/aptiskey/crawled_data/admin_dashboard.html))**:
-  - Giao diá»n tab: Quáº£n lÃ½ danh sÃ¡ch há»c viÃªn (Sá»­a VIP nhanh, Xem lá»ch sá»­ lÃ m bÃ i riÃªng) vÃ  Theo dÃµi lá»ch sá»­ lÃ m bÃ i chung cá»§a toÃ n há» thá»ng (Xem láº¡i chi tiáº¿t bÃ i lÃ m, nháº­n xÃ©t cá»§a AI).
-  - Dynamic Sidebar Menu: Tá»± Äá»ng chÃ¨n liÃªn káº¿t "Quáº£n trá» há» thá»ng" vÃ o sidebar cá»§a táº¥t cáº£ cÃ¡c trang khi tÃ i khoáº£n ÄÄng nháº­p lÃ  Admin.
-  - Hotfix Layout: Kháº¯c phá»¥c lá»i sidebar ÄÃ¨ lÃªn ná»i dung vÃ  khoáº£ng tráº¯ng á» trÃªn Äáº§u báº±ng cÃ¡ch Äiá»u chá»nh cÆ¡ cháº¿ hiá»n thá» sang class `.d-none` cá»§a Bootstrap 5 thay tháº¿ cho can thiá»p style `display` thá»§ cÃ´ng, báº£o vá» nguyÃªn tráº¡ng CSS grid/flexbox cá»§a AdminLTE.
+### 10. Phát triển trang Quản trị hệ thống (Admin Dashboard) ✅
+- **Backend API dành riêng cho Admin**:
+  - `GET /api/admin/users`: Lấy danh sách toàn bộ học viên đăng ký trên hệ thống.
+  - `PUT /api/admin/users/{user_id}/vip`: Gia hạn, đặt thời hạn, hoặc hủy VIP của học viên bất kỳ.
+  - `GET /api/admin/results`: Lấy danh sách lịch sử nộp bài thi của tất cả các tài khoản trên hệ thống.
+  - `GET /api/admin/users/{user_id}/results`: Xem lịch sử nộp bài của một học viên cụ thể.
+  - Bảo mật phân quyền: Tích hợp dependency `get_current_admin` chặn 100% tài khoản học viên thường truy cập (`403 Forbidden`).
+- **Giao diện quản trị Neumorphic (`admin_dashboard.html`)**:
+  - Giao diện tab: Quản lý danh sách học viên (Sửa VIP nhanh, Xem lịch sử làm bài riêng) và Theo dõi lịch sử làm bài chung của toàn hệ thống (Xem lại chi tiết bài làm, nhận xét của AI).
+  - Dynamic Sidebar Menu: Tự động chèn liên kết "Quản trị hệ thống" vào sidebar của tất cả các trang khi tài khoản đăng nhập là Admin.
+  - Hotfix Layout: Khắc phục lỗi sidebar đè lên nội dung và khoảng trắng ở trên đầu bằng cách điều chỉnh cơ chế hiển thị sang class `.d-none` của Bootstrap 5 thay thế cho can thiệp style `display` thủ công, bảo vệ nguyên trạng CSS grid/flexbox của AdminLTE.
+
+### 11. Sửa lỗi tăng giảm âm lượng phần ghi âm Listening ✅
+- Cập nhật các file JS làm bài Listening (`listening_test.js`, `listening_question1_13.js`, `listening_question14.js`, `listening_question15.js`, `listening_question16_17.js`).
+- Đấu nối sự kiện slider âm lượng (`input[type="range"]`) trực tiếp với thuộc tính `audio.volume` của trình phát bài nghe.
+- Cập nhật biểu tượng loa linh hoạt theo mức âm lượng và khôi phục trạng thái khi Mute / Unmute.
+
+### 12. Sửa cấu hình chạy ứng dụng qua Docker ✅
+- Cập nhật `Dockerfile` & `docker-compose.yml` để mount đầy đủ ứng dụng và phơi cổng `8001`.
+- Thêm tệp `.dockerignore` giúp tối ưu quá trình đóng gói container.
+
+### 13. Hoàn thiện tính năng chấm điểm Speaking bằng Gemini AI ✅
+- **Backend (`POST /ask-speaking`)**:
+  - Thêm router `/ask-speaking` trong `compat.py` hỗ trợ chấm điểm Speaking theo chuẩn 4 tiêu chí British Council (Fluency & Coherence, Lexical Resource, Grammatical Range & Accuracy, Content & Task Fulfilment).
+  - Tích hợp SDK `google-genai` với `GEMINI_API_KEY` có sẵn trong `.env`, trả về HTML đánh giá chi tiết kèm band điểm ước tính.
+- **Frontend (`speaking_question1_practice.js` → `speaking_question4_practice.js`)**:
+  - Cập nhật hàm `scoreAnswer()` truyền tham số `part`, `question`, `userAnswer`, `refAnswer` tới `/ask-speaking`.
+  - Nâng cấp Modal hiển thị kết quả trong 4 trang HTML Part 1 - 4 (`modal-lg`, gradient header, cuộn scroll 70vh, hiển thị spinner loading khi đang chấm bài).
+
+### 14. Chuẩn hóa tiêu đề các trang HTML giao diện học viên ✅
+- Cập nhật các thẻ `<title>` và meta description loại bỏ cụm từ không cần thiết trên 11 trang chính thuộc `crawled_data/`.
 
 ---
 
-## ð Káº¿ hoáº¡ch cÃ´ng viá»c tiáº¿p theo
+## 📋 Kế hoạch công việc tiếp theo
 
-### Æ¯u tiÃªn cao
-1. **Cáº¥u hÃ¬nh API Key tháº­t:** ThÃªm `GEMINI_API_KEY` vÃ  `PAYOS_API_KEY` vÃ o file `.env` khi triá»n khai thá»±c táº¿.
+### Ưu tiên cao
+1. **Cấu hình API Key thật:** Thêm `GEMINI_API_KEY` và `PAYOS_API_KEY` vào file `.env` khi triển khai thực tế.
 
-### Æ¯u tiÃªn trung bÃ¬nh
-2. **Security audit:** Kiá»m tra CORS nÃ¢ng cao, thá»i háº¡n háº¿t háº¡n JWT, giá»i háº¡n rate limit.
-3. **Email flow:** Test luá»ng gá»­i mail Äáº·t láº¡i máº­t kháº©u (`POST /auth/forgot-password`) khi cáº¥u hÃ¬nh Resend API key.
+### Ưu tiên trung bình
+2. **Security audit:** Kiểm tra CORS nâng cao, thời hạn hết hạn JWT, giới hạn rate limit.
+3. **Email flow:** Test luồng gửi mail đặt lại mật khẩu (`POST /auth/forgot-password`) khi cấu hình Resend API key.
 
-### Æ¯u tiÃªn tháº¥p
-4. **Dá»n dáº¹p mÃ£ nguá»n:** XÃ³a cÃ¡c script test táº¡m thá»i trong `scratch/` (`db_check.py`, `test_webhook.py`, `test_vip.py`, `test_results_api.py`, `test_save_result.py`).
+### Ưu tiên thấp
+4. **Dọn dẹp mã nguồn:** Xóa các script test tạm thời trong `scratch/` (`db_check.py`, `test_webhook.py`, `test_vip.py`, `test_results_api.py`, `test_save_result.py`).
 
 ---
 
-## ð Ghi chÃº ká»¹ thuáº­t
+## 📌 Ghi chú kỹ thuật
 
 - **Backend port:** 8001
-- **Database:** SQLite táº¡i `backend/aptispro_dev.db`
-- **Lá»nh cháº¡y server:** `python -m uvicorn app.main:app --host 127.0.0.1 --port 8001 --reload`
-- **CÆ¡ cháº¿ xÃ¡c thá»±c:** JWT Token (lÆ°u á» `localStorage`) & HttpOnly Cookie `access_token` (Äá» há» trá»£ cÃ¡c trang luyá»n táº­p tÄ©nh).
+- **Database:** SQLite tại `backend/aptispro_dev.db`
+- **Lệnh chạy server:** `python -m uvicorn app.main:app --host 127.0.0.1 --port 8001 --reload`
+- **Cơ chế xác thực:** JWT Token (lưu ở `localStorage`) & HttpOnly Cookie `access_token` (để hỗ trợ các trang luyện tập tĩnh).
 - **Admin account:** `admin@aptiskey.com` / `admin123`
-- **Há»c viÃªn test account:** `apitest@aptispro.com` / `test123`
-- **Google Gemini SDK:** `google-genai==2.12.1` (API má»i)
-- **Tá»ng sá» Äá» thi:** 78 Äá» thi cÃ³ sáºµn trong DB (sáºµn sÃ ng kiá»m tra phÃ¢n quyá»n VIP vÃ  lÆ°u lá»ch sá»­).n:** XÃ³a cÃ¡c script test táº¡m thá»i trong `scratch/` (`db_check.py`, `test_webhook.py`, `test_vip.py`, `test_results_api.py`, `test_save_result.py`).
-
----
-
-## ð Ghi chÃº ká»¹ thuáº­t
-
-- **Backend port:** 8001
-- **Database:** SQLite táº¡i `backend/aptispro_dev.db`
-- **Lá»nh cháº¡y server:** `python -m uvicorn app.main:app --host 127.0.0.1 --port 8001 --reload`
-- **CÆ¡ cháº¿ xÃ¡c thá»±c:** JWT Token (lÆ°u á» `localStorage`) & HttpOnly Cookie `access_token` (Äá» há» trá»£ cÃ¡c trang luyá»n táº­p tÄ©nh).
-- **Admin account:** `admin@aptiskey.com` / `admin123`
-- **Há»c viÃªn test account:** `apitest@aptispro.com` / `test123`
-- **Google Gemini SDK:** `google-genai==2.12.1` (API má»i)
-- **Tá»ng sá» Äá» thi:** 78 Äá» thi cÃ³ sáºµn trong DB (sáºµn sÃ ng kiá»m tra phÃ¢n quyá»n VIP vÃ  lÆ°u lá»ch sá»­).
+- **Học viên test account:** `apitest@aptispro.com` / `test123`
+- **Google Gemini SDK:** `google-genai==2.12.1` (API mới)
+- **Tổng số đề thi:** 78 đề thi có sẵn trong DB.

@@ -21,4 +21,5 @@ WORKDIR /app/backend
 EXPOSE 8001
 
 # Run database seed on startup then start Uvicorn server on Render's $PORT
-CMD ["sh", "-c", "python seed_data.py && uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8001} --workers 2"]
+CMD ["sh", "-c", "until python seed_data.py; do echo 'Waiting for DB to be ready...'; sleep 2; done && uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8001} --workers 2"]
+

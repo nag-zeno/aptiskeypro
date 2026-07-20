@@ -147,7 +147,59 @@ function toggleTranscript() {
 // 3. Hàm load âm thanh
 
 function setupPlayButton(audio, playBtn, playIcon) {
-  if (playBtn.dataset.bound === "true") return;
+  if (audio || playBtn) {
+    const topBar = (audio && audio.closest ? audio.closest('.top-bar') : null) || (playBtn && playBtn.closest ? playBtn.closest('.top-bar') : null);
+    if (topBar && !topBar.dataset.volumeBound) {
+      topBar.dataset.volumeBound = "true";
+      const volumeSlider = topBar.querySelector('input[type="range"]');
+      const buttons = topBar.querySelectorAll('button');
+      const volumeBtn = Array.from(buttons).find(b => b !== playBtn);
+      const volumeIcon = volumeBtn ? volumeBtn.querySelector('i') : null;
+
+      if (volumeSlider && audio) {
+        volumeSlider.min = "0";
+        volumeSlider.max = "1";
+        volumeSlider.step = "0.01";
+        volumeSlider.value = audio.volume !== undefined ? audio.volume : 1;
+
+        const updateVolumeIcon = (vol) => {
+          if (!volumeIcon) return;
+          volumeIcon.className = "bi fs-5";
+          if (vol === 0) {
+            volumeIcon.classList.add("bi-volume-mute-fill");
+          } else if (vol < 0.5) {
+            volumeIcon.classList.add("bi-volume-down-fill");
+          } else {
+            volumeIcon.classList.add("bi-volume-up-fill");
+          }
+        };
+
+        const setVolume = (val) => {
+          const num = Math.max(0, Math.min(1, parseFloat(val)));
+          audio.volume = num;
+          volumeSlider.value = num;
+          updateVolumeIcon(num);
+        };
+
+        volumeSlider.addEventListener("input", (e) => setVolume(e.target.value));
+        volumeSlider.addEventListener("change", (e) => setVolume(e.target.value));
+
+        if (volumeBtn) {
+          let lastVol = 1;
+          volumeBtn.addEventListener("click", () => {
+            if (audio.volume > 0) {
+              lastVol = audio.volume;
+              setVolume(0);
+            } else {
+              setVolume(lastVol > 0 ? lastVol : 1);
+            }
+          });
+        }
+      }
+    }
+  }
+
+  if (!playBtn || playBtn.dataset.bound === "true") return;
   playBtn.dataset.bound = "true"; 
 
   playBtn.addEventListener("click", () => {

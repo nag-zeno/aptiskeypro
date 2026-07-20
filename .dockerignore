@@ -1,0 +1,10 @@
+.git
+.gitignore
+.env
+*.db
+*.sqlite3
+__pycache__
+*.pyc
+backend/__pycache__
+backend/aptispro_dev.db
+backend/.venv

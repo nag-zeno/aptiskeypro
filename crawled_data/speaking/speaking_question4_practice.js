@@ -810,26 +810,30 @@ async function scoreAnswer() {
     tmp.innerHTML = questions[currentIndex].answer1;
     const refAnswer = tmp.innerText || tmp.textContent || '';
 
-    const prompt = `Hãy chấm điểm APTIS Speaking Part 4 với thông tin sau.\nBand chấm của APTIS từ A0 đến C1.\n\nCâu hỏi: ${question}\nThông tin tham khảo (đáp án mẫu): ${refAnswer}\nCâu trả lời của học viên: ${transcript}\n\nHãy chấm điểm dựa trên khả năng trình bày kinh nghiệm cá nhân, đưa ra ý kiến về chủ đề trừu tượng, từ vựng, ngữ pháp và độ trôi chảy. Trả về kết quả chấm điểm chi tiết.\n\nLưu ý khi chấm: đây là học viên đang luyện tập, không phải người bản ngữ, nên hãy chấm khoan dung và mang tính khích lệ. Tập trung vào khả năng truyền đạt ý tưởng có rõ ràng hay không, đừng trừ điểm nặng vì các lỗi ngữ pháp/phát âm nhỏ không ảnh hưởng tới việc hiểu nội dung. Nếu phân vân giữa 2 band liền kề, hãy chọn band cao hơn.`;
-
     const btn = document.getElementById('scoreBtn');
     btn.disabled = true;
     btn.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span>Đang chấm...';
 
+    const modalBody = document.getElementById('scoreModalBody');
+    modalBody.innerHTML = '<div class="text-center py-3"><span class="spinner-border text-primary me-2"></span>Gemini AI đang phân tích câu trả lời...</div>';
+    new bootstrap.Modal(document.getElementById('scoreModal')).show();
+
     try {
-        const res = await fetch('/ask', {
+        const res = await fetch('/ask-speaking', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ question: prompt })
+            body: JSON.stringify({
+                part: 4,
+                question: question,
+                userAnswer: transcript,
+                refAnswer: refAnswer
+            })
         });
         const data = await res.json();
         const result = data.answer || data.error || 'Không nhận được kết quả.';
-
-        document.getElementById('scoreModalBody').textContent = result;
-        new bootstrap.Modal(document.getElementById('scoreModal')).show();
+        modalBody.innerHTML = result;
     } catch (err) {
-        document.getElementById('scoreModalBody').textContent = 'Lỗi kết nối. Vui lòng thử lại.';
-        new bootstrap.Modal(document.getElementById('scoreModal')).show();
+        modalBody.innerHTML = '<div class="alert alert-danger">Lỗi kết nối. Vui lòng thử lại.</div>';
     } finally {
         btn.disabled = false;
         btn.innerHTML = '<i class="bi bi-star-fill me-1"></i>Chấm điểm';
