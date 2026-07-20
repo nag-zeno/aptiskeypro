@@ -1,31 +1,83 @@
+﻿# render.yaml - Render Blueprint Configuration
+# Huong dan: Commit file nay len Git, sau do tren Render Dashboard
+# chon "New Blueprint Instance" de trien khai tu dong.
+#
+# Hoac tao thu cong:
+#   1. New+ -> PostgreSQL -> copy Internal Database URL
+#   2. New+ -> Web Service (Docker) -> set env vars ben duoi
+
 services:
+  # ─── Web Service (FastAPI + Uvicorn) ─────────────────────────────────────────
   - type: web
-    name: aptiskeypro
-    env: docker
-    dockerfilePath: Dockerfile
-    plan: free
-    region: singapore
+    name: aptiskey-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free                # doi len "starter" neu can nhieu tai nguyen hon
+    region: singapore         # chon region gan VN nhat
+
+    # Health check - Render se restart neu endpoint nay that bai
+    healthCheckPath: /health
+
+    # Bien moi truong - Dien gia tri thuc te vao Render Dashboard
     envVars:
-      - key: DEBUG
-        value: "false"
-      - key: APP_NAME
-        value: "AptisPro"
-      - key: SECRET_KEY
-        generateValue: true
+      # --- Database (lay tu PostgreSQL service ben duoi) ---
       - key: DATABASE_URL
         fromDatabase:
-          name: aptispro-db
+          name: aptiskey-db
           property: connectionString
-      - key: GEMINI_API_KEY
-        sync: false
-      - key: GEMINI_MODEL
-        value: "gemini-2.5-flash"
-      - key: ALLOWED_ORIGINS
-        value: '["*"]'
 
+      # --- Admin Account (TAO MOI KHI DEPLOY LAN DAU) ---
+      - key: ADMIN_EMAIL
+        value: admin@aptiskey.com   # THAY BANG EMAIL THUC CUA BAN
+
+      - key: ADMIN_PASSWORD
+        generateValue: false
+        value: Admin@123456         # THAY BANG MAT KHAU MANH HON
+
+      - key: ADMIN_NAME
+        value: Administrator
+
+      # --- JWT Security ---
+      - key: SECRET_KEY
+        generateValue: true         # Render tu tao chuoi ngau nhien 32+ ky tu
+
+      # --- AI (Google Gemini) ---
+      - key: GEMINI_API_KEY
+        value: ""                   # DIEN GEMINI API KEY CUA BAN
+
+      - key: GEMINI_MODEL
+        value: gemini-2.0-flash
+
+      # --- App ---
+      - key: DEBUG
+        value: "false"
+
+      - key: APP_NAME
+        value: AptisPro
+
+      # --- CORS (them domain Render cua ban sau khi deploy) ---
+      - key: ALLOWED_ORIGINS
+        value: '["https://aptiskey-api.onrender.com", "http://localhost:8000", "http://localhost:5173"]'
+
+      # --- Payment (PayOS) ---
+      - key: PAYOS_CLIENT_ID
+        value: ""
+
+      - key: PAYOS_API_KEY
+        value: ""
+
+      - key: PAYOS_CHECKSUM_KEY
+        value: ""
+
+      # --- Email (Resend) ---
+      - key: RESEND_API_KEY
+        value: ""
+
+  # ─── PostgreSQL Database (Persistent) ────────────────────────────────────────
 databases:
-  - name: aptispro-db
+  - name: aptiskey-db
+    plan: free                      # 1GB mien phi tren Render
+    region: singapore
     databaseName: aptispro_db
     user: aptispro
-    region: singapore
-    plan: free

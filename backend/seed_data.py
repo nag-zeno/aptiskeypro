@@ -426,44 +426,79 @@ def seed_speaking(db):
                 _add_question(db, test, order, QuestionType.audio_response,
                               question_text,
                               explanation=explanation,
-                              audio_url=image_url)   # tái dùng trường audio_url để lưu image URL
-                order += 1
+                              audio_url=image_url)   # tái dùng trường# ─── MAIN ────────────────────────────────────────────────────────────────────
 
-            # Part 2 & 3: mỗi item có urlpic1 + question1/question2/question3
-            elif any(f"question{i}" in item for i in range(1, 5)):
-                image_url = item.get("urlpic1") or item.get("urlpic2") or ""
-                for q_idx in range(1, 5):
-                    q_key  = f"question{q_idx}"
-                    ans_key = f"question{q_idx}_answer"
-                    if q_key not in item:
-                        continue
-                    question_text = item[q_key]
-                    sample_answer = item.get(ans_key, "")
-                    explanation = f"Gợi ý: {sample_answer}" if sample_answer else None
-                    # Chỉ câu hỏi đầu tiên mới kèm ảnh
-                    _add_question(db, test, order, QuestionType.audio_response,
-                                  question_text,
-                                  explanation=explanation,
-                                  audio_url=image_url if q_idx == 1 else None)
-                    order += 1
+def main():
+    parser = argparse.ArgumentParser(description="AptisPro – Seed dữ liệu câu hỏi vào database")
+    parser.add_argument("--skill", choices=["grammar", "reading", "listening", "writing", "speaking"],
+                        help="Chỉ nạp kỹ năng cụ thể (mặc định: tất cả)")
+    parser.add_argument("--reset", action="store_true",
+                        help="Xóa sạch Tests/Questions trước khi nạp lại")
+    args = parser.parse_args()
 
-        db.commit()
-        print(f"  ✔ {file_name}  →  {order - 1} câu hỏi")
+    # Tạo bảng nếu chưa có
+    Base.metadata.create_all(bind=engine)
 
-    print(f"[Speaking] Hoàn tất – 4 Part.")
+    if args.reset:
+        reset_database()
 
-
-# ─── RESET ────────────────────────────────────────────────────────────────────
-
-def reset_database():
-    """Xóa sạch tất cả dữ liệu câu hỏi / đề thi (giữ nguyên Users và Transactions)."""
     db = SessionLocal()
     try:
-        print("[Reset] Đang xóa dữ liệu cũ...")
-        db.query(Question).delete()
-        db.query(Test).delete()
-        db.commit()
-        print("[Reset] Xóa xong toàn bộ Tests và Questions.")
+        # ── IDEMPOTENT GUARD ──────────────────────────────────────────────────
+        # Kiểm tra xem DB đã có dữ liệu đề thi hay chưa.
+        # Nếu đã có và không chạy --reset, bỏ qua toàn bộ seed để tránh
+        # duplicate mỗi lần Render restart / redeploy container.
+        if not args.reset and not args.skill:
+            existing_count = db.query(Test).count()
+            if existing_count > 0:
+                print("=" * 60)
+                print("       AptisPro – DỮ LIỆU ĐÃ TỒN TẠI, BỎ QUA SEED")
+                print(f"       Hiện có {existing_count} bộ đề trong DB.")
+                print("       Dùng --reset để xóa và nạp lại toàn bộ.")
+                print("=" * 60)
+                return
+        # ─────────────────────────────────────────────────────────────────────
+
+        skill_map = {
+            "grammar":   seed_grammar,
+            "reading":   seed_reading,
+            "listening": seed_listening,
+            "writing":   seed_writing,
+            "speaking":  seed_speaking,
+        }
+
+        if args.skill:
+            runners = {args.skill: skill_map[args.skill]}
+        else:
+            runners = skill_map
+
+        print("=" * 60)
+        print("       AptisPro – BẮT ĐẦU SEED DỮ LIỆU")
+        print("=" * 60)
+
+        for skill_name, fn in runners.items():
+            fn(db)
+
+        # Tổng kết
+        total_tests     = db.query(Test).count()
+        total_questions = db.query(Question).count()
+        print("\n" + "=" * 60)
+        print("       AptisPro – SEED HOÀN THÀNH!")
+        print(f"       Tổng số bộ đề  : {total_tests}")
+        print(f"       Tổng số câu hỏi: {total_questions}")
+        print("=" * 60)
+    except Exception as e:
+        db.rollback()
+        print(f"\n[LỖI] {e}")
+        import traceback
+        traceback.print_exc()
+        sys.exit(1)
+    finally:
+        db.close()
+
+
+if __name__ == "__main__":
+    main()� Tests và Questions.")
     finally:
         db.close()
 
