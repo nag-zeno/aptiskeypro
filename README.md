@@ -119,6 +119,7 @@ Lệnh này sẽ khởi chạy database PostgreSQL cùng backend API tự độn
 Khi ứng dụng đã chạy trên cổng `8001`:
 
 * **Trang chủ hệ thống:** [http://localhost:8001/](http://localhost:8001/) (FastAPI phục vụ nội dung của `crawled_data/`).
+* **Trang Từ vựng & Flashcards Aptis:** [http://localhost:8001/vocabulary.html](http://localhost:8001/vocabulary.html) (hoặc [http://localhost:8001/vocabulary](http://localhost:8001/vocabulary)).
 * **Trang Đăng nhập / Đăng ký:** [http://localhost:8001/frontend/auth.html](http://localhost:8001/frontend/auth.html).
 * **Tài liệu API Swagger:** [http://localhost:8001/docs](http://localhost:8001/docs) *(yêu cầu `DEBUG=True` trong file `.env`)*.
 

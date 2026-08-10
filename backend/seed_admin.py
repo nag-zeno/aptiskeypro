@@ -1,4 +1,4 @@
-﻿"""
+"""
 Seed Admin - AptisPro
 =====================
 Tu dong tao tai khoan admin khi khoi dong ung dung tren Render.
@@ -21,13 +21,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from app.core.database import Base, engine, SessionLocal
 from app.models.user import User, UserRole
-
-try:
-    from passlib.context import CryptContext
-    pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-except ImportError:
-    print("[LOI] passlib chua duoc cai. Chay: pip install passlib[bcrypt]")
-    sys.exit(1)
+from app.core.security import get_password_hash
 
 
 def seed_admin():
@@ -50,7 +44,7 @@ def seed_admin():
                 print(f"[Admin Seed] Da cap nhat role thanh admin cho {admin_email}")
             return
 
-        hashed_password = pwd_context.hash(admin_password)
+        hashed_password = get_password_hash(admin_password)
         admin_user = User(
             email=admin_email,
             full_name=admin_name,

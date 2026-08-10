@@ -1,19 +1,25 @@
-"""
-Seed Script – AptisPro
-======================
-Đọc toàn bộ dữ liệu từ thư mục crawled_data/ và nạp vào cơ sở dữ liệu
-thông qua SQLAlchemy models (Test + Question).
+# -*- coding: utf-8 -*-
+import sys
+import io
+if hasattr(sys.stdout, 'buffer'):
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
-Cách chạy (từ thư mục backend/):
-    python seed_data.py                  # nạp tất cả kỹ năng
-    python seed_data.py --skill grammar  # chỉ nạp Grammar
+"""
+Seed Script â€“ AptisPro
+======================
+Ä á» c toÃ n bá»™ dá»¯ liá»‡u tá»« thÆ° má»¥c crawled_data/ vÃ  náº¡p vÃ o cÆ¡ sá»Ÿ dá»¯ liá»‡u
+thÃ´ng qua SQLAlchemy models (Test + Question).
+
+CÃ¡ch cháº¡y (tá»« thÆ° má»¥c backend/):
+    python seed_data.py                  # náº¡p táº¥t cáº£ ká»¹ nÄƒng
+    python seed_data.py --skill grammar  # chá»‰ náº¡p Grammar
     python seed_data.py --skill reading
     python seed_data.py --skill listening
     python seed_data.py --skill writing
     python seed_data.py --skill speaking
-    python seed_data.py --reset          # xóa sạch DB rồi nạp lại
+    python seed_data.py --reset          # xÃ³a sáº¡ch DB rá»“i náº¡p láº¡i
 
-Lưu ý: Script phải được chạy từ thư mục backend/ để đường dẫn hoạt động đúng.
+LÆ°u Ã½: Script pháº£i Ä‘Æ°á»£c cháº¡y tá»« thÆ° má»¥c backend/ Ä‘á»ƒ Ä‘Æ°á» ng dáº«n hoáº¡t Ä‘á»™ng Ä‘Ãºng.
 """
 
 import os
@@ -21,7 +27,7 @@ import sys
 import json
 import argparse
 
-# Thêm backend root vào sys.path
+# ThÃªm backend root vÃ o sys.path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from app.core.database import Base, engine, SessionLocal
@@ -29,26 +35,26 @@ from app.models.user import User
 from app.models.exam import Test, Question, Skill, QuestionType
 from app.models.payment import Transaction
 
-# ─── Đường dẫn ────────────────────────────────────────────────────────────────
+# âââ ÄÆ°á»ng dáº«n ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 BACKEND_DIR  = os.path.dirname(os.path.abspath(__file__))
 CRAWLED_DIR  = os.path.join(BACKEND_DIR, "..", "crawled_data")
 
-# ─── Helpers ──────────────────────────────────────────────────────────────────
+# âââ Helpers ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 def load_json(path: str) -> dict | list | None:
-    """Đọc file JSON, trả None nếu lỗi."""
+    """Äá»c file JSON, tráº£ None náº¿u lá»i."""
     try:
         with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
     except Exception as e:
-        print(f"  [!] Không đọc được {os.path.basename(path)}: {e}")
+        print(f"  [!] KhÃ´ng Äá»c ÄÆ°á»£c {os.path.basename(path)}: {e}")
         return None
 
 
 def _add_test(db, skill: Skill, title: str, description: str = "", is_vip: int = 0) -> Test:
     test = Test(skill=skill, title=title, description=description, is_vip=is_vip)
     db.add(test)
-    db.flush()          # lấy test.id ngay mà không cần commit
+    db.flush()          # láº¥y test.id ngay mÃ  khÃ´ng cáº§n commit
     return test
 
 
@@ -77,17 +83,17 @@ def _add_question(
     return q
 
 
-# ─── GRAMMAR ──────────────────────────────────────────────────────────────────
+# âââ GRAMMAR ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 def seed_grammar(db):
     """
-    Mỗi file test_XXX.json = 1 bộ đề Grammar gồm nhiều phần:
-      question1_list : điền từ (fill_blank) — đáp án đúng là question_answer[0]
-      question2–6    : matching (chọn synonym / collocations)
+    Má»i file test_XXX.json = 1 bá» Äá» Grammar gá»m nhiá»u pháº§n:
+      question1_list : Äiá»n tá»« (fill_blank) â ÄÃ¡p Ã¡n ÄÃºng lÃ  question_answer[0]
+      question2â6    : matching (chá»n synonym / collocations)
     """
     skill_dir = os.path.join(CRAWLED_DIR, "grammar")
     files = sorted(f for f in os.listdir(skill_dir) if f.startswith("test_") and f.endswith(".json"))
-    print(f"\n[Grammar] Tìm thấy {len(files)} file đề thi.")
+    print(f"\n[Grammar] TÃ¬m tháº¥y {len(files)} file Äá» thi.")
 
     for file_name in files:
         data = load_json(os.path.join(skill_dir, file_name))
@@ -96,10 +102,10 @@ def seed_grammar(db):
 
         test_num = int(file_name.replace("test_", "").replace(".json", ""))
         test = _add_test(db, Skill.grammar, f"Grammar Test #{test_num:02d}",
-                         "Bộ đề Grammar tổng hợp – Aptis")
+                         "Bá» Äá» Grammar tá»ng há»£p â Aptis")
         order = 1
 
-        # Part 1: fill_blank (question1_list) — đáp án đúng là phần tử đầu tiên
+        # Part 1: fill_blank (question1_list) â ÄÃ¡p Ã¡n ÄÃºng lÃ  pháº§n tá»­ Äáº§u tiÃªn
         for item in data.get("question1_list", []):
             opts = item.get("question_answer", [])
             correct = opts[0] if opts else None
@@ -109,11 +115,11 @@ def seed_grammar(db):
                           correct_answer=correct)
             order += 1
 
-        # Part 2–6: matching (synonym / collocation)
+        # Part 2â6: matching (synonym / collocation)
         for part_key in ("question2_list", "question3_list", "question4_list",
                          "question5_list", "question6_list"):
             for item in data.get(part_key, []):
-                # Một số part có question_orginal, một số có question_start + question_end
+                # Má»t sá» part cÃ³ question_orginal, má»t sá» cÃ³ question_start + question_end
                 if "question_orginal" in item:
                     content = item["question_orginal"]
                 elif "question_start" in item:
@@ -131,20 +137,20 @@ def seed_grammar(db):
                 order += 1
 
         db.commit()
-        print(f"  ✔ {file_name}  →  {order - 1} câu hỏi")
+        print(f"  â {file_name}  â  {order - 1} cÃ¢u há»i")
 
-    print(f"[Grammar] Hoàn tất – {len(files)} bộ đề.")
+    print(f"[Grammar] HoÃ n táº¥t â {len(files)} bá» Äá».")
 
 
-# ─── READING ──────────────────────────────────────────────────────────────────
+# âââ READING ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 def seed_reading(db):
     """
-    Mỗi file test_XXX.json = 1 bộ đề Reading gồm 5 phần (Q1-Q5).
+    Má»i file test_XXX.json = 1 bá» Äá» Reading gá»m 5 pháº§n (Q1-Q5).
     """
     skill_dir = os.path.join(CRAWLED_DIR, "reading")
     files = sorted(f for f in os.listdir(skill_dir) if f.startswith("test_") and f.endswith(".json"))
-    print(f"\n[Reading] Tìm thấy {len(files)} file đề thi.")
+    print(f"\n[Reading] TÃ¬m tháº¥y {len(files)} file Äá» thi.")
 
     for file_name in files:
         data = load_json(os.path.join(skill_dir, file_name))
@@ -153,7 +159,7 @@ def seed_reading(db):
 
         test_num = int(file_name.replace("test_", "").replace(".json", ""))
         test = _add_test(db, Skill.reading, f"Reading Test #{test_num:02d}",
-                         data.get("label", f"Bộ đề Reading #{test_num:02d}"))
+                         data.get("label", f"Bá» Äá» Reading #{test_num:02d}"))
         order = 1
 
         # Q1: fill_blank (questionStart + answerOptions + questionEnd)
@@ -166,69 +172,69 @@ def seed_reading(db):
                           correct_answer=item.get("correctAnswer"))
             order += 1
 
-        # Q2: sắp xếp câu (matching – trình tự đúng)
+        # Q2: sáº¯p xáº¿p cÃ¢u (matching â trÃ¬nh tá»± ÄÃºng)
         q2_topic = data.get("question2Topic", "Ordering")
         q2_items = data.get("question2Content", [])
         if q2_items:
-            # Lưu từng câu như 1 câu hỏi sắp xếp (nội dung = danh sách các câu)
+            # LÆ°u tá»«ng cÃ¢u nhÆ° 1 cÃ¢u há»i sáº¯p xáº¿p (ná»i dung = danh sÃ¡ch cÃ¡c cÃ¢u)
             sentences_text = "\n".join(f"{i+1}. {it['text']}" for i, it in enumerate(q2_items))
-            content = f"[Sắp xếp câu – {q2_topic}]\n{sentences_text}"
-            # Không có đáp án chuẩn cố định trong JSON gốc → lưu essay để AI chấm
+            content = f"[Sáº¯p xáº¿p cÃ¢u â {q2_topic}]\n{sentences_text}"
+            # KhÃ´ng cÃ³ ÄÃ¡p Ã¡n chuáº©n cá» Äá»nh trong JSON gá»c â lÆ°u essay Äá» AI cháº¥m
             _add_question(db, test, order, QuestionType.essay,
                           content)
             order += 1
 
-        # Q3: sắp xếp đoạn (tương tự Q2)
+        # Q3: sáº¯p xáº¿p Äoáº¡n (tÆ°Æ¡ng tá»± Q2)
         q3_topic = data.get("question3Topic", "Ordering")
         q3_items = data.get("question3Content", [])
         if q3_items:
             sentences_text = "\n".join(f"{i+1}. {it['text']}" for i, it in enumerate(q3_items))
-            content = f"[Sắp xếp câu – {q3_topic}]\n{sentences_text}"
+            content = f"[Sáº¯p xáº¿p cÃ¢u â {q3_topic}]\n{sentences_text}"
             _add_question(db, test, order, QuestionType.essay, content)
             order += 1
 
-        # Q4: 4 người (A/B/C/D) – trắc nghiệm chọn người
+        # Q4: 4 ngÆ°á»i (A/B/C/D) â tráº¯c nghiá»m chá»n ngÆ°á»i
         q4_questions = data.get("question4Content", [])
         q4_texts = data.get("question4Text", [])
         passage_html = " ".join(q4_texts)
         for item in q4_questions:
             content = passage_html + "\n\n" + item.get("question", "")
-            opts = [o for o in item.get("options", []) if o]  # bỏ phần tử rỗng
+            opts = [o for o in item.get("options", []) if o]  # bá» pháº§n tá»­ rá»ng
             _add_question(db, test, order, QuestionType.multiple_choice,
                           content, options=opts,
                           correct_answer=item.get("answer"))
             order += 1
 
-        # Q5: chọn tiêu đề phù hợp cho đoạn văn (matching)
+        # Q5: chá»n tiÃªu Äá» phÃ¹ há»£p cho Äoáº¡n vÄn (matching)
         q5_topic   = data.get("question5Topic", "")
         q5_paras   = data.get("paragraph_question5", [])
         q5_options = data.get("options", [])
-        # Mỗi đoạn văn → 1 câu hỏi matching
+        # Má»i Äoáº¡n vÄn â 1 cÃ¢u há»i matching
         for i, para in enumerate(q5_paras):
             _add_question(db, test, order, QuestionType.matching,
-                          f"[{q5_topic}] Đoạn {i+1}: {para}",
+                          f"[{q5_topic}] Äoáº¡n {i+1}: {para}",
                           options=[o for o in q5_options if o])
             order += 1
 
         db.commit()
-        print(f"  ✔ {file_name}  →  {order - 1} câu hỏi")
+        print(f"  â {file_name}  â  {order - 1} cÃ¢u há»i")
 
-    print(f"[Reading] Hoàn tất – {len(files)} bộ đề.")
+    print(f"[Reading] HoÃ n táº¥t â {len(files)} bá» Äá».")
 
 
-# ─── LISTENING ────────────────────────────────────────────────────────────────
+# âââ LISTENING ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 def seed_listening(db):
     """
-    Mỗi file test_XXX.json = 1 bộ đề Listening gồm 3 phần:
-      q1_13 : 13 câu multiple_choice (kèm audioUrl)
-      q14   : 1 câu matching chọn person (A/B/C/D)
-      q15   : câu Agree/Disagree (Man/Woman/Both)
-      q16_17: 2 đoạn nghe, mỗi đoạn 2 câu multiple_choice
+    Má»i file test_XXX.json = 1 bá» Äá» Listening gá»m 3 pháº§n:
+      q1_13 : 13 cÃ¢u multiple_choice (kÃ¨m audioUrl)
+      q14   : 1 cÃ¢u matching chá»n person (A/B/C/D)
+      q15   : cÃ¢u Agree/Disagree (Man/Woman/Both)
+      q16_17: 2 Äoáº¡n nghe, má»i Äoáº¡n 2 cÃ¢u multiple_choice
     """
     skill_dir = os.path.join(CRAWLED_DIR, "listening")
     files = sorted(f for f in os.listdir(skill_dir) if f.startswith("test_") and f.endswith(".json"))
-    print(f"\n[Listening] Tìm thấy {len(files)} file đề thi.")
+    print(f"\n[Listening] TÃ¬m tháº¥y {len(files)} file Äá» thi.")
 
     for file_name in files:
         data = load_json(os.path.join(skill_dir, file_name))
@@ -237,10 +243,10 @@ def seed_listening(db):
 
         test_num = int(file_name.replace("test_", "").replace(".json", ""))
         test = _add_test(db, Skill.listening, f"Listening Test #{test_num:02d}",
-                         "Bộ đề Listening tổng hợp – Aptis")
+                         "Bá» Äá» Listening tá»ng há»£p â Aptis")
         order = 1
 
-        # Q1-13: multiple_choice kèm audio
+        # Q1-13: multiple_choice kÃ¨m audio
         for item in data.get("q1_13", []):
             _add_question(db, test, order, QuestionType.multiple_choice,
                           item.get("question", ""),
@@ -250,12 +256,12 @@ def seed_listening(db):
                           audio_url=item.get("audioUrl"))
             order += 1
 
-        # Q14: matching – chọn người phát biểu
+        # Q14: matching â chá»n ngÆ°á»i phÃ¡t biá»u
         q14 = data.get("q14", {})
         if q14:
             opts = q14.get("options", [])
             content = (f"[{q14.get('topic', 'Q14')}]\n"
-                       f"Nghe và chọn người phát biểu phù hợp.\n"
+                       f"Nghe vÃ  chá»n ngÆ°á»i phÃ¡t biá»u phÃ¹ há»£p.\n"
                        f"Options: {', '.join(o for o in opts if o)}\n"
                        f"Transcript:\n{q14.get('transcript', '')}")
             _add_question(db, test, order, QuestionType.matching,
@@ -280,7 +286,7 @@ def seed_listening(db):
                               explanation=q15.get("transcript"))
                 order += 1
 
-        # Q16-17: 2 đoạn, mỗi đoạn 2 câu
+        # Q16-17: 2 Äoáº¡n, má»i Äoáº¡n 2 cÃ¢u
         for passage in data.get("q16_17", []):
             audio_url  = passage.get("audioUrl")
             transcript = passage.get("transcript", "")
@@ -294,21 +300,21 @@ def seed_listening(db):
                 order += 1
 
         db.commit()
-        print(f"  ✔ {file_name}  →  {order - 1} câu hỏi")
+        print(f"  â {file_name}  â  {order - 1} cÃ¢u há»i")
 
-    print(f"[Listening] Hoàn tất – {len(files)} bộ đề.")
+    print(f"[Listening] HoÃ n táº¥t â {len(files)} bá» Äá».")
 
 
-# ─── WRITING ──────────────────────────────────────────────────────────────────
+# âââ WRITING ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 def seed_writing(db):
     """
-    Mỗi file test_XXX.json = 1 bộ đề Writing gồm 4 tasks (Q1-Q4).
-    Tất cả đều là essay (chấm bằng AI).
+    Má»i file test_XXX.json = 1 bá» Äá» Writing gá»m 4 tasks (Q1-Q4).
+    Táº¥t cáº£ Äá»u lÃ  essay (cháº¥m báº±ng AI).
     """
     skill_dir = os.path.join(CRAWLED_DIR, "writing")
     files = sorted(f for f in os.listdir(skill_dir) if f.startswith("test_") and f.endswith(".json"))
-    print(f"\n[Writing] Tìm thấy {len(files)} file đề thi.")
+    print(f"\n[Writing] TÃ¬m tháº¥y {len(files)} file Äá» thi.")
 
     for file_name in files:
         data = load_json(os.path.join(skill_dir, file_name))
@@ -318,14 +324,22 @@ def seed_writing(db):
         test_num = int(file_name.replace("test_", "").replace(".json", ""))
         club_name = data.get("club_name", "")
         test = _add_test(db, Skill.writing,
-                         f"Writing Test #{test_num:02d}" + (f" – {club_name}" if club_name else ""),
-                         "Bộ đề Writing Aptis – bao gồm 4 tasks (short answers, paragraph, emails, & formal email)")
+                         f"Writing Test #{test_num:02d}" + (f" â {club_name}" if club_name else ""),
+                         "Bá» Äá» Writing Aptis â bao gá»m 4 tasks (short answers, paragraph, emails, & formal email)")
         order = 1
 
-        # Q1: 5 câu trả lời ngắn (short answers – lưu chung 1 câu essay)
+        # Q1: 5 cÃ¢u tráº£ lá»i ngáº¯n (short answers â lÆ°u chung 1 cÃ¢u essay)
         q1_dict = data.get("questions1", {})
         q1_answers = data.get("questions1_answer", {})
         if q1_dict:
+            questions_text = "\n".join(f"â¢ {v}" for v in q1_dict.values())
+            sample_answers = "\n".join(f"â¢ {v}" for v in q1_answers.values())
+            content = f"[Q1 â Short Answers]\n{questions_text}"
+            _add_question(db, test, order, QuestionType.essay,
+                          content, explanation=f"Gá»£i Ã½ tráº£ lá»i:\n{sample_answers}")
+            order += 1
+
+        # Q2: paragraph (viáº¿t 1 Äoáº¡n)
             questions_text = "\n".join(f"• {v}" for v in q1_dict.values())
             sample_answers = "\n".join(f"• {v}" for v in q1_answers.values())
             content = f"[Q1 – Short Answers]\n{questions_text}"
@@ -378,7 +392,7 @@ def seed_writing(db):
     print(f"[Writing] Hoàn tất – {len(files)} bộ đề.")
 
 
-# ─── SPEAKING ─────────────────────────────────────────────────────────────────
+# ——— SPEAKING —————————————————————————————————————————————————————————————————
 
 def seed_speaking(db):
     """
@@ -388,17 +402,17 @@ def seed_speaking(db):
     """
     skill_dir = os.path.join(CRAWLED_DIR, "speaking")
     part_files = [
-        ("speaking_part_1.json", 1, "Câu hỏi và trả lời cá nhân (Personal questions)"),
-        ("speaking_part_2.json", 2, "Mô tả ảnh / Hỏi-đáp (Describe & Discuss)"),
-        ("speaking_part_3.json", 3, "Thảo luận chủ đề xã hội (Topic Discussion)"),
-        ("speaking_part_4.json", 4, "Thảo luận chuyên sâu (In-depth Discussion)"),
+        ("speaking_part_1.json", 1, "CÃ¢u há»i vÃ  tráº£ lá»i cÃ¡ nhÃ¢n (Personal questions)"),
+        ("speaking_part_2.json", 2, "MÃ´ táº£ áº£nh / Há»i-ÄÃ¡p (Describe & Discuss)"),
+        ("speaking_part_3.json", 3, "Tháº£o luáº­n chá»§ Äá» xÃ£ há»i (Topic Discussion)"),
+        ("speaking_part_4.json", 4, "Tháº£o luáº­n chuyÃªn sÃ¢u (In-depth Discussion)"),
     ]
-    print(f"\n[Speaking] Tìm thấy 4 file Part Speaking.")
+    print(f"\n[Speaking] TÃ¬m tháº¥y 4 file Part Speaking.")
 
     for file_name, part_num, description in part_files:
         path = os.path.join(skill_dir, file_name)
         if not os.path.exists(path):
-            print(f"  [!] Không tìm thấy {file_name}, bỏ qua.")
+            print(f"  [!] KhÃ´ng tÃ¬m tháº¥y {file_name}, bá» qua.")
             continue
 
         data = load_json(path)
@@ -411,109 +425,31 @@ def seed_speaking(db):
         order = 1
 
         for item in data:
-            # Part 1 & 4: dùng key "question" + "answer1"/"answer2"
+            # Part 1 & 4: dÃ¹ng key "question" + "answer1"/"answer2"
             if "question" in item:
                 question_text = item.get("question", "")
                 if not question_text:
                     continue
                 sample_parts = []
                 if item.get("answer1"):
-                    sample_parts.append(f"Mẫu 1: {item['answer1']}")
+                    sample_parts.append(f"Máº«u 1: {item['answer1']}")
                 if item.get("answer2"):
-                    sample_parts.append(f"Mẫu 2: {item['answer2']}")
+                    sample_parts.append(f"Máº«u 2: {item['answer2']}")
                 explanation = "\n\n".join(sample_parts) if sample_parts else None
                 image_url = item.get("urlpic1") or item.get("urlpic")
                 _add_question(db, test, order, QuestionType.audio_response,
                               question_text,
                               explanation=explanation,
-                              audio_url=image_url)   # tái dùng trường# ─── MAIN ────────────────────────────────────────────────────────────────────
+                              audio_url=image_url)   # tÃ¡i dÃ¹ng trÆ°á»ng# âââ MAIN ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+
+# --- MAIN ---
 
 def main():
-    parser = argparse.ArgumentParser(description="AptisPro – Seed dữ liệu câu hỏi vào database")
-    parser.add_argument("--skill", choices=["grammar", "reading", "listening", "writing", "speaking"],
-                        help="Chỉ nạp kỹ năng cụ thể (mặc định: tất cả)")
-    parser.add_argument("--reset", action="store_true",
-                        help="Xóa sạch Tests/Questions trước khi nạp lại")
+    parser = argparse.ArgumentParser(description="AptisPro - Seed data")
+    parser.add_argument("--skill", choices=["grammar", "reading", "listening", "writing", "speaking"])
+    parser.add_argument("--reset", action="store_true")
     args = parser.parse_args()
 
-    # Tạo bảng nếu chưa có
-    Base.metadata.create_all(bind=engine)
-
-    if args.reset:
-        reset_database()
-
-    db = SessionLocal()
-    try:
-        # ── IDEMPOTENT GUARD ──────────────────────────────────────────────────
-        # Kiểm tra xem DB đã có dữ liệu đề thi hay chưa.
-        # Nếu đã có và không chạy --reset, bỏ qua toàn bộ seed để tránh
-        # duplicate mỗi lần Render restart / redeploy container.
-        if not args.reset and not args.skill:
-            existing_count = db.query(Test).count()
-            if existing_count > 0:
-                print("=" * 60)
-                print("       AptisPro – DỮ LIỆU ĐÃ TỒN TẠI, BỎ QUA SEED")
-                print(f"       Hiện có {existing_count} bộ đề trong DB.")
-                print("       Dùng --reset để xóa và nạp lại toàn bộ.")
-                print("=" * 60)
-                return
-        # ─────────────────────────────────────────────────────────────────────
-
-        skill_map = {
-            "grammar":   seed_grammar,
-            "reading":   seed_reading,
-            "listening": seed_listening,
-            "writing":   seed_writing,
-            "speaking":  seed_speaking,
-        }
-
-        if args.skill:
-            runners = {args.skill: skill_map[args.skill]}
-        else:
-            runners = skill_map
-
-        print("=" * 60)
-        print("       AptisPro – BẮT ĐẦU SEED DỮ LIỆU")
-        print("=" * 60)
-
-        for skill_name, fn in runners.items():
-            fn(db)
-
-        # Tổng kết
-        total_tests     = db.query(Test).count()
-        total_questions = db.query(Question).count()
-        print("\n" + "=" * 60)
-        print("       AptisPro – SEED HOÀN THÀNH!")
-        print(f"       Tổng số bộ đề  : {total_tests}")
-        print(f"       Tổng số câu hỏi: {total_questions}")
-        print("=" * 60)
-    except Exception as e:
-        db.rollback()
-        print(f"\n[LỖI] {e}")
-        import traceback
-        traceback.print_exc()
-        sys.exit(1)
-    finally:
-        db.close()
-
-
-if __name__ == "__main__":
-    main()� Tests và Questions.")
-    finally:
-        db.close()
-
-
-# ─── MAIN ─────────────────────────────────────────────────────────────────────
-
-def main():
-    parser = argparse.ArgumentParser(description="AptisPro – Seed dữ liệu câu hỏi vào database")
-    parser.add_argument("--skill", choices=["grammar", "reading", "listening", "writing", "speaking"],
-                        help="Chỉ nạp kỹ năng cụ thể (mặc định: tất cả)")
-    parser.add_argument("--reset", action="store_true",
-                        help="Xóa sạch Tests/Questions trước khi nạp lại")
-    args = parser.parse_args()
-
-    # Tạo bảng nếu chưa có
     Base.metadata.create_all(bind=engine)
 
     if args.reset:
@@ -535,29 +471,27 @@ def main():
             runners = skill_map
 
         print("=" * 60)
-        print("       AptisPro – BẮT ĐẦU SEED DỮ LIỆU")
+        print("       AptisPro - START SEED DATA")
         print("=" * 60)
 
         for skill_name, fn in runners.items():
             fn(db)
 
-        # Tổng kết
         total_tests     = db.query(Test).count()
         total_questions = db.query(Question).count()
         print("\n" + "=" * 60)
-        print("       AptisPro – SEED HOÀN THÀNH!")
-        print(f"       Tổng số bộ đề  : {total_tests}")
-        print(f"       Tổng số câu hỏi: {total_questions}")
+        print("       AptisPro - SEED COMPLETED!")
+        print(f"       Total tests    : {total_tests}")
+        print(f"       Total questions: {total_questions}")
         print("=" * 60)
     except Exception as e:
         db.rollback()
-        print(f"\n[LỖI] {e}")
+        print(f"\n[ERROR] {e}")
         import traceback
         traceback.print_exc()
         sys.exit(1)
     finally:
         db.close()
-
 
 if __name__ == "__main__":
     main()

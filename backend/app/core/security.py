@@ -81,6 +81,27 @@ def get_current_user(request: Request, db: Session = Depends(get_db)) -> User:
     return user
 
 
+def get_optional_user(request: Request, db: Session = Depends(get_db)) -> Optional[User]:
+    """Dependency lấy user nếu có token hợp lệ, trả về None nếu là khách (chưa đăng nhập)."""
+    token = None
+    authorization = request.headers.get("Authorization")
+    if authorization and authorization.startswith("Bearer "):
+        token = authorization.split(" ")[1]
+    if not token:
+        token = request.cookies.get("access_token")
+    if not token:
+        return None
+    try:
+        payload = jwt.decode(token, settings.SECRET_KEY, algorithms=[settings.ALGORITHM])
+        user_id: str = payload.get("sub")
+        if user_id is None:
+            return None
+        return db.query(User).filter(User.id == int(user_id)).first()
+    except Exception:
+        return None
+
+
+
 def get_current_vip_user(current_user: User = Depends(get_current_user)) -> User:
     """Dependency đảm bảo user đang có tài khoản VIP còn hạn."""
     now = datetime.now(timezone.utc)

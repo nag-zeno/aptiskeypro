@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kho Từ vựng & Phân loại – AptisKey</title>
+  <meta name="description" content="Tra cứu, phân loại và học từ vựng Aptis theo kỹ năng, chủ đề và cấp độ CEFR A1 - C1 với thẻ ghi nhớ Flashcards 3D thông minh." />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" crossorigin="anonymous" />
+  <!-- AdminLTE static -->
+  <link rel="stylesheet" href="./css/adminlte/adminlte.css" />
+  <!-- OverlayScrollbars -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/styles/overlayscrollbars.min.css" crossorigin="anonymous" />
+  <!-- Neumorphism Design System -->
+  <link rel="stylesheet" href="./css/neumorphism.css" />
+
+  <style>
+    /* ===== PAGE OVERRIDES & STYLES ===== */
+    .app-main { background: var(--nm-bg, #e0e5ec); padding-bottom: 50px; }
+
+    /* ===== STAT CARDS ===== */
+    .stat-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: var(--nm-bg, #e0e5ec);
+      box-shadow: var(--nm-shadow-out, 6px 6px 16px #a3b1c6, -6px -6px 16px #fff);
+      border-radius: var(--nm-r-l, 20px);
+      padding: 18px 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: var(--nm-transition);
+    }
+    .stat-card:hover { box-shadow: var(--nm-shadow-out-lg); transform: translateY(-2px); }
+    .stat-icon-wrap {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+      box-shadow: var(--nm-shadow-out);
+    }
+    .stat-info .stat-value { font-size: 24px; font-weight: 800; color: var(--nm-text); line-height: 1.1; }
+    .stat-info .stat-label { font-size: 12px; font-weight: 700; color: var(--nm-text-muted); }
+
+    /* ===== FILTER & TOOLBAR ===== */
+    .vocab-toolbar {
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-out);
+      border-radius: var(--nm-r-l);
+      padding: 18px 22px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .toolbar-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+    .search-box-nm {
+      position: relative;
+      flex: 1;
+      min-width: 260px;
+    }
+    .search-box-nm .bi-search {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--nm-text-muted);
+      font-size: 15px;
+    }
+    .search-input-nm {
+      width: 100%;
+      padding: 10px 16px 10px 42px;
+      border-radius: var(--nm-r-full);
+      border: none;
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-in);
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      color: var(--nm-text);
+      outline: none;
+      transition: var(--nm-transition);
+    }
+    .search-input-nm:focus { box-shadow: var(--nm-shadow-in-lg); }
+
+    .nm-select {
+      padding: 8px 16px;
+      border-radius: var(--nm-r-full);
+      border: none;
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-out-sm);
+      font-family: 'Nunito', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--nm-text);
+      outline: none;
+      cursor: pointer;
+      transition: var(--nm-transition);
+    }
+    .nm-select:focus, .nm-select:hover { box-shadow: var(--nm-shadow-out); }
+
+    .view-mode-toggle {
+      display: flex;
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-in);
+      border-radius: var(--nm-r-full);
+      padding: 4px;
+      margin-left: auto;
+    }
+    .toggle-btn {
+      border: none;
+      background: transparent;
+      padding: 6px 16px;
+      border-radius: var(--nm-r-full);
+      font-family: 'Nunito', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--nm-text-muted);
+      cursor: pointer;
+      transition: var(--nm-transition);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .toggle-btn.active {
+      background: linear-gradient(135deg, var(--nm-primary), var(--nm-secondary));
+      color: #fff;
+      box-shadow: 0 4px 12px var(--nm-primary-glow);
+    }
+
+    /* Skill Filter Pills */
+    .filter-pills { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .pill-btn {
+      border: none;
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-flat);
+      padding: 6px 14px;
+      border-radius: var(--nm-r-full);
+      font-family: 'Nunito', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--nm-text-muted);
+      cursor: pointer;
+      transition: var(--nm-transition);
+    }
+    .pill-btn:hover { box-shadow: var(--nm-shadow-out-sm); color: var(--nm-text); }
+    .pill-btn.active {
+      background: linear-gradient(135deg, var(--nm-primary), var(--nm-secondary));
+      color: #fff;
+      box-shadow: 0 4px 12px var(--nm-primary-glow);
+    }
+
+    /* ===== FLASHCARD 3D MODE ===== */
+    .flashcard-wrapper {
+      max-width: 620px;
+      margin: 0 auto 30px;
+      perspective: 1000px;
+    }
+    .flashcard-inner {
+      width: 100%;
+      min-height: 340px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+    .flashcard-wrapper.flipped .flashcard-inner {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: var(--nm-r-xl, 28px);
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-out-lg);
+      padding: 30px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+    }
+    .card-face-back {
+      transform: rotateY(180deg);
+    }
+
+    .fc-word { font-size: 32px; font-weight: 800; color: var(--nm-text); margin-bottom: 6px; }
+    .fc-phonetic { font-size: 18px; color: var(--nm-primary); font-weight: 700; }
+    .fc-meaning { font-size: 22px; font-weight: 800; color: #16a34a; margin-bottom: 12px; }
+    .fc-example {
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-in);
+      border-radius: var(--nm-r-m);
+      padding: 14px 18px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--nm-text);
+      text-align: left;
+      width: 100%;
+    }
+
+    .badge-cefr {
+      padding: 4px 10px;
+      border-radius: var(--nm-r-full);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .5px;
+      color: #fff;
+    }
+    .cefr-A1, .cefr-A2 { background: linear-gradient(135deg, #10b981, #059669); }
+    .cefr-B1 { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+    .cefr-B2 { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+    .cefr-C1, .cefr-C2 { background: linear-gradient(135deg, #f59e0b, #d97706); }
+
+    .badge-pos {
+      background: rgba(163,177,198,0.25);
+      color: var(--nm-text);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: var(--nm-r-full);
+      text-transform: lowercase;
+      font-style: italic;
+    }
+
+    .fc-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .fc-btn {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      border: none;
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-out);
+      color: var(--nm-text);
+      font-size: 18px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: var(--nm-transition);
+    }
+    .fc-btn:hover { box-shadow: var(--nm-shadow-out-lg); color: var(--nm-primary); transform: scale(1.05); }
+
+    /* ===== VOCAB GRID CARDS ===== */
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .vocab-card {
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-out);
+      border-radius: var(--nm-r-l, 20px);
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+      transition: var(--nm-transition);
+      position: relative;
+    }
+    .vocab-card:hover { box-shadow: var(--nm-shadow-out-lg); transform: translateY(-3px); }
+    .vocab-card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .v-word { font-size: 20px; font-weight: 800; color: var(--nm-text); margin: 0; line-height: 1.2; }
+    .v-phonetic { font-size: 13px; color: var(--nm-primary); font-weight: 700; margin-top: 2px; }
+    .v-meaning { font-size: 14px; font-weight: 700; color: #16a34a; margin-top: 6px; }
+
+    .v-example {
+      font-size: 12px;
+      color: var(--nm-text-muted);
+      line-height: 1.5;
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-in);
+      padding: 8px 12px;
+      border-radius: var(--nm-r-m);
+    }
+
+    .vocab-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 8px;
+      border-top: 1px solid rgba(163,177,198,0.2);
+    }
+    .action-icon-btn {
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      border: none;
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-flat);
+      color: var(--nm-text-muted);
+      font-size: 15px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: var(--nm-transition);
+    }
+    .action-icon-btn:hover { box-shadow: var(--nm-shadow-out-sm); color: var(--nm-primary); }
+    .action-icon-btn.active-bookmark { color: #f59e0b; box-shadow: var(--nm-shadow-in); }
+    .action-icon-btn.active-mastered { color: #10b981; box-shadow: var(--nm-shadow-in); }
+
+    /* Audio Speak Button */
+    .speak-btn {
+      background: transparent;
+      border: none;
+      color: var(--nm-primary);
+      cursor: pointer;
+      font-size: 16px;
+      margin-left: 6px;
+      transition: var(--nm-transition);
+    }
+    .speak-btn:hover { transform: scale(1.2); }
+
+    /* ===== PAGINATION ===== */
+    .pagination-wrap { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 20px 0; }
+    .pg-btn {
+      width: 38px; height: 38px;
+      border-radius: var(--nm-r-m);
+      border: none;
+      background: var(--nm-bg);
+      box-shadow: var(--nm-shadow-flat);
+      color: var(--nm-text-muted);
+      font-family: 'Nunito', sans-serif;
+      font-size: 13px; font-weight: 700;
+      cursor: pointer;
+      transition: var(--nm-transition);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .pg-btn:hover { box-shadow: var(--nm-shadow-out-sm); color: var(--nm-text); }
+    .pg-btn.active {
+      background: linear-gradient(135deg, var(--nm-primary), var(--nm-secondary));
+      color: #fff;
+      box-shadow: 0 4px 12px var(--nm-primary-glow);
+    }
+    .pg-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  </style>
+</head>
+
+<body class="layout-fixed sidebar-expand-lg sidebar-open bg-body-tertiary">
+  <!-- Neumorphic Blobs -->
+  <div class="nm-blob nm-blob-blue"></div>
+  <div class="nm-blob nm-blob-violet"></div>
+
+  <div class="app-wrapper">
+    <!-- ===== HEADER ===== -->
+    <nav class="app-header navbar navbar-expand bg-body">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button"><i class="bi bi-list"></i></a>
+          </li>
+          <li class="nav-item d-none d-md-block">
+            <a href="/home.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item d-none d-md-block">
+            <a href="/vocabulary.html" class="nav-link fw-bold" style="color:var(--nm-primary)">Từ vựng Aptis</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown user-menu">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              <img src="./images/assets/img/avatar5.png" class="user-image rounded-circle shadow" alt="User Image" />
+              <span id="userName" class="d-none d-md-inline">Đang tải...</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+              <li class="user-header text-bg-primary">
+                <img src="./images/assets/img/avatar5.png" class="rounded-circle shadow" alt="User Image" />
+                <p id="status_hocvien">Học viên<small></small></p>
+              </li>
+              <li class="user-footer">
+                <a href="/profile.html" id="xProfile" class="btn btn-default btn-flat">Profile</a>
+                <a href="#" class="btn btn-default btn-flat float-end" id="signOutBtn">Sign out</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
+      <div class="sidebar-brand">
+        <a href="/home.html" class="brand-link">
+          <i class="bi bi-mortarboard-fill text-white fs-4 me-2 ms-3"></i>
+          <span class="brand-text fw-light">AptisPro</span>
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <nav class="mt-2">
+          <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="navigation" data-accordion="false">
+            <li class="nav-item">
+              <a href="/home.html" class="nav-link">
+                <i class="nav-icon bi bi-speedometer"></i><p>Trang chủ</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/roadmap.html" class="nav-link">
+                <i class="nav-icon bi bi-signpost-split-fill text-info"></i><p>Lộ trình học AI</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon bi bi-book"></i>
+                <p>Học Reading<i class="nav-arrow bi bi-chevron-right"></i></p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item"><a href="/reading_question.html" class="nav-link"><i class="nav-icon bi bi-question-circle"></i><p>Học theo câu hỏi</p></a></li>
+                <li class="nav-item"><a href="/reading_bode.html" class="nav-link"><i class="nav-icon bi bi-stack"></i><p>Học theo bộ đề</p></a></li>
+                <li class="nav-item"><a href="/reading_meo.html" class="nav-link"><i class="nav-icon bi bi-lightbulb"></i><p>Mẹo học nhanh</p></a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon bi bi-clipboard-fill"></i>
+                <p>Học Listening<i class="nav-arrow bi bi-chevron-right"></i></p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item"><a href="/listening_question.html" class="nav-link"><i class="nav-icon bi bi-question-circle"></i><p>Học theo câu hỏi</p></a></li>
+                <li class="nav-item"><a href="/listening_bode.html" class="nav-link"><i class="nav-icon bi bi-stack"></i><p>Học theo bộ đề</p></a></li>
+                <li class="nav-item"><a href="/listening_meo.html" class="nav-link"><i class="nav-icon bi bi-lightbulb"></i><p>Mẹo học nhanh</p></a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon bi bi-tree-fill"></i>
+                <p>Học Writing<i class="nav-arrow bi bi-chevron-right"></i></p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item"><a href="/writing_bode.html" class="nav-link"><i class="nav-icon bi bi-question-circle"></i><p>Học câu lạc bộ</p></a></li>
+                <li class="nav-item"><a href="/writing_meo.html" class="nav-link"><i class="nav-icon bi bi-lightbulb"></i><p>Mẹo học nhanh</p></a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon bi bi-pencil-square"></i>
+                <p>Học Speaking<i class="nav-arrow bi bi-chevron-right"></i></p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item"><a href="/speaking_question.html" class="nav-link"><i class="nav-icon bi bi-question-circle"></i><p>Học theo câu hỏi</p></a></li>
+                <li class="nav-item"><a href="/speaking_meo.html" class="nav-link"><i class="nav-icon bi bi-lightbulb"></i><p>Mẹo học nhanh</p></a></li>
+              </ul>
+            </li>
+            <li class="nav-header">CHỨC NĂNG KHÁC</li>
+            <li class="nav-item active">
+              <a href="/vocabulary.html" class="nav-link active">
+                <i class="nav-icon bi bi-journal-bookmark-fill text-success"></i>
+                <p>Từ vựng Aptis</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/history.html" class="nav-link">
+                <i class="nav-icon bi bi-clock-history text-warning"></i>
+                <p>Lịch sử làm bài</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/profile.html" class="nav-link">
+                <i class="nav-icon bi bi-circle text-info"></i>
+                <p>Profile của bạn</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="app-main">
+      <div class="app-content-header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <h3 class="mb-0"><i class="bi bi-journal-bookmark-fill me-2" style="color:var(--nm-primary)"></i>Kho Từ vựng Aptis ESOL</h3>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                <li class="breadcrumb-item"><a href="/home.html">Home</a></li>
+                <li class="breadcrumb-item active">Từ vựng Aptis</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-content">
+        <div class="container-fluid">
+          <!-- ===== STATS CARDS STRIP ===== -->
+          <div class="stat-strip">
+            <div class="stat-card">
+              <div class="stat-icon-wrap" style="color:#2563eb;">
+                <i class="bi bi-translate"></i>
+              </div>
+              <div class="stat-info">
+                <div class="stat-value" id="statTotalWords">--</div>
+                <div class="stat-label">Tổng từ vựng đề thi</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon-wrap" style="color:#10b981;">
+                <i class="bi bi-check-circle-fill"></i>
+              </div>
+              <div class="stat-info">
+                <div class="stat-value" id="statMasteredWords">--</div>
+                <div class="stat-label">Từ vựng đã thuộc</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon-wrap" style="color:#f59e0b;">
+                <i class="bi bi-bookmark-star-fill"></i>
+              </div>
+              <div class="stat-info">
+                <div class="stat-value" id="statBookmarkedWords">--</div>
+                <div class="stat-label">Từ vựng đã lưu</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon-wrap" style="color:#8b5cf6;">
+                <i class="bi bi-award-fill"></i>
+              </div>
+              <div class="stat-info">
+                <div class="stat-value" id="statB1Count">--</div>
+                <div class="stat-label">Từ vựng chuẩn B1</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== TOOLBAR & FILTERS ===== -->
+          <div class="vocab-toolbar">
+            <div class="toolbar-row">
+              <div class="search-box-nm">
+                <i class="bi bi-search"></i>
+                <input type="text" id="searchInput" class="search-input-nm" placeholder="Tìm kiếm từ tiếng Anh hoặc nghĩa tiếng Việt..." />
+              </div>
+
+              <select id="cefrFilter" class="nm-select">
+                <option value="ALL">Mọi Cấp độ CEFR</option>
+                <option value="A1">Trình độ A1</option>
+                <option value="A2">Trình độ A2</option>
+                <option value="B1">Trình độ B1 (Trọng tâm)</option>
+                <option value="B2">Trình độ B2</option>
+                <option value="C1">Trình độ C1 (Nâng cao)</option>
+              </select>
+
+              <select id="categoryFilter" class="nm-select">
+                <option value="ALL">Tất cả chủ đề</option>
+              </select>
+
+              <select id="posFilter" class="nm-select">
+                <option value="ALL">Tất cả từ loại</option>
+                <option value="noun">Danh từ (noun)</option>
+                <option value="verb">Động từ (verb)</option>
+                <option value="adjective">Tính từ (adj)</option>
+                <option value="adverb">Trạng từ (adv)</option>
+                <option value="collocation">Cụm từ (collocation)</option>
+                <option value="phrasal verb">Động từ ghép (phrasal verb)</option>
+              </select>
+
+              <div class="view-mode-toggle">
+                <button class="toggle-btn active" id="btnViewGrid" title="Xem danh sách thẻ"><i class="bi bi-grid-fill"></i> Danh sách</button>
+                <button class="toggle-btn" id="btnViewFlashcard" title="Chế độ học lật thẻ 3D"><i class="bi bi-card-heading"></i> Flashcards 3D</button>
+              </div>
+            </div>
+
+            <div class="toolbar-row">
+              <div class="filter-pills" id="skillPills">
+                <span class="text-muted fw-bold small me-1">Kỹ năng:</span>
+                <button class="pill-btn active" data-skill="ALL">Tất cả</button>
+                <button class="pill-btn" data-skill="reading"><i class="bi bi-book me-1"></i>Reading</button>
+                <button class="pill-btn" data-skill="listening"><i class="bi bi-headphones me-1"></i>Listening</button>
+                <button class="pill-btn" data-skill="writing"><i class="bi bi-pencil me-1"></i>Writing</button>
+                <button class="pill-btn" data-skill="speaking"><i class="bi bi-mic me-1"></i>Speaking</button>
+                <button class="pill-btn" data-skill="grammar"><i class="bi bi-spellcheck me-1"></i>Grammar</button>
+              </div>
+
+              <div class="filter-pills ms-auto" id="statusPills">
+                <span class="text-muted fw-bold small me-1">Trạng thái:</span>
+                <button class="pill-btn active" data-status="ALL">Tất cả</button>
+                <button class="pill-btn" data-status="mastered"><i class="bi bi-check-circle me-1"></i>Đã thuộc</button>
+                <button class="pill-btn" data-status="bookmarked"><i class="bi bi-bookmark-star me-1"></i>Đã lưu</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== CONTAINER 1: FLASHCARD MODE ===== -->
+          <div id="flashcardContainer" class="d-none">
+            <div class="flashcard-wrapper" id="flashcardWrapper">
+              <div class="flashcard-inner">
+                <!-- Mặt trước (Front) -->
+                <div class="card-face card-face-front">
+                  <div class="d-flex justify-content-between w-100">
+                    <span class="badge-cefr cefr-B1" id="fcCefr">B1</span>
+                    <span class="badge-pos" id="fcPos">noun</span>
+                  </div>
+
+                  <div class="my-auto">
+                    <div class="fc-word" id="fcWord">Word</div>
+                    <div class="d-flex align-items-center justify-content-center">
+                      <span class="fc-phonetic" id="fcPhonetic">/phonetic/</span>
+                      <button class="speak-btn" id="fcSpeakBtn" title="Nghe phát âm chuẩn"><i class="bi bi-volume-up-fill fs-4"></i></button>
+                    </div>
+                  </div>
+
+                  <div class="text-muted small fw-bold mt-auto">
+                    <i class="bi bi-arrow-repeat me-1"></i>Nhấn vào thẻ hoặc phím Space để lật xem nghĩa
+                  </div>
+                </div>
+
+                <!-- Mặt sau (Back) -->
+                <div class="card-face card-face-back">
+                  <div class="d-flex justify-content-between w-100 mb-2">
+                    <span class="text-muted small fw-bold" id="fcCategory">Category</span>
+                    <span class="text-muted small fw-bold" id="fcSkill">Skill</span>
+                  </div>
+
+                  <div class="my-auto w-100">
+                    <div class="fc-meaning" id="fcMeaning">Nghĩa tiếng Việt</div>
+                    <div class="fc-example" id="fcExample">
+                      <strong>Ví dụ đề thi:</strong> <span id="fcExampleEn">...</span>
+                      <div class="text-muted small mt-1" id="fcExampleVi">...</div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex justify-content-between w-100 mt-3 align-items-center">
+                    <button class="btn btn-sm btn-outline-warning rounded-pill px-3" id="fcBookmarkBtn">
+                      <i class="bi bi-bookmark me-1"></i>Lưu từ
+                    </button>
+                    <button class="btn btn-sm btn-success rounded-pill px-3" id="fcMasteredBtn">
+                      <i class="bi bi-check-circle me-1"></i>Đã thuộc
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="fc-controls">
+              <button class="fc-btn" id="fcPrevBtn" title="Từ trước"><i class="bi bi-chevron-left"></i></button>
+              <span class="fw-bold text-muted px-2" id="fcCounter">1 / 1</span>
+              <button class="fc-btn" id="fcNextBtn" title="Từ tiếp theo"><i class="bi bi-chevron-right"></i></button>
+            </div>
+          </div>
+
+          <!-- ===== CONTAINER 2: GRID LIST MODE ===== -->
+          <div id="gridContainer">
+            <div class="vocab-grid" id="vocabGrid">
+              <!-- Dynamically rendered cards -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination-wrap" id="paginationWrap"></div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/adminlte/adminlte.js"></script>
+  <script src="./js/common.js?v=1.0.2"></script>
+  <script src="./js/vocabulary.js?v=1.0.3"></script>
+</body>
+</html>

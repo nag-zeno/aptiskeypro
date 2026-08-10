@@ -15,7 +15,7 @@
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
   <script src="./js/home.js"></script>
-  <script src="./js/common.js?v=1.0.1"></script>
+  <script src="./js/common.js?v=1.0.2"></script>
 
   <!--begin::Accessibility Meta Tags-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
@@ -204,6 +204,15 @@
               </a>
             </li>
             <li class="nav-item">
+              <a href="/roadmap.html" class="nav-link">
+                <i class="nav-icon bi bi-diagram-3-fill text-primary"></i>
+                <p>
+                  Lộ trình học tập
+                  <span class="nav-badge badge bg-primary me-3">HOT</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="nav-icon bi bi-book"></i> <!-- Changed icon to book for "Học reading" -->
                 <p>
@@ -315,6 +324,12 @@
               </ul>
             </li>
             <li class="nav-header">CHỨC NĂNG KHÁC</li>
+            <li class="nav-item">
+              <a href="/vocabulary.html" class="nav-link">
+                <i class="nav-icon bi bi-journal-bookmark-fill text-success"></i>
+                <p>Từ vựng Aptis</p>
+              </a>
+            </li>
             <li class="nav-item" id="tabprofile">
               <a href="/profile.html" class="nav-link">
                 <i class="nav-icon bi bi-circle text-info"></i>
@@ -480,6 +495,24 @@
                 <button onclick="window.location.href = '/grammar_meo.html';"
                   class="btn btn-success btn-lg w-100 my-3 d-flex align-items-center justify-content-center">
                   <i class="bi bi-lightbulb fa-lg me-3"></i> Lưu ý về ngữ pháp
+                </button>
+              </div>
+
+              <!-- Column 6: TỪ VỰNG APTIS -->
+              <div class="col-md-3">
+                <h4 class="text-center mb-3">Từ vựng & Phân loại</h4>
+
+                <!-- Kho từ vựng & Flashcards -->
+                <button onclick="window.location.href = '/vocabulary.html';"
+                  class="btn btn-info btn-lg text-white w-100 my-3 d-flex align-items-center justify-content-center">
+                  <i class="bi bi-journal-bookmark-fill fa-lg me-3"></i> Tra cứu từ vựng
+                </button>
+
+                <!-- Học Flashcards 3D -->
+                <button onclick="window.location.href = '/vocabulary.html?mode=flashcard';"
+                  class="btn btn-purple btn-lg text-white w-100 my-3 d-flex align-items-center justify-content-center"
+                  style="background-color: #6c63ff;">
+                  <i class="bi bi-card-heading fa-lg me-3"></i> Flashcards 3D
                 </button>
               </div>
             </div>

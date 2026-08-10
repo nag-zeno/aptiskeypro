@@ -4,7 +4,7 @@ from fastapi.middleware.trustedhost import TrustedHostMiddleware
 
 from app.core.config import settings
 from app.core.database import Base, engine
-from app.routers import auth, exam, payment, compat, admin
+from app.routers import auth, exam, payment, compat, admin, roadmap, vocabulary
 
 # Tạo tất cả bảng trong database (nếu chưa tồn tại)
 Base.metadata.create_all(bind=engine)
@@ -34,6 +34,9 @@ app.include_router(exam.router)
 app.include_router(payment.router)
 app.include_router(compat.router)
 app.include_router(admin.router)
+app.include_router(roadmap.router)
+app.include_router(vocabulary.router)
+
 
 
 @app.get("/health", tags=["System"])

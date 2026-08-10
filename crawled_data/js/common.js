@@ -110,6 +110,25 @@ function updateUIForGuest(nameEl, statusEl, authBtn, tabProfile, xProfile) {
         authBtn.textContent = "Đăng nhập";
         authBtn.onclick = () => window.location.href = "/frontend/auth.html";
     }
+
+    // Tự động chèn link Từ vựng Aptis vào sidebar cho khách trải nghiệm
+    const sidebarMenu = document.querySelector('.sidebar-menu');
+    if (sidebarMenu && !document.getElementById('tabvocab')) {
+        const vocabLi = document.createElement('li');
+        vocabLi.className = 'nav-item';
+        vocabLi.id = 'tabvocab';
+        vocabLi.innerHTML = `
+            <a href="/vocabulary.html" class="nav-link ${window.location.pathname.includes('vocabulary') ? 'active' : ''}">
+                <i class="nav-icon bi bi-journal-bookmark-fill text-success"></i>
+                <p>Từ vựng Aptis</p>
+            </a>
+        `;
+        if (tabProfile) {
+            tabProfile.parentNode.insertBefore(vocabLi, tabProfile);
+        } else {
+            sidebarMenu.appendChild(vocabLi);
+        }
+    }
 }
 
 // 3. Cập nhật giao diện cho học viên
@@ -126,8 +145,27 @@ function updateUIForUser(data, nameEl, statusEl, authBtn, tabProfile, xProfile) 
     if (tabProfile) tabProfile.classList.remove("d-none");
     if (xProfile) xProfile.style.display = "inline-block";
 
-    // Tự động chèn link Quản trị hệ thống vào sidebar nếu người dùng là Admin
+    // Tự động chèn link Từ vựng Aptis vào sidebar nếu chưa có
     const sidebarMenu = document.querySelector('.sidebar-menu');
+    if (sidebarMenu && !document.getElementById('tabvocab')) {
+        const profileItem = document.getElementById('tabprofile');
+        const vocabLi = document.createElement('li');
+        vocabLi.className = 'nav-item';
+        vocabLi.id = 'tabvocab';
+        vocabLi.innerHTML = `
+            <a href="/vocabulary.html" class="nav-link ${window.location.pathname.includes('vocabulary') ? 'active' : ''}">
+                <i class="nav-icon bi bi-journal-bookmark-fill text-success"></i>
+                <p>Từ vựng Aptis</p>
+            </a>
+        `;
+        if (profileItem) {
+            profileItem.parentNode.insertBefore(vocabLi, profileItem);
+        } else {
+            sidebarMenu.appendChild(vocabLi);
+        }
+    }
+
+    // Tự động chèn link Quản trị hệ thống vào sidebar nếu người dùng là Admin
     if (data.isAdmin && sidebarMenu && !document.getElementById('tabadmin')) {
         const profileItem = document.getElementById('tabprofile') || tabProfile;
         
