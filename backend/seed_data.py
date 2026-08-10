@@ -393,17 +393,17 @@ def seed_speaking(db):
     """
     skill_dir = os.path.join(CRAWLED_DIR, "speaking")
     part_files = [
-        ("speaking_part_1.json", 1, "CÃ¢u há»i vÃ  tráº£ lá»i cÃ¡ nhÃ¢n (Personal questions)"),
-        ("speaking_part_2.json", 2, "MÃ´ táº£ áº£nh / Há»i-ÄÃ¡p (Describe & Discuss)"),
-        ("speaking_part_3.json", 3, "Tháº£o luáº­n chá»§ Äá» xÃ£ há»i (Topic Discussion)"),
-        ("speaking_part_4.json", 4, "Tháº£o luáº­n chuyÃªn sÃ¢u (In-depth Discussion)"),
+        ("speaking_part_1.json", 1, "Câu hỏi và trả lời cá nhân (Personal questions)"),
+        ("speaking_part_2.json", 2, "Mô tả ảnh / Hỏi-đáp (Describe & Discuss)"),
+        ("speaking_part_3.json", 3, "Thảo luận chủ đề xã hội (Topic Discussion)"),
+        ("speaking_part_4.json", 4, "Thảo luận chuyên sâu (In-depth Discussion)"),
     ]
-    print(f"\n[Speaking] TÃ¬m tháº¥y 4 file Part Speaking.")
+    print("\n[Speaking] Tìm thấy 4 file Part Speaking.")
 
     for file_name, part_num, description in part_files:
         path = os.path.join(skill_dir, file_name)
         if not os.path.exists(path):
-            print(f"  [!] KhÃ´ng tÃ¬m tháº¥y {file_name}, bá» qua.")
+            print(f"  [!] Không tìm thấy {file_name}, bỏ qua.")
             continue
 
         data = load_json(path)
@@ -416,22 +416,22 @@ def seed_speaking(db):
         order = 1
 
         for item in data:
-            # Part 1 & 4: dÃ¹ng key "question" + "answer1"/"answer2"
             if "question" in item:
                 question_text = item.get("question", "")
                 if not question_text:
                     continue
                 sample_parts = []
                 if item.get("answer1"):
-                    sample_parts.append(f"Máº«u 1: {item['answer1']}")
+                    sample_parts.append(f"Mẫu 1: {item['answer1']}")
                 if item.get("answer2"):
-                    sample_parts.append(f"Máº«u 2: {item['answer2']}")
+                    sample_parts.append(f"Mẫu 2: {item['answer2']}")
                 explanation = "\n\n".join(sample_parts) if sample_parts else None
                 image_url = item.get("urlpic1") or item.get("urlpic")
                 _add_question(db, test, order, QuestionType.audio_response,
                               question_text,
                               explanation=explanation,
-                              audio_url=image_url)   # tÃ¡i dÃ¹ng trÆ°á»ng# âââ MAIN ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+                              audio_url=image_url)
+
 
 # --- MAIN ---
 
