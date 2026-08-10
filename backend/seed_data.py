@@ -324,22 +324,14 @@ def seed_writing(db):
         test_num = int(file_name.replace("test_", "").replace(".json", ""))
         club_name = data.get("club_name", "")
         test = _add_test(db, Skill.writing,
-                         f"Writing Test #{test_num:02d}" + (f" â {club_name}" if club_name else ""),
-                         "Bá» Äá» Writing Aptis â bao gá»m 4 tasks (short answers, paragraph, emails, & formal email)")
+                         f"Writing Test #{test_num:02d}" + (f" – {club_name}" if club_name else ""),
+                         "Bộ đề Writing Aptis – bao gồm 4 tasks (short answers, paragraph, emails, & formal email)")
         order = 1
 
-        # Q1: 5 cÃ¢u tráº£ lá»i ngáº¯n (short answers â lÆ°u chung 1 cÃ¢u essay)
+        # Q1: 5 câu trả lời ngắn (short answers – lưu chung 1 câu essay)
         q1_dict = data.get("questions1", {})
         q1_answers = data.get("questions1_answer", {})
         if q1_dict:
-            questions_text = "\n".join(f"â¢ {v}" for v in q1_dict.values())
-            sample_answers = "\n".join(f"â¢ {v}" for v in q1_answers.values())
-            content = f"[Q1 â Short Answers]\n{questions_text}"
-            _add_question(db, test, order, QuestionType.essay,
-                          content, explanation=f"Gá»£i Ã½ tráº£ lá»i:\n{sample_answers}")
-            order += 1
-
-        # Q2: paragraph (viáº¿t 1 Äoáº¡n)
             questions_text = "\n".join(f"• {v}" for v in q1_dict.values())
             sample_answers = "\n".join(f"• {v}" for v in q1_answers.values())
             content = f"[Q1 – Short Answers]\n{questions_text}"
@@ -347,7 +339,6 @@ def seed_writing(db):
                           content, explanation=f"Gợi ý trả lời:\n{sample_answers}")
             order += 1
 
-        # Q2: paragraph (viết 1 đoạn)
         q2_dict = data.get("questions2", {})
         q2_answers = data.get("questions2_answer", {})
         if q2_dict:
