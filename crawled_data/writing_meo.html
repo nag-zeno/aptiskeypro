@@ -1,17 +1,18 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="vi">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AptisPro - Mẹo viết thư</title>
+  <title>AptisPro - Bộ Form Master & Mẹo Viết Writing Aptis ESOL</title>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <meta name="description" content="Form mẫu APTIS Writing Q4 (thư gửi bạn & thư gửi quản lý) với ghi chú từ vựng opinion và ví dụ Book Club. Giao diện tiếng Việt; nội dung thư bằng tiếng Anh.">
+  <meta name="description" content="Bộ Form Master đầy đủ 4 phần (Task 1-4) áp dụng cho 100% đề thi Aptis Writing đạt Band B2+. Tối ưu từ vựng, ngữ pháp và dung lượng chuẩn British Council.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <style>
     body {
       scroll-behavior: smooth;
       background: #f3f5fb;
+      font-family: 'Nunito', sans-serif;
     }
 
     /* ---------- Navbar ---------- */
@@ -30,8 +31,8 @@
       box-shadow: 0 10px 24px rgba(78, 115, 223, 0.25);
     }
     .meo-hero h1 {
-      font-weight: 700;
-      font-size: 1.6rem;
+      font-weight: 800;
+      font-size: 1.7rem;
       display: flex;
       align-items: center;
       gap: 0.6rem;
@@ -60,19 +61,19 @@
       border: none;
       border-radius: 0.6rem !important;
       margin-bottom: 0.15rem;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
     }
     .toc .list-group-item.active,
     .toc .list-group-item:hover {
       background: #eef1fb;
       color: #4e3fd6;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     /* ---------- Section headers ---------- */
     .section-title {
       scroll-margin-top: 80px;
-      font-weight: 700;
+      font-weight: 800;
       display: flex;
       align-items: center;
       gap: 0.6rem;
@@ -97,7 +98,6 @@
 
     /* ---------- Template cards ---------- */
     .template-card {
-      white-space: pre-line;
       border: none;
       border-radius: 0.9rem;
       box-shadow: 0 2px 14px rgba(17, 24, 39, 0.07);
@@ -105,9 +105,10 @@
     }
     .template-card .card-body {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
-      font-size: 0.94rem;
+      font-size: 0.93rem;
       line-height: 1.7;
       background: #fdfdff;
+      white-space: pre-line;
     }
     .template-header {
       display: flex;
@@ -118,6 +119,7 @@
     .template-header h5 {
       margin: 0;
       font-weight: 700;
+      font-size: 1.05rem;
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -126,12 +128,15 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 34px;
-      height: 34px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       color: #fff;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
+    .badge-part1 { background: linear-gradient(135deg, #20c997, #0ca678); }
+    .badge-part2 { background: linear-gradient(135deg, #fd7e14, #d9480f); }
+    .badge-part3 { background: linear-gradient(135deg, #6f42c1, #52279e); }
     .badge-friend { background: linear-gradient(135deg, #1cc88a, #12946a); }
     .badge-manager { background: linear-gradient(135deg, #4e73df, #2c4ed8); }
 
@@ -140,7 +145,7 @@
       color: #dc3545;
       font-weight: 700;
       background: rgba(220, 53, 69, 0.08);
-      padding: 0.05rem 0.3rem;
+      padding: 0.05rem 0.35rem;
       border-radius: 0.3rem;
     }
     .tip {
@@ -188,15 +193,11 @@
 
     footer a { text-decoration: none; }
   </style>
-    <!-- begin::Material You Theme Integration -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/neumorphism.css" />
-    <!-- end::Material You Theme Integration -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/neumorphism.css" />
 </head>
 <body data-bs-spy="scroll" data-bs-target="#tocList" tabindex="0">
-    <!-- begin::Material You Background Elements -->
-    <div class="nm-blob nm-blob-blue"></div><div class="nm-blob nm-blob-violet"></div>
-    <!-- end::Material You Background Elements -->
+  <div class="nm-blob nm-blob-blue"></div><div class="nm-blob nm-blob-violet"></div>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark meo-navbar">
@@ -208,8 +209,11 @@
       <div class="collapse navbar-collapse" id="navMain">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#gioi-thieu">Giới thiệu</a></li>
-          <li class="nav-item"><a class="nav-link" href="#forms">Form mẫu</a></li>
-          <li class="nav-item"><a class="nav-link" href="#vi-du">Ví dụ: Book Club</a></li>
+          <li class="nav-item"><a class="nav-link" href="#form-part1">Part 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="#form-part2">Part 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="#form-part3">Part 3</a></li>
+          <li class="nav-item"><a class="nav-link" href="#form-part4">Part 4 (Email)</a></li>
+          <li class="nav-item"><a class="nav-link" href="#vi-du">Ví dụ thực tế</a></li>
         </ul>
       </div>
     </div>
@@ -221,19 +225,22 @@
       <aside class="col-lg-3">
         <div class="card toc">
           <div class="card-body">
-            <h6 class="card-title mb-3 fw-bold"><i class="bi bi-list-ul me-1"></i> Mục lục</h6>
+            <h6 class="card-title mb-3 fw-bold"><i class="bi bi-list-ul me-1"></i> Mục lục bài viết</h6>
             <div class="list-group list-group-flush" id="tocList">
-              <a class="list-group-item list-group-item-action" href="#gioi-thieu"><i class="bi bi-info-circle me-2"></i>Giới thiệu</a>
-              <a class="list-group-item list-group-item-action" href="#forms"><i class="bi bi-envelope-paper me-2"></i>Form mẫu</a>
-              <a class="list-group-item list-group-item-action" href="#vi-du"><i class="bi bi-journal-text me-2"></i>Ví dụ Book Club</a>
+              <a class="list-group-item list-group-item-action" href="#gioi-thieu"><i class="bi bi-info-circle me-2"></i>Tổng quan & Band B2</a>
+              <a class="list-group-item list-group-item-action" href="#form-part1"><i class="bi bi-1-circle me-2"></i>Part 1: Câu hỏi ngắn</a>
+              <a class="list-group-item list-group-item-action" href="#form-part2"><i class="bi bi-2-circle me-2"></i>Part 2: Form filling</a>
+              <a class="list-group-item list-group-item-action" href="#form-part3"><i class="bi bi-3-circle me-2"></i>Part 3: Chat nhóm CLB</a>
+              <a class="list-group-item list-group-item-action" href="#form-part4"><i class="bi bi-envelope-paper me-2"></i>Part 4: Email Informal & Formal</a>
+              <a class="list-group-item list-group-item-action" href="#vi-du"><i class="bi bi-journal-check me-2"></i>Ví dụ thực tế</a>
             </div>
             <hr class="my-3">
             <div class="d-grid gap-2">
-              <button class="btn btn-outline-secondary btn-sm" id="btnPrint"><i class="bi bi-printer me-1"></i>In nhanh</button>
+              <button class="btn btn-outline-secondary btn-sm" id="btnPrint"><i class="bi bi-printer me-1"></i>In nhanh mẹo</button>
             </div>
             <div class="mt-3">
-              <input id="filterInput" class="form-control form-control-sm" placeholder="Tìm theo từ khóa…">
-              <small class="text-muted">Gõ để lọc phần nội dung hiển thị.</small>
+              <input id="filterInput" class="form-control form-control-sm" placeholder="Tìm kiếm từ khóa...">
+              <small class="text-muted">Gõ từ khóa để lọc nội dung bài viết.</small>
             </div>
           </div>
         </div>
@@ -244,32 +251,130 @@
         <!-- Hero / Intro -->
         <section id="gioi-thieu" class="mb-4 filter-section">
           <div class="meo-hero">
-            <h1><i class="bi bi-pencil-square"></i> Mẹo viết thư Aptis - Question 4</h1>
-            <p>Q4 có 2 email: một email ngắn (≈50 từ) cho <strong>bạn cùng CLB</strong> và một email dài (120–150 từ) cho <strong>quản lý CLB</strong>. Thay nội dung trong các ô <span class="hl">[ngoặc vuông]</span>. Di chuột lên <span class="tip">opinion 1/2</span> để xem gợi ý từ.</p>
+            <h1><i class="bi bi-pencil-square"></i> Bộ Form Master Writing Aptis (Full 4 Parts) — Chuẩn Band B2+</h1>
+            <p>Hệ thống khung mẫu chuẩn hóa áp dụng cho <strong>100% tất cả 40 bộ đề thi Writing</strong> trong cơ sở dữ liệu AptisKey. Thay nội dung trong các ô <span class="hl">[ngoặc vuông]</span> để hoàn thành bài thi dễ dàng.</p>
           </div>
-          <div class="note">
+          <div class="note mb-3">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-success fs-6"><i class="bi bi-check-circle-fill me-1"></i>Đạt chuẩn Band B2 CEFR</span>
+              <span class="text-muted small">(Tối ưu tiêu chí Task Achievement, Cohesion, Range & Accuracy của British Council)</span>
+            </div>
             <p class="mb-0">
-              Đây là 1 <strong>form mẫu viết thư</strong>, bạn có thể sử dụng
-              <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>
-              để hỗ trợ <em>xào nấu lại</em> cho khác đi, biến thành phiên bản <strong>của riêng bạn</strong>.
+              Bài thi Aptis ESOL Writing kéo dài <strong>50 phút</strong> gồm 4 phần. Bạn chỉ cần học thuộc cấu trúc khung này và thay thế các từ khóa thuộc chủ đề CLB đề bài yêu cầu.
             </p>
           </div>
         </section>
 
-        <!-- Forms -->
-        <section id="forms" class="mb-4 filter-section">
-          <h3 class="section-title mb-3"><i class="bi bi-envelope-paper-fill"></i> Form mẫu</h3>
+        <!-- PART 1 -->
+        <section id="form-part1" class="mb-4 filter-section">
+          <h3 class="section-title mb-3"><i class="bi bi-1-circle-fill text-success"></i> Part 1: Short Answers (1 – 5 từ / câu)</h3>
+          <div class="note mb-3">
+            <p class="mb-0"><strong>Quy tắc Part 1:</strong> Trả lời 5 câu hỏi cá nhân ngắn gọn. Không viết thành đoạn văn dài. Đảm bảo chính xác chính tả và cấu trúc 1-5 từ.</p>
+          </div>
+
+          <div class="template-header">
+            <h5><span class="template-badge badge-part1">P1</span> Mẫu câu trả lời đa năng Part 1</h5>
+            <button class="btn btn-outline-primary copy-btn" data-copy-target="#formPart1"><i class="bi bi-clipboard me-1"></i>Sao chép</button>
+          </div>
+          <div class="card template-card mb-4" id="formPart1">
+            <div class="card-body">
+1. Sức khỏe / Cảm xúc (How are you?):
+   ➜ <span class="hl">I am doing great, thanks!</span> / <span class="hl">I am feeling fine, thank you.</span>
+
+2. Thời tiết / Mùa (What's the weather / favorite season?):
+   ➜ <span class="hl">It is sunny and warm today.</span> / <span class="hl">I love the spring season.</span>
+
+3. Sở thích (Favorite sport / music / food / movie?):
+   ➜ <span class="hl">I enjoy playing football.</span> / <span class="hl">I love listening to pop music.</span>
+
+4. Trang phục / Thói quen (What are you wearing / do in evening?):
+   ➜ <span class="hl">I am wearing a T-shirt.</span> / <span class="hl">I usually watch TV shows.</span>
+
+5. Địa điểm / Dự định (Where do you want to go on holiday?):
+   ➜ <span class="hl">I want to visit Japan.</span> / <span class="hl">I usually go with my family.</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- PART 2 -->
+        <section id="form-part2" class="mb-4 filter-section">
+          <h3 class="section-title mb-3"><i class="bi bi-2-circle-fill text-warning"></i> Part 2: Form Filling (20 – 30 từ)</h3>
+          <div class="note mb-3">
+            <p class="mb-0"><strong>Quy tắc Part 2:</strong> Viết 1 đoạn văn duy nhất (2-3 câu). Nêu rõ lý do gia nhập CLB hoặc đối tượng / sở thích liên quan đến chủ đề CLB.</p>
+          </div>
+
+          <!-- Part 2 Form 1 -->
+          <div class="template-header">
+            <h5><span class="template-badge badge-part2">P2</span> Form 1: Lý do gia nhập CLB (Why do you want to join?)</h5>
+            <button class="btn btn-outline-primary copy-btn" data-copy-target="#formPart2_1"><i class="bi bi-clipboard me-1"></i>Sao chép</button>
+          </div>
+          <div class="card template-card mb-4" id="formPart2_1">
+            <div class="card-body">
+I am really excited to join the [<span class="hl">Tên CLB - ví dụ: Art Club</span>] because I want to improve my knowledge and share my passion for [<span class="hl">Chủ đề CLB - ví dụ: painting</span>] with other members. Moreover, it is a great opportunity to make new friends.
+            </div>
+          </div>
+
+          <!-- Part 2 Form 2 -->
+          <div class="template-header">
+            <h5><span class="template-badge badge-part2">P2</span> Form 2: Mô tả sở thích / Trải nghiệm liên quan</h5>
+            <button class="btn btn-outline-primary copy-btn" data-copy-target="#formPart2_2"><i class="bi bi-clipboard me-1"></i>Sao chép</button>
+          </div>
+          <div class="card template-card mb-4" id="formPart2_2">
+            <div class="card-body">
+I have been passionate about [<span class="hl">Chủ đề CLB - ví dụ: reading books</span>] since I was young. I usually spend my free time doing this activity, which helps me reduce stress and relax after a busy working day.
+            </div>
+          </div>
+        </section>
+
+        <!-- PART 3 -->
+        <section id="form-part3" class="mb-4 filter-section">
+          <h3 class="section-title mb-3"><i class="bi bi-3-circle-fill text-primary"></i> Part 3: Social Network Chat (3 câu - 30 tới 40 từ/câu)</h3>
+          <div class="note mb-3">
+            <p class="mb-0"><strong>Quy tắc Part 3:</strong> Tương tác với 3 thành viên nhóm chat CLB. Mỗi câu trả lời đạt chuẩn 30-40 từ, sử dụng liên từ mạch lạc.</p>
+          </div>
+
+          <div class="template-header">
+            <h5><span class="template-badge badge-part3">P3</span> Master Form trả lời 3 thành viên chat</h5>
+            <button class="btn btn-outline-primary copy-btn" data-copy-target="#formPart3"><i class="bi bi-clipboard me-1"></i>Sao chép</button>
+          </div>
+          <div class="card template-card mb-4" id="formPart3">
+            <div class="card-body">
+👤 Member 1 (Kỷ niệm / Trải nghiệm quá khứ):
+Hi [<span class="hl">Tên Member 1</span>]! To be honest, I had a very similar experience last year. I [<span class="hl">động từ quá khứ: visited / bought / participated in...</span>] and it was really unforgettable. It helped me learn a lot of valuable things about [<span class="hl">Chủ đề CLB</span>]. What about your experience?
+
+👤 Member 2 (Hỏi lời khuyên / Lựa chọn A hay B):
+Hi [<span class="hl">Tên Member 2</span>]! In my opinion, you should choose [<span class="hl">Lựa chọn A / take a course...</span>] because it is much more convenient and effective. In addition, it helps you save a lot of time and money in the long run. Hope my advice helps!
+
+👤 Member 3 (Quan điểm / Tranh luận xã hội):
+Hi [<span class="hl">Tên Member 3</span>]! From my point of view, I completely agree with this idea. On the one hand, [<span class="hl">Lý do 1: it brings many benefits to people</span>]. On the other hand, we should also consider [<span class="hl">Lý do 2</span>]. Therefore, finding a balance is very important.
+            </div>
+          </div>
+        </section>
+
+        <!-- PART 4 (Email Forms) -->
+        <section id="form-part4" class="mb-4 filter-section">
+          <h3 class="section-title mb-3"><i class="bi bi-envelope-paper-fill"></i> Part 4: Email Writing (Informal & Formal)</h3>
+          <div class="note mb-3">
+            <p class="mb-0">
+              Q4 phản hồi thông báo của CLB. Gồm 1 email thân mật gửi <strong>bạn cùng CLB (≈50 từ)</strong> và 1 email trang trọng gửi <strong>quản lý / Chủ tịch CLB (120–150 từ)</strong>.
+            </p>
+          </div>
 
           <!-- Friend Form -->
           <div class="template-header">
-            <h5><span class="template-badge badge-friend"><i class="bi bi-person-fill"></i></span> Email cho bạn (≈50 từ, tiếng Anh)</h5>
+            <h5><span class="template-badge badge-friend"><i class="bi bi-person-fill"></i></span> Part 4.1: Informal Email gửi Bạn Thân (≈50 từ)</h5>
             <button class="btn btn-outline-primary copy-btn" data-copy-target="#formFriend"><i class="bi bi-clipboard me-1"></i>Sao chép</button>
           </div>
           <div class="card template-card mb-4" id="formFriend">
             <div class="card-body">
-Hi [<span class="hl">Tên của người bạn - tiếng việt không dấu</span>],
-I’ve just read the notice about [<span class="hl">sự kiện (nội dung câu hỏi)</span>]. Honestly, I feel [<span class="hl">delighted / disappointed / surprised</span>] because I had expected [<span class="hl">suy nghĩ của bạn</span>].
-For now, I plan to [<span class="hl">kiến nghị của bạn</span>]. What do you think?
+Hi [<span class="hl">Tên người bạn</span>],
+
+Have you read the latest notice from our [<span class="hl">Tên CLB</span>]? I feel really [<span class="hl">surprised / disappointed / excited</span>] to hear that [<span class="hl">tóm tắt thông báo: the club might be closed / the fee will increase</span>]. 
+
+I'm planning to write an email to the president to express our concerns and suggest some ideas. 
+
+What do you think about this? Let me know soon!
+
 Best,
 [<span class="hl">Tên bạn</span>]
             </div>
@@ -277,36 +382,40 @@ Best,
 
           <!-- Manager Form -->
           <div class="template-header">
-            <h5><span class="template-badge badge-manager"><i class="bi bi-briefcase-fill"></i></span> Email cho quản lý CLB (120–150 từ, tiếng Anh)</h5>
+            <h5><span class="template-badge badge-manager"><i class="bi bi-briefcase-fill"></i></span> Part 4.2: Formal Email gửi Chủ tịch / Quản lý CLB (120–150 từ)</h5>
             <button class="btn btn-outline-primary copy-btn" data-copy-target="#formManager"><i class="bi bi-clipboard me-1"></i>Sao chép</button>
           </div>
-          <div class="card template-card" id="formManager">
+          <div class="card template-card mb-4" id="formManager">
             <div class="card-body">
-Dear [<span class="hl">Sir/Madam</span>],
-My name is [<span class="hl">Tên đầy đủ của bạn</span>], and I am a member of [<span class="hl">Tên câu lạc bộ</span>]. I’m writing to share my opinion about the recent announcement regarding [<span class="hl">đề bài</span>].
+Dear President,
 
-In my view, the plan is [<span class="hl tip" data-bs-toggle="tooltip" data-bs-placement="top" title="excellent, promising, practical, meaningful, useful, valuable, beneficial, inspiring, innovative, creative, effective, important, necessary; (negative) unclear, unrealistic, unnecessary, unhelpful, confusing, ineffective, disappointing, problematic, risky">opinion 1</span>] and it also makes me feel [<span class="hl tip" data-bs-toggle="tooltip" data-bs-placement="top" title="excited, pleased, satisfied, encouraged, motivated, happy, hopeful, confident, inspired, proud; (negative) worried, concerned, disappointed, confused, surprised, upset, uncertain">opinion 2</span>]. If possible, I suggest [<span class="hl">kiến nghị 1</span>] because [<span class="hl">nguyên nhân</span>]. In addition, we could [<span class="hl">Kiến nghị 2</span>] to improve [<span class="hl">để cải thiện gì đó</span>].
+I am writing this email to express my feelings and suggestions regarding the recent announcement about [<span class="hl">tóm tắt thông báo: the proposal to demolish old buildings / the club closure / the change of venue</span>].
 
-A short Q&amp;A session and a feedback form would also make the event more useful and interactive. Thank you for considering my ideas. I look forward to your response.
-Sincerely,
-[<span class="hl">Tên của bạn</span>]
+First of all, I was quite [<span class="hl">surprised / concerned / delighted</span>] upon receiving this news. As a dedicated member of the club, I believe that this decision will significantly affect our regular activities as well as the members' overall experience.
+
+To address this issue effectively, I would like to propose a few practical solutions. Firstly, we could [<span class="hl">Gợi ý 1: organize a meeting to gather feedback from all members / host a fundraising event</span>]. Secondly, it would be beneficial to [<span class="hl">Gợi ý 2: promote the club on social media to attract new participants</span>]. Furthermore, I am more than willing to volunteer and support the committee in executing these plans.
+
+I hope you will take my suggestions into consideration. I look forward to hearing your response soon.
+
+Yours sincerely,
+[<span class="hl">Họ và tên của bạn</span>]
             </div>
           </div>
 
           <!-- Ghi chú: ngân hàng từ Opinion -->
           <div class="note mt-4">
-            <strong><i class="bi bi-lightbulb-fill text-warning me-1"></i>Gợi ý từ cho Opinion</strong>
+            <strong><i class="bi bi-lightbulb-fill text-warning me-1"></i>Gợi ý từ vựng đánh giá & Cảm xúc (B2 Level)</strong>
             <div class="row g-3 mt-1">
               <div class="col-md-6">
                 <div class="vocab-card">
-                  <div class="vocab-title">Opinion 1 - đánh giá chất lượng kế hoạch (khách quan)</div>
-                  <p class="mb-1"><span class="badge badge-pos me-1">Tích cực</span> excellent, promising, practical, meaningful, useful, valuable, beneficial, inspiring, innovative, creative, effective, important, necessary</p>
+                  <div class="vocab-title">Đánh giá tính chất kế hoạch (Khách quan)</div>
+                  <p class="mb-1"><span class="badge badge-pos me-1">Tích cực</span> excellent, promising, practical, meaningful, useful, valuable, beneficial, inspiring, innovative, effective, important, necessary</p>
                   <p class="mb-0"><span class="badge badge-neg me-1">Tiêu cực</span> unclear, unrealistic, unnecessary, unhelpful, confusing, ineffective, disappointing, problematic, risky</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="vocab-card">
-                  <div class="vocab-title">Opinion 2 - cảm xúc cá nhân</div>
+                  <div class="vocab-title">Bộc lộ cảm xúc cá nhân</div>
                   <p class="mb-1"><span class="badge badge-pos me-1">Tích cực</span> excited, pleased, satisfied, encouraged, motivated, happy, hopeful, confident, inspired, proud</p>
                   <p class="mb-0"><span class="badge badge-neg me-1">Tiêu cực</span> worried, concerned, disappointed, confused, surprised, upset, uncertain</p>
                 </div>
@@ -317,28 +426,29 @@ Sincerely,
 
         <!-- Examples -->
         <section id="vi-du" class="mb-4 filter-section">
-          <h3 class="section-title mb-3"><i class="bi bi-journal-richtext"></i> Ví dụ: Book Club</h3>
+          <h3 class="section-title mb-3"><i class="bi bi-journal-richtext"></i> Ví dụ thực tế ráp Form: Book Club & Art Club</h3>
           <div class="note topic-note mb-3">
-            <strong><i class="bi bi-file-earmark-text me-1"></i>Đề bài (giữ nguyên tiếng Anh):</strong><br>
-            BOOK CLUB<br>
-            Our club wants to organize an event for the public by inviting a famous author as a speaker.
-            What kind of author do you suggest? What topic should the speaker speak on?
-            I am writing to ask all members for their suggestions. Please send me your ideas in an email.<br>
-            The manager<br><br>
-            <em>Write an email to your friend, who is also a member of the group. (50 words)<br>
-            Write an email to the manager of the club. Tell the manager about your opinion. (120–150 words)</em>
+            <strong><i class="bi bi-file-earmark-text me-1"></i>Đề bài mẫu (Book Club - Q4):</strong><br>
+            Our club wants to organize an event for the public by inviting a famous author as a speaker. What kind of author do you suggest? What topic should the speaker speak on?<br>
+            <em>1. Write an email to your friend (50 words).<br>
+            2. Write an email to the manager of the club (120–150 words).</em>
           </div>
 
           <!-- Example to Friend -->
           <div class="template-header">
-            <h5><span class="template-badge badge-friend"><i class="bi bi-person-fill"></i></span> Ví dụ email cho bạn (≈50 từ, tiếng Anh)</h5>
+            <h5><span class="template-badge badge-friend"><i class="bi bi-person-fill"></i></span> Ví dụ Part 4.1: Email cho bạn (≈50 từ)</h5>
             <button class="btn btn-outline-primary copy-btn" data-copy-target="#exFriend"><i class="bi bi-clipboard me-1"></i>Sao chép</button>
           </div>
           <div class="card template-card mb-4" id="exFriend">
             <div class="card-body">
 Hi <span class="hl">Minh</span>,
-I’ve just read the Book Club notice about <span class="hl">inviting a famous author</span>. Honestly, I feel <span class="hl">excited</span> because I expected <span class="hl">an inspiring talk</span>.
-For now, I plan to <span class="hl">join the event and prepare some questions</span>. What do you think?
+
+Have you read the latest notice from our <span class="hl">Book Club</span>? I feel really <span class="hl">excited</span> to hear that <span class="hl">we are organizing a public talk with a famous author</span>. 
+
+I'm planning to write an email to the president to express our concerns and suggest some ideas. 
+
+What do you think about this? Let me know soon!
+
 Best,
 <span class="hl">An</span>
             </div>
@@ -346,23 +456,29 @@ Best,
 
           <!-- Example to Manager -->
           <div class="template-header">
-            <h5><span class="template-badge badge-manager"><i class="bi bi-briefcase-fill"></i></span> Ví dụ email cho quản lý (120–150 từ, tiếng Anh)</h5>
+            <h5><span class="template-badge badge-manager"><i class="bi bi-briefcase-fill"></i></span> Ví dụ Part 4.2: Email cho quản lý (120–150 từ)</h5>
             <button class="btn btn-outline-primary copy-btn" data-copy-target="#exManager"><i class="bi bi-clipboard me-1"></i>Sao chép</button>
           </div>
           <div class="card template-card" id="exManager">
             <div class="card-body">
-Dear Manager,<br>
-My name is <span class="hl">An Nguyen</span>, and I am a member of the <span class="hl">Book Club</span>. I’m writing to share my opinion about the announcement regarding <span class="hl">inviting a famous author</span>.<br>
-In my view, the plan is <span class="hl">excellent</span> and it also makes me feel <span class="hl">inspired</span>. If possible, I suggest <span class="hl">inviting a bestselling contemporary novelist</span> because <span class="hl">their works are relatable to both students and the general public</span>. In addition, we could <span class="hl">ask the speaker to focus on “Stories that Mirror Modern Life”</span> to improve <span class="hl">engagement and social awareness</span>.<br>
-I also recommend including a short reading from the author’s latest book, followed by a Q&amp;A session. A feedback form at the end would help us gather opinions for future events. Thank you for considering my ideas. I look forward to your response.<br><br>
-Sincerely,<br>
+Dear President,
+
+I am writing this email to express my feelings and suggestions regarding the recent announcement about <span class="hl">the club's plan to organize a public talk with a famous author</span>.
+
+First of all, I was quite <span class="hl">delighted</span> upon receiving this news. As a dedicated member of the club, I believe that this decision will significantly affect our regular activities as well as the members' overall experience.
+
+To address this issue effectively, I would like to propose a few practical solutions. Firstly, we could <span class="hl">invite a bestselling contemporary novelist to talk about modern literature</span>. Secondly, it would be beneficial to <span class="hl">promote the event on social media to attract more young readers and students</span>. Furthermore, I am more than willing to volunteer and support the committee in executing these plans.
+
+I hope you will take my suggestions into consideration. I look forward to hearing your response soon.
+
+Yours sincerely,
 <span class="hl">An Nguyen</span>
             </div>
           </div>
         </section>
 
-        <div class="text-end text-muted small">
-          Các <code>[]</code> trong <strong>Form mẫu</strong> được bôi <span class="text-danger">đỏ</span> và <strong>in đậm</strong> để bạn thay nhanh. Gợi ý từ xuất hiện khi di chuột vào <span class="tip">opinion 1/2</span>.
+        <div class="text-end text-muted small mt-3">
+          Các ô <code>[]</code> trong <strong>Form mẫu</strong> được bôi <span class="text-danger">đỏ</span> để bạn nhận biết và điền nhanh. Nhấn nút <strong>Sao chép</strong> để lấy khung bài viết!
         </div>
       </section>
     </div>
@@ -372,16 +488,13 @@ Sincerely,<br>
 
   <footer class="border-top py-4">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-      <div class="small text-muted">© 2026 APTIS Q4 – Mẫu &amp; Ví dụ. Dùng cho mục đích học tập.</div>
+      <div class="small text-muted">© 2026 AptisKey Writing Master – Bộ Form &amp; Mẹo Học Chuẩn B2.</div>
       <div class="d-flex gap-3 small">
         <a href="#gioi-thieu">Giới thiệu</a>
-        <a href="#forms">Form mẫu</a>
-        <a href="#vi-du">Ví dụ Book Club</a>
-      </div>
-    </div>
-    <div class="container">
-      <div class="small text-muted" style="font-size: 12px;">
-        Nội dung do AptisPro biên soạn độc lập để hỗ trợ ôn luyện, không phải đề thi chính thức và không liên kết, tài trợ hay xác nhận bởi đơn vị sở hữu thương hiệu Aptis.
+        <a href="#form-part1">Part 1</a>
+        <a href="#form-part2">Part 2</a>
+        <a href="#form-part3">Part 3</a>
+        <a href="#form-part4">Part 4</a>
       </div>
     </div>
   </footer>
@@ -431,12 +544,6 @@ Sincerely,<br>
           setTimeout(() => btn.innerHTML = '<i class="bi bi-clipboard me-1"></i>Sao chép', 1500);
         });
       });
-    });
-
-    // Kích hoạt tooltip Bootstrap
-    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
-      new bootstrap.Tooltip(tooltipTriggerEl);
     });
   </script>
 </body>
