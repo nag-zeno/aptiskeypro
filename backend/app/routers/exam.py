@@ -51,13 +51,13 @@ def get_test(
 
     # Kiểm tra quyền VIP
     if test.is_vip:
-        from datetime import datetime, timezone
-        now = datetime.now(timezone.utc)
-        if not current_user.vip_expires_at or current_user.vip_expires_at.replace(tzinfo=timezone.utc) < now:
+        from app.core.security import is_vip_active
+        if not is_vip_active(current_user):
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
                 detail="Bộ đề này dành cho học viên VIP. Vui lòng nâng cấp để truy cập.",
             )
+
 
     questions_sorted = sorted(test.questions, key=lambda q: q.order_num)
     return TestDetail(

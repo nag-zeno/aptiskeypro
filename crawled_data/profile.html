@@ -720,11 +720,11 @@
             expiryDisplay.textContent = 'Ngày hết hạn: ' + expDate.toLocaleDateString('vi-VN');
           } else {
             vipTitle.innerHTML = `<i class="bi bi-star text-muted"></i> Tài khoản thường`;
-            expiryDisplay.innerHTML = `VIP đã hết hạn từ: ${expDate.toLocaleDateString('vi-VN')}. <a href="/gia-han" style="color:var(--nm-primary); text-decoration:underline;">Gia hạn</a>`;
+            expiryDisplay.innerHTML = `VIP đã hết hạn từ: ${expDate.toLocaleDateString('vi-VN')}. <a onclick="showToast('info', 'Thông báo VIP', 'Vui lòng liên hệ Admin để gia hạn tài khoản VIP.')" style="color:var(--nm-primary); text-decoration:underline; cursor:pointer;">Gia hạn</a>`;
           }
         } else {
           vipTitle.innerHTML = `<i class="bi bi-star text-muted"></i> Tài khoản thường`;
-          expiryDisplay.innerHTML = `Bạn chưa đăng ký VIP. <a href="/gia-han" style="color:var(--nm-primary); text-decoration:underline;">Nâng cấp ngay</a>`;
+          expiryDisplay.innerHTML = `Bạn chưa đăng ký VIP. <a onclick="showToast('info', 'Thông báo VIP', 'Vui lòng liên hệ Admin để nâng cấp tài khoản VIP.')" style="color:var(--nm-primary); text-decoration:underline; cursor:pointer;">Nâng cấp ngay</a>`;
         }
         
       } catch (err) {

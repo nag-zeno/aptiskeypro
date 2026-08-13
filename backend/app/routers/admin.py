@@ -27,19 +27,23 @@ def get_current_admin(current_user: User = Depends(get_current_user)) -> User:
 
 # Schema để gia hạn VIP cho học viên
 class AdminUpdateVipPayload(BaseModel):
-    vip_expires_at: Optional[str] = None  # Định dạng ISO hoặc rỗng để hủy VIP
+    vip_expires_at: Optional[datetime] = None  # Định dạng ISO hoặc rỗng để hủy VIP
 
-    @field_validator("vip_expires_at")
+    @field_validator("vip_expires_at", mode="before")
     @classmethod
     def validate_date(cls, v):
         if not v:
             return None
-        try:
-            # Kiểm tra định dạng thời gian gửi lên
-            dt = datetime.fromisoformat(v.replace("Z", "+00:00"))
-            return dt
-        except ValueError:
-            raise ValueError("Định dạng ngày tháng không hợp lệ. Vui lòng gửi định dạng ISO 8601.")
+        if isinstance(v, datetime):
+            return v
+        if isinstance(v, str):
+            try:
+                dt = datetime.fromisoformat(v.replace("Z", "+00:00"))
+                return dt
+            except ValueError:
+                raise ValueError("Định dạng ngày tháng không hợp lệ. Vui lòng gửi định dạng ISO 8601.")
+        return v
+
 
 
 # 1. API: Lấy danh sách tất cả người dùng

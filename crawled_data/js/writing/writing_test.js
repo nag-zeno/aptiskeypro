@@ -154,8 +154,12 @@ async function handleSubmitAllQuestions() {
         .join("\n");
 
     // Chuyển đối tượng đáp án cho câu hỏi 2 thành một chuỗi
+    // questions2 là object {"question2": "..."}; form field có name="question2_text"
+    const q2QuestionText = typeof questions2 === 'object' && questions2 !== null
+        ? (questions2['question2'] || Object.values(questions2)[0] || 'Q2')
+        : String(questions2 || 'Q2');
     const userAnswersText_question2 = Object.keys(answers.question2)
-        .map(key => `${questions2[key]}: ${answers.question2[key]}`)
+        .map(key => `${q2QuestionText}: ${answers.question2[key]}`)
         .join("\n");
 
     // Chuyển đối tượng đáp án cho câu hỏi 3 thành một chuỗi
@@ -182,26 +186,40 @@ async function handleSubmitAllQuestions() {
 
     // Gửi tất cả câu hỏi và đáp án cho server
     try {
+        const token = localStorage.getItem('ak_token');
+        const headers = { 'Content-Type': 'application/json' };
+        if (token) headers['Authorization'] = 'Bearer ' + token;
+
         const response = await fetch('/ask', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers,
             body: JSON.stringify({
                 question: fullQuestion // Gửi câu hỏi gộp dưới một trường "question"
-            })
+            }),
+            credentials: 'include'
         });
 
         const data = await response.json();
 
+        // Ẩn loading trước khi hiện kết quả
+        loadingModal.hide();
+
+        const modalBody = document.getElementById('modal-body-ai');
+        const resultModal = new bootstrap.Modal(document.getElementById('resultModal'));
+
         if (data.error) {
-            console.log("Lỗi: ", data.error);
+            console.error("Lỗi chấm điểm: ", data.error);
+            modalBody.innerHTML = `<div class="alert alert-danger">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                <strong>Không thể chấm điểm:</strong> ${data.error}
+            </div>`;
+            resultModal.show();
             return;
         }
 
         // Hiển thị kết quả trong modal kết quả
-        const modalBody = document.getElementById('modal-body-ai');
-        modalBody.innerHTML = renderAIGradingResult(data.answer); 
+        modalBody.innerHTML = renderAIGradingResult(data.answer);
         console.log(data.answer);
-        const resultModal = new bootstrap.Modal(document.getElementById('resultModal'));
         resultModal.show();
 
         // Tự động lưu kết quả bài làm vào lịch sử
@@ -209,9 +227,14 @@ async function handleSubmitAllQuestions() {
 
     } catch (err) {
         console.error('Có lỗi xảy ra khi gửi yêu cầu:', err);
-    } finally {
-        // Ẩn modal loading khi xong
-        loadingModal.hide(); // Ẩn modal loading
+        loadingModal.hide();
+        const modalBody = document.getElementById('modal-body-ai');
+        modalBody.innerHTML = `<div class="alert alert-danger">
+            <i class="bi bi-wifi-off me-2"></i>
+            <strong>Lỗi kết nối:</strong> Không thể kết nối tới server. Vui lòng thử lại.
+        </div>`;
+        const resultModal = new bootstrap.Modal(document.getElementById('resultModal'));
+        resultModal.show();
     }
 }
 
@@ -285,9 +308,13 @@ function renderQuestions1() {
 function renderQuestions2() {
     const container = document.getElementById("questions-container2");
     if (!container) return;
+    // questions2 là object {"question2": "..."}  →  lấy giá trị đầu tiên
+    const questionText = typeof questions2 === 'object' && questions2 !== null
+        ? (questions2['question2'] || Object.values(questions2)[0] || '')
+        : String(questions2 || '');
     container.innerHTML = `
         <div class="mb-4">
-            <label for="question2_text" class="form-label">${questions2}</label>
+            <label for="question2_text" class="form-label">${questionText}</label>
             <textarea class="form-control" id="question2_text" name="question2_text" rows="4" style="width: 100%;"></textarea>
             <div id="question2-wordCount" class="text-muted text-end mt-1">Word Count: 0</div>
         </div>
@@ -383,10 +410,17 @@ document.addEventListener("DOMContentLoaded", function() {
     if (showAnswerBtn2) {
         showAnswerBtn2.addEventListener("click", function() {
             modalBody2.innerHTML = '';
+            // questions2 và questions2_answer là object {"question2": "..."}  →  lấy giá trị
+            const q2Text = typeof questions2 === 'object' && questions2 !== null
+                ? (questions2['question2'] || Object.values(questions2)[0] || '')
+                : String(questions2 || '');
+            const q2Answer = typeof questions2_answer === 'object' && questions2_answer !== null
+                ? (questions2_answer['question2'] || Object.values(questions2_answer)[0] || '')
+                : String(questions2_answer || '');
             const qP = document.createElement('p');
-            qP.innerHTML = `<strong>${questions2}</strong>`;
+            qP.innerHTML = `<strong>${q2Text}</strong>`;
             const aP = document.createElement('p');
-            aP.innerHTML = `${questions2_answer}`;
+            aP.innerHTML = q2Answer;
             modalBody2.appendChild(qP);
             modalBody2.appendChild(aP);
             question2AnswerModal.show();
@@ -474,6 +508,16 @@ fetch(`/api/writingkey-data/${__keyNum}`)
     renderQuestions2();
     renderQuestions3();
     renderQuestions4();
+
+    // Cập nhật tiêu đề và mô tả cho từng phần
+    const setEl = (id, val) => { const el = document.getElementById(id); if (el) el.innerHTML = val; };
+    setEl('topic-title_q1', `Part 1 – ${club_name}`);
+    setEl('description_q1', 'Trả lời 5 câu hỏi ngắn (tối đa 5 từ/câu)');
+    setEl('topic-title_q2', `Part 2 – ${club_name}`);
+    setEl('description_q2', 'Viết đoạn văn ngắn (20–30 từ)');
+    setEl('topic-title_q3', `Part 3 – ${club_name}`);
+    setEl('description_q3', 'Trả lời 3 thành viên trong nhóm chat (30–40 từ/câu)');
+    setEl('topic-title_q4', `Part 4 – ${club_name}`);
   })
   .catch(err => {
     console.error('Lỗi tải dữ liệu bộ đề writing:', err);
@@ -481,7 +525,47 @@ fetch(`/api/writingkey-data/${__keyNum}`)
     if (keysIdEl) keysIdEl.innerHTML = 'Không tải được dữ liệu bộ đề, vui lòng tải lại trang.';
   });
 
-function renderAIGradingResult(rawHtml) {
-    // Trả về HTML đã định dạng từ AI
-    return rawHtml;
+function renderAIGradingResult(rawContent) {
+    if (!rawContent) return '<p class="text-muted">Không có kết quả.</p>';
+
+    // Kiểm tra nếu AI đã trả về HTML (chứa thẻ HTML)
+    const isHtml = /<[a-z][\s\S]*>/i.test(rawContent);
+
+    let html;
+    if (isHtml) {
+        // AI đã trả về HTML → dùng trực tiếp, chỉ tô màu CEFR band nếu chưa có
+        html = rawContent;
+    } else {
+        // AI trả về text thuần/markdown → render thành HTML đẹp
+        const levelColors = {
+            A0: '#6c757d', A1: '#0d6efd', A2: '#0dcaf0',
+            B1: '#20c997', B2: '#fd7e14', C1: '#dc3545', C2: '#6f42c1'
+        };
+
+        // Escape HTML trước
+        const escaped = String(rawContent)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+
+        // Tô màu CEFR band
+        const withBadges = escaped.replace(/\b(A0|A1|A2|B1|B2|C1|C2)\b/g, function(m) {
+            const color = levelColors[m] || '#6c757d';
+            return `<span class="cefr-badge" style="background:${color};display:inline-block;padding:2px 10px;border-radius:999px;color:#fff;font-weight:700;font-size:0.85rem;margin:0 2px;vertical-align:middle;">${m}</span>`;
+        });
+
+        // Bold markdown **text**
+        const withBold = withBadges.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+        // Chia thành các block theo 2+ dòng trống
+        const blocks = withBold
+            .split(/\n{2,}/)
+            .filter(b => b.trim().length > 0)
+            .map(block => `<div class="ai-result-block" style="padding:12px 16px;margin-bottom:12px;background:#ffffff;border-left:4px solid #0d6efd;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);">${block.replace(/\n/g, '<br>')}</div>`)
+            .join('');
+
+        html = `<div class="ai-result-wrapper" style="font-family:'Segoe UI',system-ui,sans-serif;font-size:0.98rem;line-height:1.7;color:#212529;">${blocks}</div>`;
+    }
+
+    return html;
 }

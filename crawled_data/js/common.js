@@ -209,7 +209,7 @@ function updateUIForUser(data, nameEl, statusEl, authBtn, tabProfile, xProfile) 
                 Học viên đăng ký
                 <small style="color:yellow; font-weight:normal;">
                     Tài khoản của bạn đã hết hạn! 
-                    <a href="/gia-han" style="color:lime; text-decoration:underline; margin-left:5px;">
+                    <a href="/profile.html" style="color:lime; text-decoration:underline; margin-left:5px;">
                         Gia hạn thêm
                     </a>
                 </small>

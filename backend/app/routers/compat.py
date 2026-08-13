@@ -10,7 +10,7 @@ from google.genai import types as genai_types
 
 from app.core.database import get_db
 from app.core.config import settings
-from app.core.security import get_current_user, get_password_hash, verify_password, create_access_token
+from app.core.security import get_current_user, get_password_hash, verify_password, create_access_token, is_vip_active
 from app.models.user import User, UserRole
 from app.models.exam import Test, Skill
 
@@ -64,11 +64,7 @@ def compat_login(
     )
 
     # Kiểm tra trạng thái hết hạn VIP
-    is_expired = False
-    if user.vip_expires_at:
-        now = datetime.now(timezone.utc)
-        if user.vip_expires_at.replace(tzinfo=timezone.utc) < now:
-            is_expired = True
+    is_expired = not is_vip_active(user) if user.role != UserRole.admin else False
 
     return {
         "success": True,
@@ -96,10 +92,18 @@ def compat_get_me(current_user: User = Depends(get_current_user)):
     # Mặc định thời hạn xa xôi cho admin, hoặc ngày hết hạn VIP cho học viên
     expired_at = "2099-12-31T23:59:59.000Z"
     if current_user.role != UserRole.admin:
-        if current_user.vip_expires_at:
-            expired_at = current_user.vip_expires_at.replace(tzinfo=timezone.utc).isoformat()
+        if is_vip_active(current_user):
+            dt = current_user.vip_expires_at
+            if isinstance(dt, str):
+                try:
+                    dt = datetime.fromisoformat(dt.replace("Z", "+00:00"))
+                except Exception:
+                    dt = datetime.now(timezone.utc)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            expired_at = dt.isoformat()
         else:
-            # Nếu chưa nâng VIP, coi như hết hạn từ năm ngoái
+            # Nếu chưa nâng VIP hoặc đã hết hạn, coi như hết hạn từ năm ngoái
             expired_at = "2025-01-01T00:00:00.000Z"
 
     return {
@@ -135,12 +139,12 @@ def check_test_vip(skill: Skill, test_id: int, db: Session, user: User):
     
     if test and test.is_vip:
         # Kiểm tra VIP của user
-        now = datetime.now(timezone.utc)
-        if not user.vip_expires_at or user.vip_expires_at.replace(tzinfo=timezone.utc) < now:
+        if not is_vip_active(user):
             raise HTTPException(
                 status_code=403,
                 detail="Bộ đề này dành cho học viên VIP. Vui lòng nâng cấp tài khoản."
             )
+
 
 
 @router.get("/api/grammar-data/{test_id}")
@@ -212,7 +216,7 @@ async def compat_ask_ai(request: Request, user: User = Depends(get_current_user)
 
     try:
         client = genai.Client(api_key=settings.GEMINI_API_KEY)
-        
+
         prompt = f"""Bạn là giám khảo chấm thi viết tiếng Anh Aptis (British Council) chuyên nghiệp.
 Hãy phân tích, chấm điểm và nhận xét chi tiết bài làm viết dưới đây của học viên bằng tiếng Việt.
 
@@ -231,23 +235,39 @@ Hãy chấm điểm theo các tiêu chí:
 Đưa ra:
 - **Band điểm dự kiến** cho từng Task (A1, A2, B1, B2, C) và tổng điểm ước lượng (0-50).
 - **Phân tích lỗi sai** (ngữ pháp, cách dùng từ) và viết lại câu gợi ý chuẩn hơn cho học viên.
-- Nhận xét bằng tiếng Việt. Hãy trả về kết quả định dạng **HTML sạch** (không cần bọc trong thẻ ```html...```, chỉ dùng các thẻ <p>, <ul>, <li>, <strong>, <br>, <span class='text-danger'> để bôi đỏ lỗi, v.v.) để hiển thị đẹp mắt trên giao diện web.
+- Nhận xét bằng tiếng Việt. Hãy trả về kết quả định dạng **HTML sạch** (không cần bọc trong thẻ ```html...```, chỉ dùng các thẻ <p>, <ul>, <li>, <strong>, <br>, <span class='text-danger'> để bôi đỏ lỗi, <span class='text-success'> cho điểm tốt) để hiển thị đẹp mắt trên giao diện web.
+
+Lưu ý quan trọng:
+- Đây là học viên đang luyện tập — hãy khích lệ và mang tính xây dựng.
+- Nếu phân vân giữa 2 band liền kề, hãy chọn band cao hơn.
 
 Bài làm của học viên:
 {question_payload}
 """
-        response = client.models.generate_content(
-            model=settings.GEMINI_MODEL,
-            contents=prompt
-        )
-        ai_response_text = response.text
-        
+        # Fallback model list để tránh lỗi nếu model chính không khả dụng
+        models_to_try = [settings.GEMINI_MODEL, "gemini-2.0-flash", "gemini-1.5-flash"]
+        seen: set = set()
+        candidate_models = [m for m in models_to_try if not (m in seen or seen.add(m))]
+
+        ai_response_text = None
+        last_error = None
+        for model_name in candidate_models:
+            try:
+                response = client.models.generate_content(model=model_name, contents=prompt)
+                ai_response_text = response.text
+                break
+            except Exception as model_err:
+                last_error = model_err
+
+        if ai_response_text is None:
+            return {"error": f"Lỗi gọi Gemini AI: {str(last_error)}"}
+
         # Clean markdown code block wraps if model generated them
         if ai_response_text.startswith("```html"):
             ai_response_text = ai_response_text.split("```html")[1].split("```")[0].strip()
         elif ai_response_text.startswith("```"):
             ai_response_text = ai_response_text.split("```")[1].split("```")[0].strip()
-            
+
         return {"answer": ai_response_text}
     except Exception as e:
         return {"error": f"Lỗi gọi Gemini AI: {str(e)}"}
@@ -320,7 +340,7 @@ Yêu cầu đầu ra:
     try:
         client = genai.Client(api_key=settings.GEMINI_API_KEY)
 
-        models_to_try = [settings.GEMINI_MODEL, "gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-2.0-flash"]
+        models_to_try = [settings.GEMINI_MODEL, "gemini-2.0-flash", "gemini-1.5-flash"]
         seen = set()
         candidate_models = [m for m in models_to_try if not (m in seen or seen.add(m))]
 

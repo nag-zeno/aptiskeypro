@@ -82,7 +82,7 @@ def _generate_content_with_fallback(client, prompt: str) -> str:
     """Gọi Gemini API với danh sách model dự phòng linh hoạt nếu model chính gặp lỗi 503/429."""
     from app.core.config import settings
 
-    models_to_try = [settings.GEMINI_MODEL, "gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-2.0-flash"]
+    models_to_try = [settings.GEMINI_MODEL, "gemini-2.0-flash", "gemini-1.5-flash"]
     seen = set()
     candidate_models = [m for m in models_to_try if not (m in seen or seen.add(m))]
 

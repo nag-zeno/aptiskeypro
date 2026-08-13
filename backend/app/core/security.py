@@ -102,12 +102,27 @@ def get_optional_user(request: Request, db: Session = Depends(get_db)) -> Option
 
 
 
+def is_vip_active(user: Optional[User]) -> bool:
+    """Kiểm tra xem người dùng có tài khoản VIP còn thời hạn hay không (an toàn với mọi kiểu datetime/string)."""
+    if not user or not user.vip_expires_at:
+        return False
+    dt = user.vip_expires_at
+    if isinstance(dt, str):
+        try:
+            dt = datetime.fromisoformat(dt.replace("Z", "+00:00"))
+        except Exception:
+            return False
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt > datetime.now(timezone.utc)
+
+
 def get_current_vip_user(current_user: User = Depends(get_current_user)) -> User:
     """Dependency đảm bảo user đang có tài khoản VIP còn hạn."""
-    now = datetime.now(timezone.utc)
-    if current_user.vip_expires_at is None or current_user.vip_expires_at.replace(tzinfo=timezone.utc) < now:
+    if not is_vip_active(current_user):
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Tính năng này yêu cầu tài khoản VIP. Vui lòng nâng cấp để tiếp tục.",
         )
     return current_user
+

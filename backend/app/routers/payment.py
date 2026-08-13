@@ -23,11 +23,14 @@ router = APIRouter(prefix="/api/payment", tags=["Payment"])
 
 
 def _generate_order_id(user_id: int) -> str:
-    """Tạo order ID unique dựa trên user_id và timestamp."""
-    import time
+    """Tạo order ID unique dựa trên user_id, timestamp và random padding."""
+    import time, random
     # PayOS order ID phải là số nguyên, tối đa 9 chữ số
-    timestamp = int(time.time()) % 100000
-    return f"{user_id}{timestamp}"
+    rand_pad = random.randint(10, 99)
+    timestamp = int(time.time()) % 10000
+    order_code = f"{user_id % 1000}{timestamp}{rand_pad}"
+    return order_code[:9]
+
 
 
 @router.post("/create")
@@ -150,16 +153,25 @@ async def payment_webhook(request: Request, db: Session = Depends(get_db)):
         return {"message": "Transaction already processed or not found"}
 
     # Kích hoạt VIP
+    from app.core.security import is_vip_active
     now = datetime.now(timezone.utc)
     user = db.query(User).filter(User.id == transaction.user_id).first()
     if user:
-        current_expiry = user.vip_expires_at
-        if current_expiry and current_expiry.replace(tzinfo=timezone.utc) > now:
+        if is_vip_active(user):
             # Gia hạn từ ngày hết hạn hiện tại
+            current_expiry = user.vip_expires_at
+            if isinstance(current_expiry, str):
+                try:
+                    current_expiry = datetime.fromisoformat(current_expiry.replace("Z", "+00:00"))
+                except Exception:
+                    current_expiry = now
+            if current_expiry.tzinfo is None:
+                current_expiry = current_expiry.replace(tzinfo=timezone.utc)
             user.vip_expires_at = current_expiry + timedelta(days=transaction.duration_days)
         else:
             # Kích hoạt mới từ hôm nay
             user.vip_expires_at = now + timedelta(days=transaction.duration_days)
+
 
         transaction.status = TransactionStatus.completed
         transaction.reference_code = webhook_data.get("reference", "")

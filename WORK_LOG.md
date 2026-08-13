@@ -84,7 +84,23 @@
 ### 14. Chuẩn hóa tiêu đề các trang HTML giao diện học viên ✅
 - Cập nhật các thẻ `<title>` và meta description loại bỏ cụm từ không cần thiết trên 11 trang chính thuộc `crawled_data/`.
 
----
+### 15. Rà soát & Sửa lỗi toàn bộ hệ thống (System-wide Code Audit & Bug Fixes) ✅
+- **Xử lý triệt để lỗi ép kiểu Datetime trong Admin VIP Payload**:
+  - Sửa `AdminUpdateVipPayload` trong `admin.py`: chuyển `vip_expires_at: Optional[datetime]` với `mode="before"` trong validator, đảm bảo dữ liệu gán vào SQLAlchemy `User.vip_expires_at` luôn là kiểu `datetime` chuẩn thay vì bị Pydantic v2 ép thành string.
+- **Tập trung hóa logic kiểm tra VIP (`is_vip_active`)**:
+  - Thêm helper `is_vip_active(user)` trong `security.py` hỗ trợ xử lý an toàn với mọi định dạng datetimes (naive, timezone-aware, ISO string hoặc None).
+  - Áp dụng `is_vip_active` trên toàn bộ các routers: `security.py`, `compat.py`, `exam.py`, `payment.py`.
+- **Chuẩn hóa danh sách Gemini Fallback Models**:
+  - Cập nhật `models_to_try` trong `compat.py` và `grader.py` loại bỏ `"gemini-2.5-flash"` (không có thật), giữ lại danh sách chuẩn: `[settings.GEMINI_MODEL, "gemini-2.0-flash", "gemini-1.5-flash"]`.
+- **Tối ưu hóa PayOS Order ID generation**:
+  - Bổ sung random 2 chữ số vào `_generate_order_id` trong `payment.py` để chống trùng lặp orderCode khi giao dịch đồng thời.
+- **Sửa liên kết chết `/gia-han` trên Frontend**:
+  - Cập nhật `common.js` hướng link `/gia-han` về `/profile.html`.
+  - Cập nhật `profile.html` thay link `/gia-han` bằng action hiển thị toast thông báo chi tiết cho học viên.
+- **Kiểm thử tự động**:
+  - Biên dịch thành công 100% tệp Python (`py_compile`).
+  - Chạy bộ kiểm thử tự động kiểm chứng `AdminUpdateVipPayload` và `is_vip_active` đạt kết quả `[PASS]`.
+
 
 ## 📋 Kế hoạch công việc tiếp theo
 
