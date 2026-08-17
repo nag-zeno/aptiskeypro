@@ -76,7 +76,7 @@
   }
 
   // ── Fetch & render ───────────────────────────────────────────────────────
-  function generateForm(index) {
+  async function generateForm(index) {
     const test = TESTS[index];
     if (!test) return;
 
@@ -86,38 +86,64 @@
     if (btnToggleMode) btnToggleMode.style.display = 'none';
     if (btnPrintForm)  btnPrintForm.style.display  = 'none';
 
-    // Detect base path (supports file:// and http://)
-    const loc = window.location.pathname.replace(/\\/g, '/');
-    const basePath = loc.includes('/crawled_data/') ? './writing/' : './crawled_data/writing/';
-    const url = basePath + test.file;
-
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.responseType = 'text';
-    xhr.onload = function () {
+    // 1. Ưu tiên dữ liệu đã bundle sẵn (hoạt động 100% offline, file://, localhost, không bị CORS)
+    if (window.WRITING_TESTS_DATA && window.WRITING_TESTS_DATA[test.file]) {
+      currentData = window.WRITING_TESTS_DATA[test.file];
+      renderAll(currentData);
       showLoading(false);
-      if (xhr.status === 200 || (xhr.status === 0 && xhr.responseText)) {
-        try {
-          currentData = JSON.parse(xhr.responseText);
+      if (outputEl) outputEl.style.display = 'block';
+      if (btnToggleMode) btnToggleMode.style.display = 'inline-flex';
+      if (btnPrintForm)  btnPrintForm.style.display  = 'inline-flex';
+      return;
+    }
+
+    // 2. Dự phòng: Thử tải qua fetch với các đường dẫn tương đối / tuyệt đối
+    const testNum = index + 1;
+    const candidatePaths = [
+      './writing/' + test.file,
+      '/writing/' + test.file,
+      './crawled_data/writing/' + test.file,
+      '/crawled_data/writing/' + test.file,
+      '/api/writingkey-data/' + testNum
+    ];
+
+    for (let path of candidatePaths) {
+      try {
+        const resp = await fetch(path);
+        if (resp.ok) {
+          currentData = await resp.json();
           renderAll(currentData);
+          showLoading(false);
           if (outputEl) outputEl.style.display = 'block';
           if (btnToggleMode) btnToggleMode.style.display = 'inline-flex';
           if (btnPrintForm)  btnPrintForm.style.display  = 'inline-flex';
-        } catch (parseErr) {
-          console.error('[FormBuilder] JSON parse error:', parseErr);
-          showError('Dữ liệu đề thi bị lỗi. Vui lòng thử lại.');
+          return;
         }
-      } else {
-        console.error('[FormBuilder] XHR error status:', xhr.status, url);
-        showError('Không thể tải dữ liệu đề thi. Vui lòng thử lại.');
+      } catch (e) {
+        // Thử đường dẫn tiếp theo
       }
-    };
-    xhr.onerror = function () {
-      showLoading(false);
-      console.error('[FormBuilder] XHR network error for:', url);
-      showError('Không thể tải dữ liệu. Hãy kiểm tra kết nối hoặc mở qua web server.');
-    };
-    xhr.send();
+    }
+
+    // 3. Dự phòng cuối cùng: XHR
+    try {
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', './writing/' + test.file, false); // sync attempt
+      xhr.send();
+      if (xhr.status === 200 || (xhr.status === 0 && xhr.responseText)) {
+        currentData = JSON.parse(xhr.responseText);
+        renderAll(currentData);
+        showLoading(false);
+        if (outputEl) outputEl.style.display = 'block';
+        if (btnToggleMode) btnToggleMode.style.display = 'inline-flex';
+        if (btnPrintForm)  btnPrintForm.style.display  = 'inline-flex';
+        return;
+      }
+    } catch (e) {
+      // Ignored
+    }
+
+    showLoading(false);
+    showError('Không thể tải dữ liệu đề thi. Vui lòng tải lại trang.');
   }
 
 
