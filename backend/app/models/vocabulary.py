@@ -19,7 +19,7 @@ class Vocabulary(Base):
     example_vi = Column(Text, nullable=True)                  # Dịch câu ví dụ sang tiếng Việt
     synonyms = Column(String, nullable=True)                  # Từ đồng nghĩa (ví dụ: schedule, lodging)
     antonyms = Column(String, nullable=True)                  # Từ trái nghĩa
-    audio_url = Column(String, nullable=True)                 # Đồng dẫn file âm thanh (nếu có)
+    audio_url = Column(String, nullable=True)                 # Đường dẫn file âm thanh (nếu có)
     occurrences = Column(Integer, default=1)                  # Tần suất xuất hiện trong bộ đề câu hỏi
     created_at = Column(DateTime, default=datetime.utcnow)
 

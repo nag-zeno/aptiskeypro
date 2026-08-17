@@ -192,6 +192,248 @@
     }
 
     footer a { text-decoration: none; }
+
+    /* ========== Form Builder (Áp Form Vào Đề) ========== */
+    .fb-section-wrap {
+      background: linear-gradient(135deg, #f0f4ff 0%, #fdf5ff 100%);
+      border: 1.5px solid #d9e2ff;
+      border-radius: 1.2rem;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 4px 20px rgba(78,115,223,0.08);
+    }
+    .fb-section-title {
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: #2c3e50;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.35rem;
+    }
+    .fb-section-desc {
+      color: #6c757d;
+      font-size: 0.92rem;
+      margin-bottom: 1.1rem;
+    }
+    .fb-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    #fb-club-select {
+      flex: 1 1 220px;
+      min-width: 0;
+      border-radius: 0.75rem;
+      border: 1.5px solid #c8d3f5;
+      padding: 0.5rem 0.9rem;
+      font-size: 0.95rem;
+      background: #fff;
+      box-shadow: inset 2px 2px 6px #d0d8f0, inset -2px -2px 6px #fff;
+    }
+    #fb-club-select:focus { outline: none; border-color: #4e73df; }
+    #fb-btn-generate { border-radius: 0.75rem; font-weight: 700; }
+    #fb-btn-random   { border-radius: 0.75rem; }
+    #fb-btn-toggle-mode, #fb-btn-print { border-radius: 0.75rem; display: none; }
+    /* Loading */
+    #fb-loading {
+      display: none;
+      align-items: center;
+      gap: 0.7rem;
+      color: #4e73df;
+      font-weight: 600;
+      padding: 1rem 0;
+    }
+    /* Empty placeholder */
+    #fb-empty {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #9aa5c4;
+      font-size: 0.95rem;
+    }
+    /* Output container */
+    #fb-output { display: none; }
+    /* Banner */
+    .fb-banner {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: linear-gradient(120deg, #4e73df, #6f42c1);
+      color: #fff;
+      border-radius: 1rem;
+      padding: 1rem 1.4rem;
+      margin-bottom: 1rem;
+    }
+    .fb-banner-icon {
+      font-size: 2rem;
+      opacity: 0.9;
+    }
+    .fb-banner-title {
+      font-weight: 800;
+      font-size: 1.15rem;
+    }
+    .fb-banner-sub {
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+    /* Part cards */
+    .fb-part-card {
+      background: #fff;
+      border: 1px solid #eef0f8;
+      border-radius: 1rem;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 12px rgba(17,24,39,0.05);
+    }
+    .fb-part-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f8f9fd;
+      border-bottom: 1px solid #eef0f8;
+      padding: 0.75rem 1.1rem;
+    }
+    .fb-part-title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #2c3e50;
+    }
+    .fb-part-hint {
+      font-size: 0.8rem;
+      color: #6c757d;
+    }
+    .fb-part-body {
+      padding: 1rem 1.1rem;
+    }
+    /* Q&A rows */
+    .fb-qa-row {
+      margin-bottom: 0.65rem;
+      padding: 0.5rem 0.7rem;
+      border-radius: 0.6rem;
+      background: #f8f9fd;
+    }
+    .fb-qa-row:last-child { margin-bottom: 0; }
+    .fb-qa-block { background: #f8f9fd; padding: 0.75rem 1rem; border-radius: 0.75rem; }
+    .fb-q-label {
+      font-weight: 600;
+      color: #344767;
+      font-size: 0.9rem;
+      margin-bottom: 0.2rem;
+    }
+    .fb-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px; height: 22px;
+      background: #4e73df;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-right: 0.5rem;
+      flex-shrink: 0;
+    }
+    .fb-a-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.1rem;
+    }
+    .fb-a-wrap-block { margin-top: 0.1rem; }
+    .fb-arrow { color: #1cc88a; font-weight: 700; flex-shrink: 0; }
+    .fb-answer-text {
+      color: #1cc88a;
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+    .fb-email-body {
+      color: #2c3e50;
+      font-weight: 400;
+      line-height: 1.7;
+      background: #fdfdff;
+      padding: 0.8rem 1rem;
+      border-radius: 0.6rem;
+      border: 1px solid #eef0f8;
+      font-size: 0.92rem;
+      white-space: pre-line;
+    }
+    /* Chat bubbles */
+    .fb-chat-row { margin-bottom: 0.9rem; }
+    .fb-chat-bubble-q {
+      background: #eef2ff;
+      border-radius: 0 0.9rem 0.9rem 0.9rem;
+      padding: 0.55rem 0.9rem;
+      margin-bottom: 0.3rem;
+      font-size: 0.9rem;
+      border-left: 3px solid #4e73df;
+    }
+    .fb-chat-name { font-weight: 700; color: #4e73df; margin-right: 0.4rem; }
+    .fb-chat-q-text { color: #344767; }
+    .fb-chat-bubble-a {
+      background: #f0fdf4;
+      border-radius: 0.9rem 0 0.9rem 0.9rem;
+      padding: 0.55rem 0.9rem;
+      border-right: 3px solid #1cc88a;
+      font-size: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      margin-left: 1.5rem;
+    }
+    .fb-chat-you { font-weight: 700; color: #1cc88a; }
+    /* Email blocks */
+    .fb-email-block {
+      border: 1px solid #eef0f8;
+      border-radius: 0.85rem;
+      overflow: hidden;
+    }
+    .fb-email-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #f8f9fd;
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid #eef0f8;
+      flex-wrap: wrap;
+    }
+    .fb-notice-box {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-left: 4px solid #f59e0b;
+      border-radius: 0.75rem;
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+      color: #344767;
+    }
+    .fb-email-header strong, .fb-email-header .fb-email-copy { }
+    /* Practice input */
+    .fb-practice-input {
+      width: 100%;
+      margin-top: 0.3rem;
+      border-radius: 0.6rem;
+      border: 1.5px dashed #94a3b8;
+      background: #f8f9fd;
+    }
+    /* Action bar */
+    .fb-action-bar {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid #eef0f8;
+    }
+    /* Print */
+    @media print {
+      .meo-navbar, aside, .fb-section-wrap .fb-controls,
+      #fb-btn-toggle-mode, #fb-btn-print, #fb-btn-generate,
+      #fb-btn-random, .back-to-top, footer, #fb-empty { display: none !important; }
+      .fb-part-card { break-inside: avoid; }
+      body { background: #fff !important; }
+    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./css/neumorphism.css" />
@@ -227,7 +469,8 @@
           <div class="card-body">
             <h6 class="card-title mb-3 fw-bold"><i class="bi bi-list-ul me-1"></i> Mục lục bài viết</h6>
             <div class="list-group list-group-flush" id="tocList">
-              <a class="list-group-item list-group-item-action" href="#gioi-thieu"><i class="bi bi-info-circle me-2"></i>Tổng quan & Band B2</a>
+              <a class="list-group-item list-group-item-action fw-bold" href="#form-builder" style="color:#6f42c1"><i class="bi bi-magic me-2"></i>🎯 Áp Form Vào Đề</a>
+              <a class="list-group-item list-group-item-action" href="#gioi-thieu"><i class="bi bi-info-circle me-2"></i>Tổng quan &amp; Band B2</a>
               <a class="list-group-item list-group-item-action" href="#form-part1"><i class="bi bi-1-circle me-2"></i>Part 1: Câu hỏi ngắn</a>
               <a class="list-group-item list-group-item-action" href="#form-part2"><i class="bi bi-2-circle me-2"></i>Part 2: Form filling</a>
               <a class="list-group-item list-group-item-action" href="#form-part3"><i class="bi bi-3-circle me-2"></i>Part 3: Chat nhóm CLB</a>
@@ -248,6 +491,56 @@
 
       <!-- Content -->
       <section class="col-lg-9" id="content">
+        <!-- ============ SECTION: ÁP FORM VÀO ĐỀ ============ -->
+        <section id="form-builder" class="mb-4 filter-section">
+          <h3 class="section-title mb-3"><i class="bi bi-magic text-primary"></i> Áp Form Vào Đề Theo Chủ Đề CLB</h3>
+          <div class="fb-section-wrap">
+            <div class="fb-section-title">
+              <i class="bi bi-collection-fill" style="color:#6f42c1"></i>
+              Chọn chủ đề CLB để xem Form mẫu điền sẵn (4 Parts)
+            </div>
+            <div class="fb-section-desc">
+              Hệ thống sẽ hiển thị toàn bộ bài viết mẫu chuẩn B2+ theo đề thi tương ứng với CLB bạn chọn.
+              Bạn có thể <strong>sao chép từng phần</strong>, <strong>in toàn bộ</strong>, hoặc chuyển sang
+              <strong>chế độ Tự luyện</strong> để tự viết và đối chiếu đáp án.
+            </div>
+
+            <!-- Controls -->
+            <div class="fb-controls">
+              <select id="fb-club-select" class="form-select">
+                <option value="" disabled selected>-- Chọn chủ đề CLB --</option>
+              </select>
+              <button id="fb-btn-generate" class="btn btn-primary">
+                <i class="bi bi-play-fill me-1"></i>Tạo Form
+              </button>
+              <button id="fb-btn-random" class="btn btn-outline-secondary">
+                <i class="bi bi-shuffle me-1"></i>Ngẫu nhiên
+              </button>
+              <button id="fb-btn-toggle-mode" class="btn btn-outline-warning btn-sm">
+                <i class="bi bi-pencil-square me-1"></i>Chế độ Tự luyện
+              </button>
+              <button id="fb-btn-print" class="btn btn-outline-secondary btn-sm">
+                <i class="bi bi-printer me-1"></i>In bài
+              </button>
+            </div>
+
+            <!-- Loading -->
+            <div id="fb-loading">
+              <div class="spinner-border spinner-border-sm text-primary"></div>
+              <span>Đang tải dữ liệu đề thi…</span>
+            </div>
+
+            <!-- Empty state -->
+            <div id="fb-empty">
+              <i class="bi bi-arrow-up-circle" style="font-size:2rem;display:block;margin-bottom:0.5rem"></i>
+              Chọn chủ đề CLB và nhấn <strong>Tạo Form</strong> để bắt đầu!
+            </div>
+
+            <!-- Output -->
+            <div id="fb-output"></div>
+          </div>
+        </section>
+
         <!-- Hero / Intro -->
         <section id="gioi-thieu" class="mb-4 filter-section">
           <div class="meo-hero">
@@ -500,6 +793,7 @@ Yours sincerely,
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/writing/form_builder.js"></script>
   <script>
     // In nhanh
     document.getElementById('btnPrint').addEventListener('click', () => window.print());

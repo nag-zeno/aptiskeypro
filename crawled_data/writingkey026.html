@@ -52,7 +52,7 @@
                 .replace(/>/g, '&gt;');
         }
 
-        // �?nh d?ng l?i k?t qu? ch?m �i?m AI (text th�) th�nh c�c kh?i d? �?c + t� m�u m?c �i?m CEFR
+        // Định dạng lại kết quả chấm điểm AI (text thô) thành các khối dễ đọc + tô màu mức điểm CEFR
         function renderAIGradingResult(rawText) {
             const escaped = escapeHtmlAI(rawText);
 
@@ -106,7 +106,7 @@
 
   <!-- Right Section (Current Step) -->
   <div id="keys_id" class="fs-5 fw-bold text-light">
-    B? �?
+    Bộ đề
   </div>
 </div>
 
@@ -119,7 +119,7 @@
     <h6 class="mb-4" id="description_q1"></h6>
     <form id="question1Form">
         <div id="questions-container1"></div>
-        <button type="button" id="question1_showanswer" class="btn btn-info">��p �n m?u</button>
+        <button type="button" id="question1_showanswer" class="btn btn-info">Đáp án mẫu</button>
     </form>
 </div>
 
@@ -132,7 +132,7 @@
             </div>
             <div class="modal-body" id="modal-body"></div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">��ng</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
             </div>
         </div>
     </div>
@@ -147,7 +147,7 @@
     <h6 class="mb-4" id="description_q2"></h6>
     <form id="question2Form">
         <div id="questions-container2"></div>
-        <button type="button" id="question2_showanswer" class="btn btn-info">��p �n m?u</button>
+        <button type="button" id="question2_showanswer" class="btn btn-info">Đáp án mẫu</button>
     </form>
 </div>
 
@@ -160,7 +160,7 @@
             </div>
             <div class="modal-body" id="modal-body2"></div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">��ng</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
             </div>
         </div>
     </div>
@@ -175,7 +175,7 @@
     <h6 class="mb-4" id="description_q3"></h6>
     <form id="question3Form">
         <div id="questions-container3"></div>
-        <button type="button" id="question3_showanswer" class="btn btn-info">��p �n m?u</button>
+        <button type="button" id="question3_showanswer" class="btn btn-info">Đáp án mẫu</button>
     </form>
 </div>
 
@@ -188,7 +188,7 @@
             </div>
             <div class="modal-body" id="modal-body3"></div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">��ng</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
             </div>
         </div>
     </div>
@@ -203,7 +203,7 @@
     <h6 class="mb-4" id="description_q4"></h6>
     <form id="question4Form">
         <div id="questions-container4"></div>
-        <button type="button" id="question4_showanswer" class="btn btn-info">��p �n m?u</button>
+        <button type="button" id="question4_showanswer" class="btn btn-info">Đáp án mẫu</button>
     </form>
 </div>
 
@@ -216,7 +216,7 @@
             </div>
             <div class="modal-body" id="modal-body4"></div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">��ng</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
             </div>
         </div>
     </div>
@@ -228,29 +228,29 @@
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="loadingModalLabel">AI �ang ch?m �i?m</h5>
+                <h5 class="modal-title" id="loadingModalLabel">AI đang chấm điểm</h5>
             </div>
             <div class="modal-body text-center">
                 <div class="spinner-border text-primary" role="status">
                     <span class="visually-hidden">Loading...</span>
                 </div>
-                <p>H?y ch? m?t l�t!!</p>
+                <p>Hãy chờ một lát!!</p>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Modal k?t qu? -->
+<!-- Modal kết quả -->
 <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="resultModalLabel"><i class="bi bi-clipboard-check-fill me-2"></i>K?t qu? ch?m �i?m</h5>
+                <h5 class="modal-title" id="resultModalLabel"><i class="bi bi-clipboard-check-fill me-2"></i>Kết quả chấm điểm</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="modal-body-ai"></div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">��ng</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
             </div>
         </div>
     </div>
@@ -262,23 +262,23 @@
 ================================================ -->
 <div class="footer">
     <button class="btn btn-back" id="backButton">Back</button>
-    <button type="button" id="btn_checkallquestions" class="btn btn-primary">Ch?m �i?m</button>
+    <button type="button" id="btn_checkallquestions" class="btn btn-primary">Chấm điểm</button>
     <button class="btn btn-next" id="nextButton">Next</button>
 </div>
 
-<!-- Modal x�c nh?n -->
+<!-- Modal xác nhận -->
 <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="confirmationModalLabel">X�c nh?n ph?n thi</h5>
+                <h5 class="modal-title" id="confirmationModalLabel">Xác nhận phần thi</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                B?n c� ch?c ch?n mu?n ch?m �i?m t?t c? c�c c�u h?i?
+                Bạn có chắc chắn muốn chấm điểm tất cả các câu hỏi?
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">H?y</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
                 <button type="button" id="confirmButton" class="btn btn-primary">Yes</button>
             </div>
         </div>

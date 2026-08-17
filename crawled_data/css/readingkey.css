@@ -93,32 +93,32 @@
 }
 
 #question_id {
-  padding-top: 20px; /* CÄn toÃ n bá» khá»i lÃªn phÃ­a trÃªn vá»i khoáº£ng cÃ¡ch 20px */
+  padding-top: 20px; /* Căn toàn bộ khối lên phía trên với khoảng cách 20px */
 }
 
-/* Pháº§n fix cÃ¢u 4 */
+/* Phần fix câu 4 */
 .select-fixed {
     width: 100px;
   }
 
 
-      /* Style cho ÄÃ¡p Ã¡n */
+      /* Style cho đáp án */
     .answer-box {
-        background-color: #e0f7fa; /* Ná»n mÃ u xanh nháº¹ */
-        border: 2px solid #26c6da; /* Viá»n mÃ u xanh Äáº­m */
-        padding: 20px; /* Khoáº£ng cÃ¡ch giá»¯a ná»i dung vÃ  viá»n */
+        background-color: #e0f7fa; /* Nền màu xanh nhẹ */
+        border: 2px solid #26c6da; /* Viền màu xanh đậm */
+        padding: 20px; /* Khoảng cách giữa nội dung và viền */
         margin-top: 20px;
-        border-radius: 10px; /* Bo gÃ³c cho box */
-        font-size: 16px; /* KÃ­ch thÆ°á»c font */
-        display: none;  /* Ban Äáº§u áº©n */
+        border-radius: 10px; /* Bo góc cho box */
+        font-size: 16px; /* Kích thước font */
+        display: none;  /* Ban đầu ẩn */
     }
 
     .answer-box p {
-        margin-bottom: 10px; /* Khoáº£ng cÃ¡ch giá»¯a cÃ¡c Äoáº¡n vÄn */
+        margin-bottom: 10px; /* Khoảng cách giữa các đoạn văn */
     }
 
     .answer-box p strong {
-        color: #00796b; /* MÃ u chá»¯ cho tiÃªu Äá» "ÄÃ¡p Ã¡n" */
+        color: #00796b; /* Màu chữ cho tiêu đề "Đáp án" */
     }
 
 /* Highlight correct and incorrect answers only in the results table */
@@ -129,29 +129,29 @@
     color: red;
 }
 
-/* Äá»nh dáº¡ng mÃ u cho nÃºt ÄÆ°á»£c chá»n */
+/* Định dạng màu cho nút được chọn */
 .btn-active {
-    background-color: #007bff;  /* MÃ u xanh cho nÃºt Äang ÄÆ°á»£c chá»n */
-    color: white;  /* MÃ u chá»¯ tráº¯ng */
-    border: none;  /* Loáº¡i bá» ÄÆ°á»ng viá»n */
+    background-color: #007bff;  /* Màu xanh cho nút đang được chọn */
+    color: white;  /* Màu chữ trắng */
+    border: none;  /* Loại bỏ đường viền */
 }
 
 
 
-/* MÃ u sáº¯c Äáº¹p cho tá»ng Äiá»m vÃ  phÃ¢n loáº¡i */
+/* Màu sắc đẹp cho tổng điểm và phân loại */
 #totalScore {
-    color: #28a745;  /* MÃ u xanh lÃ¡ Äáº­m */
+    color: #28a745;  /* Màu xanh lá đậm */
     font-weight: bold;
-    font-size: 1.5rem;  /* Äáº·t kÃ­ch thÆ°á»c chá»¯ cho dá» nhÃ¬n */
+    font-size: 1.5rem;  /* Đặt kích thước chữ cho dễ nhìn */
 }
 
 #scoreClassification {
-    color: #007bff;  /* MÃ u xanh dÆ°Æ¡ng */
+    color: #007bff;  /* Màu xanh dương */
     font-weight: bold;
-    font-size: 1.5rem;  /* Äáº·t kÃ­ch thÆ°á»c chá»¯ cho dá» nhÃ¬n */
+    font-size: 1.5rem;  /* Đặt kích thước chữ cho dễ nhìn */
 }
 
- /* ThÃªm padding Äá» hiá»n Äáº§y Äá»§ hÆ¡n - vÃ¬ sá»£ footer nÃ³ chiáº¿m khÃ´ng gian */
+ /* Thêm padding để hiện đầy đủ hơn - vì sợ footer nó chiếm không gian */
 #comparisonResult_question1 {
     padding-bottom: 80px; 
 }
@@ -192,5 +192,5 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 9999; /* Äáº£m báº£o spinner luÃ´n hiá»n thá» trÃªn cÃ¹ng */
+    z-index: 9999; /* Đảm bảo spinner luôn hiển thị trên cùng */
 }
