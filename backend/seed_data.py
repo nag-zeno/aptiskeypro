@@ -465,6 +465,13 @@ def main():
         print("       AptisPro - START SEED DATA")
         print("=" * 60)
 
+        # Idempotent check: nếu đã có đề thi trong DB và không yêu cầu skill cụ thể / reset, bỏ qua để khởi động nhanh
+        existing_test_count = db.query(Test).count()
+        if existing_test_count > 0 and not args.reset and not args.skill:
+            print(f"[Seed Data] Đã có {existing_test_count} đề thi trong cơ sở dữ liệu. Bỏ qua nạp dữ liệu.")
+            print("=" * 60)
+            return
+
         for skill_name, fn in runners.items():
             fn(db)
 
